@@ -43,6 +43,40 @@ Crée une nouvelle tâche de manière interactive en respectant le template.
 
 ---
 
+#### `/task-from-idea` - Créer une tâche depuis une idée
+
+Transforme une idée du backlog [IDEAS.md](../IDEAS.md) en tâche concrète.
+
+**Utilisation:**
+
+```bash
+/task-from-idea [--verbose]
+```
+
+**Fonctionnalités:**
+
+- Liste interactive des idées disponibles
+- Pré-remplissage automatique (trigramme, titre, contexte)
+- Processus de création guidé
+- Suppression automatique de l'idée du backlog
+- Traçabilité (lien vers la tâche source)
+
+**Exemple:**
+
+```bash
+/task-from-idea
+# → Liste les idées du backlog
+# → Sélection interactive
+# → Création guidée avec pré-remplissage
+# → Tâche créée et idée retirée
+```
+
+**Note:** Les idées sont ajoutées automatiquement dans [IDEAS.md](../IDEAS.md) lorsque vous complétez une tâche avec `/task-complete` et remplissez la section "Améliorations futures".
+
+[Documentation complète](task-from-idea.md)
+
+---
+
 #### `/task-start <ID>` - Démarrer une tâche
 
 Démarre le travail sur une tâche avec setup Git automatique.
@@ -209,7 +243,23 @@ Archive une tâche terminée vers `.archived-tasks/`.
 
 ## Workflow Recommandé
 
-### Créer et Démarrer une Tâche
+### Créer une Tâche depuis une Idée
+
+```bash
+1. /task-from-idea
+   → Liste les idées du backlog
+   → Sélection interactive
+   → Création guidée avec pré-remplissage
+   → Tâche créée: DOC-002
+   → Idée retirée de IDEAS.md
+
+2. /task-start DOC-002
+   → Branche créée: task/DOC-002-nom-tache
+   → Statut: "🔄 En cours"
+   → Contexte affiché
+```
+
+### Créer et Démarrer une Tâche Classique
 
 ```bash
 1. /task-create
@@ -242,7 +292,8 @@ Refs CNT-002"
 1. /task-complete CNT-002
    → Validation DoD
    → Compilation CV
-   → Prompts interactifs
+   → Prompts interactifs (dont "Améliorations futures")
+   → Si améliorations renseignées: ajout automatique dans IDEAS.md
    → Commit final avec "Closes CNT-002"
    → Tâche déplacée dans "Terminées"
 
@@ -324,6 +375,7 @@ Ce mode aide à gérer les cas limites sans bloquer l'utilisateur.
 
 - [TASK_RULES.md](../TASK_RULES.md) - Règles DoR/DoD et gestion des erreurs
 - [TASKS.md](../TASKS.md) - Dashboard central des tâches
+- [IDEAS.md](../IDEAS.md) - Backlog d'idées d'améliorations futures
 - [TASKS/TEMPLATE.md](../TASKS/TEMPLATE.md) - Template de tâche
 - [CLAUDE.md](../CLAUDE.md) - Instructions générales du projet
 - [GIT_WORKFLOW.md](../GIT_WORKFLOW.md) - Conventions Git
@@ -389,5 +441,5 @@ Pour toute question ou suggestion d'amélioration:
 
 ---
 
-**Version:** 1.0.0
+**Version:** 1.1.0
 **Dernière mise à jour:** 2025-10-28

@@ -71,6 +71,11 @@ Mode interactif pour compléter les informations finales:
 3. **Résultat final - Améliorations futures**
    - Prompt: "Des idées d'amélioration pour plus tard? (optionnel):"
    - Optionnel
+   - **Si rempli:** Ajouter automatiquement dans [IDEAS.md](../IDEAS.md)
+     - Identifier la section selon le trigramme de la tâche
+     - Format: `- [ ] {idée} (source: {ID}, {date})`
+     - Remplacer "*Aucune idée pour l'instant*" si présent
+     - Afficher confirmation: "✓ Idée ajoutée au backlog IDEAS.md"
 
 4. **Temps réel**
    - Prompt: "Temps réel passé en heures (optionnel):"

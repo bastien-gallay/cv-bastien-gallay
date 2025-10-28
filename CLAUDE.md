@@ -115,11 +115,20 @@ The task management system is fully automated via Claude commands. See [.claude/
 **Quick Commands:**
 
 - `/task-create` - Create a new task interactively
+- `/task-from-idea` - Create a task from an idea in the backlog ([IDEAS.md](IDEAS.md))
 - `/task-start <ID>` - Start working on a task (creates Git branch, updates status)
-- `/task-complete <ID>` - Complete a task (validates DoD, creates final commit)
+- `/task-complete <ID>` - Complete a task (validates DoD, creates final commit, adds ideas to backlog)
 - `/task-next` - Get intelligent suggestion for next task to work on
 - `/task-validate` - Validate system consistency
 - `/task-archive <ID>` - Archive a completed task
+
+**Ideas Backlog:**
+
+Future improvement ideas are automatically collected in [IDEAS.md](IDEAS.md) when completing tasks. These ideas can be transformed into concrete tasks using `/task-from-idea`, which provides:
+- Interactive selection from available ideas
+- Pre-filled task creation (trigramme, title, context)
+- Automatic removal from backlog once transformed
+- Traceability to the source task
 
 **Rules and Quality Gates:**
 
