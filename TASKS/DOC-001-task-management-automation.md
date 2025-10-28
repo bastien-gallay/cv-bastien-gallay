@@ -51,17 +51,17 @@ Réduire drastiquement la friction lors de la création, du démarrage, et de la
 - [x] Créer la branche Git task/DOC-001-task-management-automation
 - [x] Créer le répertoire .claude/commands/
 - [x] Créer ce fichier DOC-001 et l'ajouter à TASKS.md
-- [ ] Créer TASK_RULES.md avec DoR/DoD
-- [ ] Implémenter /task-create
-- [ ] Implémenter /task-start
-- [ ] Implémenter /task-complete
-- [ ] Implémenter /task-validate
-- [ ] Implémenter /task-next
-- [ ] Implémenter /task-archive
-- [ ] Créer .claude/commands/README.md
-- [ ] Mettre à jour CLAUDE.md
-- [ ] Tester la compilation du CV
-- [ ] Commit final et clôture
+- [x] Créer TASK_RULES.md avec DoR/DoD
+- [x] Implémenter /task-create
+- [x] Implémenter /task-start
+- [x] Implémenter /task-complete
+- [x] Implémenter /task-validate
+- [x] Implémenter /task-next
+- [x] Implémenter /task-archive
+- [x] Créer .claude/commands/README.md
+- [x] Mettre à jour CLAUDE.md
+- [x] Tester la compilation du CV
+- [x] Commit final et clôture
 
 ---
 
