@@ -65,6 +65,51 @@ technical leadership initiatives. Clarified timeline and key
 achievements during consultant and CTO periods.
 ```
 
+## 🏷️ Task References
+
+This project uses a task management system (see [TASKS.md](TASKS.md)). Tasks use IDs in the format `XXX-NNN` (e.g., `CNT-001`, `TPL-001`).
+
+### Referencing Tasks in Commits
+
+**Work in progress:** Use `Refs XXX-NNN` in the commit body
+
+```plaintext
+content(experience): ✏️ update LinkedIn profile details
+
+Added missing accomplishments from PALO IT role.
+
+Refs CNT-001
+```
+
+**Task completion:** Use `Closes XXX-NNN` in the commit body
+
+```plaintext
+feat(versions): ✨ add short and long CV variants
+
+- Created cv-short.typ (1 page version)
+- Created cv-long.typ (2+ pages version)
+- Updated build commands in CLAUDE.md
+- Tested PDF generation for both variants
+
+Closes TPL-001
+```
+
+### Task ID Format
+
+Tasks are organized by category using trigrammes:
+
+| Trigramme | Category | Example |
+|-----------|----------|---------|
+| **CNT** | Content | `CNT-001`: LinkedIn audit |
+| **TPL** | Template | `TPL-001`: CV versions |
+| **QUA** | Quality | `QUA-001`: Verification steps |
+| **PIP** | Pipeline | `PIP-001`: CI/CD setup |
+| **INF** | Infrastructure | `INF-001`: MCP integration |
+| **LAY** | Layout | `LAY-001`: Design updates |
+| **DOC** | Documentation | `DOC-001`: Documentation updates |
+
+**See [TASKS.md](TASKS.md)** for the complete list of tasks and their descriptions.
+
 ## 🔍 Useful Git Commands
 
 ### Viewing History

@@ -85,6 +85,53 @@ The `publications.yml` file uses Typst's bibliography format with YAML structure
 - Color scheme: Professional blue (#4682b4 accent, #3b4f60 headers)
 - The CV is structured as a two-page document with a column break after initial education section
 
+## Task Management System
+
+This project uses a structured task management system to track CV evolution and improvements.
+
+### Task Organization
+
+All tasks are documented in [TASKS.md](TASKS.md), which serves as the central dashboard. Detailed task descriptions are stored in the `TASKS/` directory.
+
+### Task ID Convention
+
+Tasks use the format `XXX-NNN` where:
+- **XXX** = 3-letter category code (trigramme)
+- **NNN** = Auto-incremented number (001, 002, etc.)
+
+**Available trigrammes:**
+- **CNT** (Content) - CV content updates and information
+- **TPL** (Template) - Template structure and architecture
+- **QUA** (Quality) - Quality checks and verification
+- **PIP** (Pipeline) - CI/CD, automation, build processes
+- **INF** (Infrastructure) - Technical infrastructure
+- **LAY** (Layout) - Visual layout, design, styling
+- **DOC** (Documentation) - Documentation and guides
+
+### Working with Tasks
+
+**Create a new task:**
+1. Choose the appropriate trigramme (e.g., CNT for content)
+2. Find the next available number for that trigramme
+3. Copy [TASKS/TEMPLATE.md](TASKS/TEMPLATE.md)
+4. Create `TASKS/XXX-NNN-task-name.md`
+5. Fill in all template fields
+6. Add entry to [TASKS.md](TASKS.md)
+
+**Work on a task:**
+1. Update status to "🔄 En cours" in the task file
+2. Reference the task ID in commits: `Refs XXX-NNN`
+3. Check off subtasks as you complete them
+
+**Complete a task:**
+1. Mark all subtasks as done
+2. Update status to "✅ Terminé"
+3. Make final commit with `Closes XXX-NNN`
+4. Move to "Completed" section in [TASKS.md](TASKS.md)
+
+**Current tasks:**
+See [TASKS.md](TASKS.md) for the full list of active, pending, and completed tasks.
+
 ## Git Workflow
 
-This project follows a simple Git workflow with conventional commits and emojis. See [GIT_WORKFLOW.md](GIT_WORKFLOW.md) for detailed commit conventions and guidelines.
+This project follows a simple Git workflow with conventional commits and emojis. See [GIT_WORKFLOW.md](GIT_WORKFLOW.md) for detailed commit conventions and guidelines, including how to reference tasks in commits.
