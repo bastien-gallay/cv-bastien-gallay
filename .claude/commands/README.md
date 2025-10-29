@@ -4,7 +4,7 @@ Ce répertoire contient les commandes Claude personnalisées pour automatiser la
 
 ## Vue d'Ensemble
 
-Le système de gestion des tâches est documenté dans [TASK_RULES.md](../TASK_RULES.md) et [CLAUDE.md](../CLAUDE.md). Ces commandes automatisent les opérations courantes tout en respectant les règles définies (DoR/DoD).
+Le système de gestion des tâches est documenté dans [TASK_RULES.md](../.tasks/TASK_RULES.md) et [CLAUDE.md](../CLAUDE.md). Ces commandes automatisent les opérations courantes tout en respectant les règles définies (DoR/DoD).
 
 ## Commandes Disponibles
 
@@ -35,7 +35,7 @@ Crée une nouvelle tâche de manière interactive en respectant le template.
 ```bash
 /task-create
 # → Guide interactif
-# → Crée TASKS/CNT-002-nom-de-la-tache.md
+# → Crée .tasks/tasks/CNT-002-nom-de-la-tache.md
 # → Ajoute l'entrée dans TASKS.md
 ```
 
@@ -45,7 +45,7 @@ Crée une nouvelle tâche de manière interactive en respectant le template.
 
 #### `/task-from-idea` - Créer une tâche depuis une idée
 
-Transforme une idée du backlog [IDEAS.md](../IDEAS.md) en tâche concrète.
+Transforme une idée du backlog [IDEAS.md](../.tasks/IDEAS.md) en tâche concrète.
 
 **Utilisation:**
 
@@ -71,7 +71,7 @@ Transforme une idée du backlog [IDEAS.md](../IDEAS.md) en tâche concrète.
 # → Tâche créée et idée retirée
 ```
 
-**Note:** Les idées sont ajoutées automatiquement dans [IDEAS.md](../IDEAS.md) lorsque vous complétez une tâche avec `/task-complete` et remplissez la section "Améliorations futures".
+**Note:** Les idées sont ajoutées automatiquement dans [IDEAS.md](../.tasks/IDEAS.md) lorsque vous complétez une tâche avec `/task-complete` et remplissez la section "Améliorations futures".
 
 [Documentation complète](task-from-idea.md)
 
@@ -212,7 +212,7 @@ Suggère la prochaine tâche selon un modèle "valeur/temps".
 
 #### `/task-archive <ID>` - Archiver une tâche terminée
 
-Archive une tâche terminée vers `.archived-tasks/`.
+Archive une tâche terminée vers `.tasks/.archived/`.
 
 **Utilisation:**
 
@@ -225,7 +225,7 @@ Archive une tâche terminée vers `.archived-tasks/`.
 - Validation que la tâche est terminée
 - Mise à jour de l'historique (entrée d'archivage)
 - Changement du statut vers "📦 Archivé"
-- Déplacement vers `.archived-tasks/`
+- Déplacement vers `.tasks/.archived/`
 - Mise à jour de TASKS.md et statistiques
 - Préservation de l'historique Git
 
@@ -233,7 +233,7 @@ Archive une tâche terminée vers `.archived-tasks/`.
 
 ```bash
 /task-archive TPL1
-# → Archive TASKS/TPL-001-*.md vers .archived-tasks/
+# → Archive .tasks/tasks/TPL-001-*.md vers .tasks/.archived/
 # → Retire de TASKS.md
 ```
 
@@ -298,7 +298,7 @@ Refs CNT-002"
    → Tâche déplacée dans "Terminées"
 
 2. (Optionnel) /task-archive CNT-002
-   → Archive dans .archived-tasks/
+   → Archive dans .tasks/.archived/
    → Retire de TASKS.md
 ```
 
@@ -373,12 +373,12 @@ Ce mode aide à gérer les cas limites sans bloquer l'utilisateur.
 
 ## Fichiers de Référence
 
-- [TASK_RULES.md](../TASK_RULES.md) - Règles DoR/DoD et gestion des erreurs
-- [TASKS.md](../TASKS.md) - Dashboard central des tâches
-- [IDEAS.md](../IDEAS.md) - Backlog d'idées d'améliorations futures
-- [TASKS/TEMPLATE.md](../TASKS/TEMPLATE.md) - Template de tâche
+- [TASK_RULES.md](../.tasks/TASK_RULES.md) - Règles DoR/DoD et gestion des erreurs
+- [TASKS.md](../.tasks/TASKS.md) - Dashboard central des tâches
+- [IDEAS.md](../.tasks/IDEAS.md) - Backlog d'idées d'améliorations futures
+- [.tasks/tasks/TEMPLATE.md](../.tasks/tasks/TEMPLATE.md) - Template de tâche
 - [CLAUDE.md](../CLAUDE.md) - Instructions générales du projet
-- [GIT_WORKFLOW.md](../GIT_WORKFLOW.md) - Conventions Git
+- [GIT_WORKFLOW.md](../../docs/GIT_WORKFLOW.md) - Conventions Git
 
 ---
 
@@ -386,7 +386,7 @@ Ce mode aide à gérer les cas limites sans bloquer l'utilisateur.
 
 ### Commits
 
-Les commandes respectent les conventions définies dans [GIT_WORKFLOW.md](../GIT_WORKFLOW.md):
+Les commandes respectent les conventions définies dans [GIT_WORKFLOW.md](../../docs/GIT_WORKFLOW.md):
 
 - **Format:** `type(scope): emoji description`
 - **Références:** `Refs XXX-NNN` (en cours) ou `Closes XXX-NNN` (final)
@@ -435,7 +435,7 @@ Commandes potentielles à ajouter:
 
 Pour toute question ou suggestion d'amélioration:
 
-1. Consulter [TASK_RULES.md](../TASK_RULES.md)
+1. Consulter [TASK_RULES.md](../.tasks/TASK_RULES.md)
 2. Consulter [CLAUDE.md](../CLAUDE.md)
 3. Créer une nouvelle tâche avec `/task-create` (trigramme DOC)
 

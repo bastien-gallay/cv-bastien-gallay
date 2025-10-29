@@ -67,7 +67,7 @@ Poser les questions suivantes à l'utilisateur:
 
 ### Étape 3: Création du Fichier
 
-1. Lire TASKS/TEMPLATE.md
+1. Lire .tasks/tasks/TEMPLATE.md
 2. Remplacer tous les placeholders par les valeurs collectées:
    - `XXX-NNN` → ID généré
    - `[Titre de la tâche]` → Titre fourni
@@ -205,7 +205,7 @@ Claude: Je vais vous guider pour créer une nouvelle tâche.
 
 ID: CNT-002
 Titre: Mise à jour de l'expérience professionnelle
-Fichier: TASKS/CNT-002-mise-a-jour-experience-professionnelle.md
+Fichier: .tasks/tasks/CNT-002-mise-a-jour-experience-professionnelle.md
 Statut: ⏳ À faire
 Priorité: 🔴 Haute
 
@@ -215,6 +215,6 @@ Utilisez `/task-start CNT-002` pour commencer à travailler dessus.
 
 ## Références
 
-- [TASK_RULES.md](../TASK_RULES.md) - Règles DoR/DoD
-- [TASKS/TEMPLATE.md](../TASKS/TEMPLATE.md) - Template de tâche
-- [TASKS.md](../TASKS.md) - Dashboard des tâches
+- [TASK_RULES.md](../.tasks/TASK_RULES.md) - Règles DoR/DoD
+- [.tasks/tasks/TEMPLATE.md](../.tasks/tasks/TEMPLATE.md) - Template de tâche
+- [TASKS.md](../.tasks/TASKS.md) - Dashboard des tâches

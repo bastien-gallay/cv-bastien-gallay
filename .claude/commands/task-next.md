@@ -288,6 +288,6 @@ Commandes:
 
 ## Références
 
-- [TASKS.md](../TASKS.md) - Dashboard des tâches
-- [TASK_RULES.md](../TASK_RULES.md) - Règles et workflow
+- [TASKS.md](../.tasks/TASKS.md) - Dashboard des tâches
+- [TASK_RULES.md](../.tasks/TASK_RULES.md) - Règles et workflow
 - [Weighted Shortest Job First (WSJF)](https://www.scaledagileframework.com/wsjf/) - Méthodologie Agile

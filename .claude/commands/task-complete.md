@@ -29,7 +29,7 @@ Cette commande automatise toutes les étapes de finalisation d'une tâche en res
 
 ### Étape 1: Validation de la DoD
 
-Vérifier que la tâche respecte la Definition of Done (voir [TASK_RULES.md](../TASK_RULES.md)):
+Vérifier que la tâche respecte la Definition of Done (voir [TASK_RULES.md](../.tasks/TASK_RULES.md)):
 
 1. **Vérifier que le fichier existe**
    - Scanner `TASKS/` pour trouver le fichier `{ID}-*.md`
@@ -71,7 +71,7 @@ Mode interactif pour compléter les informations finales:
 3. **Résultat final - Améliorations futures**
    - Prompt: "Des idées d'amélioration pour plus tard? (optionnel):"
    - Optionnel
-   - **Si rempli:** Ajouter automatiquement dans [IDEAS.md](../IDEAS.md)
+   - **Si rempli:** Ajouter automatiquement dans [IDEAS.md](../.tasks/IDEAS.md)
      - Identifier la section selon le trigramme de la tâche
      - Format: `- [ ] {idée} (source: {ID}, {date})`
      - Remplacer "*Aucune idée pour l'instant*" si présent
@@ -352,7 +352,7 @@ Si d'autres tâches dépendent de celle-ci:
 User: /task-complete TPL1
 
 Claude: Validation de la tâche TPL-001...
-✓ Fichier trouvé: TASKS/TPL-001-cv-versions.md
+✓ Fichier trouvé: .tasks/tasks/TPL-001-cv-versions.md
 ✓ Statut valide: 🔄 En cours
 ✓ Toutes les sous-tâches cochées (4/4)
 
@@ -397,12 +397,12 @@ Options:
 Votre choix: 1
 
 Mise à jour des fichiers...
-✓ TASKS/TPL-001-cv-versions.md - Statut et résultat mis à jour
+✓ .tasks/tasks/TPL-001-cv-versions.md - Statut et résultat mis à jour
 ✓ TASKS.md - Tâche déplacée vers "Terminées"
 ✓ Statistiques actualisées
 
 Création du commit final...
-✓ Fichiers ajoutés: cv-short.typ, cv-long.typ, build.sh, TASKS/TPL-001-cv-versions.md, TASKS.md
+✓ Fichiers ajoutés: cv-short.typ, cv-long.typ, build.sh, .tasks/tasks/TPL-001-cv-versions.md, TASKS.md
 ✓ Commit créé: a3f5c1d
 
 Voulez-vous merger la branche dans main? (o/N): o
@@ -436,6 +436,6 @@ Utilisez `/task-archive TPL-001` si vous voulez l'archiver définitivement.
 
 ## Références
 
-- [TASK_RULES.md](../TASK_RULES.md) - Règles DoR/DoD
-- [TASKS.md](../TASKS.md) - Dashboard des tâches
-- [GIT_WORKFLOW.md](../GIT_WORKFLOW.md) - Conventions Git
+- [TASK_RULES.md](../.tasks/TASK_RULES.md) - Règles DoR/DoD
+- [TASKS.md](../.tasks/TASKS.md) - Dashboard des tâches
+- [GIT_WORKFLOW.md](../../docs/GIT_WORKFLOW.md) - Conventions Git

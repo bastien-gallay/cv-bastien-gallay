@@ -19,14 +19,14 @@ Vérifie la cohérence entre les fichiers de tâches et le dashboard, détecte l
 
 ## Comportement
 
-Cette commande effectue une validation complète du système de tâches en vérifiant le respect des règles définies dans [TASK_RULES.md](../TASK_RULES.md).
+Cette commande effectue une validation complète du système de tâches en vérifiant le respect des règles définies dans [TASK_RULES.md](../.tasks/TASK_RULES.md).
 
 ### Vérifications Effectuées
 
 1. **Validation DoR/DoD**
    - Vérifier que les tâches "À faire" respectent la DoR
    - Vérifier que les tâches "Terminées" respectent la DoD
-   - Référencer les critères depuis [TASK_RULES.md](../TASK_RULES.md)
+   - Référencer les critères depuis [TASK_RULES.md](../.tasks/TASK_RULES.md)
 
 2. **Cohérence Structurelle**
    - Chaque fichier `TASKS/XXX-NNN-*.md` a une entrée dans TASKS.md
@@ -211,6 +211,6 @@ Appliquer? (o/N): o
 
 ## Références
 
-- [TASK_RULES.md](../TASK_RULES.md) - Définition des règles DoR/DoD et validations
-- [TASKS.md](../TASKS.md) - Dashboard des tâches
-- [TASKS/TEMPLATE.md](../TASKS/TEMPLATE.md) - Template de référence
+- [TASK_RULES.md](../.tasks/TASK_RULES.md) - Définition des règles DoR/DoD et validations
+- [TASKS.md](../.tasks/TASKS.md) - Dashboard des tâches
+- [.tasks/tasks/TEMPLATE.md](../.tasks/tasks/TEMPLATE.md) - Template de référence

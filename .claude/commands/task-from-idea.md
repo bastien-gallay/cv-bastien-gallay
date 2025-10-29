@@ -4,7 +4,7 @@ description: Créer une nouvelle tâche depuis une idée du backlog
 
 # Commande: task-from-idea
 
-Transforme une idée du backlog [IDEAS.md](../IDEAS.md) en tâche concrète.
+Transforme une idée du backlog [IDEAS.md](../.tasks/IDEAS.md) en tâche concrète.
 
 ## Utilisation
 
@@ -186,7 +186,7 @@ Source: DOC-001 (2025-10-28)
 📋 Nouvelle tâche:
 ID: DOC-002
 Titre: Suggérer des réponses automatiques
-Fichier: TASKS/DOC-002-suggerer-reponses-automatiques.md
+Fichier: .tasks/tasks/DOC-002-suggerer-reponses-automatiques.md
 Statut: ⏳ À faire
 Priorité: 🟡 Moyenne
 
@@ -421,7 +421,7 @@ Source: DOC-001 (2025-10-28)
 📋 Nouvelle tâche:
 ID: DOC-002
 Titre: Suggérer des réponses automatiques aux questions de collecte
-Fichier: TASKS/DOC-002-suggerer-reponses-automatiques.md
+Fichier: .tasks/tasks/DOC-002-suggerer-reponses-automatiques.md
 Statut: ⏳ À faire
 Priorité: 🔴 Haute
 
@@ -435,7 +435,7 @@ Utilisez `/task-start DOC-002` pour commencer à travailler dessus.
 
 ## Références
 
-- [IDEAS.md](../IDEAS.md) - Backlog d'idées
+- [IDEAS.md](../.tasks/IDEAS.md) - Backlog d'idées
 - [task-create.md](task-create.md) - Création de tâche classique
 - [task-complete.md](task-complete.md) - Ajout automatique d'idées
-- [TASKS.md](../TASKS.md) - Dashboard des tâches
+- [TASKS.md](../.tasks/TASKS.md) - Dashboard des tâches

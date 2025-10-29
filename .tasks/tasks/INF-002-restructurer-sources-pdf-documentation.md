@@ -40,7 +40,7 @@ Une navigation plus simple dans le repository, et une capacité à implémenter 
 - [x] Réfléchir et proposer une structure correcte pour ce repo
 - [x] Séparer les fichiers `*.typ` et leurs dépendances du reste des fichiers
 - [x] Modifier l'infrastructure des tâches afin de les déplacer vers un dossier racine dédié (trop de fichiers de gestion à la racine)
-- [ ] Modifier les commandes `/task-*` en conséquences
+- [x] Modifier les commandes `/task-*` en conséquences
 - [ ] Modifier le fichier CLAUDE.md en conséquences
 - [ ] Vérifier et ajuster les dépendances dans l'ensemble des tâches : fichier TASKS.md, TASK_RULES.md, IDEAS.md, GIT_WORKFLOW.md et `TASKS/*.md`
 - [x] Disposer d'un dossier de build ou dist, qui comportera tous les CV construits dans ce repo

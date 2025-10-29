@@ -27,7 +27,7 @@ Cette commande automatise toutes les étapes nécessaires pour démarrer proprem
 
 ### Étape 1: Validation de la DoR
 
-Vérifier que la tâche respecte la Definition of Ready (voir [TASK_RULES.md](../TASK_RULES.md)):
+Vérifier que la tâche respecte la Definition of Ready (voir [TASK_RULES.md](../.tasks/TASK_RULES.md)):
 
 1. **Vérifier que le fichier existe**
    - Scanner `TASKS/` pour trouver le fichier `{ID}-*.md`
@@ -285,12 +285,12 @@ Si une branche `task/{ID}-*` existe déjà:
 User: /task-start CNT-001
 
 Claude: Validation de la tâche CNT-001...
-✓ Fichier trouvé: TASKS/CNT-001-linkedin-audit.md
+✓ Fichier trouvé: .tasks/tasks/CNT-001-linkedin-audit.md
 ✓ Statut valide: ⏳ À faire
 ✓ DoR respectée
 
 Mise à jour des fichiers...
-✓ TASKS/CNT-001-linkedin-audit.md - Statut mis à jour
+✓ .tasks/tasks/CNT-001-linkedin-audit.md - Statut mis à jour
 ✓ TASKS.md - Dashboard synchronisé
 ✓ Statistiques actualisées
 
@@ -322,7 +322,7 @@ Respecter le format de date existant.
 
 📊 Status:
   - Branche: task/CNT-001-linkedin-audit
-  - Fichier: TASKS/CNT-001-linkedin-audit.md
+  - Fichier: .tasks/tasks/CNT-001-linkedin-audit.md
   - Dashboard: mis à jour
 
 Prêt à travailler! N'oubliez pas de:
@@ -333,6 +333,6 @@ Prêt à travailler! N'oubliez pas de:
 
 ## Références
 
-- [TASK_RULES.md](../TASK_RULES.md) - Règles DoR/DoD
-- [TASKS.md](../TASKS.md) - Dashboard des tâches
-- [GIT_WORKFLOW.md](../GIT_WORKFLOW.md) - Conventions Git
+- [TASK_RULES.md](../.tasks/TASK_RULES.md) - Règles DoR/DoD
+- [TASKS.md](../.tasks/TASKS.md) - Dashboard des tâches
+- [GIT_WORKFLOW.md](../../docs/GIT_WORKFLOW.md) - Conventions Git

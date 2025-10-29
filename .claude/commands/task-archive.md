@@ -4,7 +4,7 @@ description: Archive une tâche terminée vers le répertoire d'archives
 
 # Commande: task-archive
 
-Archive une tâche terminée en la déplaçant vers `.archived-tasks/` tout en préservant l'historique Git.
+Archive une tâche terminée en la déplaçant vers `.tasks/.archived/` tout en préservant l'historique Git.
 
 ## Utilisation
 
@@ -50,21 +50,21 @@ Cette commande déplace une tâche terminée vers les archives tout en maintenan
 
 2. **Ajouter une entrée dans l'historique**
    - Dans la section "Historique des modifications"
-   - Ajouter: `| {date_aujourdhui} | Archivé | Tâche archivée dans .archived-tasks/ |`
+   - Ajouter: `| {date_aujourdhui} | Archivé | Tâche archivée dans .tasks/.archived/ |`
 
 ### Étape 3: Archivage du Fichier
 
 1. **Créer le répertoire si nécessaire**
-   - S'assurer que `.archived-tasks/` existe
+   - S'assurer que `.tasks/.archived/` existe
    - Le créer si absent
 
 2. **Déplacer le fichier**
    - De: `TASKS/{ID}-{slug}.md`
-   - Vers: `.archived-tasks/{ID}-{slug}.md`
+   - Vers: `.tasks/.archived/{ID}-{slug}.md`
    - Utiliser `git mv` pour préserver l'historique
 
 3. **Vérifier l'intégrité**
-   - Confirmer que le fichier existe dans `.archived-tasks/`
+   - Confirmer que le fichier existe dans `.tasks/.archived/`
    - Confirmer qu'il n'existe plus dans `TASKS/`
 
 ### Étape 4: Mise à Jour de TASKS.md
@@ -78,18 +78,18 @@ Cette commande déplace une tâche terminée vers les archives tout en maintenan
    - Décrémenter "Terminées"
 
 3. **Mettre à jour la note d'archivage**
-   - Compter le nombre de fichiers dans `.archived-tasks/`
+   - Compter le nombre de fichiers dans `.tasks/.archived/`
    - Mettre à jour le texte si pertinent
 
 ### Étape 5: Commit Git
 
 1. **Créer un commit d'archivage**
    ```bash
-   git add .archived-tasks/{ID}-{slug}.md
+   git add .tasks/.archived/{ID}-{slug}.md
    git add TASKS.md
    git commit -m "chore(tasks): 🗄️ archive {ID}
 
-   Archived completed task to .archived-tasks/
+   Archived completed task to .tasks/.archived/
 
    Refs {ID}"
    ```
@@ -110,7 +110,7 @@ Afficher un résumé:
 📂 Actions effectuées:
   ✓ Historique de la tâche mis à jour
   ✓ Statut changé en "📦 Archivé"
-  ✓ Fichier déplacé vers .archived-tasks/
+  ✓ Fichier déplacé vers .tasks/.archived/
   ✓ Entrée retirée de TASKS.md
   ✓ Statistiques mises à jour
   ✓ Commit créé ({hash})
@@ -121,7 +121,7 @@ Afficher un résumé:
   - Terminées: 1 → 0
   - Archivées: 0 → 1
 
-Note: Le fichier archivé reste accessible dans .archived-tasks/
+Note: Le fichier archivé reste accessible dans .tasks/.archived/
 et l'historique Git complet est préservé.
 ```
 
@@ -131,7 +131,7 @@ Avant d'archiver, vérifier:
 - ✓ Le fichier de tâche existe
 - ✓ Le statut est "✅ Terminé"
 - ✓ La tâche est complète (résultat final rempli)
-- ✓ Le répertoire `.archived-tasks/` existe ou peut être créé
+- ✓ Le répertoire `.tasks/.archived/` existe ou peut être créé
 
 ## Gestion des Erreurs
 
@@ -173,10 +173,10 @@ Options:
 Votre choix: _
 ```
 
-**Répertoire .archived-tasks/ inaccessible:**
+**Répertoire .tasks/.archived/ inaccessible:**
 
 ```text
-❌ Erreur: Impossible de créer/accéder au répertoire .archived-tasks/
+❌ Erreur: Impossible de créer/accéder au répertoire .tasks/.archived/
 
 Erreur système: {message d'erreur}
 
@@ -200,13 +200,13 @@ Pour restaurer une tâche archivée:
 
 ```bash
 # Déplacer manuellement le fichier
-git mv .archived-tasks/{ID}-{slug}.md TASKS/{ID}-{slug}.md
+git mv .tasks/.archived/{ID}-{slug}.md TASKS/{ID}-{slug}.md
 
 # Mettre à jour le statut dans le fichier
 # | **Statut** | 📦 Archivé | → | **Statut** | ✅ Terminé |
 
 # Ajouter une entrée dans l'historique
-# | {date} | Restauré | Tâche restaurée depuis .archived-tasks/ |
+# | {date} | Restauré | Tâche restaurée depuis .tasks/.archived/ |
 
 # Mettre à jour manuellement TASKS.md
 # - Ajouter l'entrée dans "Tâches terminées"
@@ -238,7 +238,7 @@ L'archivage déplace simplement les fichiers. Pour supprimer définitivement une
 
 ```bash
 # ⚠️  ATTENTION: Suppression irréversible (historique Git perdu aussi)
-git rm .archived-tasks/{ID}-{slug}.md
+git rm .tasks/.archived/{ID}-{slug}.md
 git commit -m "chore(tasks): 🗑️ delete archived {ID}"
 ```
 
@@ -246,10 +246,10 @@ Recommandation: Ne jamais supprimer définitivement, garder l'archive et l'histo
 
 ## Organisation des Archives
 
-Les tâches archivées dans `.archived-tasks/` peuvent être organisées par année ou trigramme pour faciliter la navigation:
+Les tâches archivées dans `.tasks/.archived/` peuvent être organisées par année ou trigramme pour faciliter la navigation:
 
 ```
-.archived-tasks/
+.tasks/.archived/
   2025/
     CNT-001-linkedin-audit.md
     TPL-001-cv-versions.md
@@ -265,7 +265,7 @@ Cette organisation peut être mise en place manuellement ou via une future amél
 User: /task-archive TPL-001
 
 Claude: Validation de la tâche TPL-001...
-✓ Fichier trouvé: TASKS/TPL-001-cv-versions.md
+✓ Fichier trouvé: .tasks/tasks/TPL-001-cv-versions.md
 ✓ Statut valide: ✅ Terminé
 ✓ Tâche complète (résultat final rempli)
 
@@ -274,7 +274,7 @@ Mise à jour du fichier de tâche...
 ✓ Historique mis à jour (entrée d'archivage ajoutée)
 
 Archivage en cours...
-✓ Répertoire .archived-tasks/ vérifié
+✓ Répertoire .tasks/.archived/ vérifié
 ✓ Fichier déplacé avec git mv
 ✓ TASKS.md mis à jour
 ✓ Statistiques recalculées
@@ -291,7 +291,7 @@ Commit de l'archivage...
 📂 Actions effectuées:
   ✓ Historique de la tâche mis à jour
   ✓ Statut changé en "📦 Archivé"
-  ✓ Fichier déplacé vers .archived-tasks/
+  ✓ Fichier déplacé vers .tasks/.archived/
   ✓ Entrée retirée de TASKS.md
   ✓ Statistiques mises à jour
   ✓ Commit créé (f7a9c2b)
@@ -302,12 +302,12 @@ Commit de l'archivage...
   - Terminées: 1 → 0
   - Archivées: 0 → 1
 
-Note: Le fichier archivé reste accessible dans .archived-tasks/
+Note: Le fichier archivé reste accessible dans .tasks/.archived/
 et l'historique Git complet est préservé.
 ```
 
 ## Références
 
-- [TASKS.md](../TASKS.md) - Dashboard des tâches
-- [.archived-tasks/](../.archived-tasks/) - Répertoire des archives
-- [TASK_RULES.md](../TASK_RULES.md) - Règles et workflow
+- [TASKS.md](../.tasks/TASKS.md) - Dashboard des tâches
+- [.tasks/.archived/](../.tasks/.archived/) - Répertoire des archives
+- [TASK_RULES.md](../.tasks/TASK_RULES.md) - Règles et workflow
