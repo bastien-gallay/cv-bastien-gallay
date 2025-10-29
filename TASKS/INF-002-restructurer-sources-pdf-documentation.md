@@ -8,7 +8,7 @@
 |-------|--------|
 | **ID** | INF-002 |
 | **Titre** | Restructurer les sources, PDF et documentation |
-| **Statut** | ⏳ À faire |
+| **Statut** | 🔄 En cours |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | INF |
 | **Section CV** | N/A |
@@ -194,6 +194,7 @@ Closes INF-002"
 | Date | Action | Détails |
 |------|--------|---------|
 | 2025-10-29 | Création | Tâche créée depuis une idée du backlog |
+| 2025-10-29 | En cours | Début du travail |
 
 ---
 

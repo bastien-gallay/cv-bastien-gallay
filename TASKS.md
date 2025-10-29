@@ -42,7 +42,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | ID | Titre | Statut | Priorité | Créé le |
 |----|-------|--------|----------|---------|
 | [CNT-001](TASKS/CNT-001-linkedin-audit.md) | Audit LinkedIn | ⏳ À faire | 🔴 Haute | 2025-10-28 |
-| [INF-002](TASKS/INF-002-restructurer-sources-pdf-documentation.md) | Restructurer les sources, PDF et documentation | ⏳ À faire | 🔴 Haute | 2025-10-29 |
+| [INF-002](TASKS/INF-002-restructurer-sources-pdf-documentation.md) | Restructurer les sources, PDF et documentation | 🔄 En cours | 🔴 Haute | 2025-10-29 |
 | [TPL-001](TASKS/TPL-001-cv-versions.md) | Versions courte et longue du CV | ⏳ À faire | 🟡 Moyenne | 2025-10-28 |
 | [QUA-001](TASKS/QUA-001-verification.md) | Étapes de vérification du CV | ⏳ À faire | 🟡 Moyenne | 2025-10-28 |
 | [TPL-002](TASKS/TPL-002-template-system.md) | Système de changement de template | ⏳ À faire | 🟢 Basse | 2025-10-28 |
@@ -123,8 +123,8 @@ Closes TPL-001"
 ## Statistiques
 
 - **Total**: 8 tâches
-- **À faire**: 7
-- **En cours**: 0
+- **À faire**: 6
+- **En cours**: 1
 - **Terminées**: 1
 - **Bloquées**: 0
 
