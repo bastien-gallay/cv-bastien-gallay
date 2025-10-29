@@ -8,7 +8,7 @@
 |-------|--------|
 | **ID** | CNT-001 |
 | **Titre** | Audit LinkedIn et documentation des éléments manquants |
-| **Statut** | ⏳ À faire |
+| **Statut** | 🔄 En cours |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | CNT (Content) |
 | **Section CV** | General |
@@ -144,6 +144,7 @@ Closes CNT-001"
 | Date | Action | Détails |
 |------|--------|---------|
 | 2025-10-28 | Création | Tâche créée dans le cadre de l'initialisation du système de tâches |
+| 2025-10-29 | En cours | Début du travail - Option B: LinkedIn data export |
 
 ---
 
