@@ -24,7 +24,7 @@ Ce fichier collecte les idées d'améliorations futures issues des tâches termi
 
 ## Pipeline (PIP)
 
-*Aucune idée pour l'instant*
+- [ ] Dans les commandes de gestion des tâches, privilégier des questionnaires posant plusieurs questions numérotées à la suite plutôt que des questions uniques successives
 
 ---
 
@@ -59,6 +59,7 @@ Utilisez `/task-from-idea` pour transformer une idée en tâche concrète. L'id�
 ### Format
 
 Chaque idée suit le format :
+
 ```markdown
 - [ ] {Description de l'idée} (source: {ID-TACHE}, {DATE})
 ```
