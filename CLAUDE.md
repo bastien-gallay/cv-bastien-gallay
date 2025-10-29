@@ -31,8 +31,13 @@ neat-cv/
 ├── .tasks/                    # Task management system
 │   ├── tasks/                 # Individual task files
 │   ├── .archived/             # Archived completed tasks
+│   ├── resources/             # Analysis and audit resources
+│   │   ├── audits/            # Source data extractions
+│   │   ├── analyses/          # Comparative analysis results
+│   │   └── templates/         # Reusable templates
+│   ├── ANALYSES.md            # Analysis dashboard
 │   ├── IDEAS.md               # Ideas backlog
-│   ├── TASKS.md               # Dashboard
+│   ├── TASKS.md               # Tasks dashboard
 │   └── TASK_RULES.md          # Rules and workflow
 ├── dist/                      # Build outputs (gitignored)
 │   └── cv.pdf                 # Generated PDF
@@ -50,6 +55,7 @@ neat-cv/
 │   ├── cv.typ                 # Main CV source
 │   └── manifest.yml           # Font manifest
 ├── .claude/                   # Claude Code configuration
+│   └── commands/              # Custom slash commands
 ├── justfile                   # Build automation
 └── README.md                  # Project overview
 ```
@@ -171,6 +177,132 @@ If automation is unavailable, follow the manual process:
 
 **Current tasks:**
 See [.tasks/TASKS.md](.tasks/TASKS.md) for the full list of active, pending, and completed tasks.
+
+## Analysis and Audit System
+
+This project includes a structured system for analyzing the CV against external sources (LinkedIn, GitHub, external CVs, personal websites) to identify gaps, inconsistencies, and improvement opportunities.
+
+### System Overview
+
+The analysis system enables:
+- **Source Extraction**: Structured extraction of data from external sources
+- **Comparative Analysis**: Identify gaps between CV and source data
+- **Recommendation Tracking**: Track improvement recommendations with priorities
+- **Task Generation**: Automatically create tasks from recommendations
+- **Full Traceability**: Source → Analysis → Recommendation → Task → CV Change
+
+### Directory Structure
+
+```
+.tasks/
+├── resources/
+│   ├── audits/                     # Source data extractions
+│   │   └── {TASK-ID}/
+│   │       ├── linkedin-profile.md  # Raw LinkedIn data
+│   │       ├── github-profile.md    # Raw GitHub data
+│   │       └── cv-snapshot.md       # CV state at audit time
+│   ├── analyses/                    # Analysis results
+│   │   └── {TASK-ID}/
+│   │       ├── audit-report.md           # Comparative analysis
+│   │       ├── recommendations.md        # Detailed recommendations
+│   │       ├── recommendations-status.md # Tracking file (for /task-from-analysis)
+│   │       ├── action-plan.md            # Implementation plan
+│   │       └── metrics.md                # Statistics and metrics
+│   └── templates/                   # Reusable templates
+│       ├── audit-template.md
+│       ├── recommendations-template.md
+│       └── source-extraction-template.md
+└── ANALYSES.md                      # Analysis dashboard
+```
+
+### Analysis Commands
+
+**Extract Source Data:**
+```bash
+/analyze-source [--task-id=XXX-NNN]
+```
+
+This command provides interactive guidance to extract data from external sources:
+- Supports LinkedIn, GitHub, external CVs, websites, and other sources
+- Uses templates for consistent data structure
+- Saves extracted data to `.tasks/resources/audits/{TASK-ID}/`
+- Links to parent analysis task if provided
+
+**Create Tasks from Recommendations:**
+```bash
+/task-from-analysis [--analysis-id=XXX-NNN] [--filter=high|medium|low|all]
+```
+
+This command transforms analysis recommendations into concrete tasks:
+- Lists analyses with pending recommendations
+- Allows batch selection ('1,5,6', 'all', 'high', etc.)
+- Pre-fills task creation with recommendation data
+- Updates `recommendations-status.md` with task IDs
+- Maintains full traceability (recommendation → task)
+- Updates statistics in `ANALYSES.md`
+
+### Typical Workflow
+
+1. **Create Analysis Task:**
+   ```bash
+   /task-create
+   # Choose CNT trigramme, e.g., "CNT-001 LinkedIn Audit"
+   ```
+
+2. **Extract Source Data:**
+   ```bash
+   /task-start CNT-001
+   /analyze-source --task-id=CNT-001
+   # Follow interactive prompts to extract LinkedIn/GitHub/etc. data
+   ```
+
+3. **Perform Analysis:**
+   - Create comparative analysis in `.tasks/resources/analyses/CNT-001/`
+   - Use `audit-template.md` for structure
+   - Document gaps, inconsistencies, and recommendations
+   - Create `recommendations-status.md` for tracking
+
+4. **Generate Tasks:**
+   ```bash
+   /task-from-analysis --analysis-id=CNT-001 --filter=high
+   # Select recommendations to transform into tasks
+   # Each task automatically links back to its recommendation
+   ```
+
+5. **Execute Tasks:**
+   ```bash
+   /task-start CNT-002  # Task created from recommendation
+   # Make CV changes
+   /task-complete CNT-002
+   # Recommendation automatically marked as completed in recommendations-status.md
+   ```
+
+### Recommendation ID Format
+
+Recommendations use the format `{ANALYSIS-ID}-R{NN}`:
+- Example: `CNT-001-R05` (recommendation 5 from analysis CNT-001)
+- Ensures unique identification across all analyses
+- Enables clear traceability in task files and commit messages
+
+### Key Files
+
+- [.tasks/ANALYSES.md](.tasks/ANALYSES.md) - Central dashboard for all analyses
+- [.tasks/resources/templates/](.tasks/resources/templates/) - Templates for audits and recommendations
+- Individual analysis folders contain all related files (audits, analysis results, tracking)
+
+### Priority Levels
+
+Recommendations use a 4-level priority system:
+- 🔴🔴 **Very High**: Critical issues affecting credibility
+- 🔴 **High**: Important issues to address quickly
+- 🟡 **Medium**: Desirable improvements
+- 🟢 **Low**: Optional, can be deferred
+
+Priority mapping for task creation:
+- Very High → High priority task (🔴)
+- High → High priority task (🔴)
+- Medium → Medium priority task (🟡)
+- Low → Low priority task (🟢)
 
 ## Git Workflow
 

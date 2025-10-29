@@ -241,6 +241,105 @@ Archive une tâche terminée vers `.tasks/.archived/`.
 
 ---
 
+### Commandes d'Analyse
+
+Ces commandes permettent d'analyser le CV en comparaison avec des sources externes (LinkedIn, GitHub, etc.) pour identifier des écarts et générer des recommandations:
+
+#### `/analyze-source` - Extraire des données depuis une source externe
+
+Extrait et structure des informations depuis une source externe pour comparaison avec le CV.
+
+**Utilisation:**
+
+```bash
+/analyze-source [--task-id=XXX-NNN] [--verbose]
+```
+
+**Fonctionnalités:**
+
+- Guide interactif pour sélectionner le type de source (LinkedIn, GitHub, CV externe, Website, Autre)
+- Extraction guidée section par section avec templates
+- Sauvegarde structurée dans `.tasks/resources/audits/{TASK-ID}/`
+- Lien optionnel vers une tâche d'analyse parent
+- Support pour LinkedIn, GitHub, CVs externes, sites web personnels
+
+**Sources supportées:**
+
+1. **LinkedIn Profile** - Extrait expériences, éducation, certifications, langues, bénévolat, recommandations
+2. **GitHub Profile** - Extrait statistiques, repositories, langages, contributions
+3. **CV Externe** - Compare structure et contenu avec un CV PDF/Word externe
+4. **Website/Blog** - Extrait informations d'un site personnel
+5. **Autre** - Source personnalisée avec template adaptatif
+
+**Exemple:**
+
+```bash
+/analyze-source --task-id=CNT-001
+# → Choix du type de source: LinkedIn Profile
+# → Extraction guidée interactive (10 sections)
+# → Sauvegarde dans .tasks/resources/audits/CNT-001/linkedin-profile.md
+# → Référence ajoutée à la tâche CNT-001
+```
+
+**Note:** Cette commande extrait uniquement les données sources. L'analyse comparative doit être créée manuellement en utilisant `audit-template.md`.
+
+[Documentation complète](analyze-source.md)
+
+---
+
+#### `/task-from-analysis` - Créer des tâches depuis des recommandations
+
+Transforme les recommandations d'une analyse comparative en tâches concrètes.
+
+**Utilisation:**
+
+```bash
+/task-from-analysis [--analysis-id=XXX-NNN] [--filter=high|medium|low|all] [--verbose]
+```
+
+**Fonctionnalités:**
+
+- Liste les analyses avec recommandations pendantes
+- Affiche les recommandations groupées par priorité (🔴🔴, 🔴, 🟡, 🟢)
+- Sélection batch: '1,5,6', '1-3,5', 'all', 'high', 'critical', 'medium', 'low'
+- Création de tâches avec pré-remplissage depuis les recommandations
+- Mise à jour automatique de `recommendations-status.md` avec IDs de tâches
+- Synchronisation des statistiques dans `ANALYSES.md`
+- Traçabilité complète (recommandation ↔ tâche)
+
+**Workflow:**
+
+1. Sélectionne une analyse (ex: CNT-001 LinkedIn Audit)
+2. Affiche les 19 recommandations par priorité
+3. Sélectionne les recommandations à traiter (ex: 'high' pour toutes les hautes priorités)
+4. Création interactive de chaque tâche avec données pré-remplies
+5. Mise à jour automatique des fichiers de suivi
+6. Résumé final avec liste des tâches créées
+
+**Exemple:**
+
+```bash
+/task-from-analysis --analysis-id=CNT-001 --filter=high
+
+# → Affiche 11 recommandations hautes priorités
+# → Sélection: confirmer les 11
+# → Création de 11 tâches (CNT-002 à CNT-012)
+# → Mise à jour de recommendations-status.md
+# → Mise à jour de ANALYSES.md (11/19 recommandations traitées)
+# → Résumé final avec prochaines étapes
+```
+
+**Priorités:**
+
+- 🔴🔴 **Très Haute** → Tâche 🔴 Haute (critique pour crédibilité)
+- 🔴 **Haute** → Tâche 🔴 Haute (important, à traiter rapidement)
+- 🟡 **Moyenne** → Tâche 🟡 Moyenne (amélioration souhaitable)
+- 🟢 **Basse** → Tâche 🟢 Basse (optionnel, différable)
+
+[Documentation complète](task-from-analysis.md)
+
+---
+
 ## Workflow Recommandé
 
 ### Créer une Tâche depuis une Idée
@@ -315,6 +414,50 @@ Refs CNT-002"
 /task-next --start
 ```
 
+### Analyser le CV avec une Source Externe
+
+```bash
+1. /task-create
+   → Trigramme: CNT
+   → Titre: "Audit LinkedIn du CV"
+   → Tâche créée: CNT-001
+
+2. /task-start CNT-001
+   → Branche créée: task/CNT-001-audit-linkedin-cv
+
+3. /analyze-source --task-id=CNT-001
+   → Sélection: LinkedIn Profile
+   → Extraction guidée interactive (10 sections)
+   → Fichier créé: .tasks/resources/audits/CNT-001/linkedin-profile.md
+
+4. Créer l'analyse comparative (manuel)
+   → Utiliser audit-template.md
+   → Créer .tasks/resources/analyses/CNT-001/audit-report.md
+   → Créer .tasks/resources/analyses/CNT-001/recommendations.md (19 recommandations)
+   → Créer .tasks/resources/analyses/CNT-001/recommendations-status.md (suivi)
+   → Créer .tasks/resources/analyses/CNT-001/action-plan.md
+   → Créer .tasks/resources/analyses/CNT-001/metrics.md
+
+5. /task-complete CNT-001
+   → L'analyse est terminée et documentée dans ANALYSES.md
+
+6. /task-from-analysis --analysis-id=CNT-001 --filter=high
+   → Sélection: 11 recommandations hautes priorités
+   → Création de 11 tâches (CNT-002 à CNT-012)
+   → Mise à jour automatique de recommendations-status.md
+   → Chaque tâche référence sa recommandation (traçabilité)
+
+7. /task-start CNT-002
+   → Travail sur la première recommandation
+   → Mise à jour du CV
+
+8. /task-complete CNT-002
+   → Recommandation CNT-001-R01 automatiquement marquée comme "✅ Completed"
+   → Statistiques dans ANALYSES.md mises à jour
+
+# Répéter pour toutes les recommandations...
+```
+
 ---
 
 ## Options Communes
@@ -375,8 +518,10 @@ Ce mode aide à gérer les cas limites sans bloquer l'utilisateur.
 
 - [TASK_RULES.md](../.tasks/TASK_RULES.md) - Règles DoR/DoD et gestion des erreurs
 - [TASKS.md](../.tasks/TASKS.md) - Dashboard central des tâches
+- [ANALYSES.md](../.tasks/ANALYSES.md) - Dashboard des analyses et audits
 - [IDEAS.md](../.tasks/IDEAS.md) - Backlog d'idées d'améliorations futures
 - [.tasks/tasks/TEMPLATE.md](../.tasks/tasks/TEMPLATE.md) - Template de tâche
+- [.tasks/resources/templates/](../.tasks/resources/templates/) - Templates d'audit et recommandations
 - [CLAUDE.md](../CLAUDE.md) - Instructions générales du projet
 - [GIT_WORKFLOW.md](../../docs/GIT_WORKFLOW.md) - Conventions Git
 
@@ -441,5 +586,5 @@ Pour toute question ou suggestion d'amélioration:
 
 ---
 
-**Version:** 1.1.0
-**Dernière mise à jour:** 2025-10-28
+**Version:** 1.2.0
+**Dernière mise à jour:** 2025-10-29
