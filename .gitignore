@@ -41,6 +41,17 @@ Temporary Items
 *.sln
 *.sw?
 
-# Typst build artifacts (if needed)
-# Uncomment if you don't want to track the PDF
-# cv.pdf
+# Build outputs
+/dist/
+/build/
+*.pdf
+
+# Typst cache and temporary files
+.typst-cache/
+*.typst-cache
+
+# Keep dist directory structure
+!/dist/.gitkeep
+
+# Sed backups from restructuring
+/.sed-backups/
