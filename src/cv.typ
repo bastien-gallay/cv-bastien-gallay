@@ -22,7 +22,7 @@
     // scholar: "",
     // orcid: "0000-0000-0000-1955",
   ),
-  profile-picture: image("identite.png"),
+  profile-picture: image("assets/identite.png"),
   accent-color: rgb("#4682b4"),
   // font-color: rgb("#333333"),
   header-color: rgb("#3b4f60"),
