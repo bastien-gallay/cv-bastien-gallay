@@ -11,26 +11,48 @@ This is a CV (curriculum vitae) project written in Typst, a modern markup-based 
 ### Building the CV
 ```bash
 # Compile the CV to PDF
-typst compile cv.typ
+just build
 
 # Watch mode - automatically recompile on changes
-typst watch cv.typ
+just watch
 
 # Compile with custom output name
-typst compile cv.typ output.pdf
+just build output.pdf
 ```
 
 ### Viewing the Output
-The compiled PDF is saved as `cv.pdf` in the root directory.
+The compiled PDF is saved as `dist/cv.pdf`.
 
 ## Project Structure
 
-- **cv.typ**: Main CV source file containing all content and configuration
-- **cv.pdf**: Generated PDF output (604KB)
-- **identite.png**: Profile photo used in the CV header
-- **profile.png**: Alternative profile image
-- **publications.yml**: Bibliography data file containing example academic publications (currently contains placeholder data from "Back to the Future" theme)
-- **manifest.yml**: Font manifest listing available fonts (Noto Sans, Fira Sans, Roboto with various weights)
+```
+neat-cv/
+├── CLAUDE.md                  # This file - project instructions
+├── .tasks/                    # Task management system
+│   ├── tasks/                 # Individual task files
+│   ├── .archived/             # Archived completed tasks
+│   ├── IDEAS.md               # Ideas backlog
+│   ├── TASKS.md               # Dashboard
+│   └── TASK_RULES.md          # Rules and workflow
+├── dist/                      # Build outputs (gitignored)
+│   └── cv.pdf                 # Generated PDF
+├── docs/                      # Project documentation
+│   └── GIT_WORKFLOW.md        # Git conventions
+├── scripts/                   # Build scripts
+│   ├── build.sh
+│   └── watch.sh
+├── src/                       # Typst sources
+│   ├── assets/                # Images
+│   │   ├── identite.png       # Profile photo
+│   │   └── profile.png        # Alternative profile
+│   ├── data/                  # Data files
+│   │   └── publications.yml   # Bibliography data
+│   ├── cv.typ                 # Main CV source
+│   └── manifest.yml           # Font manifest
+├── .claude/                   # Claude Code configuration
+├── justfile                   # Build automation
+└── README.md                  # Project overview
+```
 
 ## Typst and neat-cv Template
 
@@ -91,7 +113,7 @@ This project uses a structured task management system to track CV evolution and 
 
 ### Task Organization
 
-All tasks are documented in [TASKS.md](TASKS.md), which serves as the central dashboard. Detailed task descriptions are stored in the `TASKS/` directory.
+All tasks are documented in [.tasks/TASKS.md](.tasks/TASKS.md), which serves as the central dashboard. Detailed task descriptions are stored in the `.tasks/tasks/` directory.
 
 ### Task ID Convention
 
@@ -115,7 +137,7 @@ The task management system is fully automated via Claude commands. See [.claude/
 **Quick Commands:**
 
 - `/task-create` - Create a new task interactively
-- `/task-from-idea` - Create a task from an idea in the backlog ([IDEAS.md](IDEAS.md))
+- `/task-from-idea` - Create a task from an idea in the backlog ([.tasks/IDEAS.md](.tasks/IDEAS.md))
 - `/task-start <ID>` - Start working on a task (creates Git branch, updates status)
 - `/task-complete <ID>` - Complete a task (validates DoD, creates final commit, adds ideas to backlog)
 - `/task-next` - Get intelligent suggestion for next task to work on
@@ -124,7 +146,7 @@ The task management system is fully automated via Claude commands. See [.claude/
 
 **Ideas Backlog:**
 
-Future improvement ideas are automatically collected in [IDEAS.md](IDEAS.md) when completing tasks. These ideas can be transformed into concrete tasks using `/task-from-idea`, which provides:
+Future improvement ideas are automatically collected in [.tasks/IDEAS.md](.tasks/IDEAS.md) when completing tasks. These ideas can be transformed into concrete tasks using `/task-from-idea`, which provides:
 - Interactive selection from available ideas
 - Pre-filled task creation (trigramme, title, context)
 - Automatic removal from backlog once transformed
@@ -132,7 +154,7 @@ Future improvement ideas are automatically collected in [IDEAS.md](IDEAS.md) whe
 
 **Rules and Quality Gates:**
 
-The system enforces Definition of Ready (DoR) and Definition of Done (DoD) criteria. See [TASK_RULES.md](TASK_RULES.md) for:
+The system enforces Definition of Ready (DoR) and Definition of Done (DoD) criteria. See [.tasks/TASK_RULES.md](.tasks/TASK_RULES.md) for:
 - Criteria for starting a task (DoR)
 - Criteria for completing a task (DoD)
 - Workflow steps and quality gates
@@ -142,14 +164,14 @@ The system enforces Definition of Ready (DoR) and Definition of Done (DoD) crite
 
 If automation is unavailable, follow the manual process:
 
-1. **Create:** Copy [TASKS/TEMPLATE.md](TASKS/TEMPLATE.md), fill fields, add to [TASKS.md](TASKS.md)
+1. **Create:** Copy [.tasks/tasks/TEMPLATE.md](.tasks/tasks/TEMPLATE.md), fill fields, add to [.tasks/TASKS.md](.tasks/TASKS.md)
 2. **Start:** Update status to "🔄 En cours", create branch `task/XXX-NNN-slug`
 3. **Work:** Reference task in commits with `Refs XXX-NNN`
-4. **Complete:** Update status to "✅ Terminé", commit with `Closes XXX-NNN`, move in [TASKS.md](TASKS.md)
+4. **Complete:** Update status to "✅ Terminé", commit with `Closes XXX-NNN`, move in [.tasks/TASKS.md](.tasks/TASKS.md)
 
 **Current tasks:**
-See [TASKS.md](TASKS.md) for the full list of active, pending, and completed tasks.
+See [.tasks/TASKS.md](.tasks/TASKS.md) for the full list of active, pending, and completed tasks.
 
 ## Git Workflow
 
-This project follows a simple Git workflow with conventional commits and emojis. See [GIT_WORKFLOW.md](GIT_WORKFLOW.md) for detailed commit conventions and guidelines, including how to reference tasks in commits.
+This project follows a simple Git workflow with conventional commits and emojis. See [docs/GIT_WORKFLOW.md](docs/GIT_WORKFLOW.md) for detailed commit conventions and guidelines, including how to reference tasks in commits.
