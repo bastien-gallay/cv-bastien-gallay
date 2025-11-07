@@ -1,9 +1,9 @@
-# Données LinkedIn Extraites
+# Audit Complet LinkedIn - Bastien Gallay
 
 **Analyse:** CNT-001
-**Date d'extraction:** 2025-10-29
+**Date d'extraction:** 2025-10-30
 **Profil LinkedIn:** <https://www.linkedin.com/in/bastiengallay/>
-**Source:** Scraping web + données fournies par l'utilisateur
+**Source:** Export complet de données LinkedIn (CSV)
 
 ---
 
@@ -13,37 +13,47 @@
 |-------|----------------|
 | **Nom** | Bastien Gallay |
 | **Localisation** | Bordeaux, Nouvelle-Aquitaine, France |
-| **Réseau** | 2,000 followers, 500+ connections |
-| **Headline** | Passionné de Startup, d'Agilité et de Software Craftsmanship |
-| **Emploi actuel** | @Home |
+| **Code postal** | 33000 |
+| **Headline** | Software Craftsman |
+| **Summary** | Passionné de Startup, d'Agilité et de Software Craftsmanship.<br><br>Spécialisations : Software Craftsmanship, Coaching d'équipe, Product Management, Scrum, Kanban, méthodes Agiles, SAFe |
+| **Industrie** | Technology, Information and Internet |
+| **Sites web** | - Blog: <http://bastien.gallay.org/><br>- Autre: <http://lemondedesparents.fr> |
+| **Twitter** | @bastien_gallay |
+| **Email** | (données dans Email Addresses.csv) |
 
-## 2. Expériences professionnelles (10 postes)
+## 2. Expériences professionnelles (13 postes)
 
-### PALO IT - CDI · 4 ans 9 mois
+### 1. @Home - Consultant et explorateur de systèmes logiciels
 
-#### Chief Technology Officer
+- **Dates:** Septembre 2025 - Présent
+- **Lieu:** Bordeaux, Nouvelle-Aquitaine, France
+- **Description:** (non fournie)
 
-- **Dates:** nov. 2024 - oct. 2025 (1 an)
-- **Lieu:** Hybride
+### 2. PALO IT - Chief Technology Officer
 
-#### Consultant
+- **Dates:** Novembre 2024 - Octobre 2025 (1 an)
+- **Lieu:** (non spécifié)
+- **Description:** (non fournie)
 
-- **Dates:** févr. 2021 - nov. 2024 (3 ans 10 mois)
+### 3. PALO IT - Consultant
+
+- **Dates:** Mars 2021 - Novembre 2024 (3 ans 9 mois)
 - **Lieu:** Bordeaux, Nouvelle-Aquitaine, France
 - **Description:**
   - Audits techniques et organisationnels
   - Accompagnement des équipes (DDD, Clean Code, DevOps et Agilité)
   - Développements logiciels (Java, Python, Typescript, React, etc...)
 
-### Upwiser - Coach Agile / Gérant
+### 4. Upwiser - Coach Agile / Gérant
 
-- **Dates:** oct. 2013 - nov. 2024 (11 ans 2 mois)
-- **Lieu:** Bordeaux Area, France
+- **Dates:** Octobre 2013 - Novembre 2024 (11 ans 2 mois)
+- **Lieu:** (non spécifié)
+- **Description:** (non fournie)
 
-### i-BP (Informatique Banque Populaire) - Coach Agile · Freelance
+### 5. i-BP - Coach Agile
 
-- **Dates:** avr. 2015 - sept. 2015 (6 mois)
-- **Lieu:** Nantes Area, France
+- **Dates:** Avril 2015 - Septembre 2015 (6 mois)
+- **Lieu:** (non spécifié)
 - **Description:**
   - Accompagnement de projets Agiles : Décisionnel, Livraison (DevOps)
   - Coaching de la communauté de pratique des équipiers Agiles
@@ -51,114 +61,220 @@
   - Mise en place de Coach Dating
   - Méthodes : Scrum, Kanban, Lean Startup
 
-### DEKRA Automotive France - Coach Agile · Freelance
+### 6. DEKRA Automotive France - Coach Agile
 
-- **Dates:** oct. 2013 - janv. 2015 (1 an 4 mois)
-- **Lieu:** Bordeaux Area, France
+- **Dates:** Octobre 2013 - Janvier 2015 (1 an 4 mois)
+- **Lieu:** (non spécifié)
 - **Description:**
   - Scrum Mastering pour le projet de refonte logiciel interne
   - Mise en place des feature teams, coordination multi-équipes, suivi d'objectifs en équipes, management visuel et suivi d'avancement
   - Coaching et formation des nouveaux Scrum Masters
   - Accompagnement à l'adoption de bonnes pratiques pour l'amélioration de la production
 
-### Cdiscount - Project manager / Scrum master
+### 7. Cdiscount - Project manager / Scrum master
 
-- **Dates:** oct. 2010 - oct. 2013 (3 ans 1 mois)
+- **Dates:** Octobre 2010 - Octobre 2013 (3 ans)
 - **Lieu:** Bordeaux
+- **Description:** (non fournie)
 
-### ITS Group - Project manager
+### 8. ITS Group - Project manager
 
-- **Dates:** oct. 2010 - juin 2011 (9 mois)
+- **Dates:** Octobre 2010 - Juin 2011 (9 mois)
 - **Lieu:** Bordeaux
 - **Description:** En mission pour CDiscount
 
-### Cast consulting - Engineer / Consultant
+### 9. Cast consulting - Engineer / Consultant
 
-- **Dates:** août 2006 - sept. 2010 (4 ans 2 mois)
+- **Dates:** Août 2006 - Septembre 2010 (4 ans 2 mois)
+- **Lieu:** (non spécifié)
 - **Description:** As a consultant, my first mission is Project Manager at Fotovista (e/merchant), for the integration of TheLink.com
 
-### Boonty - Development engineer and analyst
+### 10. Boonty - Development engineer and analyst
 
-- **Dates:** juin 2005 - juil. 2006 (1 an 2 mois)
+- **Dates:** Juin 2005 - Juillet 2006 (1 an 2 mois)
+- **Lieu:** (non spécifié)
 - **Description:**
   - I had in charge architectural work on front office, back office
   - Particularly, I integrated into DRMs server part for video games (Macrovision, Starforce and Sony/SecuROM) and developped the subscription system to video games
 
-### Qualia Services - Programming engineer
+### 11. Qualia Services - Programming engineer
 
-- **Dates:** juin 2004 - juin 2005 (1 an 1 mois)
+- **Dates:** Juin 2004 - Juin 2005 (1 an 1 mois)
+- **Lieu:** (non spécifié)
 - **Description:**
   - Development missions for Boonty
   - Internal teaching and consulting
 
-### Freelance - Web developer
+### 12. Freelance - Web developer
 
-- **Dates:** juin 2002 - juin 2004 (2 ans 1 mois)
+- **Dates:** Juin 2002 - Juin 2004 (2 ans 1 mois)
+- **Lieu:** (non spécifié)
+- **Description:** (non fournie)
+
+### 13. (Position non listée dans l'export - possiblement fusionnée ou supprimée)
 
 ## 3. Éducation (2 diplômes)
 
-1. **UVSQ Université de Versailles Saint-Quentin-en-Yvelines**
-   - Diplôme: Master, Computer Science, Virtual Reality and Artificial Intelligence
-   - Dates: 2001 - 2002
+### 1. Master (DEA)
 
-2. **Université de Picardie Jules Verne (UPJV)**
-   - Diplôme: Maîtrise, Informatique
-   - Dates: 1999 - 2001
+- **Établissement:** (Non spécifié dans l'export CSV - probablement INSTN ou UVSQ)
+- **Dates:** 2001 - 2002
+- **Diplôme:** Master
+- **Domaine:** (Computer Science, Virtual Reality and Artificial Intelligence)
+- **Notes:** (non fournies dans l'export)
+
+### 2. Université de Picardie Jules Verne (Amiens)
+
+- **Dates:** 1999 - 2001
+- **Diplôme:** Maîtrise
+- **Domaine:** Informatique
+- **Activities:** (non fournies)
+
+**Note:** L'export CSV LinkedIn ne contient pas les détails complets de l'éducation (noms d'établissements manquants, pas de mention du DUT ni du Baccalauréat).
 
 ## 4. Langues (3)
 
-| Langue | Niveau LinkedIn |
-|--------|----------------|
-| Français | (implicite - langue maternelle) |
-| English | Full professional proficiency |
-| Spanish | Elementary proficiency |
+| Langue | Niveau LinkedIn | Niveau CECRL (équivalent) |
+|--------|----------------|---------------------------|
+| **Français** | (implicite - langue maternelle) | C2 (Natif) |
+| **Anglais** | Full professional proficiency | C1 (Avancé) |
+| **Espagnol** | Elementary proficiency | A2 (Élémentaire) |
 
-## 5. Certifications (5 identifiées)
+## 5. Certifications (6 certifications)
 
-1. **Professional Scrum Developer (PSD-I)** - Scrum.org (May 2018)
-2. **Scaled Professional Scrum (SPS)** - Scrum.org (Jan 2016)
-3. **Professional Scrum Master I (PSM-I)** - Scrum.org (May 2015)
-4. **Certified Scrum Master** - Scrum Alliance (Oct 2008)
-5. **Certified SAFe 5 Program Consultant** - Scaled Agile, Inc. (Jun 2020)
+| Date | Certification | Autorité | Numéro de licence |
+|------|--------------|----------|-------------------|
+| **Mai 2018** | Professional Scrum Developer (PSD-I) | Scrum.org | (non fourni) |
+| **Janvier 2016** | Scaled Professional Scrum (SPS) | Scrum.org | (non fourni) |
+| **Mai 2015** | Professional Scrum Master I (PSM-I Scrum.org) | Scrum.org | (non fourni) |
+| **Octobre 2008** | Certified Scrum Master | Scrum Alliance | (non fourni) |
+| **Juin 2020** | Certified SAFe 5 Program Consultant | Scaled Agile, Inc. | (expire juin 2020) |
 
-## 6. Expérience bénévole (6 organisations)
+**Notes:**
 
-1. **Okiwi - Membre de l'équipe d'organisation Agile Tour**
-   - Dates: avr. 2012 - aujourd'hui (13 ans 7 mois)
-   - Domaine: Sciences et technologie
-   - Description: Recherche d'orateurs, constitution d'un programme, communication et logistique événementielle
+- La certification SAFe 5 est expirée (juin 2020)
+- Aucun numéro de licence n'est fourni dans l'export
+- **Manquantes dans l'export:** Professional Scrum with Kanban (2017) mentionnée dans le CV
 
-2. **Startup Weekend Bordeaux - Coach Agile**
-   - Dates: oct. 2012 (1 mois)
-   - Description:
-     - Coaching des équipes
-     - Présentation d'un panorama de pratiques agiles
-     - Animation de jeux agiles
+## 6. Compétences (28 skills)
 
-3. **Ruby Bordeaux - Organisateur**
-   - Dates: janv. 2011 - janv. 2013 (2 ans)
-   - Description:
-     - Co-création de l'événement
-     - Recherche de lieu d'accueil et publicité de lancement
-     - Quelques présentations
+### Compétences les plus endorsées (Top 10)
 
-4. **Agile Tour Bordeaux - Organisation (actif ou helper)**
-   - Dates: mars 2011 - aujourd'hui (14 ans 8 mois)
-   - Domaine: Sciences et technologie
+| Rang | Compétence | Nombre d'endorsements |
+|------|------------|----------------------|
+| 1 | **Scrum** | 93 |
+| 2 | **Méthodes agiles** | 44 |
+| 3 | **Agile Methodologies** | 32 |
+| 4 | **E-commerce** | 21 |
+| 5 | **Gestion de projet Agile** | 15 |
+| 6 | **Test Driven Development** | 12 |
+| 6 | **Programmation web** | 12 |
+| 6 | **Lean Startup** | 12 |
+| 6 | **Agile Project Management** | 12 |
+| 10 | **Gestion de projet** | 10 |
+| 10 | **.NET** | 10 |
 
-5. **Collectif Quinconces - Co-fondateur**
-   - Dates: avr. 2016 - juin 2018 (2 ans 3 mois)
-   - Description: "On a toujours bien assez de temps lorsqu'on l'emploie bien" - Votre temps est votre principale ressource, quinze entrepreneurs vous aident à l'employer à son plus haut potentiel
+### Liste complète des compétences (par ordre dans l'export)
 
-6. **Lean Startup Bordeaux - Founder and Leader**
-   - Dates: janv. 2012 - janv. 2018 (6 ans)
+1. Scrum (93 endorsements)
+2. Méthodes agiles (44)
+3. Lean Startup (12)
+4. Agile Methodologies (32)
+5. Product Ownership (5)
+6. Esprit Lean (5)
+7. Coaching (7)
+8. Gestion de projet Agile (15)
+9. E-commerce (21)
+10. Programmation web (12)
+11. .NET (10)
+12. Agile Project Management (12)
+13. Gestion de projet (10)
+14. Test Driven Development (12)
+15. Web Development (5)
+16. PHP (8)
+17. Management (9)
+18. Ruby on Rails
+19. Web Services
+20. JavaScript (5)
+21. Développement de logiciel (6)
+22. Software Development
+23. Services web
+24. Consulting (8)
+25. Ruby
+26. C#
+27. Entrepreneuriat
+28. UML
 
-## 7. Sites web (2)
+**Total endorsements reçus:** 400+ endorsements sur les compétences principales
 
-- <http://bastien.gallay.org/> (blog personnel)
-- <http://lemondedesparents.fr>
+**Observations:**
 
-## 8. Recommandations LinkedIn (11 recommandations)
+- Forte expertise reconnue en Scrum (93 endorsements)
+- Reconnaissance solide en méthodologies agiles (44+32)
+- Équilibre entre compétences managériales et techniques
+- Compétences techniques historiques (.NET, PHP, C#) toujours présentes mais moins endorsées
+
+## 7. Projets (1 projet listé)
+
+### Data Anonymization
+
+- **Dates:** Janvier 2012 - Juillet 2012 (7 mois)
+- **URL:** (non fournie)
+- **Description:** As requested by the majority of the governments, Datas stored in all the databases have to be secured to avoid "personally identifiable information" from being accessible on environment other than the production.
+
+**Note:** Un seul projet listé, probablement d'autres projets importants non documentés sur LinkedIn.
+
+## 8. Expérience bénévole (6 organisations)
+
+### 1. Okiwi - Membre de l'équipe d'organisation Agile Tour
+
+- **Dates:** Avril 2012 - Présent (13 ans+)
+- **Cause:** Science et technologie
+- **Description:** Recherche d'orateurs, constitution d'un programme, communication et logistique événementielle.
+
+### 2. Startup Weekend Bordeaux - Coach Agile
+
+- **Dates:** Octobre 2012 (1 mois)
+- **Cause:** (non spécifiée)
+- **Description:**
+  - Coaching des équipes
+  - Présentation d'un panorama de pratiques agiles
+  - Animation de jeux agiles
+
+### 3. Ruby Bordeaux - Organisateur
+
+- **Dates:** 2011 - 2013 (2 ans)
+- **Cause:** (non spécifiée)
+- **Description:**
+  - Co-création de l'événement
+  - Recherche de lieu d'accueil et publicité de lancement
+  - Quelques présentations
+
+### 4. Agile Tour Bordeaux - Organisation (actif ou helper)
+
+- **Dates:** Mars 2011 - Présent (14 ans+)
+- **Cause:** Science et technologie
+- **Description:** (non fournie)
+
+### 5. Collectif Quinconces - Co-fondateur
+
+- **Dates:** Avril 2016 - Juin 2018 (2 ans 3 mois)
+- **Cause:** (non spécifiée)
+- **Description:** "On a toujours bien assez de temps lorsqu'on l'emploie bien" - Wolfgang Von Goethe. Votre temps est votre principale ressource, quinze entrepreneurs vous aident à l'employer à son plus haut potentiel.
+
+### 6. Lean Startup Bordeaux - Founder and Leader
+
+- **Dates:** 2012 - 2018 (6 ans)
+- **Cause:** (non spécifiée)
+- **Description:** (non fournie)
+
+**Observations:**
+
+- Forte implication dans la communauté tech bordelaise (13+ ans)
+- Leadership dans l'organisation d'événements (Agile Tour, Lean Startup)
+- Engagement constant depuis plus de 10 ans
+
+## 9. Recommandations LinkedIn (11 recommandations)
 
 | Date | Nom | Poste/Entreprise | Relation | Points clés mentionnés |
 |------|-----|-----------------|----------|------------------------|
@@ -202,3 +318,46 @@
 - High satisfaction level (international e-commerce)
 - Avancement rapide des projets
 - Grande valeur ajoutée
+
+## 10. Statistiques et métriques
+
+### Activité professionnelle
+
+- **Années d'expérience totales:** 23 ans (2002-2025)
+- **Nombre d'employeurs:** 13
+- **Durée moyenne par poste:** 1.8 ans
+- **Poste le plus long:** Upwiser (11 ans 2 mois)
+- **Domaine principal:** Agilité, coaching, développement logiciel
+
+### Réseau et influence
+
+- **Endorsements reçus:** 400+ endorsements
+- **Recommandations:** 11 recommandations écrites
+- **Bénévolat:** 6 organisations, 10+ ans d'engagement
+- **Compétence #1:** Scrum (93 endorsements)
+
+### Formation et certifications
+
+- **Diplômes:** 2 diplômes universitaires (Maîtrise, Master/DEA)
+- **Certifications:** 6 certifications professionnelles
+- **Langues:** 3 langues (Français natif, Anglais C1, Espagnol A2)
+
+---
+
+## Notes et limitations de l'export LinkedIn
+
+L'export de données LinkedIn (format CSV) présente certaines limitations :
+
+1. **Éducation incomplète:** Noms d'établissements manquants pour le Master, pas de DUT ni de Baccalauréat
+2. **Descriptions limitées:** Nombreuses positions sans description détaillée
+3. **Lieux manquants:** Plusieurs positions n'ont pas de localisation
+4. **Certifications:** Pas de numéros de licence fournis
+5. **Projets:** Un seul projet listé (probablement incomplet)
+6. **Publications:** Non incluses dans cet export ou fichier vide
+7. **Dates de certification:** Pas de dates d'expiration claires (sauf SAFe)
+
+**Recommandation:** Pour une analyse complète, combiner cet export avec :
+
+- Une consultation directe du profil LinkedIn web
+- Les informations du CV actuel
+- Un entretien avec l'utilisateur pour compléter les données manquantes

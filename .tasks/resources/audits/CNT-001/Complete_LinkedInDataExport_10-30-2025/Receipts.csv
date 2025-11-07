@@ -1,0 +1,40 @@
+First Name,Last Name,Billing Country,Postal Code,Transaction Made At,Payment Method Type,Invoice Number,Description,Tax Amount,Sub Total,Total Amount,Currency Code
+Bastien,Gallay,fr,33000,25/1/22 11:12,CreditCard,6566389466,Premium Business Subscription renewal (Annual),0,446.18,446.18,EUR
+Bastien,Gallay,fr,33000,25/1/21 11:12,CreditCard,6267383334,Premium Business Subscription renewal (Annual),0,446.18,446.18,EUR
+Bastien,Gallay,fr,33000,29/11/20 08:42,CreditCard,6109757474,Premium Business Subscription renewal (Annual),0,0.00,0.00,EUR
+Bastien,Gallay,fr,33000,29/10/20 08:44,CreditCard,6028630064,Premium Business Subscription (Annual),0,0,0,EUR
+Bastien,Gallay,fr,33000,24/6/19 14:14,CreditCard,4715786163,Premium Career Subscription renewal (Annual),0,221.88,221.88,EUR
+Bastien,Gallay,fr,33000,24/6/18 14:14,CreditCard,3908122054,Premium Career Subscription renewal (Annual),0,221.88,221.88,EUR
+Bastien,Gallay,fr,33000,24/6/17 14:14,CreditCard,3669220333,Premium Career Subscription renewal (Annual),0,221.88,221.88,EUR
+Bastien,Gallay,fr,33000,24/5/17 14:16,CreditCard,3636838553,Premium Career Subscription (Annual),0,0,0,EUR
+UPWISER,UPWISER,fr,33000,12/3/17 14:30,CreditCard,3563913863,Business Plus Subscription renewal (Monthly),0,44.99,44.99,EUR
+UPWISER,UPWISER,fr,33000,12/2/17 14:30,CreditCard,3536359073,Business Plus Subscription renewal (Monthly),0,44.99,44.99,EUR
+UPWISER,UPWISER,fr,33000,12/1/17 14:30,CreditCard,3505115503,Business Plus Subscription renewal (Monthly),0,44.99,44.99,EUR
+UPWISER,UPWISER,fr,33000,12/12/16 14:30,CreditCard,3478319833,Business Plus Subscription renewal (Monthly),0,44.99,44.99,EUR
+UPWISER,UPWISER,fr,33000,12/11/16 14:30,CreditCard,3452357783,Business Plus Subscription renewal (Monthly),0,44.99,44.99,EUR
+UPWISER,UPWISER,fr,33000,12/10/16 14:30,CreditCard,3423475243,Business Plus Subscription renewal (Monthly),0,44.99,44.99,EUR
+UPWISER,UPWISER,fr,33000,12/9/16 14:30,CreditCard,3395900563,Business Plus Subscription renewal (Monthly),0,44.99,44.99,EUR
+UPWISER,UPWISER,fr,33000,12/8/16 14:30,CreditCard,2899165294,Business Plus Subscription renewal (Monthly),0,44.99,44.99,EUR
+UPWISER,UPWISER,fr,33000,12/7/16 14:30,CreditCard,2850788714,Business Plus Subscription renewal (Monthly),0,44.99,44.99,EUR
+UPWISER,UPWISER,fr,33000,12/6/16 14:30,CreditCard,2796835134,Business Plus Subscription renewal (Monthly),0,44.99,44.99,EUR
+UPWISER,UPWISER,fr,33000,12/5/16 14:30,CreditCard,2741088114,Business Plus Subscription renewal (Monthly),0,44.99,44.99,EUR
+UPWISER,UPWISER,fr,33000,12/4/16 14:30,CreditCard,2684223854,Business Plus Subscription renewal (Monthly),0,44.99,44.99,EUR
+UPWISER,UPWISER,fr,33000,12/3/16 14:30,CreditCard,2626507724,Business Plus Subscription renewal (Monthly),0,44.99,44.99,EUR
+UPWISER,UPWISER,fr,33000,12/2/16 14:30,CreditCard,2570618964,Business Plus Subscription renewal (Monthly),0,44.99,44.99,EUR
+UPWISER,UPWISER,fr,33000,12/1/16 14:35,CreditCard,2483790754,"Business Plus Subscription (Monthly), Credit from previous subscription purchase",0,44.99,44.99,EUR
+UPWISER,UPWISER,fr,33000,12/1/16 10:56,CreditCard,2483197794,Premium Job Seeker Subscription (Monthly),0,0.00,0.00,EUR
+Bastien,Gallay,fr,33000,9/9/15 08:05,CreditCard,3113375633,Business Subscription renewal (Monthly),4.4,21.99,26.39,EUR
+Bastien,Gallay,fr,33000,9/8/15 08:05,CreditCard,3000272903,Business Subscription renewal (Monthly),4.4,21.99,26.39,EUR
+Bastien,Gallay,fr,33000,9/7/15 08:06,CreditCard,2896988813,Business Subscription renewal (Monthly),4.4,21.99,26.39,EUR
+Bastien,Gallay,fr,33000,9/6/15 08:05,CreditCard,2795706023,Business Subscription renewal (Monthly),4.4,21.99,26.39,EUR
+Bastien,Gallay,fr,33000,9/5/15 08:05,CreditCard,2698116063,Business Subscription renewal (Monthly),4.4,21.99,26.39,EUR
+Bastien,Gallay,fr,33000,9/4/15 08:05,CreditCard,2604979373,Business Subscription renewal (Monthly),4.4,21.99,26.39,EUR
+Bastien,Gallay,fr,33000,9/3/15 08:05,CreditCard,2506385153,Business Subscription renewal (Monthly),4.4,21.99,26.39,EUR
+Bastien,Gallay,fr,33000,9/2/15 08:05,CreditCard,2419898143,Business Subscription renewal (Monthly),4.4,21.99,26.39,EUR
+Bastien,Gallay,fr,33000,9/1/15 08:05,CreditCard,1817600473,Business Subscription renewal (Monthly),4.4,21.99,26.39,EUR
+Bastien,Gallay,fr,33000,9/12/14 08:05,CreditCard,1668659493,Business Subscription renewal (Monthly),5.06,21.99,27.05,EUR
+Bastien,Gallay,fr,33000,9/11/14 08:05,CreditCard,1510705373,Business Subscription renewal (Monthly),5.06,21.99,27.05,EUR
+Bastien,Gallay,fr,33000,9/10/14 08:05,CreditCard,1389907671,Business Subscription renewal (Monthly),5.06,21.99,27.05,EUR
+Bastien,Gallay,fr,33000,9/9/14 08:05,CreditCard,1238124971,Business Subscription renewal (Monthly),5.06,21.99,27.05,EUR
+Bastien,Gallay,fr,33000,9/8/14 08:05,CreditCard,1093057611,Business Subscription renewal (Monthly),5.06,21.99,27.05,EUR
+Bastien,Gallay,fr,33000,9/7/14 08:08,CreditCard,941650351,Business Subscription (Monthly),0,0.00,0.00,EUR

@@ -2,10 +2,13 @@
 
 **Analyse:** CNT-001 - Audit LinkedIn
 **Date création:** 2025-10-29
+**Date clarifications:** 2025-11-05
 **Total recommandations:** 19
-**Statut:** ⏳ En attente de traitement
+**Statut:** 🔄 En cours de traitement
 
 Ce fichier permet de suivre l'évolution de chaque recommandation issue de l'audit. Lorsqu'une recommandation est transformée en tâche via `/task-from-analysis`, elle est marquée comme "task created" avec l'ID de la tâche créée.
+
+**Mise à jour 2025-11-05:** 3 recommandations rejetées suite aux clarifications utilisateur.
 
 ---
 
@@ -14,38 +17,51 @@ Ce fichier permet de suivre l'évolution de chaque recommandation issue de l'aud
 | Statut | Nombre | Pourcentage |
 |--------|--------|-------------|
 | ⏳ Pending | 8 | 42% |
-| 🔄 Task created | 11 | 58% |
+| 🔄 Task created | 8 | 42% |
+| ❌ Rejetée | 3 | 16% |
 | ✅ Completed | 0 | 0% |
+| **TOTAL** | **19** | **100%** |
 
 ---
 
-## 🔴🔴 Priorité TRÈS HAUTE (0/1 items pending)
+## 🔴🔴 Priorité TRÈS HAUTE (0/0 items - Toutes clarifiées)
 
-- [x] **R01 - Corriger l'écart critique sur Upwiser**
-  - Catégorie: Date incohérence
+**Note:** Les 3 "incohérences critiques" ont été clarifiées avec l'utilisateur le 2025-11-05. Voir section "Clarifications utilisateur" dans audit-report.md.
+
+- [x] **~~R01 - Ajouter position @Home~~** → **REJETÉE (2025-11-05)**
+  - Catégorie: Position manquante
   - Source: [recommendations.md](./recommendations.md#r01---corriger-lécart-critique-sur-upwiser)
+  - Référence CV: N/A
+  - **Raison rejet:** @Home = période de chômage actuelle. Il est normal et approprié de ne pas inclure une période de chômage dans le CV.
+  - Date ajout: 2025-11-05
+  - Date rejet: 2025-11-05
+  - Statut: ❌ Rejetée
+
+- [x] **~~R02 - Corriger dates Upwiser~~** → **REJETÉE (2025-11-05)**
+  - Catégorie: Date incohérence
+  - Source: Audit comparatif
   - Référence CV: [src/cv.typ:122](../../../src/cv.typ#L122)
-  - Trigramme suggéré: CNT
-  - Date ajout: 2025-10-29
-  - Tâche créée: [CNT-002](../../tasks/CNT-002-corriger-ecart-critique-upwiser.md)
-  - Date création tâche: 2025-10-29
-  - Statut: 🔄 Task created
+  - **Raison rejet:** Pas d'incohérence. CV affiche fin activité plein temps (01/2021), LinkedIn affiche fermeture administrative (11/2024). Les deux sont corrects selon le contexte.
+  - Date ajout: 2025-11-05
+  - Date rejet: 2025-11-05
+  - Statut: ❌ Rejetée
+
+- [x] **~~R03 - Harmoniser dates PALO IT CTO~~** → **REJETÉE (2025-11-05)**
+  - Catégorie: Date incohérence
+  - Source: Audit comparatif
+  - Référence CV: [src/cv.typ:107](../../../src/cv.typ#L107)
+  - **Raison rejet:** CV a la bonne date (08/2025), LinkedIn est erroné (10/2025). Pas de correction nécessaire.
+  - Date ajout: 2025-11-05
+  - Date rejet: 2025-11-05
+  - Statut: ❌ Rejetée
 
 ---
 
-## 🔴 Priorité HAUTE (0/10 items pending)
+## 🔴 Priorité HAUTE (0/8 items pending - 2 rejetées)
 
-- [x] **R02 - Corriger la date de fin CTO chez PALO IT**
-  - Catégorie: Date incohérence
-  - Source: [recommendations.md](./recommendations.md#r02---corriger-la-date-de-fin-cto-chez-palo-it)
-  - Référence CV: [src/cv.typ:107](../../../src/cv.typ#L107)
-  - Trigramme suggéré: CNT
-  - Date ajout: 2025-10-29
-  - Tâche créée: [CNT-003](../../tasks/CNT-003-corriger-date-fin-cto-palo-it.md)
-  - Date création tâche: 2025-10-29
-  - Statut: 🔄 Task created
+**Note:** Les anciennes tâches CNT-002 (Upwiser) et CNT-003 (PALO IT CTO) créées avant les clarifications peuvent être fermées/rejetées.
 
-- [x] **R03 - Corriger les dates de Boonty**
+- [x] **R04 - Corriger les dates de Boonty**
   - Catégorie: Date incohérence
   - Source: [recommendations.md](./recommendations.md#r03---corriger-les-dates-de-boonty)
   - Référence CV: [src/cv.typ:162](../../../src/cv.typ#L162)
