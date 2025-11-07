@@ -331,3 +331,4 @@ Priority mapping for task creation:
 ## Git Workflow
 
 This project follows a simple Git workflow with conventional commits and emojis. See [docs/GIT_WORKFLOW.md](docs/GIT_WORKFLOW.md) for detailed commit conventions and guidelines, including how to reference tasks in commits.
+- **IMPORTANT** Ne met pas de signature claude dans les commits
