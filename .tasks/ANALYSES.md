@@ -28,6 +28,7 @@ Chaque analyse peut générer plusieurs **recommandations** qui sont suivies ind
 | ID | Type | Source | Statut | Créé le | Recommandations | Tâches créées |
 |----|------|--------|--------|---------|----------------|--------------|
 | [CNT-001](resources/analyses/CNT-001/) | LinkedIn Audit | [linkedin.com/in/bastiengallay](https://linkedin.com/in/bastiengallay/) | ✅ Terminé | 2025-10-29 | 19 total (1 très haute, 10 hautes, 5 moyennes, 3 basses) | 11/19 (58%) |
+| [CNT-013](resources/analyses/CNT-013/) | CV Comparatif | CV 2019 (Mars 2019) | ✅ Terminé | 2025-11-14 | 14 total (2 très hautes, 4 hautes, 6 moyennes, 2 basses) | 0/14 (0%) |
 
 ---
 
@@ -41,23 +42,21 @@ Les analyses sont archivées lorsque toutes leurs recommandations ont été trai
 
 ## Statistiques Globales
 
-- **Total analyses**: 1
+- **Total analyses**: 2
 - **En cours**: 0
-- **Terminées**: 1
-- **Recommandations totales**: 19
-- **Recommandations pendantes**: 8 (42%)
+- **Terminées**: 2
+- **Recommandations totales**: 33
+- **Recommandations pendantes**: 22 (67%)
 - **Tâches créées depuis analyses**: 11
 
 ### Répartition par priorité
 
 | Priorité | Nombre | Pourcentage |
 |----------|--------|-------------|
-| 🔴🔴 Très Haute | 1 | 5% |
-| 🔴 Haute | 10 | 53% |
-| 🟡 Moyenne | 8 | 42% |
-| 🟢 Basse | 8 | 42% |
-
-_Note: Le total dépasse 100% car certaines recommandations ont des sous-catégories._
+| 🔴🔴 Très Haute | 3 | 9% |
+| 🔴 Haute | 14 | 42% |
+| 🟡 Moyenne | 11 | 33% |
+| 🟢 Basse | 5 | 15% |
 
 ---
 
@@ -123,6 +122,65 @@ La commande mettra automatiquement à jour:
 1. Clarifier les 4 écarts critiques de dates avec l'utilisateur
 2. Créer les tâches de correction via `/task-from-analysis`
 3. Exécuter les corrections par ordre de priorité
+
+---
+
+### CNT-013: Analyse Ancien CV > 5 ans (2019)
+
+**Objectif**: Identifier les écarts entre le CV actuel (2025) et l'ancien CV (Mars 2019) pour récupérer informations perdues et corriger incohérences
+
+**Sources analysées**:
+
+- CV 2019: `.tasks/resources/sources-analyses/CV-2019/CV_Bastien_GALLAY_Coach_Agile-201903.docx(1).md`
+- CV actuel: `src/cv.typ`
+
+**Fichiers de ressources**:
+
+- Audits: [resources/audits/CNT-013/](resources/audits/CNT-013/)
+  - `cv-2019.md` - Extraction structurée du CV 2019
+  - `cv-snapshot.md` - Snapshot du CV actuel au moment de l'analyse
+- Analyses: [resources/analyses/CNT-013/](resources/analyses/CNT-013/)
+  - `audit-report.md` - Rapport d'analyse comparative (1245 lignes)
+  - `recommendations-status.md` - Suivi des recommandations
+  - `metrics.md` - Métriques et statistiques détaillées
+
+**Résultats clés**:
+
+- **Score global**: 7.5/10 (excellent positionnement, manque de contenu)
+- **2 erreurs critiques de dates**:
+  - Indépendant: 06/1999-06/2004 → devrait être 09/2002-06/2004 (impossible avant fin études)
+  - Boonty: dates à vérifier (clarification utilisateur: Qualia Service 06/2004-07/2005, Boonty direct 07/2005-07/2006)
+- **Perte de contenu massive**:
+  - 12 missions détaillées Upwiser (2013-2021) absentes
+  - Boonty et Indépendant sans description
+  - 4 certifications manquantes (PSD, Facilitation Graphique, User Stories, Gestion de projet)
+  - Engagement communautaire perdu (Lean Startup leader, Agile Tour organisateur, Ruby Bordeaux co-fondateur)
+- **Évolutions positives**:
+  - Titre modernisé: "Coach Agile" → "Crafting Technology Officer"
+  - Expérience PALO IT ajoutée (2021-2025) avec rôle CTO valorisé
+  - Technologies actualisées (TypeScript, Rust, Python, IA)
+
+**Recommandations**: 14 total
+
+- 🔴🔴 Très Haute: 2 (dates critiques: Indépendant, Boonty)
+- 🔴 Haute: 4 (missions Upwiser majeures: Dekra, iBP, Robin Finance, autres)
+- 🟡 Moyenne: 6 (CDiscount, Cast, certifications, engagement communautaire)
+- 🟢 Basse: 2 (espagnol commenté, formation Amélioration User Stories)
+
+**Impact potentiel**:
+
+- Score avant corrections: 7.5/10, ATS 65/100, taux conversion 15-20%
+- Score après corrections: 9.5/10, ATS 85-90/100, taux conversion 35-45%
+- Effort estimé total: 4-6 heures
+- Quick wins (très haute priorité): 56 minutes pour impact critique
+
+**Prochaines actions**:
+
+1. Vérifier dates officielles Boonty/Qualia avec documents (contrats de travail, bulletins de salaire)
+2. Corriger immédiatement date Indépendant (1999 → 2002)
+3. Créer tâches de correction via `/task-from-analysis --analysis-id=CNT-013 --filter=high`
+4. Enrichir missions Upwiser prioritaires (Dekra, iBP, Robin Finance)
+5. Compléter descriptions manquantes (Boonty, Indépendant, CDiscount, Cast)
 
 ---
 
