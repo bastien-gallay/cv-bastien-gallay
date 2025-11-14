@@ -37,6 +37,7 @@ Cette analyse s'inscrit dans le processus complet: Source → Extraction → Ana
 Extraire les données de l'ancien CV (PDF et MD), effectuer une analyse comparative avec le CV actuel, et produire des recommandations pour enrichir les expériences antérieures à 2013.
 
 **Résultat attendu:**
+
 - Fichier d'audit structuré dans `audits/CNT-013/`
 - Analyse comparative dans `analyses/CNT-013/`
 - Recommandations priorisées dans `analyses/CNT-013/recommendations.md`
@@ -46,15 +47,15 @@ Extraire les données de l'ancien CV (PDF et MD), effectuer une analyse comparat
 
 ## Sous-tâches
 
-- [ ] Extraire les données de `.tasks/resources/sources-analyses/CV-2019/*.pdf`
-- [ ] Extraire les données de `.tasks/resources/sources-analyses/CV-2019/*.md`
-- [ ] Créer le fichier d'audit `audits/CNT-013/cv-2019.md`
-- [ ] Comparer avec le CV actuel (expériences 2004-2013)
-- [ ] Identifier les écarts et manques (dates, entreprises, missions)
-- [ ] Créer l'analyse comparative `analyses/CNT-013/audit-report.md`
-- [ ] Générer les recommandations avec priorités `analyses/CNT-013/recommendations.md`
-- [ ] Créer le fichier de tracking `analyses/CNT-013/recommendations-status.md`
-- [ ] Mettre à jour `.tasks/ANALYSES.md`
+- [x] Extraire les données de `.tasks/resources/sources-analyses/CV-2019/*.pdf`
+- [x] Extraire les données de `.tasks/resources/sources-analyses/CV-2019/*.md`
+- [x] Créer le fichier d'audit `audits/CNT-013/cv-2019.md`
+- [x] Comparer avec le CV actuel (expériences 2004-2013)
+- [x] Identifier les écarts et manques (dates, entreprises, missions)
+- [x] Créer l'analyse comparative `analyses/CNT-013/audit-report.md`
+- [x] Générer les recommandations avec priorités `analyses/CNT-013/recommendations.md`
+- [x] Créer le fichier de tracking `analyses/CNT-013/recommendations-status.md`
+- [x] Mettre à jour `.tasks/ANALYSES.md`
 
 ---
 
@@ -133,6 +134,13 @@ Extraire les données de l'ancien CV (PDF et MD), effectuer une analyse comparat
 - Filtrer par priorité: `--filter=high` pour les corrections critiques
 - Les tâches créées viendront enrichir ou remplacer CNT-004, CNT-008, CNT-009
 
+**Clarification utilisateur (dates Boonty/Qualia):**
+
+- 06/2004 - 07/2005: Salarié Qualia Service (prestation chez Boonty)
+- 07/2005 - 07/2006: Salarié direct Boonty
+- Total affiché: Boonty 06/2004 - 07/2006 (choix éditorial: ne pas valoriser Qualia séparément)
+- Mois exacts à vérifier avec documents officiels (contrats de travail, bulletins de salaire)
+
 ---
 
 ## Références externes
@@ -196,14 +204,14 @@ Closes CNT-013"
 
 ## Tests / Vérifications
 
-- [ ] Fichier `audits/CNT-013/cv-2019.md` créé et structuré
-- [ ] Fichier `analyses/CNT-013/audit-report.md` complet
-- [ ] Fichier `analyses/CNT-013/recommendations.md` avec priorités
-- [ ] Fichier `analyses/CNT-013/recommendations-status.md` au bon format
-- [ ] Dashboard `.tasks/ANALYSES.md` mis à jour
-- [ ] Toutes les expériences antérieures à 2013 comparées
-- [ ] Les IDs de recommandations suivent le format `CNT-013-RXX`
-- [ ] Les commits suivent la convention
+- [x] Fichier `audits/CNT-013/cv-2019.md` créé et structuré
+- [x] Fichier `analyses/CNT-013/audit-report.md` complet
+- [x] Fichier `analyses/CNT-013/recommendations.md` avec priorités (intégrées dans audit-report.md)
+- [x] Fichier `analyses/CNT-013/recommendations-status.md` au bon format
+- [x] Dashboard `.tasks/ANALYSES.md` mis à jour
+- [x] Toutes les expériences antérieures à 2013 comparées
+- [x] Les IDs de recommandations suivent le format `CNT-013-RXX`
+- [x] Les commits suivent la convention
 
 ---
 
@@ -212,22 +220,50 @@ Closes CNT-013"
 | Date | Action | Détails |
 |------|--------|---------|
 | 2025-11-14 | Création | Tâche créée pour analyse CV 2019 |
-| 2025-11-14 | En cours | Début du travail |
+| 2025-11-14 | En cours | Début du travail, extraction et analyse |
+| 2025-11-14 | Terminé | Analyse complète: 14 recommandations, score 7.5/10 |
 
 ---
 
 ## Résultat final
 
-[À remplir une fois la tâche terminée]
+Analyse complète du CV 2019 terminée avec succès. Score global: **7.5/10** (excellent positionnement, manque de contenu détaillé).
 
 **Ce qui a été fait:**
 
-- [Liste des réalisations]
+- Extraction complète des données du CV-2019 (mars 2019) vers `audits/CNT-013/cv-2019.md`
+- Création du snapshot du CV actuel (2025) vers `audits/CNT-013/cv-snapshot.md`
+- Analyse comparative détaillée (1245 lignes) dans `analyses/CNT-013/audit-report.md`
+- Génération de 14 recommandations priorisées (2 très hautes, 4 hautes, 6 moyennes, 2 basses)
+- Création du fichier de tracking `recommendations-status.md` pour `/task-from-analysis`
+- Création du fichier de métriques `metrics.md` avec impact et effort estimés
+- Mise à jour du dashboard `ANALYSES.md` avec statistiques globales
+
+**Principaux écarts identifiés:**
+
+- **2 erreurs critiques de dates**: Indépendant (1999→2002) et Boonty (à vérifier avec docs officiels)
+- **12 missions Upwiser détaillées perdues** (2013-2021): Dekra, iBP, Robin Finance, etc.
+- **Descriptions manquantes**: Boonty (400k€/mois, framework, équipes internationales), Indépendant (sites PME/associations)
+- **4 certifications manquantes**: PSD, Facilitation Graphique, User Stories, Gestion de projet
+- **Engagement communautaire perdu**: Lean Startup leader, Agile Tour organisateur, Ruby Bordeaux co-fondateur
+
+**Impact potentiel des corrections:**
+
+- Score: 7.5/10 → 9.5/10
+- ATS: 65/100 → 85-90/100
+- Taux conversion: 15-20% → 35-45%
+- Effort estimé: 4-6 heures total
+- Quick wins: 56 minutes pour impact critique (très haute priorité)
 
 **Difficultés rencontrées:**
 
-- [Problèmes et solutions]
+- Incohérence interne dans le CV-2019 concernant les dates de Boonty (tableau vs détail)
+- Clarification nécessaire de l'utilisateur pour Qualia Service (06/2004-07/2005) vs Boonty direct (07/2005-07/2006)
+- Choix éditorial documenté: ne pas valoriser Qualia Service séparément, afficher "Boonty 06/2004-07/2006"
 
 **Améliorations futures:**
 
-- [Idées pour aller plus loin]
+- Vérifier dates exactes avec documents officiels (contrats de travail, bulletins de salaire)
+- Enrichir expérience PALO IT avec CNT-014 (activités CTO depuis journal)
+- Analyser cohérence avec CV Flash (CNT-015)
+- Créer tâches de correction via `/task-from-analysis --analysis-id=CNT-013 --filter=high`
