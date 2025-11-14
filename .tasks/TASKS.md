@@ -52,7 +52,6 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | [CNT-010](tasks/CNT-010-ajouter-section-benevolat.md) | Ajouter section Bénévolat | ⏳ À faire | 🔴 Haute | 2025-10-29 |
 | [CNT-011](tasks/CNT-011-corriger-ecarts-mineurs-cdiscount.md) | Corriger écarts mineurs de dates (Cdiscount) | ⏳ À faire | 🔴 Haute | 2025-10-29 |
 | [CNT-012](tasks/CNT-012-corriger-ecarts-mineurs-cast.md) | Corriger écarts mineurs de dates (Cast) | ⏳ À faire | 🔴 Haute | 2025-10-29 |
-| [CNT-013](tasks/CNT-013-analyse-ancien-cv-2019.md) | Analyse ancien CV > 5 ans (2019) | 🔄 En cours | 🔴 Haute | 2025-11-14 |
 | [CNT-014](tasks/CNT-014-analyse-experience-palo-it.md) | Analyse expérience PALO IT (journal/tâches CTO) | ⏳ À faire | 🔴 Haute | 2025-11-14 |
 | [CNT-015](tasks/CNT-015-analyse-cv-flash.md) | Analyse CV Flash (slide unique) | ⏳ À faire | 🔴 Haute | 2025-11-14 |
 | [TPL-001](tasks/TPL-001-cv-versions.md) | Versions courte et longue du CV | ⏳ À faire | 🟡 Moyenne | 2025-10-28 |
@@ -67,6 +66,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
+| [CNT-013](tasks/CNT-013-analyse-ancien-cv-2019.md) | Analyse ancien CV > 5 ans (2019) | ✅ Terminé | 🔴 Haute | 2025-11-14 |
 | [CNT-001](tasks/CNT-001-linkedin-audit.md) | Audit LinkedIn | ✅ Terminé | 🔴 Haute | 2025-11-05 |
 | [INF-002](tasks/INF-002-restructurer-sources-pdf-documentation.md) | Restructurer les sources, PDF et documentation | ✅ Terminé | 🔴 Haute | 2025-10-29 |
 | [DOC-001](tasks/DOC-001-task-management-automation.md) | Système d'automatisation de gestion des tâches | ✅ Terminé | 🔴 Haute | 2025-10-28 |
@@ -137,9 +137,9 @@ Closes TPL-001"
 ## Statistiques
 
 - **Total**: 22 tâches
-- **À faire**: 18
-- **En cours**: 1
-- **Terminées**: 3
+- **À faire**: 17
+- **En cours**: 0
+- **Terminées**: 4
 - **Bloquées**: 0
 
 **Prochains IDs disponibles par trigramme**:
