@@ -70,18 +70,31 @@ Vérifier que la tâche respecte la Definition of Ready (voir [TASK_RULES.md](..
    - Décrémenter "À faire" ou "Bloquées"
    - Incrémenter "En cours"
 
-### Étape 4: Création de la Branche Git
+### Étape 4: Décision et Création Conditionnelle de Branche Git
 
-1. **Générer le nom de la branche**
-   - Format: `task/{ID}-{slug}`
-   - Slug extrait du nom de fichier (ex: `CNT-003-update-experience` → `update-experience`)
-   - Ou généré depuis le titre en lowercase avec tirets
+1. **Lire le champ "Branche nécessaire" des métadonnées**
+   - Valeurs possibles: `Auto`, `Oui`, `Non`
 
-2. **Vérifier si la branche existe déjà**
-   - Si elle existe: proposer de la réutiliser ou d'en créer une nouvelle variante
+2. **Déterminer si une branche est nécessaire**
+   - Si paramètre `--branch` fourni → **OUI, créer branche**
+   - Si métadonnées = "Oui" → **OUI, créer branche**
+   - Si métadonnées = "Non" → **NON, pas de branche**
+   - Si métadonnées = "Auto" → analyser critères:
+     * Temps estimé > 2 heures?
+     * Trigramme = TPL ou INF?
+     * Description contient "expérimentation" ou "experimental"?
+     * Si OUI à l'un des critères → **OUI, créer branche**
+     * Sinon → **NON, pas de branche**
 
-3. **Créer et basculer sur la branche**
-   - `git checkout -b task/{ID}-{slug}`
+3. **Si branche nécessaire:**
+   - Générer le nom: `task/{ID}-{slug}`
+   - Slug extrait du nom de fichier ou généré depuis le titre
+   - Créer et basculer: `git checkout -b task/{ID}-{slug}`
+   - Afficher: `✓ Branche créée: task/{ID}-{slug}`
+
+4. **Si pas de branche:**
+   - Rester sur la branche courante (normalement `main`)
+   - Afficher: `ℹ️  Pas de branche Git (commits directs sur main)`
 
 ### Étape 5: Commit Initial
 
@@ -120,8 +133,8 @@ Afficher un résumé pour charger le contexte de travail:
 {Notes pour Claude si présentes}
 
 📊 Status:
-  - Branche: task/{ID}-{slug}
-  - Fichier: TASKS/{ID}-{slug}.md
+  - Branche: task/{ID}-{slug} (si branche créée) OU "main (pas de branche)" (si pas de branche)
+  - Fichier: .tasks/tasks/{ID}-{slug}.md
   - Dashboard: mis à jour
 
 Prêt à travailler! N'oubliez pas de:
@@ -165,7 +178,6 @@ Votre choix: _
 ⚠️  Warning: La tâche {ID} est déjà en cours
 
 Statut actuel: 🔄 En cours
-Branche associée: task/{ID}-{slug} (si elle existe)
 
 Options:
 1. Continuer sur cette tâche (afficher le contexte)
@@ -206,20 +218,6 @@ Options:
 1. Continuer quand même (démarrer {ID})
 2. Retourner sur {autre_ID}
 3. Terminer {autre_ID} d'abord
-4. Annuler
-
-Votre choix: _
-```
-
-**Branche Git existe déjà:**
-
-```text
-⚠️  Warning: La branche task/{ID}-{slug} existe déjà
-
-Options:
-1. Réutiliser la branche existante
-2. Créer une nouvelle variante (task/{ID}-{slug}-2)
-3. Supprimer et recréer (⚠️  perte de travail non mergé)
 4. Annuler
 
 Votre choix: _
@@ -270,15 +268,6 @@ Voulez-vous débloquer et démarrer cette tâche? (o/N): _
 
 Si oui, procéder normalement en mettant le statut à "🔄 En cours".
 
-### Reprise après Interruption
-
-Si une branche `task/{ID}-*` existe déjà:
-
-- Détecter automatiquement
-- Proposer de réutiliser la branche
-- Synchroniser les fichiers si nécessaire
-- Afficher le contexte avec progression des sous-tâches
-
 ## Exemple d'Utilisation
 
 ```text
@@ -294,7 +283,8 @@ Mise à jour des fichiers...
 ✓ TASKS.md - Dashboard synchronisé
 ✓ Statistiques actualisées
 
-Création de la branche Git...
+Analyse de la nécessité d'une branche...
+✓ Branche nécessaire (critère: temps estimé > 2h)
 ✓ Branche créée: task/CNT-001-linkedin-audit
 ✓ Commit initial créé
 

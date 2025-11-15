@@ -107,7 +107,15 @@ Dans ces cas, documenter l'exception dans "Résultat final".
 1. Validation de la DoR
 2. Mise à jour du statut vers "🔄 En cours" dans le fichier de tâche
 3. Mise à jour synchronisée de [TASKS.md](TASKS.md)
-4. Création de la branche Git: `task/XXX-NNN-slug`
+4. **Décision et création conditionnelle de branche Git:**
+   - Si `--branch` fourni → branche créée
+   - Si métadonnées "Branche nécessaire" = "Oui" → branche créée
+   - Si métadonnées = "Auto" → analyse critères:
+     * Temps estimé > 2h?
+     * Trigramme TPL ou INF?
+     * Description contient "expérimentation"?
+     * Si OUI → branche créée `task/XXX-NNN-slug`
+   - Sinon → pas de branche (commits directs sur main)
 5. Commit initial: `chore(tasks): 🔧 start XXX-NNN`
 6. Ajout d'une entrée dans "Historique des modifications"
 7. Affichage du contexte (description, sous-tâches, notes pour Claude)
@@ -118,7 +126,7 @@ Dans ces cas, documenter l'exception dans "Résultat final".
 
 **Résultat attendu:**
 
-- Branche Git créée et active
+- Branche Git créée (si nécessaire selon critères) OU commits directs sur main
 - Fichiers mis à jour avec le bon statut
 - Contexte chargé pour commencer le travail
 
@@ -162,20 +170,22 @@ Refs XXX-NNN"
 6. Génération et création du commit final avec `Closes XXX-NNN`
 7. Déplacement de l'entrée de "Actives" vers "Terminées" dans [TASKS.md](TASKS.md)
 8. Mise à jour des statistiques
-9. Proposition de merge de la branche
+9. **Gestion conditionnelle de la branche:**
+   - Si sur branche `task/*` → proposition de merge
+   - Si sur `main` → aucune action Git nécessaire
 
 **Actions manuelles requises:**
 
 - Renseigner le résultat final (prompt interactif)
 - Confirmer ou éditer le message de commit généré
-- Décider de merger la branche ou non
+- Décider de merger la branche (uniquement si branche créée)
 
 **Résultat attendu:**
 
 - Tâche marquée comme terminée
 - Dashboard mis à jour
 - Commit final créé avec référence
-- Branche prête à être mergée ou déjà mergée
+- Branche mergée dans main (si branche utilisée) OU commits déjà sur main
 
 ### Phase 4: Archivage (Optionnel)
 

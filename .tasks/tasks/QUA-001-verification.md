@@ -17,6 +17,7 @@
 | **Terminé le** | |
 | **Temps estimé** | 3-4 heures |
 | **Temps réel** | |
+| **Branche nécessaire** | Auto |
 
 ---
 

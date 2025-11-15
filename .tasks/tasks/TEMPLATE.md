@@ -26,6 +26,12 @@
 | **Terminé le** | (à remplir lors de la complétion) |
 | **Temps estimé** | X heures |
 | **Temps réel** | (à remplir après) |
+| **Branche nécessaire** | Auto |
+
+> **Note sur "Branche nécessaire":**
+> - `Auto` (défaut) - Décision automatique selon critères (temps > 2h, TPL/INF, expérimentation)
+> - `Oui` - Force la création d'une branche Git pour cette tâche
+> - `Non` - Jamais de branche, commits directs sur main
 
 ---
 

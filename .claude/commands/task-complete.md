@@ -172,30 +172,40 @@ Mode interactif pour compléter les informations finales:
    - `git commit` avec le message
    - Afficher le hash et le message du commit créé
 
-### Étape 6: Gestion de la Branche
-
-Si `--no-merge` n'est pas spécifié:
+### Étape 6: Gestion de la Branche (Conditionnelle)
 
 1. **Détecter la branche courante**
-   - Vérifier qu'on est sur `task/{ID}-*`
+   - Exécuter `git branch --show-current`
+   - Analyser le nom de la branche
 
-2. **Proposer le merge**
+2. **Cas 1: Sur une branche task/{ID}-***
 
-   ```markdown
-   La tâche est terminée et committée.
+   Si sur branche de tâche ET `--no-merge` non spécifié:
 
-   Voulez-vous merger la branche dans main? (o/N): _
-   ```
+   a. **Proposer le merge**
+      ```markdown
+      La tâche est terminée et committée sur la branche task/{ID}-{slug}.
 
-3. **Si oui, merger**
-   - `git checkout main`
-   - `git merge --no-ff task/{ID}-{slug}`
-   - Gérer les conflits si nécessaire
-   - `git branch -d task/{ID}-{slug}` (proposer de supprimer la branche)
+      Voulez-vous merger la branche dans main? (o/N): _
+      ```
 
-4. **Si non**
-   - Laisser sur la branche de tâche
-   - Informer l'utilisateur comment merger plus tard
+   b. **Si oui, merger**
+      - `git checkout main`
+      - `git merge --no-ff task/{ID}-{slug}`
+      - Gérer les conflits si nécessaire
+      - `git branch -d task/{ID}-{slug}` (proposer de supprimer la branche)
+
+   c. **Si non**
+      - Laisser sur la branche de tâche
+      - Informer comment merger plus tard
+
+3. **Cas 2: Sur main (ou autre branche)**
+
+   Si déjà sur `main` ou branche non-task:
+
+   - Aucune action Git nécessaire
+   - Le commit final est déjà sur la bonne branche
+   - Afficher: `ℹ️  Pas de branche à merger (commits déjà sur main)`
 
 ### Étape 7: Confirmation Finale
 
@@ -216,7 +226,7 @@ Afficher un résumé complet:
   ✓ Dashboard synchronisé
   ✓ Statistiques actualisées
   ✓ Commit final créé ({hash})
-  ✓ Branche mergée dans main
+  ✓ Branche mergée dans main (si branche créée) OU "Commits sur main" (si pas de branche)
 
 La tâche est maintenant archivée dans "Tâches terminées".
 Utilisez `/task-archive {ID}` si vous voulez l'archiver définitivement.
@@ -306,7 +316,7 @@ Options:
 Votre choix: _
 ```
 
-**Conflits Git lors du merge:**
+**Conflits Git lors du merge (uniquement si branche utilisée):**
 
 ```markdown
 ❌ Erreur: Conflit lors du merge
