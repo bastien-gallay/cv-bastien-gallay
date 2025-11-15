@@ -8,15 +8,15 @@
 |-------|--------|
 | **ID** | CNT-013 |
 | **Titre** | Analyse ancien CV > 5 ans (2019) |
-| **Statut** | 🔄 En cours |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | CNT |
 | **Section CV** | Experience |
 | **Créé le** | 2025-11-14 |
 | **Cible** | 2025-11-20 |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-14 |
 | **Temps estimé** | 2-3 heures |
-| **Temps réel** | - |
+| **Temps réel** | 3 heures |
 
 ---
 

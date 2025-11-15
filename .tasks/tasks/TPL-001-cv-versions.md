@@ -9,7 +9,7 @@
 | **ID** | TPL-001 |
 | **Titre** | Créer versions courte (1 page) et longue (2+ pages) du CV |
 | **Statut** | ⏳ À faire |
-| **Priorité** | 🔴 Haute |
+| **Priorité** | 🟡 Moyenne |
 | **Trigramme** | TPL (Template) |
 | **Section CV** | General |
 | **Créé le** | 2025-10-28 |

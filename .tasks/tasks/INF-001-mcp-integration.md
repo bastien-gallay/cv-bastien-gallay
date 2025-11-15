@@ -9,7 +9,7 @@
 | **ID** | INF-001 |
 | **Titre** | Ajouter MCP pour vérification Claude |
 | **Statut** | ⏳ À faire |
-| **Priorité** | 🟢 Basse |
+| **Priorité** | 🟡 Moyenne |
 | **Trigramme** | INF (Infrastructure) |
 | **Section CV** | N/A |
 | **Créé le** | 2025-10-28 |
