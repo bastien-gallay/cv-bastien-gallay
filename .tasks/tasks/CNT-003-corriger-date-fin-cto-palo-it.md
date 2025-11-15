@@ -8,15 +8,15 @@
 |-------|--------|
 | **ID** | CNT-003 |
 | **Titre** | Corriger la date de fin CTO chez PALO IT |
-| **Statut** | 🔄 En cours |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | CNT |
 | **Section CV** | Experience |
 | **Créé le** | 2025-10-29 |
 | **Cible** | - |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-15 |
 | **Temps estimé** | 0.25 heures |
-| **Temps réel** | - |
+| **Temps réel** | 0.2 heures |
 
 ---
 
@@ -34,18 +34,23 @@ L'audit LinkedIn (CNT-001) a identifié un écart de -2 mois sur la date de fin:
 
 **Origine:** Recommandation [CNT-001-R02](../resources/analyses/CNT-001/recommendations-status.md#r02---corriger-la-date-de-fin-cto-chez-palo-it) depuis l'analyse [CNT-001](../resources/analyses/CNT-001/)
 
-### Objectif
+### Objectif (Initial)
 
 Mettre à jour le CV avec la date exacte de fin (octobre 2025) pour assurer la cohérence avec LinkedIn.
+
+### Résolution
+
+**Clarification utilisateur:** La date réelle de fin est **août 2025 (08/2025)**, pas octobre. Le CV est donc **correct** et c'est LinkedIn qui doit être mis à jour (action hors scope de ce projet).
 
 ---
 
 ## Sous-tâches
 
-- [ ] Modifier la date de fin de 08/2025 à 10/2025 dans [src/cv.typ:107](../../src/cv.typ#L107)
-- [ ] Compiler le CV avec `just build`
-- [ ] Vérifier le rendu dans le PDF généré
-- [ ] Valider la cohérence des dates
+- [x] Vérifier la date de fin dans [src/cv.typ:107](../../src/cv.typ#L107)
+- [x] Compiler le CV avec `just build`
+- [x] Vérifier le rendu dans le PDF généré
+- [x] Clarifier avec l'utilisateur la date réelle
+- [x] Documenter la clarification
 
 ---
 
@@ -127,9 +132,27 @@ Closes CNT-003"
 | Date | Action | Détails |
 |------|--------|---------|
 | 2025-10-29 | Création | Tâche créée depuis recommandation CNT-001-R02 |
+| 2025-11-15 | Démarré | Début de l'investigation |
+| 2025-11-15 | Clarification | Utilisateur confirme que 08/2025 est correct, LinkedIn est erroné |
+| 2025-11-15 | Terminé | Tâche fermée - Aucune modification nécessaire au CV |
 
 ---
 
 ## Résultat final
 
-[À remplir une fois la tâche terminée]
+**Vérification effectuée - Aucune correction nécessaire:**
+
+**Clarification utilisateur (2025-11-15):**
+- La date de fin réelle du poste CTO est **août 2025 (08/2025)**
+- Le CV affiche correctement **08/2025** ✅
+- C'est **LinkedIn qui est erroné** (affiche 10/2025) ❌
+
+**Conclusion:**
+- Le CV n'a pas besoin de modification
+- La source de vérité est l'utilisateur, pas LinkedIn
+- LinkedIn devra être mis à jour pour afficher 08/2025 (hors scope de ce projet CV)
+
+**Action prise:**
+- Vérification du CV: dates confirmées correctes (08/2025)
+- Documentation de la clarification dans cette tâche
+- Aucune modification apportée au CV

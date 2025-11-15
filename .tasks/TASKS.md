@@ -42,7 +42,6 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | ID | Titre | Statut | Priorité | Créé le |
 |----|-------|--------|----------|---------|
 | [CNT-002](tasks/CNT-002-corriger-ecart-critique-upwiser.md) | Corriger l'écart critique sur Upwiser | ⏳ À faire | 🔴 Haute | 2025-10-29 |
-| [CNT-003](tasks/CNT-003-corriger-date-fin-cto-palo-it.md) | Corriger la date de fin CTO chez PALO IT | 🔄 En cours | 🔴 Haute | 2025-10-29 |
 | [CNT-004](tasks/CNT-004-corriger-dates-boonty.md) | Corriger les dates de Boonty | ⏳ À faire | 🔴 Haute | 2025-10-29 |
 | [CNT-005](tasks/CNT-005-corriger-dates-debut-freelance.md) | Corriger les dates de début Freelance | ⏳ À faire | 🔴 Haute | 2025-10-29 |
 | [CNT-006](tasks/CNT-006-ajouter-certifications-manquantes.md) | Ajouter les certifications manquantes | ⏳ À faire | 🔴 Haute | 2025-10-29 |
@@ -66,6 +65,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
+| [CNT-003](tasks/CNT-003-corriger-date-fin-cto-palo-it.md) | Corriger la date de fin CTO chez PALO IT | ✅ Terminé | 🔴 Haute | 2025-11-15 |
 | [CNT-013](tasks/CNT-013-analyse-ancien-cv-2019.md) | Analyse ancien CV > 5 ans (2019) | ✅ Terminé | 🔴 Haute | 2025-11-14 |
 | [CNT-001](tasks/CNT-001-linkedin-audit.md) | Audit LinkedIn | ✅ Terminé | 🔴 Haute | 2025-11-05 |
 | [INF-002](tasks/INF-002-restructurer-sources-pdf-documentation.md) | Restructurer les sources, PDF et documentation | ✅ Terminé | 🔴 Haute | 2025-10-29 |
@@ -138,8 +138,8 @@ Closes TPL-001"
 
 - **Total**: 22 tâches
 - **À faire**: 16
-- **En cours**: 1
-- **Terminées**: 4
+- **En cours**: 0
+- **Terminées**: 5
 - **Bloquées**: 0
 
 **Prochains IDs disponibles par trigramme**:
