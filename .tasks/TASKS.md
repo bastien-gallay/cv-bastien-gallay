@@ -48,7 +48,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | [CNT-008](tasks/CNT-008-ajouter-experience-ibp.md) | Ajouter l'expérience i-BP | ⏳ À faire | 🔴 Haute | 2025-10-29 |
 | [CNT-009](tasks/CNT-009-ajouter-experience-dekra.md) | Ajouter l'expérience DEKRA | ⏳ À faire | 🔴 Haute | 2025-10-29 |
 | [CNT-010](tasks/CNT-010-ajouter-section-benevolat.md) | Ajouter section Bénévolat | ⏳ À faire | 🔴 Haute | 2025-10-29 |
-| [CNT-011](tasks/CNT-011-corriger-ecarts-mineurs-cdiscount.md) | Corriger écarts mineurs de dates (Cdiscount) | ⏳ À faire | 🔴 Haute | 2025-10-29 |
+| [CNT-011](tasks/CNT-011-corriger-ecarts-mineurs-cdiscount.md) | Corriger écarts mineurs de dates (Cdiscount) | 🔄 En cours | 🔴 Haute | 2025-10-29 |
 | [CNT-012](tasks/CNT-012-corriger-ecarts-mineurs-cast.md) | Corriger écarts mineurs de dates (Cast) | ⏳ À faire | 🔴 Haute | 2025-10-29 |
 | [CNT-014](tasks/CNT-014-analyse-experience-palo-it.md) | Analyse expérience PALO IT (journal/tâches CTO) | ⏳ À faire | 🔴 Haute | 2025-11-14 |
 | [CNT-015](tasks/CNT-015-analyse-cv-flash.md) | Analyse CV Flash (slide unique) | ⏳ À faire | 🔴 Haute | 2025-11-14 |
@@ -137,8 +137,8 @@ Closes TPL-001"
 ## Statistiques
 
 - **Total**: 22 tâches
-- **À faire**: 15
-- **En cours**: 0
+- **À faire**: 14
+- **En cours**: 1
 - **Terminées**: 6
 - **Bloquées**: 0
 
