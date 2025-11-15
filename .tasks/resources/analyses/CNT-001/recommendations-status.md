@@ -17,9 +17,9 @@ Ce fichier permet de suivre l'évolution de chaque recommandation issue de l'aud
 | Statut | Nombre | Pourcentage |
 |--------|--------|-------------|
 | ⏳ Pending | 8 | 42% |
-| 🔄 Task created | 8 | 42% |
+| 🔄 Task created | 7 | 37% |
 | ❌ Rejetée | 3 | 16% |
-| ✅ Completed | 0 | 0% |
+| ✅ Completed | 1 | 5% |
 | **TOTAL** | **19** | **100%** |
 
 ---
@@ -149,7 +149,8 @@ Ce fichier permet de suivre l'évolution de chaque recommandation issue de l'aud
   - Date ajout: 2025-10-29
   - Tâche créée: [CNT-012](../../tasks/CNT-012-corriger-ecarts-mineurs-cast.md)
   - Date création tâche: 2025-10-29
-  - Statut: 🔄 Task created
+  - Date complétion: 2025-11-15
+  - Statut: ✅ Completed
 
 ---
 

@@ -147,7 +147,7 @@
 
 #entry(
   title: "Consultant Technique",
-  date: "07/2006 - 09/2010",
+  date: "08/2006 - 09/2010",
   institution: "Cast Consulting",
   location: "Paris, France",
 )[

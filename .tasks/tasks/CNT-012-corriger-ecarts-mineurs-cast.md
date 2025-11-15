@@ -8,15 +8,15 @@
 |-------|--------|
 | **ID** | CNT-012 |
 | **Titre** | Corriger écarts mineurs de dates (Cast) |
-| **Statut** | 🔄 En cours |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | CNT |
 | **Section CV** | Experience |
 | **Créé le** | 2025-10-29 |
 | **Cible** | - |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-15 |
 | **Temps estimé** | 0.25 heures |
-| **Temps réel** | - |
+| **Temps réel** | 0.1 heures |
 | **Branche nécessaire** | Auto |
 
 ---
@@ -45,9 +45,9 @@ Corriger la date de début pour aligner parfaitement le CV avec LinkedIn.
 
 ## Sous-tâches
 
-- [ ] Modifier la date de début de 07/2006 à 08/2006 dans [src/cv.typ:150](../../src/cv.typ#L150)
-- [ ] Compiler le CV avec `just build`
-- [ ] Vérifier le rendu dans le PDF
+- [x] Modifier la date de début de 07/2006 à 08/2006 dans [src/cv.typ:150](../../src/cv.typ#L150)
+- [x] Compiler le CV avec `just build`
+- [x] Vérifier le rendu dans le PDF
 
 ---
 
@@ -116,9 +116,9 @@ Closes CNT-012"
 
 ## Tests / Vérifications
 
-- [ ] Le CV compile sans erreur (`just build`)
-- [ ] Le PDF affiche 08/2006
-- [ ] La date est cohérente avec le format du CV
+- [x] Le CV compile sans erreur (`just build`)
+- [x] Le PDF affiche 08/2006
+- [x] La date est cohérente avec le format du CV
 
 ---
 
@@ -128,9 +128,23 @@ Closes CNT-012"
 |------|--------|---------|
 | 2025-10-29 | Création | Tâche créée depuis recommandation CNT-001-R11 |
 | 2025-11-15 | En cours | Début du travail (pas de branche) |
+| 2025-11-15 | Terminé | Tâche complétée - correction appliquée et vérifiée |
 
 ---
 
 ## Résultat final
 
-[À remplir une fois la tâche terminée]
+**Ce qui a été réalisé:**
+
+- Correction de la date de début de l'expérience Cast Consulting de 07/2006 à 08/2006
+- Alignement parfait avec le profil LinkedIn (août 2006)
+- Élimination de l'écart mineur de -1 mois identifié dans l'audit CNT-001
+- Vérification du rendu dans le PDF généré
+
+**Difficultés rencontrées:**
+
+Aucune difficulté - correction simple et directe.
+
+**Impact:**
+
+Le CV est maintenant parfaitement cohérent avec LinkedIn pour l'expérience Cast Consulting.
