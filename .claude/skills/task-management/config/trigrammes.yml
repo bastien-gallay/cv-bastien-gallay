@@ -1,0 +1,53 @@
+# Trigramme Categories Configuration
+
+trigrammes:
+  CNT:
+    name: "Content"
+    description: "Contenu, informations du CV"
+    default_section: "Experience"
+    requires_branch: "auto"  # auto | yes | no
+
+  TPL:
+    name: "Template"
+    description: "Templates, structure, architecture"
+    default_section: "General"
+    requires_branch: "yes"  # Always create branch for template changes
+
+  QUA:
+    name: "Quality"
+    description: "Qualité, vérification, validation"
+    default_section: "General"
+    requires_branch: "auto"
+
+  PIP:
+    name: "Pipeline"
+    description: "CI/CD, automatisation, build"
+    default_section: "N/A"
+    requires_branch: "yes"  # Always create branch for CI/CD
+
+  LAY:
+    name: "Layout"
+    description: "Mise en page, design, style visuel"
+    default_section: "General"
+    requires_branch: "auto"
+
+  DOC:
+    name: "Documentation"
+    description: "Documentation, guides"
+    default_section: "N/A"
+    requires_branch: "no"  # Direct commits for docs
+
+  INF:
+    name: "Infrastructure"
+    description: "Infrastructure technique générale"
+    default_section: "N/A"
+    requires_branch: "yes"  # Always create branch for infrastructure
+
+# CV sections
+cv_sections:
+  - "Experience"
+  - "Education"
+  - "Skills"
+  - "Sidebar"
+  - "General"
+  - "N/A"

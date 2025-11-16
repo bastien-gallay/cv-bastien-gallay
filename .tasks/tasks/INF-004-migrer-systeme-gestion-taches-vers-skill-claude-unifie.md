@@ -39,12 +39,12 @@ Migrer l'ensemble des slash commands /task-* vers un Skill Claude unifié 'task-
 
 ### Session 1 : Architecture + Proof of Concept (task-next)
 
-- [ ] Concevoir et valider l'architecture cible du skill avec l'utilisateur
-- [ ] Créer la structure de base `.claude/skills/task-management/` avec SKILL.md
-- [ ] Migrer `/task-next` : créer `scripts/algorithms/wsjf_calculator.py` avec tests unitaires
-- [ ] Créer le fichier de tests manuels pour `/task-next`
-- [ ] Tester le workflow complet avec l'utilisateur
-- [ ] Commit session 1 : architecture + task-next migré
+- [x] Concevoir et valider l'architecture cible du skill avec l'utilisateur
+- [x] Créer la structure de base `.claude/skills/task-management/` avec SKILL.md
+- [x] Migrer `/task-next` : créer `scripts/algorithms/priority_scorer.py` avec tests unitaires
+- [x] Créer le fichier de tests manuels pour `/task-next`
+- [x] Tester le workflow complet avec l'utilisateur
+- [x] Commit session 1 : architecture + task-next migré
 
 ### Session 2 : Commandes principales (create + complete)
 

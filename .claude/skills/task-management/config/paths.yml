@@ -1,0 +1,39 @@
+# File Paths Configuration
+# All paths relative to project root
+
+# Task management paths
+tasks:
+  root: ".tasks"
+  tasks_dir: ".tasks/tasks"
+  archived_dir: ".tasks/.archived"
+  dashboard: ".tasks/TASKS.md"
+  ideas: ".tasks/IDEAS.md"
+  task_rules: ".tasks/TASK_RULES.md"
+  template: ".tasks/tasks/TEMPLATE.md"
+
+# Analysis paths
+analysis:
+  root: ".tasks/resources"
+  audits_dir: ".tasks/resources/audits"
+  analyses_dir: ".tasks/resources/analyses"
+  templates_dir: ".tasks/resources/templates"
+  dashboard: ".tasks/ANALYSES.md"
+
+# Skill paths (self-reference)
+skill:
+  root: ".claude/skills/task-management"
+  config_dir: ".claude/skills/task-management/config"
+  scripts_dir: ".claude/skills/task-management/scripts"
+  templates_dir: ".claude/skills/task-management/templates"
+  workflows_dir: ".claude/skills/task-management/workflows"
+  tests_dir: ".claude/skills/task-management/tests"
+
+# CV paths
+cv:
+  source: "src/cv.typ"
+  output: "dist/cv.pdf"
+
+# Git
+git:
+  branch_prefix: "task/"
+  main_branch: "main"
