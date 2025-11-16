@@ -79,77 +79,70 @@ Une fois l'idée sélectionnée, extraire:
 
 ### Étape 4: Création de la Tâche
 
-Lancer le processus de création similaire à `/task-create` mais avec **pré-remplissage**:
+Présenter un questionnaire interactif structuré avec valeurs **pré-remplies** depuis l'idée sélectionnée:
 
-1. **Trigramme** (pré-rempli, éditable)
+```markdown
+Création d'une tâche depuis l'idée sélectionnée
+────────────────────────────────────────────────
 
-   ```markdown
-   1. Trigramme:
-      Suggestion basée sur l'idée: DOC
+Questionnaire de création (valeurs pré-remplies entre crochets)
+Appuyez sur Entrée pour accepter, ou tapez une nouvelle valeur:
 
-      Confirmer DOC ou choisir un autre trigramme: [DOC]
-   ```
+1. Trigramme: [DOC]
+   Suggestion basée sur l'idée
+   Confirmer ou choisir un autre (CNT/TPL/QUA/PIP/LAY/DOC/INF): _
 
-2. **Titre** (pré-rempli, éditable)
+2. Titre: [Suggérer des réponses automatiques aux questions...]
+   Suggestion depuis l'idée
+   Confirmer ou modifier: _
 
-   ```markdown
-   2. Titre de la tâche (max 80 caractères):
-      Suggestion: Suggérer des réponses automatiques aux questions...
+3. Slug: [suggerer-reponses-automatiques]
+   Auto-généré depuis le titre
+   Confirmer ou modifier: _
 
-      Confirmer ou modifier: [confirmer]
-   ```
+4. Priorité: [🟡 Moyenne]
+   Options: 🔴 Haute / 🟡 Moyenne / 🟢 Basse
+   _
 
-3. **Slug** (auto-généré depuis le titre)
+5. Description - Contexte: [Pré-rempli]
+   Idée issue de la tâche DOC-001 (2025-10-28).
 
-   ```markdown
-   3. Slug proposé: suggerer-reponses-automatiques
-      Confirmer ou modifier: [confirmer]
-   ```
+   Modifier ou compléter le contexte: _
 
-4. **Priorité** (demander, défaut: Moyenne)
+6. Description - Objectif:
+   Quel est le résultat attendu ?
+   _
 
-   ```markdown
-   4. Priorité (Haute/Moyenne/Basse) [Moyenne]:
-   ```
+7. Sous-tâches (optionnel, une par ligne, tapez 'fin'):
+   Minimum 2 recommandées
+   - _
+   - _
+   - fin
 
-5. **Description - Contexte** (pré-rempli avec source)
+8. Section CV: [General]
+   Options: Experience / Education / Skills / Sidebar / General / N/A
+   _
 
-   ```markdown
-   5. Description - Contexte:
-      Suggestion: Idée issue de la tâche DOC-001 (2025-10-28).
+9. Date cible: [aucune]
+   Format: YYYY-MM-DD ou 'aucune'
+   _
 
-      Modifier ou compléter le contexte:
-   ```
+10. Temps estimé: [vide]
+    En heures (laisser vide si inconnu)
+    _
 
-6. **Description - Objectif** (demander)
+────────────────────────────────────────────────
+Résumé de la tâche à créer:
 
-   ```markdown
-   6. Description - Objectif:
-   ```
+ID: DOC-002 (généré automatiquement)
+Titre: Suggérer des réponses automatiques...
+Trigramme: DOC
+Priorité: 🔴 Haute
+Section CV: N/A
 
-7. **Sous-tâches** (demander normalement)
-
-   ```markdown
-   7. Sous-tâches (optionnel, une par ligne, tapez 'fin'):
-   ```
-
-8. **Section CV** (demander normalement)
-
-   ```markdown
-   8. Section CV (Experience/Education/Skills/Sidebar/General/N/A) [General]:
-   ```
-
-9. **Date cible** (demander normalement)
-
-   ```markdown
-   9. Date cible (YYYY-MM-DD ou 'aucune') [aucune]:
-   ```
-
-10. **Temps estimé** (demander normalement)
-
-    ```markdown
-    10. Temps estimé (heures) [vide]:
-    ```
+Créer cette tâche ? (o/n): _
+────────────────────────────────────────────────
+```
 
 ### Étape 5: Création du Fichier de Tâche
 
@@ -378,39 +371,68 @@ Total: 2 idées
 
 Choisissez une idée (1-2) ou 0 pour annuler: 1
 
-Création d'une tâche depuis l'idée sélectionnée...
+Création d'une tâche depuis l'idée sélectionnée
+────────────────────────────────────────────────
 
-1. Trigramme:
-   Suggestion: DOC
-   Confirmer ou modifier [DOC]: [Enter]
+Questionnaire de création (valeurs pré-remplies entre crochets)
+Appuyez sur Entrée pour accepter, ou tapez une nouvelle valeur:
 
-2. Titre:
-   Suggestion: Suggérer des réponses automatiques aux questions de collecte
+1. Trigramme: [DOC]
+   Suggestion basée sur l'idée
+   Confirmer ou choisir un autre (CNT/TPL/QUA/PIP/LAY/DOC/INF): [Enter]
+
+2. Titre: [Suggérer des réponses automatiques aux questions de collecte]
+   Suggestion depuis l'idée
    Confirmer ou modifier: [Enter]
 
-3. Slug proposé: suggerer-reponses-automatiques
+3. Slug: [suggerer-reponses-automatiques]
+   Auto-généré depuis le titre
    Confirmer ou modifier: [Enter]
 
-4. Priorité (Haute/Moyenne/Basse) [Moyenne]: Haute
+4. Priorité: [🟡 Moyenne]
+   Options: 🔴 Haute / 🟡 Moyenne / 🟢 Basse
+   Haute
 
-5. Description - Contexte:
-   Pré-rempli: "Idée issue de la tâche DOC-001 (2025-10-28)."
-   Compléter: Améliorer l'expérience utilisateur lors de la complétion des tâches
+5. Description - Contexte: [Pré-rempli]
+   Idée issue de la tâche DOC-001 (2025-10-28).
+
+   Modifier ou compléter le contexte: Améliorer l'expérience utilisateur lors de la complétion des tâches
 
 6. Description - Objectif:
+   Quel est le résultat attendu ?
    Analyser le contexte et l'historique Git pour suggérer automatiquement des réponses pertinentes
 
-7. Sous-tâches (une par ligne, 'fin' pour terminer):
+7. Sous-tâches (optionnel, une par ligne, tapez 'fin'):
+   Minimum 2 recommandées
    - Analyser les commits liés à la tâche
    - Extraire les patterns de changements
    - Générer des suggestions contextuelles
    - fin
 
-8. Section CV [General/N/A]: N/A
+8. Section CV: [General]
+   Options: Experience / Education / Skills / Sidebar / General / N/A
+   N/A
 
-9. Date cible [aucune]: aucune
+9. Date cible: [aucune]
+   Format: YYYY-MM-DD ou 'aucune'
+   [Enter]
 
-10. Temps estimé (heures) [vide]: 3
+10. Temps estimé: [vide]
+    En heures (laisser vide si inconnu)
+    3
+
+────────────────────────────────────────────────
+Résumé de la tâche à créer:
+
+ID: DOC-002 (généré automatiquement)
+Titre: Suggérer des réponses automatiques aux questions de collecte
+Trigramme: DOC
+Priorité: 🔴 Haute
+Section CV: N/A
+Temps estimé: 3h
+Sous-tâches: 3
+
+Créer cette tâche ? (o/n): o
 
 ✅ Tâche créée depuis une idée du backlog!
 
