@@ -64,11 +64,11 @@ Rendre plus agréable et rapide l'exécution des tâches pour l'utilisateur.
 
 ## Sous-tâches
 
-- [ ] Auditer toutes les commandes de gestion de tâches (task-*.md)
-- [ ] Identifier celles qui n'utilisent pas le format questionnaire
-- [ ] Refactorer les commandes concernées
-- [ ] Mettre à jour la documentation
-- [ ] Créer un template/guide pour les futures commandes
+- [x] Auditer toutes les commandes de gestion de tâches (task-*.md)
+- [x] Identifier celles qui n'utilisent pas le format questionnaire
+- [x] Refactorer les commandes concernées
+- [x] Mettre à jour la documentation
+- [x] Créer un template/guide pour les futures commandes
 
 ---
 
