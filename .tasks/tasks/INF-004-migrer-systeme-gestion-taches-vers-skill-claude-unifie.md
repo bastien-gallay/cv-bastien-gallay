@@ -48,9 +48,9 @@ Migrer l'ensemble des slash commands /task-* vers un Skill Claude unifié 'task-
 
 ### Session 2 : Commandes principales (create + complete)
 
-- [ ] Restructurer `/task-create` : workflow + scripts (id_generator.py, validator.py) avec tests
-- [ ] Restructurer `/task-complete` : workflow + scripts (dashboard_manager.py, git_operations.py) avec tests
-- [ ] Mettre à jour le fichier de tests manuels (ajout create + complete)
+- [x] Restructurer `/task-create` : workflow + scripts (id_generator.py, validator.py) avec tests
+- [x] Restructurer `/task-complete` : workflow + scripts (dashboard_manager.py, git_operations.py) avec tests
+- [x] Mettre à jour le fichier de tests manuels (ajout create + complete)
 - [ ] Tester le cycle complet : create → start → complete
 - [ ] Commit session 2 : create + complete migrés
 

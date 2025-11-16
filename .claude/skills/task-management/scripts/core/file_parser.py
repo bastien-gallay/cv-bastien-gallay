@@ -140,10 +140,10 @@ def parse_task_file(file_path: Path) -> Dict[str, any]:
     subtasks_completed = sum(1 for completed, _ in subtasks if completed)
     subtasks_total = len(subtasks)
 
-    # Extract sections
-    description = extract_section(content, "Description")
-    notes_claude = extract_section(content, "Notes pour Claude")
-    notes_user = extract_section(content, "Notes pour l'utilisateur")
+    # Extract sections (level=2 for H2 headers: ##)
+    description = extract_section(content, "Description", level=2)
+    notes_claude = extract_section(content, "Notes pour Claude", level=2)
+    notes_user = extract_section(content, "Notes pour l'utilisateur", level=2)
 
     return {
         'metadata': metadata,
