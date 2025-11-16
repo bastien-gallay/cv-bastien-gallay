@@ -62,7 +62,6 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
-| [CNT-012](tasks/CNT-012-corriger-ecarts-mineurs-cast.md) | Corriger écarts mineurs de dates (Cast) | ✅ Terminé | 🔴 Haute | 2025-11-15 |
 | [CNT-011](tasks/CNT-011-corriger-ecarts-mineurs-cdiscount.md) | Corriger écarts mineurs de dates (Cdiscount) | ✅ Terminé | 🔴 Haute | 2025-11-15 |
 | [CNT-007](tasks/CNT-007-corriger-date-safe.md) | Corriger la date SAFe | ✅ Terminé | 🔴 Haute | 2025-11-15 |
 | [CNT-003](tasks/CNT-003-corriger-date-fin-cto-palo-it.md) | Corriger la date de fin CTO chez PALO IT | ✅ Terminé | 🔴 Haute | 2025-11-15 |
@@ -71,7 +70,10 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | [INF-002](tasks/INF-002-restructurer-sources-pdf-documentation.md) | Restructurer les sources, PDF et documentation | ✅ Terminé | 🔴 Haute | 2025-10-29 |
 | [DOC-001](tasks/DOC-001-task-management-automation.md) | Système d'automatisation de gestion des tâches | ✅ Terminé | 🔴 Haute | 2025-10-28 |
 
-Les tâches archivées sont déplacées dans [.archived-tasks/](.archived-tasks/).
+Les tâches archivées sont déplacées dans [.archived/](.archived/).
+
+**Tâches archivées:** 1 tâche
+- CNT-012 (2025-11-15)
 
 ---
 
@@ -136,11 +138,12 @@ Closes TPL-001"
 
 ## Statistiques
 
-- **Total**: 22 tâches
+- **Total**: 21 tâches
 - **À faire**: 13
 - **En cours**: 0
-- **Terminées**: 8
+- **Terminées**: 7
 - **Bloquées**: 0
+- **Archivées**: 1
 
 **Prochains IDs disponibles par trigramme**:
 

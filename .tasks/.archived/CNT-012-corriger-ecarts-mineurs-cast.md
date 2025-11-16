@@ -8,7 +8,7 @@
 |-------|--------|
 | **ID** | CNT-012 |
 | **Titre** | Corriger écarts mineurs de dates (Cast) |
-| **Statut** | ✅ Terminé |
+| **Statut** | 📦 Archivé |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | CNT |
 | **Section CV** | Experience |
@@ -129,6 +129,7 @@ Closes CNT-012"
 | 2025-10-29 | Création | Tâche créée depuis recommandation CNT-001-R11 |
 | 2025-11-15 | En cours | Début du travail (pas de branche) |
 | 2025-11-15 | Terminé | Tâche complétée - correction appliquée et vérifiée |
+| 2025-11-15 | Archivé | Tâche archivée dans .tasks/.archived/ |
 
 ---
 
