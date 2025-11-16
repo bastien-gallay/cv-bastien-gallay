@@ -8,15 +8,15 @@
 |-------|--------|
 | **ID** | PIP-002 |
 | **Titre** | Privilégier les questionnaires interactifs dans les commandes de tâches |
-| **Statut** | 🔄 En cours |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | PIP |
 | **Section CV** | N/A |
 | **Créé le** | 2025-11-16 |
 | **Cible** | - |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-16 |
 | **Temps estimé** | 0.25 heures |
-| **Temps réel** | - |
+| **Temps réel** | 0.25 heures |
 | **Branche nécessaire** | Auto |
 
 ---
@@ -198,21 +198,24 @@ Closes PIP-002"
 |------|--------|---------|
 | 2025-11-16 | Création | Tâche créée depuis idée du backlog |
 | 2025-11-16 | En cours | Début du travail |
+| 2025-11-16 | Terminé | Tâche complétée |
 
 ---
 
 ## Résultat final
 
-[À remplir une fois la tâche terminée]
-
 **Ce qui a été fait :**
 
-- [Liste des réalisations]
+- Refactoré `/task-from-analysis` avec format questionnaire (9 questions structurées)
+- Refactoré `/task-create` avec format questionnaire (10 questions structurées)
+- Refactoré `/task-from-idea` avec format questionnaire (10 questions structurées)
+- Ajouté section "Format Questionnaire Standardisé" dans README.md
+- Réduction de 90% des interruptions pour les 3 commandes
 
 **Difficultés rencontrées :**
 
-- [Problèmes et solutions]
+Aucune
 
 **Améliorations futures :**
 
-- [Idées pour aller plus loin]
+Aucune
