@@ -4,12 +4,19 @@ This module provides functions to update the TASKS.md dashboard file,
 including adding new tasks, moving tasks between sections, and updating statistics.
 """
 
+import sys
 from pathlib import Path
 from typing import Optional, Tuple
 import re
 from datetime import datetime
 
-from .config_loader import load_paths
+# Try relative import (when used as module), fall back to absolute (when run as script)
+try:
+    from .config_loader import load_paths
+except ImportError:
+    # Add parent directory to path for CLI usage
+    sys.path.insert(0, str(Path(__file__).parent.parent))
+    from core.config_loader import load_paths
 
 
 # ============================================================================

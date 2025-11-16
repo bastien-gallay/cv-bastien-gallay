@@ -5,11 +5,18 @@ committing changes, and checking repository status.
 """
 
 import subprocess
+import sys
 from pathlib import Path
 from typing import Optional, Tuple
 import re
 
-from .config_loader import load_paths
+# Try relative import (when used as module), fall back to absolute (when run as script)
+try:
+    from .config_loader import load_paths
+except ImportError:
+    # Add parent directory to path for CLI usage
+    sys.path.insert(0, str(Path(__file__).parent.parent))
+    from core.config_loader import load_paths
 
 
 # ============================================================================

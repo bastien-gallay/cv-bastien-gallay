@@ -227,11 +227,16 @@ if __name__ == '__main__':
     """Test file parser on actual task file."""
     import sys
 
+    # Import config_loader for CLI usage
+    sys.path.insert(0, str(Path(__file__).parent.parent))
+    from core.config_loader import load_paths
+
     print("Testing file_parser.py")
     print("=" * 60)
 
     # Find a task file to test with
-    tasks_dir = Path('../../../.tasks/tasks')
+    paths = load_paths()
+    tasks_dir = Path(paths.tasks_dir)
 
     if not tasks_dir.exists():
         print(f"❌ Tasks directory not found: {tasks_dir}")

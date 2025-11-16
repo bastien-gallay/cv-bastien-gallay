@@ -7,6 +7,7 @@ Python dataclasses. Configurations are cached in memory for performance.
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Literal
+import os
 import yaml
 
 
@@ -209,6 +210,11 @@ def load_trigrammes() -> tuple[Dict[str, Trigramme], list[str]]:
 def load_paths() -> PathsConfig:
     """Load file paths configuration from paths.yml.
 
+    Supports environment variable overrides for isolated testing:
+    - TASK_SYSTEM_TASKS_DIR: Override tasks directory
+    - TASK_SYSTEM_ARCHIVED_DIR: Override archived directory
+    - TASK_SYSTEM_DASHBOARD: Override TASKS.md path
+
     Returns:
         PathsConfig instance
 
@@ -222,6 +228,14 @@ def load_paths() -> PathsConfig:
         return _cache[cache_key]
 
     data = _load_yaml('paths.yml')
+
+    # Apply environment variable overrides for testing
+    if 'TASK_SYSTEM_TASKS_DIR' in os.environ:
+        data['tasks']['tasks_dir'] = os.environ['TASK_SYSTEM_TASKS_DIR']
+    if 'TASK_SYSTEM_ARCHIVED_DIR' in os.environ:
+        data['tasks']['archived_dir'] = os.environ['TASK_SYSTEM_ARCHIVED_DIR']
+    if 'TASK_SYSTEM_DASHBOARD' in os.environ:
+        data['tasks']['dashboard'] = os.environ['TASK_SYSTEM_DASHBOARD']
 
     # Flatten nested structure
     config = PathsConfig(
