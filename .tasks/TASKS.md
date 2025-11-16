@@ -41,7 +41,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Créé le |
 |----|-------|--------|----------|---------|
-| [CNT-002](tasks/CNT-002-corriger-ecart-critique-upwiser.md) | Corriger l'écart critique sur Upwiser | ⏳ À faire | 🔴 Haute | 2025-10-29 |
+| [CNT-002](tasks/CNT-002-corriger-ecart-critique-upwiser.md) | Corriger l'écart critique sur Upwiser | 🔄 En cours | 🔴 Haute | 2025-10-29 |
 | [CNT-004](tasks/CNT-004-corriger-dates-boonty.md) | Corriger les dates de Boonty | ⏳ À faire | 🔴 Haute | 2025-10-29 |
 | [CNT-005](tasks/CNT-005-corriger-dates-debut-freelance.md) | Corriger les dates de début Freelance | ⏳ À faire | 🔴 Haute | 2025-10-29 |
 | [CNT-006](tasks/CNT-006-ajouter-certifications-manquantes.md) | Ajouter les certifications manquantes | ⏳ À faire | 🔴 Haute | 2025-10-29 |
@@ -140,8 +140,8 @@ Closes TPL-001"
 ## Statistiques
 
 - **Total**: 14 tâches
-- **À faire**: 13
-- **En cours**: 0
+- **À faire**: 12
+- **En cours**: 1
 - **Terminées**: 0
 - **Bloquées**: 0
 - **Archivées**: 8

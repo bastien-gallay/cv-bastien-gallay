@@ -8,7 +8,7 @@
 |-------|--------|
 | **ID** | CNT-002 |
 | **Titre** | Corriger l'écart critique sur Upwiser |
-| **Statut** | ⏳ À faire |
+| **Statut** | 🔄 En cours |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | CNT |
 | **Section CV** | Experience |
@@ -151,6 +151,7 @@ Closes CNT-002"
 | Date | Action | Détails |
 |------|--------|---------|
 | 2025-10-29 | Création | Tâche créée depuis recommandation CNT-001-R01 |
+| 2025-11-16 | En cours | Début du travail (pas de branche) |
 
 ---
 
