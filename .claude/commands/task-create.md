@@ -22,41 +22,64 @@ Cette commande guide l'utilisateur à travers un processus interactif pour crée
 
 ### Étape 1: Collecte des Informations
 
-Poser les questions suivantes à l'utilisateur:
+Présenter un questionnaire interactif structuré avec toutes les questions numérotées:
 
-1. **Trigramme** (obligatoire)
-   - Afficher la liste des trigrammes disponibles avec leur description
-   - CNT (Content), TPL (Template), QUA (Quality), PIP (Pipeline), LAY (Layout), DOC (Documentation), INF (Infrastructure)
-   - Valider que le trigramme choisi est valide
+```markdown
+Questionnaire de création de tâche
+──────────────────────────────────
 
-2. **Titre** (obligatoire)
-   - Demander un titre court et descriptif (max 80 caractères)
-   - Générer automatiquement un slug à partir du titre
-   - Proposer le slug et permettre de le modifier
+1. Trigramme (obligatoire):
+   Options disponibles:
+   - CNT (Content) - Contenu, informations du CV
+   - TPL (Template) - Templates, structure, architecture
+   - QUA (Quality) - Qualité, vérification, validation
+   - PIP (Pipeline) - CI/CD, automatisation, build
+   - LAY (Layout) - Mise en page, design, style visuel
+   - DOC (Documentation) - Documentation, guides
+   - INF (Infrastructure) - Infrastructure technique générale
 
-3. **Priorité** (obligatoire, défaut: Moyenne)
-   - Proposer: 🔴 Haute / 🟡 Moyenne / 🟢 Basse
-   - Défaut: 🟡 Moyenne
+   Votre choix: _
 
-4. **Description** (obligatoire)
-   - Demander une description claire du contexte
-   - Demander l'objectif à atteindre
+2. Titre de la tâche (max 80 caractères):
+   Court et descriptif
+   _
 
-5. **Sous-tâches** (optionnel)
-   - Demander de lister les sous-tâches (une par ligne)
-   - Proposer d'en ajouter d'autres
+3. Slug (auto-généré depuis le titre):
+   [slug-auto-genere]
+   Confirmer ou modifier: _
 
-6. **Section CV** (obligatoire)
-   - Experience / Education / Skills / Sidebar / General / N/A
-   - Défaut: General
+4. Priorité [🟡 Moyenne]:
+   Options: 🔴 Haute / 🟡 Moyenne / 🟢 Basse
+   _
 
-7. **Date cible** (optionnel)
-   - Proposer YYYY-MM-DD ou "aucune"
-   - Valider le format si fourni
+5. Description - Contexte (obligatoire):
+   Décrivez le contexte et la motivation
+   _
 
-8. **Notes spécifiques** (optionnel)
-   - Pour Claude: Instructions spécifiques pour l'IA
-   - Pour l'utilisateur: Rappels personnels
+6. Description - Objectif (obligatoire):
+   Quel est le résultat attendu ?
+   _
+
+7. Sous-tâches (optionnel, une par ligne, tapez 'fin'):
+   Minimum 2 recommandées
+   - _
+   - _
+   - fin
+
+8. Section CV [General]:
+   Options: Experience / Education / Skills / Sidebar / General / N/A
+   _
+
+9. Date cible [aucune]:
+   Format: YYYY-MM-DD ou 'aucune'
+   _
+
+10. Temps estimé [vide]:
+    En heures (laisser vide si inconnu)
+    _
+```
+
+Une fois toutes les réponses collectées, afficher un résumé pour validation finale.
 
 ### Étape 2: Génération de l'ID
 
@@ -172,7 +195,11 @@ User: /task-create
 
 Claude: Je vais vous guider pour créer une nouvelle tâche.
 
-1. Trigramme:
+Questionnaire de création de tâche
+──────────────────────────────────
+
+1. Trigramme (obligatoire):
+   Options disponibles:
    - CNT (Content) - Contenu, informations du CV
    - TPL (Template) - Templates, structure, architecture
    - QUA (Quality) - Qualité, vérification, validation
@@ -183,31 +210,59 @@ Claude: Je vais vous guider pour créer une nouvelle tâche.
 
    Votre choix: CNT
 
-2. Titre de la tâche (max 80 caractères): Mise à jour de l'expérience professionnelle
+2. Titre de la tâche (max 80 caractères):
+   Court et descriptif
+   Mise à jour de l'expérience professionnelle
 
-3. Slug proposé: mise-a-jour-experience-professionnelle
+3. Slug (auto-généré depuis le titre):
+   [mise-a-jour-experience-professionnelle]
    Confirmer ou modifier: [confirmer]
 
-4. Priorité (Haute/Moyenne/Basse) [Moyenne]: Haute
+4. Priorité [🟡 Moyenne]:
+   Options: 🔴 Haute / 🟡 Moyenne / 🟢 Basse
+   Haute
 
-5. Description - Contexte:
+5. Description - Contexte (obligatoire):
+   Décrivez le contexte et la motivation
    L'expérience actuelle ne reflète pas les derniers projets réalisés.
 
-6. Description - Objectif:
+6. Description - Objectif (obligatoire):
+   Quel est le résultat attendu ?
    Mettre à jour la section expérience avec les 3 derniers projets majeurs.
 
-7. Sous-tâches (minimum 2, une par ligne, tapez 'fin' quand terminé):
+7. Sous-tâches (optionnel, une par ligne, tapez 'fin'):
+   Minimum 2 recommandées
    - Ajouter projet A
    - Ajouter projet B
    - Ajouter projet C
    - Mettre à jour les dates
    - fin
 
-8. Section CV (Experience/Education/Skills/Sidebar/General/N/A) [General]: Experience
+8. Section CV [General]:
+   Options: Experience / Education / Skills / Sidebar / General / N/A
+   Experience
 
-9. Date cible (YYYY-MM-DD ou 'aucune') [aucune]: 2025-11-01
+9. Date cible [aucune]:
+   Format: YYYY-MM-DD ou 'aucune'
+   2025-11-01
 
-10. Temps estimé (heures) [vide]: 1.5
+10. Temps estimé [vide]:
+    En heures (laisser vide si inconnu)
+    1.5
+
+──────────────────────────────────
+Résumé de la tâche à créer:
+
+ID: CNT-002 (généré automatiquement)
+Titre: Mise à jour de l'expérience professionnelle
+Trigramme: CNT
+Priorité: 🔴 Haute
+Section CV: Experience
+Date cible: 2025-11-01
+Temps estimé: 1.5h
+Sous-tâches: 4
+
+Créer cette tâche ? (o/n): o
 
 ✅ Tâche créée avec succès!
 
