@@ -8,7 +8,7 @@
 |-------|--------|
 | **ID** | CNT-004 |
 | **Titre** | Corriger les dates de Boonty |
-| **Statut** | ⏳ À faire |
+| **Statut** | 🔄 En cours |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | CNT |
 | **Section CV** | Experience |
@@ -136,6 +136,7 @@ Closes CNT-004"
 | Date | Action | Détails |
 |------|--------|---------|
 | 2025-10-29 | Création | Tâche créée depuis recommandation CNT-001-R03 |
+| 2025-11-16 | En cours | Début du travail (pas de branche) |
 
 ---
 
