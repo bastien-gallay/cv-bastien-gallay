@@ -52,7 +52,9 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | [QUA-001](tasks/QUA-001-verification.md) | Étapes de vérification du CV | ⏳ À faire | 🟡 Moyenne | 2025-10-28 |
 | [TPL-002](tasks/TPL-002-template-system.md) | Système de changement de template | ⏳ À faire | 🟢 Basse | 2025-10-28 |
 | [PIP-001](tasks/PIP-001-cicd-pipeline.md) | CI/CD pour publication automatique | ⏳ À faire | 🟢 Basse | 2025-10-28 |
+| [PIP-002](tasks/PIP-002-privilegier-questionnaires-interactifs-commandes.md) | Privilégier les questionnaires interactifs dans les commandes de tâches | 🔄 En cours | 🔴 Haute | 2025-11-16 |
 | [INF-001](tasks/INF-001-mcp-integration.md) | Améliorer visuellement le CV avec l'aide de Claude | ⏳ À faire | 🟡 Moyenne | 2025-10-28 |
+| [INF-003](tasks/INF-003-perenniser-ameliorer-script-priorites.md) | Pérenniser et améliorer le script Python de calcul des priorités | ⏳ À faire | 🔴 Haute | 2025-11-16 |
 
 ---
 
@@ -139,16 +141,16 @@ Closes TPL-001"
 
 ## Statistiques
 
-- **Total**: 14 tâches
-- **À faire**: 10
-- **En cours**: 0
+- **Total**: 16 tâches
+- **À faire**: 11
+- **En cours**: 1
 - **Terminées**: 2
 - **Bloquées**: 0
 - **Archivées**: 8
 
 **Prochains IDs disponibles par trigramme**:
 
-- CNT-016, TPL-003, QUA-002, PIP-002, INF-003, LAY-001, DOC-002
+- CNT-016, TPL-003, QUA-002, PIP-003, INF-004, LAY-001, DOC-002
 
 ---
 
