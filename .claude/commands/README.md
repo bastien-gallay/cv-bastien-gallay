@@ -514,6 +514,63 @@ Ce mode aide à gérer les cas limites sans bloquer l'utilisateur.
 
 ---
 
+## Format Questionnaire Standardisé
+
+Toutes les commandes de création de tâches (`/task-create`, `/task-from-idea`, `/task-from-analysis`) utilisent un **format questionnaire interactif unifié** pour améliorer l'expérience utilisateur.
+
+### Principe
+
+Au lieu de poser des questions une par une avec interruptions successives, toutes les questions sont présentées ensemble dans un questionnaire numéroté structuré :
+
+```markdown
+Questionnaire de création de tâche
+──────────────────────────────────
+
+1. Trigramme (obligatoire):
+   Options disponibles:
+   - CNT (Content) - Contenu, informations du CV
+   - TPL (Template) - Templates, structure, architecture
+   [...]
+
+   Votre choix: _
+
+2. Titre de la tâche (max 80 caractères):
+   Court et descriptif
+   _
+
+3. Slug (auto-généré depuis le titre):
+   [slug-auto-genere]
+   Confirmer ou modifier: _
+
+[... toutes les questions suivantes ...]
+
+──────────────────────────────────
+Résumé de la tâche à créer:
+
+ID: CNT-002 (généré automatiquement)
+Titre: ...
+Trigramme: CNT
+Priorité: 🔴 Haute
+
+Créer cette tâche ? (o/n): _
+──────────────────────────────────
+```
+
+### Avantages
+
+- **Réduction massive des interruptions** : 8-10 interruptions → 1 validation finale
+- **Vue d'ensemble** : Toutes les informations visibles simultanément
+- **Cohérence** : Expérience utilisateur uniforme entre toutes les commandes
+- **Efficacité** : Processus plus rapide et plus fluide
+
+### Commandes concernées
+
+- `/task-create` : 10 questions en un questionnaire
+- `/task-from-idea` : 10 questions avec pré-remplissage
+- `/task-from-analysis` : 9 questions par recommandation
+
+---
+
 ## Fichiers de Référence
 
 - [TASK_RULES.md](../.tasks/TASK_RULES.md) - Règles DoR/DoD et gestion des erreurs
@@ -586,5 +643,5 @@ Pour toute question ou suggestion d'amélioration:
 
 ---
 
-**Version:** 1.2.0
-**Dernière mise à jour:** 2025-10-29
+**Version:** 1.3.0
+**Dernière mise à jour:** 2025-11-16
