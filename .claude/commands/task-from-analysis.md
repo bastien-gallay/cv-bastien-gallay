@@ -152,42 +152,73 @@ Lire aussi le fichier `recommendations.md` pour obtenir la **description complè
 
 **Mode par défaut (interactif)**:
 
-Afficher les données pré-remplies et permettre modification:
+Afficher un questionnaire structuré avec toutes les données pré-remplies :
 
 ```text
 === Création de tâche 1/3 ===
 
 Recommandation: R01 - Corriger l'écart critique sur Upwiser
 
-Données pré-remplies (appuyez sur Entrée pour accepter):
+Questionnaire de création (valeurs pré-remplies entre crochets)
+Appuyez sur Entrée pour accepter, ou tapez une nouvelle valeur:
 
-1. Trigramme [CNT]:
-2. Titre [Corriger l'écart critique sur Upwiser]:
-3. Priorité [🔴 Haute]:
-4. Description (pré-remplie depuis recommendations.md)
-   - Contexte: Date de fin très différente entre LinkedIn et CV
-   - Objectif: Corriger la date de fin pour Upwiser
+1. Trigramme: [CNT]
+   _
 
-   Modifier ? (o/n): n
+2. Titre: [Corriger l'écart critique sur Upwiser]
+   _
 
-5. Sous-tâches suggérées:
+3. Priorité: [🔴 Haute]
+   Options: 🔴 Haute / 🟡 Moyenne / 🟢 Basse
+   _
+
+4. Description - Contexte: [Pré-rempli]
+   Date de fin très différente entre LinkedIn et CV (source: recommandation R01)
+
+   Modifier le contexte ? (o/n): _
+
+5. Description - Objectif: [Pré-rempli]
+   Corriger la date de fin pour Upwiser
+
+   Modifier l'objectif ? (o/n): _
+
+6. Sous-tâches: [Suggérées automatiquement]
    - [ ] Vérifier la date exacte sur LinkedIn
    - [ ] Mettre à jour src/cv.typ:122
    - [ ] Valider la cohérence avec les autres dates
    - [ ] Compiler et vérifier le PDF
 
-   Ajouter/Modifier ? (o/n): n
+   Modifier les sous-tâches ? (o/n): _
 
-6. Section CV [Experience]:
-7. Date cible [aucune]:
-8. Temps estimé [0.5]:
+7. Section CV: [Experience]
+   Options: Experience / Education / Skills / Sidebar / General / N/A
+   _
 
-Créer cette tâche ? (o/n): o
+8. Date cible: [aucune]
+   Format: YYYY-MM-DD ou 'aucune'
+   _
+
+9. Temps estimé: [0.5]
+   En heures (laisser vide si inconnu)
+   _
+
+─────────────────────────────────────────────────
+Résumé de la tâche à créer:
+
+ID: CNT-016 (généré automatiquement)
+Titre: Corriger l'écart critique sur Upwiser
+Trigramme: CNT
+Priorité: 🔴 Haute
+Section CV: Experience
+Temps estimé: 0.5h
+
+Créer cette tâche ? (o/n): _
+─────────────────────────────────────────────────
 ```
 
 **Mode automatique** (avec `--auto`):
 
-Créer directement les tâches avec les valeurs pré-remplies, sans demander confirmation.
+Créer directement les tâches avec les valeurs pré-remplies, sans afficher le questionnaire ni demander confirmation.
 
 #### 4.3 Créer la Tâche
 
