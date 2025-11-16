@@ -48,6 +48,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | [CNT-010](tasks/CNT-010-ajouter-section-benevolat.md) | Ajouter section Bénévolat | ⏳ À faire | 🔴 Haute | 2025-10-29 |
 | [CNT-014](tasks/CNT-014-analyse-experience-palo-it.md) | Analyse expérience PALO IT (journal/tâches CTO) | ⏳ À faire | 🔴 Haute | 2025-11-14 |
 | [CNT-015](tasks/CNT-015-analyse-cv-flash.md) | Analyse CV Flash (slide unique) | ⏳ À faire | 🔴 Haute | 2025-11-14 |
+| [INF-004](tasks/INF-004-migrer-systeme-gestion-taches-vers-skill-claude-unifie.md) | Migrer le système de gestion de tâches vers un Skill Claude unifié | 🔄 En cours | 🔴 Haute | 2025-11-16 |
 | [TPL-001](tasks/TPL-001-cv-versions.md) | Versions courte et longue du CV | ⏳ À faire | 🟡 Moyenne | 2025-10-28 |
 | [QUA-001](tasks/QUA-001-verification.md) | Étapes de vérification du CV | ⏳ À faire | 🟡 Moyenne | 2025-10-28 |
 | [TPL-002](tasks/TPL-002-template-system.md) | Système de changement de template | ⏳ À faire | 🟢 Basse | 2025-10-28 |
@@ -141,16 +142,16 @@ Closes TPL-001"
 
 ## Statistiques
 
-- **Total**: 16 tâches
+- **Total**: 17 tâches
 - **À faire**: 11
-- **En cours**: 0
+- **En cours**: 1
 - **Terminées**: 3
 - **Bloquées**: 0
 - **Archivées**: 8
 
 **Prochains IDs disponibles par trigramme**:
 
-- CNT-016, TPL-003, QUA-002, PIP-003, INF-004, LAY-001, DOC-002
+- CNT-016, TPL-003, QUA-002, PIP-003, INF-005, LAY-001, DOC-002
 
 ---
 
