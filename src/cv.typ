@@ -159,7 +159,7 @@
 
 #entry(
   title: "Développeur Web",
-  date: "07/2004 - 07/2006",
+  date: "06/2004 - 07/2006",
   institution: "Boonty (devenu Nexway)",
   location: "Paris, France",
 )[]

@@ -41,7 +41,6 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Créé le |
 |----|-------|--------|----------|---------|
-| [CNT-004](tasks/CNT-004-corriger-dates-boonty.md) | Corriger les dates de Boonty | 🔄 En cours | 🔴 Haute | 2025-10-29 |
 | [CNT-005](tasks/CNT-005-corriger-dates-debut-freelance.md) | Corriger les dates de début Freelance | ⏳ À faire | 🔴 Haute | 2025-10-29 |
 | [CNT-006](tasks/CNT-006-ajouter-certifications-manquantes.md) | Ajouter les certifications manquantes | ⏳ À faire | 🔴 Haute | 2025-10-29 |
 | [CNT-008](tasks/CNT-008-ajouter-experience-ibp.md) | Ajouter l'expérience i-BP | ⏳ À faire | 🔴 Haute | 2025-10-29 |
@@ -61,6 +60,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
+| [CNT-004](tasks/CNT-004-corriger-dates-boonty.md) | Corriger les dates de Boonty | ✅ Terminé | 🔴 Haute | 2025-11-16 |
 | [CNT-002](tasks/CNT-002-corriger-ecart-critique-upwiser.md) | Corriger l'écart critique sur Upwiser | ✅ Terminé | 🔴 Haute | 2025-11-16 |
 
 Les tâches archivées sont déplacées dans [.archived/](.archived/).
@@ -140,9 +140,9 @@ Closes TPL-001"
 ## Statistiques
 
 - **Total**: 14 tâches
-- **À faire**: 11
-- **En cours**: 1
-- **Terminées**: 1
+- **À faire**: 10
+- **En cours**: 0
+- **Terminées**: 2
 - **Bloquées**: 0
 - **Archivées**: 8
 

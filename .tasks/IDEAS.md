@@ -6,7 +6,7 @@ Ce fichier collecte les idées d'améliorations futures issues des tâches termi
 
 ## Contenu (CNT)
 
-*Aucune idée pour l'instant*
+- [ ] Améliorer la traçabilité des clarifications historiques dans le système de tâches (source: CNT-004, 2025-11-16)
 
 ---
 

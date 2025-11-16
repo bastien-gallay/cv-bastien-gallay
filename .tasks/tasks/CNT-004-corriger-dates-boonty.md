@@ -8,15 +8,15 @@
 |-------|--------|
 | **ID** | CNT-004 |
 | **Titre** | Corriger les dates de Boonty |
-| **Statut** | 🔄 En cours |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | CNT |
 | **Section CV** | Experience |
 | **Créé le** | 2025-10-29 |
 | **Cible** | - |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-16 |
 | **Temps estimé** | 0.5 heures |
-| **Temps réel** | - |
+| **Temps réel** | 0.1 heures |
 | **Branche nécessaire** | Auto |
 
 ---
@@ -45,12 +45,12 @@ Vérifier les contrats de travail et corriger les dates de Boonty pour assurer l
 
 ## Sous-tâches
 
-- [ ] Vérifier les contrats de travail pour confirmer les dates exactes
-- [ ] Clarifier l'activité 2004-2005 (Qualia Services?)
-- [ ] Mettre à jour la date de début dans [src/cv.typ:162](../../src/cv.typ#L162)
-- [ ] Ajuster la durée si nécessaire
-- [ ] Compiler le CV avec `just build`
-- [ ] Vérifier la cohérence avec les autres expériences de la période
+- [x] Vérifier les contrats de travail pour confirmer les dates exactes
+- [x] Clarifier l'activité 2004-2005 (Qualia Services?)
+- [x] Mettre à jour la date de début dans [src/cv.typ:162](../../src/cv.typ#L162)
+- [x] Ajuster la durée si nécessaire
+- [x] Compiler le CV avec `just build`
+- [x] Vérifier la cohérence avec les autres expériences de la période
 
 ---
 
@@ -137,9 +137,23 @@ Closes CNT-004"
 |------|--------|---------|
 | 2025-10-29 | Création | Tâche créée depuis recommandation CNT-001-R03 |
 | 2025-11-16 | En cours | Début du travail (pas de branche) |
+| 2025-11-16 | Terminé | Tâche complétée après clarification depuis CNT-013 |
 
 ---
 
 ## Résultat final
 
-[À remplir une fois la tâche terminée]
+**Ce qui a été fait:**
+
+- Vérifié dates exactes depuis analyse CNT-013 archivée
+- Clarifié période: 06/2004-07/2005 Qualia Service (prestation chez Boonty), 07/2005-07/2006 Boonty direct
+- Corrigé date début de 07/2004 à 06/2004 dans src/cv.typ:162
+- Compilé et vérifié cohérence du CV
+
+**Difficultés rencontrées:**
+
+Aucune difficulté - clarification rapide grâce aux archives CNT-013.
+
+**Améliorations futures:**
+
+- Améliorer la traçabilité des clarifications historiques dans le système de tâches
