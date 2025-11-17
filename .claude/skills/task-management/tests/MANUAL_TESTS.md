@@ -422,7 +422,7 @@ cd .claude/skills/task-management && uvx --with pyyaml pytest tests/ -v --tb=sho
 - Aucune failure
 - Coverage complet des fonctionnalités critiques
 
-**Status:** [ ]
+**Status:** [x]
 
 *Note utilisateur:*
 
@@ -446,7 +446,7 @@ ls -la .claude/commands/task-*.md 2>/dev/null
 - Message "no matches found" ou aucun output
 - 9 fichiers supprimés (~2,340 lignes)
 
-**Status:** [ ]
+**Status:** [x]
 
 *Note utilisateur:*
 
@@ -470,7 +470,7 @@ grep -n "task-management" CLAUDE.md
 - Architecture documentée
 - Workflows listés
 
-**Status:** [ ]
+**Status:** [x]
 
 *Note utilisateur:*
 
@@ -482,26 +482,144 @@ grep -n "task-management" CLAUDE.md
 
 ### Test 20: Workflow end-to-end complet
 
-**Setup:** Environnement isolé de test
+**Préparation:** Des fichiers de test réutilisables sont disponibles dans `tests/fixtures/`
+
+**Setup:** Créer un environnement isolé de test
 
 ```bash
-# Créer environnement de test
+# 1. Créer l'environnement de test
 export TASK_SYSTEM_TASKS_DIR=.tasks/test-e2e
 export TASK_SYSTEM_DASHBOARD=.tasks/test-e2e/TASKS.md
-mkdir -p .tasks/test-e2e
+export TASK_SYSTEM_ARCHIVED_DIR=.tasks/test-e2e/.archived
 
-# Copier template et dashboard
-cp .tasks/tasks/TEMPLATE.md .tasks/test-e2e/
-echo "# Test Dashboard" > .tasks/test-e2e/TASKS.md
+mkdir -p .tasks/test-e2e
+mkdir -p .tasks/test-e2e/.archived
+
+# 2. Copier les fichiers de test préparés
+cp .claude/skills/task-management/tests/fixtures/TEST-001-sample-task.md .tasks/test-e2e/
+cp .claude/skills/task-management/tests/fixtures/TASKS-test-dashboard.md .tasks/test-e2e/TASKS.md
+
+# 3. Vérifier que l'environnement est prêt
+ls -la .tasks/test-e2e/
 ```
 
-**Test:**
+**Tests pas à pas:**
 
-1. Suggestion de tâche (task-next)
-2. Création de tâche (via skill)
-3. Démarrage de tâche (task-start)
-4. Complétion de tâche (task-complete)
-5. Archivage
+#### Étape 1: Vérifier que task-next trouve la tâche TEST-001
+
+```bash
+uv run --with pyyaml python3 .claude/skills/task-management/scripts/algorithms/priority_scorer.py
+```
+
+**✅ Validation:** Doit afficher "💡 Prochaine tâche suggérée: TEST-001"
+
+---
+
+#### Étape 2: Valider la tâche avec DoR validator
+
+```bash
+uv run --with pyyaml python3 .claude/skills/task-management/scripts/validators/dor_validator.py TEST-001
+```
+
+**✅ Validation:** Doit afficher "✅ Valid: Yes" (la tâche est en statut "⏳ À faire")
+
+---
+
+#### Étape 3: Simuler le démarrage de la tâche
+
+```bash
+# Mettre à jour le statut dans le fichier de tâche
+sed -i '' 's/⏳ À faire/🔄 En cours/' .tasks/test-e2e/TEST-001-sample-task.md
+
+# Mettre à jour le dashboard (déplacer de "À faire" vers "En cours")
+uv run --with pyyaml python3 -c "
+import sys
+sys.path.append('.claude/skills/task-management/scripts')
+from core.dashboard_updater import update_task_status
+
+# La fonction attend que la tâche soit déjà dans le dashboard
+update_task_status('TEST-001', '🔄 En cours')
+"
+```
+
+**✅ Validation:** Le dashboard doit montrer TEST-001 dans la section "🔄 En cours"
+
+---
+
+#### Étape 4: Préparer la complétion (cocher les sous-tâches)
+
+```bash
+# Cocher toutes les sous-tâches
+sed -i '' 's/- \[ \]/- [x]/g' .tasks/test-e2e/TEST-001-sample-task.md
+
+# Ajouter la section Résultat final (requise pour DoD)
+echo "
+---
+
+## Résultat final
+
+Test end-to-end complété avec succès. Toutes les étapes du workflow ont été validées." >> .tasks/test-e2e/TEST-001-sample-task.md
+```
+
+**✅ Validation:** Vérifier que les sous-tâches sont cochées et la section résultat ajoutée
+
+---
+
+#### Étape 5: Valider avec DoD validator
+
+```bash
+uv run --with pyyaml python3 .claude/skills/task-management/scripts/validators/dod_validator.py TEST-001
+```
+
+**✅ Validation:** Doit afficher "✅ Valid: Yes" si toutes les conditions sont remplies
+
+---
+
+#### Étape 6: Compléter la tâche
+
+```bash
+# Mettre à jour le statut dans le fichier
+sed -i '' 's/🔄 En cours/✅ Terminé/' .tasks/test-e2e/TEST-001-sample-task.md
+
+# Mettre à jour le dashboard
+uv run --with pyyaml python3 -c "
+import sys
+sys.path.append('.claude/skills/task-management/scripts')
+from core.dashboard_updater import update_task_status
+
+update_task_status('TEST-001', '✅ Terminé')
+"
+```
+
+**✅ Validation:** Le dashboard doit montrer TEST-001 dans la section "✅ Tâches terminées"
+
+---
+
+#### Étape 7: Archiver la tâche
+
+```bash
+# Déplacer vers le dossier d'archives
+mv .tasks/test-e2e/TEST-001-sample-task.md .tasks/test-e2e/.archived/
+
+# Vérifier l'archivage
+ls -la .tasks/test-e2e/.archived/TEST-001-sample-task.md
+```
+
+**✅ Validation:** Le fichier doit être dans `.archived/` et ne plus être dans le dossier principal
+
+---
+
+#### Étape 8: Nettoyage
+
+```bash
+# Supprimer l'environnement de test
+rm -rf .tasks/test-e2e
+
+# Désactiver les variables d'environnement
+unset TASK_SYSTEM_TASKS_DIR
+unset TASK_SYSTEM_DASHBOARD
+unset TASK_SYSTEM_ARCHIVED_DIR
+```
 
 **Status:** [ ]
 
