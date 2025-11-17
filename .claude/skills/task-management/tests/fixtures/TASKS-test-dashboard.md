@@ -1,20 +1,15 @@
 # Tableau de bord des tâches (TEST)
 
-## 🎯 Tâches actives
+## Tâches actives
 
-### 🔄 En cours
+| ID | Titre | Statut | Priorité | Créé le | Fichier |
+|----|-------|--------|---------|---------|---------|
+| TEST-001 | Tâche de test pour validation end-to-end | ⏳ À faire | 🔴 Haute | 2025-11-17 | TEST-001-sample-task.md |
 
-*(Aucune tâche en cours)*
+## Tâches terminées
 
-### ⏳ À faire
-
-| ID | Titre | Priorité | Créé le | Fichier |
-|----|-------|---------|---------|---------|
-| TEST-001 | Tâche de test pour validation end-to-end | 🔴 Haute | 2025-11-17 | TEST-001-sample-task.md |
-
-## ✅ Tâches terminées
-
-*(Aucune tâche terminée)*
+| ID | Titre | Priorité | Créé le | Terminé le | Fichier |
+|----|-------|---------|---------|------------|---------|
 
 ---
 
