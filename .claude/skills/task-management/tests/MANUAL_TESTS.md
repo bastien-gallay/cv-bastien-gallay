@@ -581,17 +581,22 @@ uv run --with pyyaml python3 .claude/skills/task-management/scripts/validators/d
 # Mettre à jour le statut dans le fichier
 sed -i '' 's/🔄 En cours/✅ Terminé/' .tasks/test-e2e/TEST-001-sample-task.md
 
-# Mettre à jour le dashboard
+# Ajouter la date de complétion dans le fichier
+sed -i '' 's/| \*\*Terminé le\*\* | - |/| **Terminé le** | 2025-11-17 |/' .tasks/test-e2e/TEST-001-sample-task.md
+
+# Déplacer la tâche vers la section "Terminées" dans le dashboard
 uv run --with pyyaml python3 -c "
 import sys
+from datetime import date
 sys.path.append('.claude/skills/task-management/scripts')
-from core.dashboard_updater import update_task_status
+from core.dashboard_updater import move_task_to_completed
 
-update_task_status('TEST-001', '✅ Terminé')
+# Déplacer la tâche vers la section terminées
+move_task_to_completed('TEST-001', str(date.today()))
 "
 ```
 
-**✅ Validation:** Le dashboard doit montrer TEST-001 dans la section "✅ Tâches terminées"
+**✅ Validation:** Le dashboard doit montrer TEST-001 dans la section "Tâches terminées" (et plus dans "Tâches actives")
 
 ---
 
