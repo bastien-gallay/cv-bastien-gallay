@@ -406,6 +406,128 @@ cd .claude/skills/task-management && uvx --with pyyaml pytest tests/ -v
 
 ---
 
+## Session 4: Tests finaux + Documentation + Cleanup
+
+### Test 17: Suite complète de tests unitaires
+
+**Command:**
+
+```bash
+cd .claude/skills/task-management && uvx --with pyyaml pytest tests/ -v --tb=short
+```
+
+**Attendu:**
+
+- 74 tests passent (file_parser, priority_scorer, id_generator, dor_validator, recommendation_parser)
+- Aucune failure
+- Coverage complet des fonctionnalités critiques
+
+**Status:** [ ]
+
+*Note utilisateur:*
+
+```markdown
+[À compléter lors du test]
+```
+
+---
+
+### Test 18: Vérification suppression slash commands
+
+**Command:**
+
+```bash
+ls -la .claude/commands/task-*.md 2>/dev/null
+```
+
+**Attendu:**
+
+- Aucun fichier trouvé
+- Message "no matches found" ou aucun output
+- 9 fichiers supprimés (~2,340 lignes)
+
+**Status:** [ ]
+
+*Note utilisateur:*
+
+```markdown
+[À compléter lors du test]
+```
+
+---
+
+### Test 19: Documentation CLAUDE.md mise à jour
+
+**Command:**
+
+```bash
+grep -n "task-management" CLAUDE.md
+```
+
+**Attendu:**
+
+- Trouve la documentation du skill
+- Architecture documentée
+- Workflows listés
+
+**Status:** [ ]
+
+*Note utilisateur:*
+
+```markdown
+[À compléter lors du test]
+```
+
+---
+
+### Test 20: Workflow end-to-end complet
+
+**Setup:** Environnement isolé de test
+
+```bash
+# Créer environnement de test
+export TASK_SYSTEM_TASKS_DIR=.tasks/test-e2e
+export TASK_SYSTEM_DASHBOARD=.tasks/test-e2e/TASKS.md
+mkdir -p .tasks/test-e2e
+
+# Copier template et dashboard
+cp .tasks/tasks/TEMPLATE.md .tasks/test-e2e/
+echo "# Test Dashboard" > .tasks/test-e2e/TASKS.md
+```
+
+**Test:**
+
+1. Suggestion de tâche (task-next)
+2. Création de tâche (via skill)
+3. Démarrage de tâche (task-start)
+4. Complétion de tâche (task-complete)
+5. Archivage
+
+**Status:** [ ]
+
+*Note utilisateur:*
+
+```markdown
+[À compléter lors du test]
+```
+
+---
+
+## Validation Finale Session 4
+
+- [ ] Tous les tests Session 1-3 passent toujours
+- [ ] 74 tests unitaires passent (100% success)
+- [ ] Slash commands supprimés (9 fichiers, ~2,340 lignes)
+- [ ] CLAUDE.md mis à jour avec documentation skill
+- [ ] Architecture progressive disclosure fonctionnelle
+- [ ] Scripts Python isolés et testables
+- [ ] Validation end-to-end complète
+
+**Validé par:** _______
+**Date:** _______
+
+---
+
 ## Notes de Migration
 
 **Sessions complétées:**
@@ -418,6 +540,6 @@ cd .claude/skills/task-management && uvx --with pyyaml pytest tests/ -v
 **Métriques:**
 
 - **Tests unitaires:** 74 (tous passent)
-- **Workflows:** 8 (task-next, create, complete, from-analysis, analyze-source, start, archive, validate, from-idea)
-- **Scripts Python:** 10 modules
+- **Workflows:** 9 (task-next, create, complete, from-analysis, analyze-source, start, archive, validate, from-idea)
+- **Scripts Python:** 10 modules (~2,000 lignes)
 - **Réduction contexte:** ~2,340 lignes de slash commands → ~1,900 lignes de workflows (réutilisables)
