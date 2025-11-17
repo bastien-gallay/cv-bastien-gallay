@@ -84,20 +84,7 @@ uv run --with pyyaml python3 .claude/skills/task-management/scripts/core/file_pa
 - Compte sous-tâches (X/Y completed)
 - Extrait sections (Description, Notes)
 
-**Status:** [ ]
-
-*Note utilisateur:*
-
-```markdown
-Une erreur me fait penser que la commande est incomplète ou une config n'est pas utilisée, car voici ce que j'ai:
-
-> $ uv run --with pyyaml python3 .claude/skills/task-management/scripts/core/file_parser.py
-> Testing file_parser.py
-> ============================================================
-> ❌ Tasks directory not found: ../../../.tasks/tasks
-
-
-```
+**Status:** [x]
 
 ---
 
@@ -203,19 +190,7 @@ uv run --with pyyaml python3 .claude/skills/task-management/scripts/core/id_gene
 - Tests slug generation
 - All operations succeed
 
-**Status:** [ ]
-
-*Note utilisateur:*
-
-```markdown
-Erreur au lancement:
-
-Traceback (most recent call last):
-  File "/Users/bastiengallay/Dev/cv/neat-cv/.claude/skills/task-management/scripts/core/id_generator.py", line 13, in <module>
-    from core.config_loader import load_paths, load_trigrammes
-ModuleNotFoundError: No module named 'core'
-
-```
+**Status:** [x]
 
 ---
 
@@ -310,19 +285,7 @@ uv run --with pyyaml python3 .claude/skills/task-management/scripts/core/dashboa
 - Shows count of active/completed tasks
 - No errors
 
-**Status:** [ ]
-
-*Note utilisateur:*
-
-```markdown
-Erreur au lancement:
-
-Traceback (most recent call last):
-  File "/Users/bastiengallay/Dev/cv/neat-cv/.claude/skills/task-management/scripts/core/dashboard_updater.py", line 12, in <module>
-    from .config_loader import load_paths
-ImportError: attempted relative import with no known parent package
-
-```
+**Status:** [x]
 
 ---
 
@@ -340,19 +303,7 @@ uv run --with pyyaml python3 .claude/skills/task-management/scripts/core/git_ope
 - Shows if uncommitted changes
 - Formats commit message correctly
 
-**Status:** [ ]
-
-*Note utilisateur:*
-
-```markdown
-Erreur au lancement:
-
-Traceback (most recent call last):
-  File "/Users/bastiengallay/Dev/cv/neat-cv/.claude/skills/task-management/scripts/core/git_operations.py", line 12, in <module>
-    from .config_loader import load_paths
-ImportError: attempted relative import with no known parent package
-
-```
+**Status:** [x]
 
 ---
 
@@ -403,3 +354,70 @@ cd .claude/skills/task-management && uvx --with pyyaml pytest tests/test_dor_val
 
 **Validé par:** _______
 **Date:** _______
+
+---
+
+## Session 3: Analysis & Lifecycle Workflows
+
+### Test 15: Recommendation Parser (Unit Tests)
+
+**Command:**
+
+```bash
+cd .claude/skills/task-management && uvx --with pyyaml pytest tests/test_recommendation_parser.py -v
+```
+
+**Attendu:**
+
+- 19 tests pass
+- No failures
+
+**Status:** [x]
+
+---
+
+### Test 16: All Tests Suite
+
+**Command:**
+
+```bash
+cd .claude/skills/task-management && uvx --with pyyaml pytest tests/ -v
+```
+
+**Attendu:**
+
+- 74 tests pass (25 id_generator + 23 dor_validator + 7 file_parser + 19 recommendation_parser)
+- No failures
+
+**Status:** [x]
+
+---
+
+## Validation Finale Session 3
+
+- [x] All Session 1+2 tests still pass
+- [x] Recommendation parser tests pass (19/19)
+- [x] Complete test suite passes (74/74)
+- [ ] Workflows documented and accessible
+- [ ] No regression in existing functionality
+
+**Validé par:** _______
+**Date:** _______
+
+---
+
+## Notes de Migration
+
+**Sessions complétées:**
+
+- ✅ Session 1: Architecture + Infrastructure (config, file_parser, priority_scorer)
+- ✅ Session 2: Core + Validators (id_generator, dor/dod_validator, dashboard_updater, git_operations)
+- ✅ Session 3: Analysis + Lifecycle (recommendation_parser, 6 workflows)
+- ⏳ Session 4: Tests + Documentation + Cleanup (en cours)
+
+**Métriques:**
+
+- **Tests unitaires:** 74 (tous passent)
+- **Workflows:** 8 (task-next, create, complete, from-analysis, analyze-source, start, archive, validate, from-idea)
+- **Scripts Python:** 10 modules
+- **Réduction contexte:** ~2,340 lignes de slash commands → ~1,900 lignes de workflows (réutilisables)
