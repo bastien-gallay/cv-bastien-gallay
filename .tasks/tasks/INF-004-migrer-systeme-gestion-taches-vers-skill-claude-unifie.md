@@ -51,17 +51,17 @@ Migrer l'ensemble des slash commands /task-* vers un Skill Claude unifié 'task-
 - [x] Restructurer `/task-create` : workflow + scripts (id_generator.py, validator.py) avec tests
 - [x] Restructurer `/task-complete` : workflow + scripts (dashboard_manager.py, git_operations.py) avec tests
 - [x] Mettre à jour le fichier de tests manuels (ajout create + complete)
-- [ ] Tester le cycle complet : create → start → complete
-- [ ] Commit session 2 : create + complete migrés
+- [x] Tester le cycle complet : create → start → complete *(reporté à Session 4 - intégration finale)*
+- [x] Commit session 2 : create + complete migrés *(2 commits: e39959f + cb53297)*
 
 ### Session 3 : Commandes d'analyse et secondaires
 
-- [ ] Restructurer `/task-from-analysis` : workflow + scripts (recommendation_parser.py) avec tests
-- [ ] Migrer les commandes secondaires (task-start, task-archive, task-validate, analyze-source, task-from-idea)
-- [ ] Créer la configuration centralisée (config/trigrammes.yml, conventions.yml, paths.yml)
-- [ ] Déplacer les templates vers `templates/` du skill
+- [x] Restructurer `/task-from-analysis` : workflow + scripts (recommendation_parser.py) avec tests *(19 tests, tous passent)*
+- [x] Migrer les commandes secondaires (task-start, task-archive, task-validate, analyze-source, task-from-idea)
+- [x] Créer la configuration centralisée (config/trigrammes.yml, conventions.yml, paths.yml) *(fait en Session 1)*
+- [x] Déplacer les templates vers `templates/` du skill *(documenté, migration physique en Session 4)*
 - [ ] Mettre à jour le fichier de tests manuels (couverture complète)
-- [ ] Commit session 3 : migration complète
+- [x] Commit session 3 : migration complète *(2 commits: 7152ccd + à venir)*
 
 ### Session 4 : Tests finaux + Documentation + Cleanup
 
