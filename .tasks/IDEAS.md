@@ -24,7 +24,6 @@ Ce fichier collecte les idées d'améliorations futures issues des tâches termi
 
 ## Pipeline (PIP)
 
-- [ ] Dans les commandes de gestion des tâches, privilégier des questionnaires posant plusieurs questions numérotées à la suite plutôt que des questions uniques successives
 - [ ] `/task-next` pourrait bénéficier d'un cache pour accélérer la recherche de la prochaine tâche à faire (Spike, expérimentation nécessaire)
 
 ---
@@ -37,13 +36,13 @@ Ce fichier collecte les idées d'améliorations futures issues des tâches termi
 
 ## Documentation (DOC)
 
-- [ ] Suggérer des réponses automatiques aux questions de collecte d'informations lors de la complétion des tâches (basées sur le contenu de la tâche et l'historique Git) (source: DOC-001, 2025-10-28)
+*Aucune idée pour l'instant*
 
 ---
 
 ## Infrastructure (INF)
 
-- [ ] Pérenniser le script Python de calcul des priorités (scripts/priority_weight.py) utilisé dans /task-next et l'améliorer pour le futur (source: CNT-002, 2025-11-16)
+*Aucune idée pour l'instant*
 
 ---
 

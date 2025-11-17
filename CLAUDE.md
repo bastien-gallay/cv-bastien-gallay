@@ -148,17 +148,31 @@ Tasks use the format `XXX-NNN` where:
 
 ### Task Automation
 
-The task management system is fully automated via Claude commands. See [.claude/commands/README.md](.claude/commands/README.md) for complete documentation.
+The task management system is implemented as a **Claude Skill** with progressive disclosure architecture, combining workflows, Python scripts, and comprehensive testing.
 
-**Quick Commands:**
+**Architecture:**
 
-- `/task-create` - Create a new task interactively
-- `/task-from-idea` - Create a task from an idea in the backlog ([.tasks/IDEAS.md](.tasks/IDEAS.md))
-- `/task-start <ID>` - Start working on a task (creates Git branch, updates status)
-- `/task-complete <ID>` - Complete a task (validates DoD, creates final commit, adds ideas to backlog)
-- `/task-next` - Get intelligent suggestion for next task to work on
-- `/task-validate` - Validate system consistency
-- `/task-archive <ID>` - Archive a completed task
+```
+.claude/skills/task-management/
+├── workflows/        # Concise workflow documentation
+├── scripts/          # Deterministic Python logic
+│   ├── core/         # ID generation, validation, dashboard, Git
+│   └── analysis/     # Recommendation parsing
+├── config/           # YAML configuration (priorities, paths, trigrammes)
+└── tests/            # 74 unit tests (pytest)
+```
+
+**Available Workflows:**
+
+- `task-create` - Create a new task interactively
+- `task-from-idea` - Create task from ideas backlog ([.tasks/IDEAS.md](.tasks/IDEAS.md))
+- `task-start <ID>` - Start working (DoR validation, Git branch, status update)
+- `task-complete <ID>` - Complete task (DoD validation, final commit, backlog ideas)
+- `task-next` - WSJF-based intelligent task suggestion
+- `task-from-analysis` - Create tasks from analysis recommendations
+- `analyze-source` - Extract data from external sources (LinkedIn, GitHub, etc.)
+- `task-validate` - Validate system consistency
+- `task-archive <ID>` - Archive completed tasks
 
 **Ideas Backlog:**
 

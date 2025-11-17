@@ -1,0 +1,43 @@
+# Priority Configuration
+# Used by priority scorer and task commands
+
+task_priorities:
+  high:
+    emoji: "🔴"
+    score: 10
+    default_time_hours: 8.0
+
+  medium:
+    emoji: "🟡"
+    score: 5
+    default_time_hours: 4.0
+
+  low:
+    emoji: "🟢"
+    score: 2
+    default_time_hours: 2.0
+
+# Analysis priority mapping (from recommendations-status.md)
+analysis_priorities:
+  very_high:
+    emoji: "🔴🔴"
+    maps_to: "high"
+
+  high:
+    emoji: "🔴"
+    maps_to: "high"
+
+  medium:
+    emoji: "🟡"
+    maps_to: "medium"
+
+  low:
+    emoji: "🟢"
+    maps_to: "low"
+
+# Urgency scoring (for WSJF algorithm)
+urgency_scores:
+  overdue: 10      # Target date passed
+  week: 5          # Target < 7 days
+  month: 2         # Target < 30 days
+  none: 0          # No target date

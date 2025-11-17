@@ -61,6 +61,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
+| [INF-004](tasks/INF-004-migrer-systeme-gestion-taches-vers-skill-claude-unifie.md) | Migrer le système de gestion de tâches vers un Skill Claude unifié | ✅ Terminé | 🔴 Haute | 2025-11-17 |
 | [PIP-002](tasks/PIP-002-privilegier-questionnaires-interactifs-commandes.md) | Privilégier les questionnaires interactifs dans les commandes de tâches | ✅ Terminé | 🔴 Haute | 2025-11-16 |
 | [CNT-004](tasks/CNT-004-corriger-dates-boonty.md) | Corriger les dates de Boonty | ✅ Terminé | 🔴 Haute | 2025-11-16 |
 | [CNT-002](tasks/CNT-002-corriger-ecart-critique-upwiser.md) | Corriger l'écart critique sur Upwiser | ✅ Terminé | 🔴 Haute | 2025-11-16 |
@@ -141,16 +142,16 @@ Closes TPL-001"
 
 ## Statistiques
 
-- **Total**: 16 tâches
-- **À faire**: 11
+- **Total**: 17 tâches
+- **À faire**: 10
 - **En cours**: 0
-- **Terminées**: 3
+- **Terminées**: 4
 - **Bloquées**: 0
 - **Archivées**: 8
 
 **Prochains IDs disponibles par trigramme**:
 
-- CNT-016, TPL-003, QUA-002, PIP-003, INF-004, LAY-001, DOC-002
+- CNT-016, TPL-003, QUA-002, PIP-003, INF-005, LAY-001, DOC-002
 
 ---
 
