@@ -8,7 +8,7 @@
 |-------|--------|
 | **ID** | CNT-014 |
 | **Titre** | Analyse expérience PALO IT (journal/tâches CTO) |
-| **Statut** | ⏳ À faire |
+| **Statut** | 🔄 En cours |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | CNT |
 | **Section CV** | Experience |
