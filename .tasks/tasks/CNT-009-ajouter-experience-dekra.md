@@ -23,13 +23,13 @@
 
 ## Description
 
-Ajouter l'expérience de Coach Agile chez DEKRA (octobre 2013 - janvier 2015) qui est présente sur LinkedIn mais absente du CV.
+Ajouter la mission DEKRA (octobre 2013 - janvier 2015) dans la section "= Expérience détaillée" comme mission longue au sein d'Upwiser.
 
 ### Contexte
 
 L'audit LinkedIn (CNT-001) a identifié une mission freelance manquante:
 
-- **Poste:** Coach Agile (Freelance)
+- **Poste:** Coach Agile (Freelance via Upwiser)
 - **Dates:** oct. 2013 - janv. 2015 (1 an 4 mois)
 - **Lieu:** Bordeaux Area, France
 - **Description:**
@@ -38,25 +38,30 @@ L'audit LinkedIn (CNT-001) a identifié une mission freelance manquante:
   - Coaching et formation des nouveaux Scrum Masters
   - Accompagnement à l'adoption de bonnes pratiques
 
-Cette mission démarre juste après le début d'Upwiser (oct. 2013). Il faut clarifier le lien entre les deux (mission freelance parallèle?).
+Cette mission démarre en même temps qu'Upwiser (oct. 2013) et représente une des premières missions longues de la société. Elle doit être ajoutée **uniquement dans la section "= Expérience détaillée"** (ligne 253+) pour enrichir la description d'Upwiser avec des missions concrètes.
+
+**Note:** Cette tâche sera traitée en même temps que CNT-008 (i-BP) et CNT-016 (enrichissement global).
 
 **Origine:** Recommandation [CNT-001-R08](../resources/analyses/CNT-001/recommendations-status.md#r08---ajouter-lexpérience-dekra) depuis l'analyse [CNT-001](../resources/analyses/CNT-001/)
 
 ### Objectif
 
-Compléter le CV avec cette mission freelance significative (1 an 4 mois) pour refléter fidèlement le parcours professionnel.
+Enrichir la section "= Expérience détaillée" avec cette mission freelance DEKRA pour illustrer concrètement les activités Upwiser.
 
 ---
 
 ## Sous-tâches
 
-- [ ] Clarifier le lien entre DEKRA et Upwiser (mission freelance parallèle?)
-- [ ] Identifier l'emplacement exact dans le CV (après ligne 135, entre Upwiser et Cdiscount)
-- [ ] Créer une entrée `#entry()` avec les informations DEKRA
-- [ ] Rédiger une description concise basée sur les points LinkedIn
-- [ ] Vérifier que l'insertion ne casse pas le layout
+- [ ] Coordonner avec CNT-016 (enrichissement section détaillée)
+- [ ] Coordonner avec CNT-008 (mission i-BP, même période Upwiser)
+- [ ] Identifier l'emplacement exact dans la section "= Expérience détaillée" (ligne 253+)
+- [ ] Créer une sous-section pour Upwiser avec missions détaillées
+- [ ] Ajouter la mission DEKRA comme entrée détaillée
+- [ ] Rédiger une description développée basée sur les points LinkedIn
+- [ ] Préciser que DEKRA était une des premières missions longues d'Upwiser
 - [ ] Compiler le CV avec `just build`
 - [ ] Vérifier le rendu dans le PDF
+- [ ] Vérifier que la section ne déborde pas (max 3-4 pages total)
 
 ---
 
@@ -64,33 +69,57 @@ Compléter le CV avec cette mission freelance significative (1 an 4 mois) pour r
 
 > Instructions spécifiques pour l'assistance IA
 
-Ajouter l'expérience en suivant le format existant des autres expériences professionnelles.
+**IMPORTANT:** Cette mission doit être ajoutée **UNIQUEMENT dans la section "= Expérience détaillée"** (ligne 253+), PAS en page 1.
 
-**Format attendu:**
+**Coordination avec autres tâches:**
+- Traiter en même temps que CNT-008 (i-BP, même logique)
+- Intégrer dans CNT-016 (enrichissement global de la section détaillée)
+
+**Format attendu (section détaillée):**
 
 ```typst
+= Expérience détaillée
+
 #entry(
-  title: [Coach Agile],
-  date: [10/2013 - 01/2015],
-  institution: [DEKRA],
-  location: [Bordeaux],
-  description: [
-    - Scrum Master pour projet de refonte logiciel interne
-    - Mise en place de feature teams et coordination multi-équipes
-    - Coaching et formation des nouveaux Scrum Masters
-    - Accompagnement à l'adoption de bonnes pratiques Agile
-  ]
-)
+  title: [Gérant & Coach Agile],
+  date: [09/2013 - 02/2021],
+  institution: [Upwiser],
+  location: [Bordeaux, France],
+)[
+  === Contexte
+  Création de ma société de conseil en agilité et développement logiciel...
+
+  === Missions principales
+
+  ==== Mission DEKRA - Coach Agile (oct. 2013 - janv. 2015)
+  **Client:** DEKRA, Bordeaux
+  **Durée:** 1 an 4 mois
+
+  - Scrum Master pour projet de refonte logiciel interne
+  - Mise en place de feature teams et coordination multi-équipes
+  - Coaching et formation des nouveaux Scrum Masters
+  - Accompagnement à l'adoption de bonnes pratiques Agile
+
+  ==== Mission i-BP - Coach Agile (avr. 2015 - sept. 2015)
+  [À ajouter via CNT-008]
+
+  === Autres activités Upwiser
+  - Animation de formations et ateliers
+  - Accompagnement de ~100 startups et PME
+  - Création du cercle Lean Startup Bordeaux
+  ...
+]
 ```
 
 **Outils/commandes à utiliser:**
 
 - `just build` pour compiler
-- Vérifier le positionnement chronologique
+- Traiter après CNT-014 (analyse PALO IT)
 
 **Fichiers à consulter:**
 
-- [cv.typ](../../src/cv.typ) (insertion après ligne 135)
+- [cv.typ:253+](../../src/cv.typ#L253) - Section "= Expérience détaillée"
+- [CNT-016](./CNT-016-enrichir-section-experience-detaillee-avec-descriptions-developpees.md) - Tâche parente
 
 ---
 
