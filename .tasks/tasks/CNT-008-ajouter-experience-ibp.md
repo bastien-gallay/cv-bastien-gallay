@@ -23,13 +23,13 @@
 
 ## Description
 
-Ajouter l'expérience de Coach Agile chez i-BP (avril 2015 - septembre 2015) qui est présente sur LinkedIn mais absente du CV.
+Ajouter la mission i-BP (avril 2015 - septembre 2015) dans la section "= Expérience détaillée" comme mission longue au sein d'Upwiser.
 
 ### Contexte
 
 L'audit LinkedIn (CNT-001) a identifié une mission freelance manquante:
 
-- **Poste:** Coach Agile (Freelance)
+- **Poste:** Coach Agile (Freelance via Upwiser)
 - **Dates:** avr. 2015 - sept. 2015 (6 mois)
 - **Lieu:** Nantes Area, France
 - **Description:**
@@ -39,24 +39,29 @@ L'audit LinkedIn (CNT-001) a identifié une mission freelance manquante:
   - Mise en place de Coach Dating
   - Méthodes: Scrum, Kanban, Lean Startup
 
-Cette mission s'inscrit dans la période Upwiser et doit être insérée entre Upwiser et Cdiscount (ordre chronologique).
+Cette mission s'inscrit dans la période Upwiser (sept. 2013 - fév. 2021) et doit être ajoutée **uniquement dans la section "= Expérience détaillée"** (ligne 253+) pour enrichir la description d'Upwiser avec des missions concrètes.
+
+**Note:** Cette tâche sera traitée en même temps que CNT-009 (DEKRA) et CNT-016 (enrichissement global).
 
 **Origine:** Recommandation [CNT-001-R07](../resources/analyses/CNT-001/recommendations-status.md#r07---ajouter-lexpérience-i-bp) depuis l'analyse [CNT-001](../resources/analyses/CNT-001/)
 
 ### Objectif
 
-Compléter le CV avec cette mission freelance pour refléter fidèlement le parcours professionnel.
+Enrichir la section "= Expérience détaillée" avec cette mission freelance i-BP pour illustrer concrètement les activités Upwiser.
 
 ---
 
 ## Sous-tâches
 
-- [ ] Identifier l'emplacement exact dans le CV (après ligne 135, entre Upwiser et Cdiscount)
-- [ ] Créer une entrée `#entry()` avec les informations i-BP
-- [ ] Rédiger une description concise basée sur les points LinkedIn
-- [ ] Vérifier que l'insertion ne casse pas le layout
+- [ ] Coordonner avec CNT-016 (enrichissement section détaillée)
+- [ ] Coordonner avec CNT-009 (mission DEKRA, même période Upwiser)
+- [ ] Identifier l'emplacement exact dans la section "= Expérience détaillée" (ligne 253+)
+- [ ] Créer une sous-section pour Upwiser avec missions détaillées
+- [ ] Ajouter la mission i-BP comme entrée détaillée
+- [ ] Rédiger une description développée basée sur les points LinkedIn
 - [ ] Compiler le CV avec `just build`
 - [ ] Vérifier le rendu dans le PDF
+- [ ] Vérifier que la section ne déborde pas (max 3-4 pages total)
 
 ---
 
@@ -64,33 +69,57 @@ Compléter le CV avec cette mission freelance pour refléter fidèlement le parc
 
 > Instructions spécifiques pour l'assistance IA
 
-Ajouter l'expérience en suivant le format existant des autres expériences professionnelles.
+**IMPORTANT:** Cette mission doit être ajoutée **UNIQUEMENT dans la section "= Expérience détaillée"** (ligne 253+), PAS en page 1.
 
-**Format attendu:**
+**Coordination avec autres tâches:**
+- Traiter en même temps que CNT-009 (DEKRA, même logique)
+- Intégrer dans CNT-016 (enrichissement global de la section détaillée)
+
+**Format attendu (section détaillée):**
 
 ```typst
+= Expérience détaillée
+
 #entry(
-  title: [Coach Agile],
-  date: [04/2015 - 09/2015],
-  institution: [i-BP],
-  location: [Nantes],
-  description: [
-    - Accompagnement de projets Agiles (Décisionnel, DevOps)
-    - Coaching de la communauté de pratique Agile
-    - Mise en place de Coach Dating
-    - Méthodes: Scrum, Kanban, Lean Startup
-  ]
-)
+  title: [Gérant & Coach Agile],
+  date: [09/2013 - 02/2021],
+  institution: [Upwiser],
+  location: [Bordeaux, France],
+)[
+  === Contexte
+  Création de ma société de conseil en agilité et développement logiciel...
+
+  === Missions principales
+
+  ==== Mission i-BP - Coach Agile (avr. 2015 - sept. 2015)
+  **Client:** i-BP, Nantes
+
+  - Accompagnement de projets Agiles (Décisionnel, DevOps)
+  - Coaching de la communauté de pratique des équipiers Agiles
+  - Participation à des travaux transverses d'organisation
+  - Mise en place de Coach Dating
+  - **Méthodes:** Scrum, Kanban, Lean Startup
+
+  ==== Mission DEKRA - Coach Agile (oct. 2013 - janv. 2015)
+  [À ajouter via CNT-009]
+
+  === Autres activités Upwiser
+  - Animation de formations et ateliers
+  - Accompagnement de ~100 startups et PME
+  - Création du cercle Lean Startup Bordeaux
+  ...
+]
 ```
 
 **Outils/commandes à utiliser:**
 
 - `just build` pour compiler
-- Vérifier le positionnement chronologique
+- Traiter après CNT-014 (analyse PALO IT)
 
 **Fichiers à consulter:**
 
-- [cv.typ](../../src/cv.typ) (insertion après ligne 135)
+- [cv.typ:253+](../../src/cv.typ#L253) - Section "= Expérience détaillée"
+- [CNT-016](./CNT-016-enrichir-section-experience-detaillee-avec-descriptions-developpees.md) - Tâche parente
 
 ---
 

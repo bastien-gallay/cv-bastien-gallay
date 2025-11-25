@@ -46,8 +46,14 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | [CNT-008](tasks/CNT-008-ajouter-experience-ibp.md) | Ajouter l'expérience i-BP | ⏳ À faire | 🔴 Haute | 2025-10-29 |
 | [CNT-009](tasks/CNT-009-ajouter-experience-dekra.md) | Ajouter l'expérience DEKRA | ⏳ À faire | 🔴 Haute | 2025-10-29 |
 | [CNT-010](tasks/CNT-010-ajouter-section-benevolat.md) | Ajouter section Bénévolat | ⏳ À faire | 🔴 Haute | 2025-10-29 |
-| [CNT-014](tasks/CNT-014-analyse-experience-palo-it.md) | Analyse expérience PALO IT (journal/tâches CTO) | ⏳ À faire | 🔴 Haute | 2025-11-14 |
 | [CNT-015](tasks/CNT-015-analyse-cv-flash.md) | Analyse CV Flash (slide unique) | ⏳ À faire | 🔴 Haute | 2025-11-14 |
+| [CNT-016](tasks/CNT-016-enrichir-section-experience-detaillee-avec-descriptions-developpees.md) | Enrichir section Expérience détaillée avec descriptions développées | ⏳ À faire | 🔴 Haute | 2025-11-17 |
+| [CNT-017](tasks/CNT-017-corriger-donnees-critiques-experience-palo-it-cto.md) | Corriger données critiques expérience PALO IT CTO | ⏳ À faire | 🔴 Haute | 2025-11-25 |
+| [CNT-018](tasks/CNT-018-ajouter-stack-technique-complete-palo-it-cto.md) | Ajouter stack technique complète PALO IT CTO | ⏳ À faire | 🔴 Haute | 2025-11-25 |
+| [CNT-019](tasks/CNT-019-ajouter-projets-clients-et-resultats-business-palo-it-cto.md) | Ajouter projets clients et résultats business PALO IT CTO | ⏳ À faire | 🔴 Haute | 2025-11-25 |
+| [CNT-020](tasks/CNT-020-ajouter-activite-presales-et-business-development-palo-it-cto.md) | Ajouter activité presales et business development PALO IT CTO | ⏳ À faire | 🔴 Haute | 2025-11-25 |
+| [CNT-021](tasks/CNT-021-ajouter-partenariats-strategiques-palo-it-cto.md) | Ajouter partenariats stratégiques PALO IT CTO | ⏳ À faire | 🔴 Haute | 2025-11-25 |
+| [CNT-022](tasks/CNT-022-ajouter-initiatives-innovation-et-formation-palo-it-cto.md) | Ajouter initiatives innovation et formation PALO IT CTO | ⏳ À faire | 🔴 Haute | 2025-11-25 |
 | [TPL-001](tasks/TPL-001-cv-versions.md) | Versions courte et longue du CV | ⏳ À faire | 🟡 Moyenne | 2025-10-28 |
 | [QUA-001](tasks/QUA-001-verification.md) | Étapes de vérification du CV | ⏳ À faire | 🟡 Moyenne | 2025-10-28 |
 | [TPL-002](tasks/TPL-002-template-system.md) | Système de changement de template | ⏳ À faire | 🟢 Basse | 2025-10-28 |
@@ -61,6 +67,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
+| [CNT-014](tasks/CNT-014-analyse-experience-palo-it.md) | Analyse expérience PALO IT (journal/tâches CTO) | ✅ Terminé | 🔴 Haute | 2025-11-25 |
 | [INF-004](tasks/INF-004-migrer-systeme-gestion-taches-vers-skill-claude-unifie.md) | Migrer le système de gestion de tâches vers un Skill Claude unifié | ✅ Terminé | 🔴 Haute | 2025-11-17 |
 | [PIP-002](tasks/PIP-002-privilegier-questionnaires-interactifs-commandes.md) | Privilégier les questionnaires interactifs dans les commandes de tâches | ✅ Terminé | 🔴 Haute | 2025-11-16 |
 | [CNT-004](tasks/CNT-004-corriger-dates-boonty.md) | Corriger les dates de Boonty | ✅ Terminé | 🔴 Haute | 2025-11-16 |
@@ -142,16 +149,16 @@ Closes TPL-001"
 
 ## Statistiques
 
-- **Total**: 17 tâches
-- **À faire**: 10
+- **Total**: 24 tâches
+- **À faire**: 16
 - **En cours**: 0
-- **Terminées**: 4
+- **Terminées**: 5
 - **Bloquées**: 0
 - **Archivées**: 8
 
 **Prochains IDs disponibles par trigramme**:
 
-- CNT-016, TPL-003, QUA-002, PIP-003, INF-005, LAY-001, DOC-002
+- CNT-023, TPL-003, QUA-002, PIP-003, INF-005, LAY-001, DOC-002
 
 ---
 
