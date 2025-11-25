@@ -51,6 +51,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | [CNT-020](tasks/CNT-020-ajouter-activite-presales-et-business-development-palo-it-cto.md) | Ajouter activité presales et business development PALO IT CTO | ⏳ À faire | 🔴 Haute | 2025-11-25 |
 | [CNT-021](tasks/CNT-021-ajouter-partenariats-strategiques-palo-it-cto.md) | Ajouter partenariats stratégiques PALO IT CTO | ⏳ À faire | 🔴 Haute | 2025-11-25 |
 | [CNT-022](tasks/CNT-022-ajouter-initiatives-innovation-et-formation-palo-it-cto.md) | Ajouter initiatives innovation et formation PALO IT CTO | ⏳ À faire | 🔴 Haute | 2025-11-25 |
+| [CNT-023](tasks/CNT-023-mettre-a-jour-photo-profil.md) | Mettre à jour la photo du CV | ⏳ À faire | 🟡 Moyenne | 2025-11-25 |
 | [TPL-001](tasks/TPL-001-cv-versions.md) | Versions courte et longue du CV | ⏳ À faire | 🟡 Moyenne | 2025-10-28 |
 | [QUA-001](tasks/QUA-001-verification.md) | Étapes de vérification du CV | ⏳ À faire | 🟡 Moyenne | 2025-10-28 |
 | [TPL-002](tasks/TPL-002-template-system.md) | Système de changement de template | ⏳ À faire | 🟢 Basse | 2025-10-28 |
@@ -149,8 +150,8 @@ Closes TPL-001"
 
 ## Statistiques
 
-- **Total**: 24 tâches
-- **À faire**: 13
+- **Total**: 25 tâches
+- **À faire**: 14
 - **En cours**: 0
 - **Terminées**: 8
 - **Bloquées**: 0
@@ -158,7 +159,7 @@ Closes TPL-001"
 
 **Prochains IDs disponibles par trigramme**:
 
-- CNT-023, TPL-003, QUA-002, PIP-003, INF-005, LAY-001, DOC-002
+- CNT-024, TPL-003, QUA-002, PIP-003, INF-005, LAY-001, DOC-002
 
 ---
 
