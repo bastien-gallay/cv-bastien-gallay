@@ -48,13 +48,13 @@ Le CV est actuellement généré en PDF via Typst, mais l'optimisation visuelle 
 
 ## Sous-tâches
 
-- [ ] Identifier les méthodes disponibles pour l'analyse visuelle (PDF direct, captures d'écran, MCP)
-- [ ] Tester la lecture du PDF compilé par Claude
-- [ ] Établir un workflow d'analyse visuelle (compile → read → analyze → suggest)
-- [ ] Définir les critères d'évaluation visuelle (lisibilité, équilibre, hiérarchie, espaces)
-- [ ] Créer un guide de directives visuelles pour le CV
+- [x] Identifier les méthodes disponibles pour l'analyse visuelle (PDF direct, captures d'écran, MCP)
+- [x] Tester la lecture du PDF compilé par Claude
+- [x] Établir un workflow d'analyse visuelle (compile → read → analyze → suggest)
+- [x] Définir les critères d'évaluation visuelle (lisibilité, équilibre, hiérarchie, espaces)
+- [x] Créer un guide de directives visuelles pour le CV
 - [ ] Tester le workflow complet avec des modifications réelles
-- [ ] Documenter le processus dans CLAUDE.md
+- [x] Documenter le processus dans CLAUDE.md
 - [ ] (Optionnel) Créer des scripts d'automatisation si nécessaire
 
 ---
@@ -230,13 +230,13 @@ Closes INF-001"
 
 ## Tests / Vérifications
 
-- [ ] Claude peut lire et analyser le PDF du CV
-- [ ] Le workflow d'analyse visuelle fonctionne (compile → read → analyze)
-- [ ] Les critères d'évaluation visuelle sont clairs et applicables
-- [ ] Les suggestions d'amélioration sont concrètes et actionnables
+- [x] Claude peut lire et analyser le PDF du CV
+- [x] Le workflow d'analyse visuelle fonctionne (compile → read → analyze)
+- [x] Les critères d'évaluation visuelle sont clairs et applicables
+- [x] Les suggestions d'amélioration sont concrètes et actionnables
 - [ ] Les modifications Typst améliorent effectivement le rendu visuel
 - [ ] Le CV reste professionnel et lisible après modifications
-- [ ] La documentation du workflow est complète dans CLAUDE.md
+- [x] La documentation du workflow est complète dans CLAUDE.md
 - [ ] Des exemples avant/après sont disponibles
 
 ---

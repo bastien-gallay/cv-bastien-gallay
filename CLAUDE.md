@@ -119,7 +119,7 @@ The `publications.yml` file uses Typst's bibliography format with YAML structure
 - Paper size: A4
 - Font size: 10pt
 - Color scheme: Professional blue (#4682b4 accent, #3b4f60 headers)
-- The CV is structured as a two-page document with a column break after initial education section
+- The CV is currently a 5-page document (as of November 2025)
 
 ## Task Management System
 
@@ -152,7 +152,7 @@ The task management system is implemented as a **Claude Skill** with progressive
 
 **Architecture:**
 
-```
+```text
 .claude/skills/task-management/
 ├── workflows/        # Concise workflow documentation
 ├── scripts/          # Deterministic Python logic
@@ -341,6 +341,81 @@ Priority mapping for task creation:
 - High → High priority task (🔴)
 - Medium → Medium priority task (🟡)
 - Low → Low priority task (🟢)
+
+## Visual Analysis Workflow
+
+Claude can analyze the compiled CV visually to suggest design improvements.
+
+### Workflow Steps
+
+```bash
+# 1. Compile the CV
+just build
+
+# 2. Read the PDF for visual analysis
+# Claude reads dist/cv.pdf directly
+
+# 3. Analyze according to evaluation criteria
+# 4. Suggest Typst modifications
+# 5. Iterate until satisfied
+```
+
+### Evaluation Criteria
+
+When analyzing the CV visually, evaluate these aspects:
+
+| Criterion | Description | Target |
+|-----------|-------------|--------|
+| **Readability** | Font clarity, size, contrast | Clear at arm's length |
+| **Balance** | Harmonious distribution of elements | No heavy/empty zones |
+| **Hierarchy** | Clear distinction between info levels | Titles > subtitles > content |
+| **Spacing** | Margins, padding, line-height | Consistent throughout |
+| **Professionalism** | Clean, modern appearance | Appropriate for target industry |
+| **Scannability** | Easy quick reading by recruiter | Key info visible in <30s |
+
+### Rating Scale
+
+Use this scale for visual evaluation:
+
+- 4 stars: Excellent, no improvement needed
+- 3 stars: Good, minor improvements possible
+- 2 stars: Acceptable, notable improvements needed
+- 1 star: Poor, significant rework required
+
+### Typical Issues and Solutions
+
+| Issue | Typst Solution |
+|-------|----------------|
+| Too dense | Increase `#v()` spacing, reduce content |
+| Unbalanced pages | Adjust `#colbreak()` or `#pagebreak()` |
+| Poor hierarchy | Modify font sizes in template config |
+| Sidebar overflow | Reduce skills/content or adjust `sidebar-width` |
+| Inconsistent spacing | Standardize `#v()` values |
+
+### Example Analysis Output
+
+```markdown
+## Visual Analysis - [Date]
+
+### Scores
+- Readability: 4/4
+- Balance: 3/4 (page 5 has 50% whitespace)
+- Hierarchy: 4/4
+- Spacing: 3/4
+- Professionalism: 4/4
+- Scannability: 2/4 (5 pages is too long)
+
+### Recommendations
+1. [HIGH] Reduce to 2 pages for standard applications
+2. [MEDIUM] Consolidate duplicate sections
+3. [LOW] Add visual separators between major sections
+```
+
+### Related Tasks
+
+- [LAY-001](.tasks/tasks/LAY-001-sidebar-premiere-page-uniquement.md) - Sidebar on first page only
+- [LAY-002](.tasks/tasks/LAY-002-consolidation-sections-dupliquees.md) - Consolidate duplicate sections
+- [TPL-001](.tasks/tasks/TPL-001-cv-versions.md) - Short and long CV versions
 
 ## Git Workflow
 

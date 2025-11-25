@@ -32,10 +32,18 @@ Le CV actuel utilise une mise en page à deux colonnes sur toutes les pages :
 - **Colonne gauche (sidebar)** : Contact, langues, compétences, intérêts
 - **Colonne droite (main)** : Expériences, formation, certifications
 
-Cette structure est répétée sur toutes les pages, ce qui :
+**Observation visuelle (novembre 2025):**
+
+L'analyse du PDF révèle que la sidebar déborde sur la page 2 avec les skills techniques (Python, Java, C#, C, Rust, Management, Développement, Architecture). Ce débordement:
+
+- Crée une incohérence visuelle (sidebar partielle page 2)
+- Gaspille de l'espace sur les pages suivantes
+- Réduit l'espace disponible pour le contenu principal
+
+Cette structure répétée:
 
 - Réduit l'espace disponible pour le contenu principal
-- Peut créer des espaces vides dans la sidebar sur les pages 2+
+- Crée des espaces vides dans la sidebar sur les pages 2+
 - Ne correspond pas aux conventions de CV multi-pages
 
 ### Objectif

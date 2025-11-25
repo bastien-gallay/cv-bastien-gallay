@@ -32,13 +32,19 @@ Créer deux variantes du CV à partir du fichier actuel:
 
 Selon les contextes de candidature, il est nécessaire d'avoir:
 
-1. Un CV court (1 page) qui présente l'essentiel de manière percutante
-2. Un CV long (2-3 pages) qui détaille davantage les expériences et accomplissements
+1. Un CV court (1-2 pages) qui présente l'essentiel de manière percutante
+2. Un CV long (3-5 pages) qui détaille davantage les expériences et accomplissements
 
-Le CV actuel fait 2 pages. Il faut donc:
+**État actuel (novembre 2025):** Le CV fait **5 pages** avec:
 
-- Créer une version condensée (1 page)
-- Possiblement étendre la version longue avec plus de détails
+- Page 1: Infos principales, expérience résumée, formation résumée
+- Page 2: Suite sidebar (skills), formation détaillée, certifications, bénévolat
+- Pages 3-5: Expérience détaillée par mission
+
+Il faut donc:
+
+- Créer une version courte (1-2 pages) en sélectionnant l'essentiel
+- Considérer le CV actuel comme la version longue (à optimiser)
 
 ### Objectif
 

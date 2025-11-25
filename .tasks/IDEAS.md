@@ -30,7 +30,9 @@ Ce fichier collecte les idées d'améliorations futures issues des tâches termi
 
 ## Layout (LAY)
 
-*Aucune idée pour l'instant*
+- [ ] Optimiser la répartition du contenu pour éviter les pages quasi-vides (page 5 actuelle ~50% vide) (source: INF-001, 2025-11-25)
+- [ ] Ajouter des séparateurs visuels plus marqués entre les grandes sections (source: INF-001, 2025-11-25)
+- [ ] Étudier l'utilisation d'icônes pour les compétences techniques (source: INF-001, 2025-11-25)
 
 ---
 
