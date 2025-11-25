@@ -30,7 +30,7 @@ Chaque analyse peut générer plusieurs **recommandations** qui sont suivies ind
 | [CNT-001](resources/analyses/CNT-001/) | LinkedIn Audit | [linkedin.com/in/bastiengallay](https://linkedin.com/in/bastiengallay/) | ✅ Terminé | 2025-10-29 | 19 total (1 très haute, 10 hautes, 5 moyennes, 3 basses) | 11/19 (58%) |
 | [CNT-013](resources/analyses/CNT-013/) | CV Comparatif | CV 2019 (Mars 2019) | ✅ Terminé | 2025-11-14 | 14 total (2 très hautes, 4 hautes, 6 moyennes, 2 basses) | 0/14 (0%) |
 | [CNT-014](resources/analyses/CNT-014/) | Journal CTO | Journal CTO PALO IT (mars-juillet 2025) | ✅ Terminé | 2025-11-18 | 25 total (5 très hautes, 10 hautes, 7 moyennes, 3 basses) | 0/25 (0%) |
-| [CNT-015](resources/analyses/CNT-015/) | CV Flash | CV Flash 2021 (slide unique) | ✅ Terminé | 2025-11-25 | 10 total (0 très haute, 4 hautes, 4 moyennes, 2 basses) | 0/10 (0%) |
+| [CNT-015](resources/analyses/CNT-015/) | CV Flash | CV Flash 2021 (slide unique) | 📋 Partiellement traité | 2025-11-25 | 10 total (0 très haute, 4 hautes, 4 moyennes, 2 basses) | 8/10 (80%) |
 
 ---
 
@@ -48,8 +48,8 @@ Les analyses sont archivées lorsque toutes leurs recommandations ont été trai
 - **En cours**: 0
 - **Terminées**: 4
 - **Recommandations totales**: 68
-- **Recommandations pendantes**: 57 (84%)
-- **Tâches créées depuis analyses**: 11
+- **Recommandations pendantes**: 49 (72%)
+- **Tâches créées depuis analyses**: 14
 
 ### Répartition par priorité
 

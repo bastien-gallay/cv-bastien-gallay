@@ -1,0 +1,156 @@
+# CNT-024: Analyse CV Flash 2025
+
+---
+
+## Métadonnées
+
+| Champ | Valeur |
+|-------|--------|
+| **ID** | CNT-024 |
+| **Titre** | Analyse CV Flash 2025 |
+| **Statut** | ⏳ À faire |
+| **Priorité** | 🔴 Haute |
+| **Trigramme** | CNT |
+| **Section CV** | General |
+| **Créé le** | 2025-11-25 |
+| **Cible** | - |
+| **Terminé le** | (à remplir lors de la complétion) |
+| **Temps estimé** | 2 heures |
+| **Temps réel** | (à remplir après) |
+| **Branche nécessaire** | Non |
+
+---
+
+## Description
+
+Analyser le CV Flash 2025 (format slide unique) pour identifier les informations à intégrer ou vérifier dans le CV Typst principal.
+
+### Contexte
+
+Un CV Flash 2025 a été fourni dans `.tasks/resources/sources-analyses/CV-Flash-2025/`. Ce CV condensé sur une seule slide présente une vision synthétique du parcours professionnel avec:
+
+- En-tête: Coach Agile / CTO / Software Craftsman | +20 ans d'expérience
+- Expériences clés: Beta.gouv, Nalo, SeLoger.com, Coach et formateur
+- Expertise & Technology: Coaching Agile, Software Craftsmanship, langages (TypeScript, Java, Python, etc.)
+- Certifications & Talks: SAFe SPC, PSM/PSPO/PSD/PSP/PSK, CSM, Lean Startup Bordeaux
+
+### Objectif
+
+1. Extraire et documenter toutes les informations du CV Flash 2025
+2. Comparer avec le CV Typst actuel
+3. Identifier les écarts et informations manquantes
+4. Générer des recommandations d'amélioration
+
+---
+
+## Sous-tâches
+
+- [ ] Extraire les informations du CV Flash 2025 (image PNG et PDF)
+- [ ] Créer le fichier d'extraction structuré dans `resources/audits/CNT-024/`
+- [ ] Comparer avec le CV Typst actuel (`src/cv.typ`)
+- [ ] Documenter les écarts identifiés
+- [ ] Créer les recommandations avec priorités
+- [ ] Mettre à jour le dashboard des analyses (ANALYSES.md)
+
+---
+
+## Notes pour Claude
+
+> Instructions spécifiques pour l'assistance IA
+
+L'analyse doit comparer les éléments suivants entre le CV Flash et le CV Typst:
+
+- Titre/positionnement professionnel
+- Expériences mentionnées et leur description
+- Stack technique et compétences
+- Certifications listées
+- Éléments de différenciation ou formulations intéressantes
+
+**Fichiers à consulter:**
+
+- [CV Flash 2025 PNG](../resources/sources-analyses/CV-Flash-2025/Extrait-CV-flash-2025.png)
+- [CV Flash 2025 PDF](../resources/sources-analyses/CV-Flash-2025/CV-Flash-Extrait-2025-Teragone%20-%20Accompagnement%20audit%20-%20Berger%20Levrault%20Kick%20-%20Off.pdf)
+- [cv.typ](../../src/cv.typ) - CV Typst actuel
+- [ANALYSES.md](../ANALYSES.md) - Dashboard des analyses
+
+---
+
+## Notes pour l'utilisateur
+
+- Le CV Flash 2025 est un format condensé destiné aux présentations rapides
+- Certaines informations peuvent être plus récentes ou formulées différemment
+- L'expérience Beta.gouv (MonEspaceNis2) est mentionnée comme "Lead developer"
+
+---
+
+## Références externes
+
+### Fichiers du projet
+
+- [cv.typ](../../src/cv.typ) - CV Typst principal
+- [CNT-015](./CNT-015-analyse-cv-flash.md) - Analyse précédente du CV Flash (slide unique)
+
+### Ressources sources
+
+- [Extrait-CV-flash-2025.png](../resources/sources-analyses/CV-Flash-2025/Extrait-CV-flash-2025.png)
+- [CV-Flash-Extrait-2025-Teragone.pdf](../resources/sources-analyses/CV-Flash-2025/CV-Flash-Extrait-2025-Teragone%20-%20Accompagnement%20audit%20-%20Berger%20Levrault%20Kick%20-%20Off.pdf)
+
+---
+
+## Commits Git associés
+
+### En cours de travail
+
+```bash
+git commit -m "chore(tasks): 📝 add CNT-024 CV Flash 2025 analysis task
+
+Refs CNT-024"
+```
+
+### Commit final
+
+```bash
+git commit -m "chore(tasks): ✅ complete CNT-024 CV Flash 2025 analysis
+
+- Extracted all information from CV Flash 2025
+- Documented gaps with current CV
+- Created prioritized recommendations
+
+Closes CNT-024"
+```
+
+---
+
+## Tests / Vérifications
+
+- [ ] Extraction complète des informations du CV Flash
+- [ ] Fichier d'audit créé dans `resources/audits/CNT-024/`
+- [ ] Analyse comparative documentée
+- [ ] Recommandations créées avec priorités
+- [ ] Dashboard ANALYSES.md mis à jour
+
+---
+
+## Historique des modifications
+
+| Date | Action | Détails |
+|------|--------|---------|
+| 2025-11-25 | Création | Tâche créée |
+
+---
+
+## Résultat final
+
+[À remplir une fois la tâche terminée]
+
+**Ce qui a été fait:**
+
+- [Liste des réalisations]
+
+**Difficultés rencontrées:**
+
+- [Problèmes et solutions]
+
+**Améliorations futures:**
+
+- [Idées pour aller plus loin]
