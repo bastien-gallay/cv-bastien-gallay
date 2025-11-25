@@ -232,6 +232,12 @@
 )[]
 
 #entry(
+  title: "Scaled Professional Scrum (SPS)",
+  date: "2016",
+  institution: "Scrum.org",
+)[]
+
+#entry(
   title: "Professional Scrum with Kanban",
   date: "2017",
   institution: "Scrum.org",
@@ -240,6 +246,12 @@
 #entry(
   title: "Scaled Professional Scrum (Nexus)",
   date: "2017",
+  institution: "Scrum.org",
+)[]
+
+#entry(
+  title: "Professional Scrum Developer (PSD-I)",
+  date: "2018",
   institution: "Scrum.org",
 )[]
 

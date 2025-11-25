@@ -8,15 +8,15 @@
 |-------|--------|
 | **ID** | CNT-006 |
 | **Titre** | Ajouter les certifications manquantes |
-| **Statut** | ⏳ À faire |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | CNT |
 | **Section CV** | Education |
 | **Créé le** | 2025-10-29 |
 | **Cible** | - |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-25 |
 | **Temps estimé** | 0.5 heures |
-| **Temps réel** | - |
+| **Temps réel** | 0.25 heures |
 | **Branche nécessaire** | Auto |
 
 ---
@@ -44,12 +44,12 @@ Compléter la section Certifications avec les certifications manquantes pour ref
 
 ## Sous-tâches
 
-- [ ] Identifier l'emplacement exact dans [src/cv.typ:220-250](../../src/cv.typ#L220-L250)
-- [ ] Ajouter Professional Scrum Developer (PSD-I) - May 2018
-- [ ] Ajouter Scaled Professional Scrum (SPS) - Jan 2016
-- [ ] Vérifier le format et l'alignement avec les autres certifications
-- [ ] Compiler le CV avec `just build`
-- [ ] Vérifier le rendu dans le PDF (tient sur une page?)
+- [x] Identifier l'emplacement exact dans [src/cv.typ:220-250](../../src/cv.typ#L220-L250)
+- [x] Ajouter Professional Scrum Developer (PSD-I) - May 2018
+- [x] Ajouter Scaled Professional Scrum (SPS) - Jan 2016
+- [x] Vérifier le format et l'alignement avec les autres certifications
+- [x] Compiler le CV avec `just build`
+- [x] Vérifier le rendu dans le PDF (tient sur une page?)
 
 ---
 
@@ -135,11 +135,11 @@ Closes CNT-006"
 
 ## Tests / Vérifications
 
-- [ ] Le CV compile sans erreur (`just build`)
-- [ ] Les certifications sont au bon emplacement
-- [ ] Le format est cohérent avec les autres certifications
-- [ ] Pas de débordement de page
-- [ ] Le PDF s'affiche correctement
+- [x] Le CV compile sans erreur (`just build`)
+- [x] Les certifications sont au bon emplacement
+- [x] Le format est cohérent avec les autres certifications
+- [x] Pas de débordement de page
+- [x] Le PDF s'affiche correctement
 
 ---
 
@@ -148,9 +148,16 @@ Closes CNT-006"
 | Date | Action | Détails |
 |------|--------|---------|
 | 2025-10-29 | Création | Tâche créée depuis recommandation CNT-001-R05 |
+| 2025-11-25 | En cours | Début du travail |
+| 2025-11-25 | Terminé | Ajout de SPS (2016) et PSD-I (2018) |
 
 ---
 
 ## Résultat final
 
-[À remplir une fois la tâche terminée]
+Deux certifications Scrum.org ajoutées avec succès dans la section Certifications du CV :
+
+- Scaled Professional Scrum (SPS) - 2016
+- Professional Scrum Developer (PSD-I) - 2018
+
+Le CV compile correctement et le layout reste sur 2 pages.
