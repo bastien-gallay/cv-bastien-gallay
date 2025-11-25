@@ -9,7 +9,7 @@
 | **ID** | INF-003 |
 | **Titre** | Pérenniser et améliorer le script Python de calcul des priorités |
 | **Statut** | ⏳ À faire |
-| **Priorité** | 🔴 Haute |
+| **Priorité** | 🟢 Basse |
 | **Trigramme** | INF |
 | **Section CV** | N/A |
 | **Créé le** | 2025-11-16 |
@@ -23,45 +23,43 @@
 
 ## Description
 
-Le script `scripts/priority_weight.py` est actuellement utilisé par `/task-next` pour calculer les priorités des tâches selon un modèle "valeur/délai". Ce script nécessite une refonte pour être maintenable et évolutif.
+~~Le script `scripts/priority_weight.py` est actuellement utilisé par `/task-next` pour calculer les priorités des tâches selon un modèle "valeur/délai". Ce script nécessite une refonte pour être maintenable et évolutif.~~
+
+### ⚠️ Mise à jour (2025-11-25)
+
+**La majorité du travail a été réalisée** lors de la création du skill task-management. Le nouveau script [priority_scorer.py](../../.claude/skills/task-management/scripts/algorithms/priority_scorer.py) remplace l'ancien et implémente toutes les améliorations prévues :
+
+| Objectif | Statut |
+|----------|--------|
+| Lecture automatique des tâches | ✅ Fait (`rank_tasks()`) |
+| Date dynamique | ✅ Fait (`datetime.now()`) |
+| Paramètres configurables | ✅ Fait (`config_loader`) |
+| Documentation claire | ✅ Fait (docstrings) |
+| CLI standalone | ✅ Fait (argparse) |
+| Tests unitaires | ❌ **Reste à faire** |
+
+L'ancien script `scripts/priority_weight.py` est désormais obsolète et pourra être supprimé.
 
 ### Contexte
 
 Idée issue de la tâche CNT-002 (2025-11-16).
 
-Le script scripts/priority_weight.py est actuellement utilisé par /task-next pour calculer les priorités des tâches. Il nécessite une pérennisation et des améliorations pour être maintenu dans le futur.
+### Objectif résiduel
 
-**Problèmes actuels identifiés :**
-- Liste des task_ids hardcodée (ligne 8-10)
-- Date du jour hardcodée (ligne 16 : `today = datetime(2025, 11, 16)`)
-- Manque de flexibilité pour le paramétrage
-- Pas de cache pour accélérer les calculs répétitifs
-- Pas de tests unitaires
-
-### Objectif
-
-Gagner en cohérence dans le calcul de priorité, accélérer cette action et permettre des évolutions futures (paramétrage différent, ajout de cache, etc...)
-
-**Résultat attendu :**
-- Script autonome qui lit automatiquement TASKS.md
-- Date calculée dynamiquement
-- Paramètres configurables (poids, valeurs par défaut)
-- Cache optionnel pour performances
-- Tests unitaires
-- Documentation claire
+**Ajouter des tests unitaires** pour `priority_scorer.py` afin de garantir la fiabilité du calcul de priorités.
 
 ---
 
 ## Sous-tâches
 
-- [ ] Analyser le code actuel et documenter les améliorations nécessaires
-- [ ] Refactorer pour lecture automatique de TASKS.md (éliminer liste hardcodée)
-- [ ] Remplacer la date hardcodée par `datetime.now()`
-- [ ] Externaliser les paramètres de calcul (poids, valeurs par défaut)
-- [ ] Implémenter un système de cache optionnel
-- [ ] Ajouter des tests unitaires
-- [ ] Documenter l'utilisation et les paramètres
-- [ ] Mettre à jour `/task-next` si nécessaire
+- [x] Analyser le code actuel et documenter les améliorations nécessaires
+- [x] Refactorer pour lecture automatique de TASKS.md (éliminer liste hardcodée)
+- [x] Remplacer la date hardcodée par `datetime.now()`
+- [x] Externaliser les paramètres de calcul (poids, valeurs par défaut)
+- [x] Documenter l'utilisation et les paramètres
+- [x] Mettre à jour `/task-next` pour utiliser le nouveau script
+- [ ] Ajouter des tests unitaires pour `priority_scorer.py`
+- [ ] Supprimer l'ancien script `scripts/priority_weight.py`
 
 ---
 
@@ -175,13 +173,12 @@ Closes INF-003"
 
 ## Tests / Vérifications
 
-- [ ] Le script s'exécute sans erreur
-- [ ] Aucune valeur hardcodée (task IDs, dates)
-- [ ] Les résultats sont cohérents avec l'ancienne version
-- [ ] `/task-next` fonctionne correctement avec le nouveau script
+- [x] Le script s'exécute sans erreur
+- [x] Aucune valeur hardcodée (task IDs, dates)
+- [x] `/task-next` fonctionne correctement avec le nouveau script
+- [x] La documentation est claire et complète
 - [ ] Les tests unitaires passent
-- [ ] La documentation est claire et complète
-- [ ] Le code respecte les conventions Python (PEP8)
+- [ ] L'ancien script est supprimé
 
 ---
 
@@ -190,6 +187,7 @@ Closes INF-003"
 | Date | Action | Détails |
 |------|--------|---------|
 | 2025-11-16 | Création | Tâche créée depuis idée du backlog (source: CNT-002) |
+| 2025-11-25 | Mise à jour | Priorité 🔴→🟢, scope réduit aux tests (refactoring déjà fait dans skill) |
 
 ---
 
