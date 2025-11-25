@@ -18,6 +18,7 @@
 | **Temps estimé** | 4-6 heures |
 | **Temps réel** | |
 | **Branche nécessaire** | Oui |
+| **Prérequis** | [TPL-004](./TPL-004-extraction-donnees-structurees.md) |
 
 ---
 
@@ -192,8 +193,9 @@ Les missions détaillées avant 2013 (Cdiscount, Cast Consulting, Boonty) occupe
 
 ### Tâches liées
 
-- [CNT-001](./CNT-001-linkedin-audit.md) - Audit LinkedIn (peut influencer le contenu)
+- [TPL-004](./TPL-004-extraction-donnees-structurees.md) - **Prérequis** : données structurées nécessaires
 - [TPL-002](./TPL-002-template-system.md) - Système de templates (architecture similaire)
+- [LAY-002](./LAY-002-consolidation-sections-dupliquees.md) - Consolidation sections (complémentaire)
 
 ### Ressources
 

@@ -18,6 +18,7 @@
 | **Temps estimé** | 4-6 heures |
 | **Temps réel** | - |
 | **Branche nécessaire** | Oui |
+| **Prérequis** | [TPL-004](./TPL-004-extraction-donnees-structurees.md) |
 
 ---
 
@@ -152,9 +153,9 @@ Cette structure est conventionnelle mais pas nécessairement optimale pour tous 
 
 ### Tâches liées
 
+- [TPL-004](./TPL-004-extraction-donnees-structurees.md) - **Prérequis** : données structurées nécessaires
 - [TPL-001](./TPL-001-cv-versions.md) - Versions courte/longue (complémentaire)
-- [TPL-002](./TPL-002-template-system.md) - Système de templates (architecture)
-- [INF-001](./INF-001-mcp-integration.md) - Analyse visuelle (pour évaluation)
+- [TPL-002](./TPL-002-template-system.md) - Système de templates (alternative : templates existants vs from scratch)
 
 ### Ressources
 

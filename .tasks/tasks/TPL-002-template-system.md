@@ -18,6 +18,7 @@
 | **Temps estimé** | 5-7 heures |
 | **Temps réel** | |
 | **Branche nécessaire** | Oui |
+| **Prérequis** | [TPL-004](./TPL-004-extraction-donnees-structurees.md) |
 
 ---
 
@@ -167,7 +168,8 @@ Mettre en place une architecture modulaire permettant:
 
 ### Tâches liées
 
-- [TPL-001](./TPL-001-cv-versions.md) - Versions du CV (architecture similaire)
+- [TPL-004](./TPL-004-extraction-donnees-structurees.md) - **Prérequis** : données structurées nécessaires
+- [TPL-001](./TPL-001-cv-versions.md) - Versions du CV (utilise la même base de données)
 - [QUA-001](./QUA-001-verification.md) - Vérification (doit fonctionner avec tous les templates)
 
 ### Ressources

@@ -18,6 +18,7 @@
 | **Temps estimé** | 1 heure |
 | **Temps réel** | - |
 | **Branche nécessaire** | Auto |
+| **Prérequis** | [LAY-001](./LAY-001-sidebar-premiere-page-uniquement.md) |
 
 ---
 
@@ -146,7 +147,7 @@ Si l'espace le permet, ajouter des niveaux (expert, avancé, familier) mais atte
 
 ### Tâches liées
 
-- [LAY-001](./LAY-001-sidebar-premiere-page-uniquement.md) - Sidebar page 1 (contrainte espace)
+- [LAY-001](./LAY-001-sidebar-premiere-page-uniquement.md) - **Prérequis** : sidebar doit tenir sur page 1 avant réorganisation
 - [CNT-034](./CNT-034-restructurer-experience-palo-it.md) - Restructurer PALO IT (cohérence)
 
 ### Ressources
