@@ -8,13 +8,13 @@
 |-------|--------|
 | **ID** | CNT-016 |
 | **Titre** | Enrichir section Expérience détaillée avec descriptions développées |
-| **Statut** | ⏳ À faire |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | CNT |
 | **Section CV** | Experience |
 | **Créé le** | 2025-11-17 |
 | **Cible** | - |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-25 |
 | **Temps estimé** | 2-3 heures |
 | **Temps réel** | - |
 | **Branche nécessaire** | Auto |
@@ -57,16 +57,16 @@ Créer une section "= Expérience détaillée" riche et structurée qui :
 
 ## Sous-tâches
 
-- [ ] Planifier la structure de la section détaillée (quelles expériences détailler ?)
-- [ ] Attendre la finalisation de CNT-014 (analyse PALO IT) pour avoir les données
-- [ ] Enrichir l'expérience PALO IT CTO avec détails de CNT-014
-- [ ] Enrichir l'expérience PALO IT Consultant Senior avec projets concrets
-- [ ] Enrichir l'expérience Upwiser avec missions détaillées (i-BP, DEKRA, etc.)
-- [ ] Ajouter détails CDiscount (technologies, projets, équipes)
-- [ ] Ajouter détails Cast Consulting (projets clients, domaines métiers)
-- [ ] Vérifier la cohérence avec la section page 1
-- [ ] Compiler le CV avec `just build`
-- [ ] Vérifier le rendu et la pagination (max 3-4 pages au total)
+- [x] Planifier la structure de la section détaillée (quelles expériences détailler ?)
+- [x] Attendre la finalisation de CNT-014 (analyse PALO IT) pour avoir les données
+- [x] Enrichir l'expérience PALO IT CTO avec détails de CNT-014
+- [x] Enrichir l'expérience PALO IT Consultant Senior avec projets concrets
+- [x] Enrichir l'expérience Upwiser avec missions détaillées (i-BP, DEKRA, etc.)
+- [x] Ajouter détails CDiscount (technologies, projets, équipes)
+- [x] Ajouter détails Cast Consulting (projets clients, domaines métiers)
+- [x] Vérifier la cohérence avec la section page 1
+- [x] Compiler le CV avec `just build`
+- [x] Vérifier le rendu et la pagination (max 3-4 pages au total)
 
 ---
 

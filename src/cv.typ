@@ -508,3 +508,39 @@
 
   - Développement sites professionnels
 ]
+
+#entry(
+  title: [Chef de projet technique et Scrum Master],
+  date: [10/2010 - 10/2013],
+  institution: [CDiscount],
+  location: [Bordeaux, France],
+)[
+  === Contexte
+  Responsable technique au sein de l'un des leaders français du e-commerce, en charge de la plateforme de paiement et de la gestion de projets techniques.
+
+  === Responsabilités et réalisations
+
+  ==== Plateforme de paiement
+  - Responsable technique de la plateforme de paiement
+  - Obtention de la certification *PCI DSS* (Payment Card Industry Data Security Standard)
+  - Refonte technique de l'application vers un mode *SaaS*
+  - Maintenance et évolution des applications en production
+
+  ==== Gestion de projets
+  - Mise en place des méthodes *Scrum* et *Scrumban*
+  - Gestion de *200 jours de projet par mois* en moyenne
+  - Prise en charge des développements au forfait
+
+  ==== Données et conformité
+  - Industrialisation de l'anonymisation des données clients (précurseur RGPD)
+
+  ==== Animation technique
+  - Création de *déjeuners Scrum* pour partager les bonnes pratiques
+  - Animation de *Coding Dojos internes* pour la montée en compétences
+  - Coaching des développeurs et chefs de projets
+
+  === Stack technique
+  - #strong[Langages:] C\#, .Net, SQL Server
+  - #strong[Méthodes:] Scrum, Scrumban, TDD
+  - #strong[Domaine:] E-commerce, paiement en ligne, sécurité
+]

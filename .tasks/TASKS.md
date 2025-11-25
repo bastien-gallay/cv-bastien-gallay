@@ -41,7 +41,6 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Créé le |
 |----|-------|--------|----------|---------|
-| [CNT-016](tasks/CNT-016-enrichir-section-experience-detaillee-avec-descriptions-developpees.md) | Enrichir section Expérience détaillée avec descriptions développées | ⏳ À faire | 🔴 Haute | 2025-11-17 |
 | [CNT-023](tasks/CNT-023-mettre-a-jour-photo-profil.md) | Mettre à jour la photo du CV | ⏳ À faire | 🟡 Moyenne | 2025-11-25 |
 | [CNT-029](tasks/CNT-029-ameliorations-cv-flash-priorite-moyenne.md) | Améliorations CV Flash (priorité moyenne) | ⏳ À faire | 🟡 Moyenne | 2025-11-25 |
 | [TPL-001](tasks/TPL-001-cv-versions.md) | Versions courte et longue du CV | ⏳ À faire | 🟡 Moyenne | 2025-10-28 |
@@ -57,6 +56,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
+| [CNT-016](tasks/CNT-016-enrichir-section-experience-detaillee-avec-descriptions-developpees.md) | Enrichir section Expérience détaillée avec descriptions développées | ✅ Terminé | 🔴 Haute | 2025-11-25 |
 | [CNT-027](tasks/CNT-027-ajouter-missions-clients-upwiser-manquantes.md) | Ajouter les missions clients manquantes | ✅ Terminé | 🔴 Haute | 2025-11-25 |
 | [CNT-010](tasks/CNT-010-ajouter-section-benevolat.md) | Ajouter section Bénévolat | ✅ Terminé | 🔴 Haute | 2025-11-25 |
 | [CNT-028](tasks/CNT-028-ajouter-activites-communautaires-rayonnement.md) | Ajouter activités communautaires et rayonnement | ✅ Terminé | 🔴 Haute | 2025-11-25 |
@@ -152,9 +152,9 @@ Closes TPL-001"
 ## Statistiques
 
 - **Total**: 26 tâches
-- **À faire**: 11
+- **À faire**: 8
 - **En cours**: 0
-- **Terminées**: 14
+- **Terminées**: 15
 - **Bloquées**: 0
 - **Archivées**: 13
 
