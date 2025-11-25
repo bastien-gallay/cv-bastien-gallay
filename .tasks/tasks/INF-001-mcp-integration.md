@@ -8,7 +8,7 @@
 |-------|--------|
 | **ID** | INF-001 |
 | **Titre** | Améliorer visuellement le CV avec l'aide de Claude |
-| **Statut** | ⏳ À faire |
+| **Statut** | 🔄 En cours |
 | **Priorité** | 🟡 Moyenne |
 | **Trigramme** | INF (Infrastructure) |
 | **Section CV** | Visuel / Layout |
@@ -245,6 +245,7 @@ Closes INF-001"
 
 | Date | Action | Détails |
 |------|--------|---------|
+| 2025-11-25 | En cours | Début du travail |
 | 2025-10-28 | Création | Tâche créée dans le cadre de l'initialisation du système de tâches |
 
 ---
