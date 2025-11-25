@@ -48,7 +48,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | [CNT-020](tasks/CNT-020-ajouter-activite-presales-et-business-development-palo-it-cto.md) | Ajouter activité presales et business development PALO IT CTO | ⏳ À faire | 🔴 Haute | 2025-11-25 |
 | [CNT-021](tasks/CNT-021-ajouter-partenariats-strategiques-palo-it-cto.md) | Ajouter partenariats stratégiques PALO IT CTO | ⏳ À faire | 🔴 Haute | 2025-11-25 |
 | [CNT-022](tasks/CNT-022-ajouter-initiatives-innovation-et-formation-palo-it-cto.md) | Ajouter initiatives innovation et formation PALO IT CTO | ⏳ À faire | 🔴 Haute | 2025-11-25 |
-| [CNT-024](tasks/CNT-024-analyse-cv-flash-2025.md) | Analyse CV Flash 2025 | ⏳ À faire | 🔴 Haute | 2025-11-25 |
+| [CNT-024](tasks/CNT-024-analyse-cv-flash-2025.md) | Analyse CV Flash 2025 | 🔄 En cours | 🔴 Haute | 2025-11-25 |
 | [CNT-027](tasks/CNT-027-ajouter-missions-clients-upwiser-manquantes.md) | Ajouter les missions clients Upwiser manquantes | ⏳ À faire | 🔴 Haute | 2025-11-25 |
 | [CNT-028](tasks/CNT-028-ajouter-activites-communautaires-rayonnement.md) | Ajouter activités communautaires et rayonnement | ⏳ À faire | 🔴 Haute | 2025-11-25 |
 | [CNT-023](tasks/CNT-023-mettre-a-jour-photo-profil.md) | Mettre à jour la photo du CV | ⏳ À faire | 🟡 Moyenne | 2025-11-25 |
@@ -155,8 +155,8 @@ Closes TPL-001"
 ## Statistiques
 
 - **Total**: 29 tâches
-- **À faire**: 18
-- **En cours**: 0
+- **À faire**: 17
+- **En cours**: 1
 - **Terminées**: 11
 - **Bloquées**: 0
 - **Archivées**: 8

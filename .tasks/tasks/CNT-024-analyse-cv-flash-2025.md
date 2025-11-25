@@ -8,7 +8,7 @@
 |-------|--------|
 | **ID** | CNT-024 |
 | **Titre** | Analyse CV Flash 2025 |
-| **Statut** | ⏳ À faire |
+| **Statut** | 🔄 En cours |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | CNT |
 | **Section CV** | General |
@@ -136,6 +136,7 @@ Closes CNT-024"
 | Date | Action | Détails |
 |------|--------|---------|
 | 2025-11-25 | Création | Tâche créée |
+| 2025-11-25 | En cours | Début du travail |
 
 ---
 
