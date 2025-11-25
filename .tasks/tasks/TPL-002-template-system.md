@@ -9,7 +9,7 @@
 | **ID** | TPL-002 |
 | **Titre** | Permettre de changer le template Typst |
 | **Statut** | ⏳ À faire |
-| **Priorité** | 🟡 Moyenne |
+| **Priorité** | 🟢 Basse |
 | **Trigramme** | TPL (Template) |
 | **Section CV** | General |
 | **Créé le** | 2025-10-28 |

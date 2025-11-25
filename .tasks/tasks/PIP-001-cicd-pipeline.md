@@ -9,7 +9,7 @@
 | **ID** | PIP-001 |
 | **Titre** | Créer chaîne CI/CD pour publication automatique |
 | **Statut** | ⏳ À faire |
-| **Priorité** | 🟡 Moyenne |
+| **Priorité** | 🟢 Basse |
 | **Trigramme** | PIP (Pipeline) |
 | **Section CV** | N/A |
 | **Créé le** | 2025-10-28 |

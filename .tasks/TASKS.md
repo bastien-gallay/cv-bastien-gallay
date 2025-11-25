@@ -151,7 +151,7 @@ Closes TPL-001"
 
 ## Statistiques
 
-- **Total**: 26 tâches
+- **Total**: 33 tâches
 - **À faire**: 6
 - **En cours**: 0
 - **Terminées**: 0
