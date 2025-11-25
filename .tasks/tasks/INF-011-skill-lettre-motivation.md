@@ -45,6 +45,26 @@ Créer un skill qui :
 - Permet l'itération et l'amélioration
 - Supporte le français (principalement) et l'anglais
 
+### Position dans le workflow
+
+```text
+INF-009 → INF-010
+              │
+              ▼
+     ┌────────┴────────┐
+     │                 │
+     ▼                 ▼
+┌─────────────┐  ┌─────────────┐
+│ ★ INF-011 ★ │  │   INF-012   │
+│ Lettre de   │  │  CV adapté  │
+│ motivation  │  └─────────────┘
+└─────────────┘
+     │
+     ▼
+  [Output]
+  lettre.md
+```
+
 ---
 
 ## Sous-tâches

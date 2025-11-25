@@ -46,6 +46,23 @@ Créer un skill qui :
 - Recherche des informations sur l'entreprise (optionnel)
 - Génère un rapport d'analyse formaté
 
+### Position dans le workflow
+
+```text
+┌─────────────────┐
+│  Offre d'emploi │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐     ┌─────────────────┐
+│ ★ INF-009 ★     │────▶│ Recherche       │
+│ Analyse offre   │     │ entreprise      │
+└────────┬────────┘     └─────────────────┘
+         │
+         ▼
+    INF-010 → INF-011 / INF-012
+```
+
 ---
 
 ## Sous-tâches

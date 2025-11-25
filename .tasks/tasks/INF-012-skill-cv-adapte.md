@@ -46,6 +46,26 @@ Créer un skill qui :
 - Ajuste le format si nécessaire
 - Compile le PDF final
 
+### Position dans le workflow
+
+```text
+INF-009 → INF-010
+              │
+              ▼
+     ┌────────┴────────┐
+     │                 │
+     ▼                 ▼
+┌─────────────┐  ┌─────────────┐
+│   INF-011   │  │ ★ INF-012 ★ │
+│   Lettre    │  │  CV adapté  │
+└─────────────┘  └──────┬──────┘
+                        │
+                        ▼
+                   [Output]
+                   cv-adapted.typ
+                   cv-adapted.pdf
+```
+
 ---
 
 ## Sous-tâches

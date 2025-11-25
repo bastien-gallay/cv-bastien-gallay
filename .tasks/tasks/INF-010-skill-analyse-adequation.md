@@ -45,6 +45,24 @@ Créer un skill qui :
 - Suggère des points de discussion/argumentation
 - Propose des recommandations pour la candidature
 
+### Position dans le workflow
+
+```text
+    INF-009 (Analyse offre)
+         │
+         ▼
+┌─────────────────┐
+│ ★ INF-010 ★     │
+│ Analyse fit     │
+│ Score + Points  │
+└────────┬────────┘
+         │
+    ┌────┴────┐
+    ▼         ▼
+INF-011   INF-012
+Lettre    CV adapté
+```
+
 ---
 
 ## Sous-tâches
