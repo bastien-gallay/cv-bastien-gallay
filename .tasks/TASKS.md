@@ -41,12 +41,16 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Score | Créé le |
 |----|-------|--------|----------|-------|---------|
+| [CNT-032](tasks/CNT-032-moderniser-entete-cv.md) | Moderniser l'en-tête du CV (titre + adresse) | ⏳ À faire | 🔴 Haute | 10.00 | 2025-11-25 |
+| [CNT-033](tasks/CNT-033-ameliorer-section-a-propos.md) | Améliorer section "À propos" avec métriques | ⏳ À faire | 🔴 Haute | 10.00 | 2025-11-25 |
+| [CNT-034](tasks/CNT-034-restructurer-experience-palo-it.md) | Restructurer expérience PALO IT par résultats | ⏳ À faire | 🔴 Haute | 8.00 | 2025-11-25 |
 | [INF-001](tasks/INF-001-mcp-integration.md) | Améliorer visuellement le CV avec l'aide de Claude | 🔄 En cours | 🟡 Moyenne | 6.40 | 2025-10-28 |
 | [QUA-001](tasks/QUA-001-verification.md) | Étapes de vérification du CV | ⏳ À faire | 🟡 Moyenne | 5.93 | 2025-10-28 |
 | [TPL-001](tasks/TPL-001-cv-versions.md) | Versions courte et longue du CV | ⏳ À faire | 🟡 Moyenne | 4.45 | 2025-10-28 |
 | [TPL-002](tasks/TPL-002-template-system.md) | Système de changement de template | ⏳ À faire | 🟢 Basse | 2.96 | 2025-10-28 |
 | [LAY-001](tasks/LAY-001-sidebar-premiere-page-uniquement.md) | Sidebar uniquement sur la première page | ⏳ À faire | 🟡 Moyenne | 2.50 | 2025-11-25 |
 | [LAY-002](tasks/LAY-002-consolidation-sections-dupliquees.md) | Consolider les sections dupliquées (Études, Expérience) | ⏳ À faire | 🟡 Moyenne | 2.50 | 2025-11-25 |
+| [LAY-003](tasks/LAY-003-reorganiser-competences-3-poles.md) | Réorganiser compétences en 3 pôles thématiques | ⏳ À faire | 🟡 Moyenne | 2.50 | 2025-11-25 |
 | [INF-005](tasks/INF-005-repertoire-ressources-dedie.md) | Répertoire dédié aux ressources d'analyse | ⏳ À faire | 🟡 Moyenne | 2.50 | 2025-11-25 |
 | [PIP-003](tasks/PIP-003-build-word-format.md) | Build du CV au format Word | ⏳ À faire | 🟡 Moyenne | 2.50 | 2025-11-25 |
 | [PIP-001](tasks/PIP-001-cicd-pipeline.md) | CI/CD pour publication automatique | ⏳ À faire | 🟢 Basse | 2.47 | 2025-10-28 |
@@ -163,8 +167,8 @@ Closes TPL-001"
 
 ## Statistiques
 
-- **Total**: 45 tâches
-- **À faire**: 17
+- **Total**: 49 tâches
+- **À faire**: 21
 - **En cours**: 1
 - **Terminées**: 0
 - **Bloquées**: 0
@@ -172,7 +176,7 @@ Closes TPL-001"
 
 **Prochains IDs disponibles par trigramme**:
 
-- CNT-032, TPL-004, QUA-002, PIP-004, INF-013, LAY-003, DOC-002
+- CNT-035, TPL-004, QUA-002, PIP-004, INF-013, LAY-004, DOC-002
 
 ---
 

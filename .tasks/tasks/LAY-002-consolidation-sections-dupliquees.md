@@ -32,7 +32,7 @@ L'analyse visuelle du CV (novembre 2025) révèle une structure redondante:
 **Page 1:**
 
 - "Études" (version résumée, 1 entrée)
-- "Expérience Professionnelle" (version résumée)
+- "Expérience Professionnelle" (tableau récapitulatif)
 
 **Page 2:**
 
@@ -41,6 +41,8 @@ L'analyse visuelle du CV (novembre 2025) révèle une structure redondante:
 **Pages 3-5:**
 
 - "Expérience détaillée" (missions complètes)
+
+**Audit novembre 2025:** Le tableau récapitulatif page 1 crée un doublon immédiat avec la section "Expérience Détaillée" qui démarre page 2. Il consomme un espace précieux sans ajouter de détail contextuel. → **Supprimer le tableau, garder uniquement la version détaillée.**
 
 Cette structure crée:
 

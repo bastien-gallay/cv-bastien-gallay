@@ -155,10 +155,16 @@ typst compile cv-long.typ
 
 **Critères version courte:**
 
-- Maximum 1 page A4
+- Maximum 1-2 pages A4
 - Focus sur les 3-5 dernières années
 - Compétences les plus pertinentes
 - Pas de centres d'intérêt détaillés
+
+**Audit novembre 2025 - Condensation des expériences anciennes:**
+
+Les missions détaillées avant 2013 (Cdiscount, Cast Consulting, Boonty) occupent les pages 4-5. Pour un poste de CTO, ces détails techniques datés sont moins pertinents.
+
+→ **Action:** Regrouper en une section "Expériences Précédentes" listant simplement: Entreprise, Rôle, Dates et une phrase de synthèse.
 
 **Critères version longue (exhaustive):**
 
