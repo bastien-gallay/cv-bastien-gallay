@@ -166,7 +166,7 @@
 
 #entry(
   title: "Webmaster ",
-  date: "06/1999 - 06/2004",
+  date: "06/2002 - 06/2004",
   institution: "Indépendant",
   location: "Paris, France",
 )[]

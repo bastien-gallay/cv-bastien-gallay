@@ -8,13 +8,13 @@
 |-------|--------|
 | **ID** | CNT-005 |
 | **Titre** | Corriger les dates de début Freelance |
-| **Statut** | ⏳ À faire |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | CNT |
 | **Section CV** | Experience |
 | **Créé le** | 2025-10-29 |
 | **Cible** | - |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-25 |
 | **Temps estimé** | 0.5 heures |
 | **Temps réel** | - |
 | **Branche nécessaire** | Auto |
