@@ -8,15 +8,15 @@
 |-------|--------|
 | **ID** | CNT-015 |
 | **Titre** | Analyse CV Flash (slide unique) |
-| **Statut** | ⏳ À faire |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | CNT |
 | **Section CV** | General |
 | **Créé le** | 2025-11-14 |
 | **Cible** | 2025-11-24 |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-25 |
 | **Temps estimé** | 1.5-2 heures |
-| **Temps réel** | - |
+| **Temps réel** | 1h |
 | **Branche nécessaire** | Auto |
 
 ---
@@ -55,18 +55,18 @@ Extraire les données du CV Flash, effectuer une analyse comparative avec le CV 
 
 ## Sous-tâches
 
-- [ ] Extraire les données de `.tasks/resources/sources-analyses/CV-Flash/`
-- [ ] Identifier les expériences mentionnées dans le CV Flash
-- [ ] Identifier les compétences mises en avant
-- [ ] Identifier les accomplissements/résultats clés
-- [ ] Créer le fichier d'audit `audits/CNT-015/cv-flash.md`
-- [ ] Comparer avec le CV actuel (cohérence des messages)
-- [ ] Vérifier l'alignement des dates et durées
-- [ ] Identifier les incohérences ou manques
-- [ ] Créer l'analyse comparative `analyses/CNT-015/audit-report.md`
-- [ ] Générer les recommandations avec priorités `analyses/CNT-015/recommendations.md`
-- [ ] Créer le fichier de tracking `analyses/CNT-015/recommendations-status.md`
-- [ ] Mettre à jour `.tasks/ANALYSES.md`
+- [x] Extraire les données de `.tasks/resources/sources-analyses/CV-Flash/`
+- [x] Identifier les expériences mentionnées dans le CV Flash
+- [x] Identifier les compétences mises en avant
+- [x] Identifier les accomplissements/résultats clés
+- [x] Créer le fichier d'audit `audits/CNT-015/cv-flash.md`
+- [x] Comparer avec le CV actuel (cohérence des messages)
+- [x] Vérifier l'alignement des dates et durées
+- [x] Identifier les incohérences ou manques
+- [x] Créer l'analyse comparative `analyses/CNT-015/audit-report.md`
+- [x] Générer les recommandations avec priorités `analyses/CNT-015/recommendations.md`
+- [x] Créer le fichier de tracking `analyses/CNT-015/recommendations-status.md`
+- [x] Mettre à jour `.tasks/ANALYSES.md`
 
 ---
 
@@ -264,16 +264,20 @@ Closes CNT-015"
 
 ## Résultat final
 
-[À remplir une fois la tâche terminée]
-
 **Ce qui a été fait:**
 
-- [Liste des réalisations]
+- Extraction complète des données du CV Flash (2021)
+- Identification de 6 missions clients et 6 activités communautaires
+- Analyse comparative détaillée avec le CV actuel
+- Génération de 10 recommandations priorisées (4 hautes, 4 moyennes, 2 basses)
+- Création de tous les fichiers de tracking et mise à jour du dashboard
 
-**Difficultés rencontrées:**
+**Écarts majeurs identifiés:**
 
-- [Problèmes et solutions]
+- 5 missions clients absentes (Dronisos, Wanteeed, Mieux Placer, SeLoger, JOA Online)
+- 5 activités communautaires absentes (Google Launchpad, Startup Weekend, Agile Tour, Scrum Day, enseignement)
 
-**Améliorations futures:**
+**Prochaines actions:**
 
-- [Idées pour aller plus loin]
+- Utiliser `/task-from-analysis --analysis-id=CNT-015` pour créer les tâches de correction
+- Priorité aux missions clients et activités communautaires (haute valeur)

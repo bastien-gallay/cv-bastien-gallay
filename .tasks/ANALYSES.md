@@ -30,6 +30,7 @@ Chaque analyse peut générer plusieurs **recommandations** qui sont suivies ind
 | [CNT-001](resources/analyses/CNT-001/) | LinkedIn Audit | [linkedin.com/in/bastiengallay](https://linkedin.com/in/bastiengallay/) | ✅ Terminé | 2025-10-29 | 19 total (1 très haute, 10 hautes, 5 moyennes, 3 basses) | 11/19 (58%) |
 | [CNT-013](resources/analyses/CNT-013/) | CV Comparatif | CV 2019 (Mars 2019) | ✅ Terminé | 2025-11-14 | 14 total (2 très hautes, 4 hautes, 6 moyennes, 2 basses) | 0/14 (0%) |
 | [CNT-014](resources/analyses/CNT-014/) | Journal CTO | Journal CTO PALO IT (mars-juillet 2025) | ✅ Terminé | 2025-11-18 | 25 total (5 très hautes, 10 hautes, 7 moyennes, 3 basses) | 0/25 (0%) |
+| [CNT-015](resources/analyses/CNT-015/) | CV Flash | CV Flash 2021 (slide unique) | ✅ Terminé | 2025-11-25 | 10 total (0 très haute, 4 hautes, 4 moyennes, 2 basses) | 0/10 (0%) |
 
 ---
 
@@ -43,21 +44,21 @@ Les analyses sont archivées lorsque toutes leurs recommandations ont été trai
 
 ## Statistiques Globales
 
-- **Total analyses**: 3
+- **Total analyses**: 4
 - **En cours**: 0
-- **Terminées**: 3
-- **Recommandations totales**: 58
-- **Recommandations pendantes**: 47 (81%)
+- **Terminées**: 4
+- **Recommandations totales**: 68
+- **Recommandations pendantes**: 57 (84%)
 - **Tâches créées depuis analyses**: 11
 
 ### Répartition par priorité
 
 | Priorité | Nombre | Pourcentage |
 |----------|--------|-------------|
-| 🔴🔴 Très Haute | 8 | 14% |
-| 🔴 Haute | 24 | 41% |
-| 🟡 Moyenne | 18 | 31% |
-| 🟢 Basse | 8 | 14% |
+| 🔴🔴 Très Haute | 8 | 12% |
+| 🔴 Haute | 28 | 41% |
+| 🟡 Moyenne | 22 | 32% |
+| 🟢 Basse | 10 | 15% |
 
 ---
 
@@ -257,6 +258,63 @@ La commande mettra automatiquement à jour:
 4. Intégrer technologies cloud et AI/ML complètes
 5. Ajouter projets clients concrets avec métriques
 6. Phase 2: Créer tâches priorité haute (certifications, partenariats, enrichissement Gen-e2)
+
+---
+
+### CNT-015: Analyse CV Flash (2021)
+
+**Objectif**: Analyser le CV Flash (format slide unique) pour identifier les informations condensées, comparer avec le CV actuel et assurer la cohérence entre les versions
+
+**Sources analysées**:
+
+- CV Flash 2021: `.tasks/resources/sources-analyses/CV-flash/CV_BGA_Court.2021.pdf`
+- CV actuel: `src/cv.typ`
+
+**Fichiers de ressources**:
+
+- Audits: [resources/audits/CNT-015/](resources/audits/CNT-015/)
+  - `cv-flash.md` - Extraction structurée du CV Flash
+- Analyses: [resources/analyses/CNT-015/](resources/analyses/CNT-015/)
+  - `audit-report.md` - Rapport d'analyse comparative
+  - `recommendations.md` - 10 recommandations détaillées
+  - `recommendations-status.md` - Suivi des recommandations
+  - `metrics.md` - Métriques et statistiques
+
+**Résultats clés**:
+
+- **Positionnement 2021**: "Coach Agile & Software Craftsmanship" (15 ans de pratiques agiles)
+- **Positionnement actuel**: "Crafting Technology Officer" (25 ans d'expérience) - évolution cohérente
+- **5 missions clients absentes du CV actuel**:
+  - Dronisos (Startup événementiel)
+  - Wanteeed.com (Startup Web)
+  - Mieux Placer (Fintech)
+  - Groupe SeLoger/Logic Immo (Immobilier)
+  - JOA Online (Jeux en ligne)
+- **5 activités communautaires absentes**:
+  - Mentor Google Launchpad
+  - Coach Startup Weekend
+  - Orateur Agile Tour
+  - Orateur Scrum Day
+  - Intervenant enseignement supérieur
+
+**Recommandations**: 10 total
+
+- 🔴 Haute: 4 (missions clients, activités communautaires Google/Startup Weekend/Conférences)
+- 🟡 Moyenne: 4 (enseignement, quantifier formation, Design Thinking, i-BP national)
+- 🟢 Basse: 2 (secteurs d'activité, harmonisation terminologie)
+
+**Impact potentiel**:
+
+- **Priorité globale**: 🔴 HAUTE
+- **Effort estimé**: 4.5-5.5 heures
+- **Bénéfice principal**: Cohérence entre versions courte/longue du CV + valorisation du rayonnement communautaire
+
+**Prochaines actions**:
+
+1. Créer tâches pour missions clients via `/task-from-analysis --analysis-id=CNT-015 --filter=high`
+2. Enrichir section Upwiser avec les 5 missions manquantes
+3. Ajouter activités communautaires (Google Launchpad, Startup Weekend, conférences)
+4. Quantifier l'activité de formation (~15 sessions/an depuis 2015)
 
 ---
 
