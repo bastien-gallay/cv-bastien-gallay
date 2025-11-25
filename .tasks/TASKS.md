@@ -43,12 +43,8 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 |----|-------|--------|----------|---------|
 | [CNT-010](tasks/CNT-010-ajouter-section-benevolat.md) | Ajouter section Bénévolat | ⏳ À faire | 🔴 Haute | 2025-10-29 |
 | [CNT-016](tasks/CNT-016-enrichir-section-experience-detaillee-avec-descriptions-developpees.md) | Enrichir section Expérience détaillée avec descriptions développées | ⏳ À faire | 🔴 Haute | 2025-11-17 |
-| [CNT-018](tasks/CNT-018-ajouter-stack-technique-complete-palo-it-cto.md) | Ajouter stack technique complète PALO IT CTO | ⏳ À faire | 🔴 Haute | 2025-11-25 |
-| [CNT-019](tasks/CNT-019-ajouter-projets-clients-et-resultats-business-palo-it-cto.md) | Ajouter projets clients et résultats business PALO IT CTO | ⏳ À faire | 🔴 Haute | 2025-11-25 |
-| [CNT-020](tasks/CNT-020-ajouter-activite-presales-et-business-development-palo-it-cto.md) | Ajouter activité presales et business development PALO IT CTO | ⏳ À faire | 🔴 Haute | 2025-11-25 |
-| [CNT-021](tasks/CNT-021-ajouter-partenariats-strategiques-palo-it-cto.md) | Ajouter partenariats stratégiques PALO IT CTO | ⏳ À faire | 🔴 Haute | 2025-11-25 |
-| [CNT-022](tasks/CNT-022-ajouter-initiatives-innovation-et-formation-palo-it-cto.md) | Ajouter initiatives innovation et formation PALO IT CTO | ⏳ À faire | 🔴 Haute | 2025-11-25 |
 | [CNT-027](tasks/CNT-027-ajouter-missions-clients-upwiser-manquantes.md) | Ajouter les missions clients Upwiser manquantes | ⏳ À faire | 🔴 Haute | 2025-11-25 |
+| [CNT-031](tasks/CNT-031-enrichir-experience-palo-it-cto-complete.md) | Enrichir l'expérience PALO IT CTO (consolidation) | 🔄 En cours | 🔴 Haute | 2025-11-25 |
 | [CNT-028](tasks/CNT-028-ajouter-activites-communautaires-rayonnement.md) | Ajouter activités communautaires et rayonnement | ⏳ À faire | 🔴 Haute | 2025-11-25 |
 | [CNT-023](tasks/CNT-023-mettre-a-jour-photo-profil.md) | Mettre à jour la photo du CV | ⏳ À faire | 🟡 Moyenne | 2025-11-25 |
 | [CNT-029](tasks/CNT-029-ameliorations-cv-flash-priorite-moyenne.md) | Améliorations CV Flash (priorité moyenne) | ⏳ À faire | 🟡 Moyenne | 2025-11-25 |
@@ -155,16 +151,16 @@ Closes TPL-001"
 
 ## Statistiques
 
-- **Total**: 30 tâches
-- **À faire**: 17
-- **En cours**: 0
+- **Total**: 26 tâches
+- **À faire**: 12
+- **En cours**: 1
 - **Terminées**: 13
 - **Bloquées**: 0
-- **Archivées**: 8
+- **Archivées**: 13
 
 **Prochains IDs disponibles par trigramme**:
 
-- CNT-031, TPL-003, QUA-002, PIP-003, INF-005, LAY-001, DOC-002
+- CNT-032, TPL-003, QUA-002, PIP-003, INF-005, LAY-001, DOC-002
 
 ---
 

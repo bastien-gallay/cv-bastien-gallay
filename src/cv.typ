@@ -108,13 +108,13 @@
   institution: "PALO IT",
   location: "Bordeaux/Paris, France",
 )[
-  - *En tant que CTO (10/2024 - 10/2025) :* Responsable de la stratégie technologique et de l'innovation, avec participation au COMEX de l'entreprise.
-  - Management et mentorat des équipes techniques (50 personnes) et développement des talents au sein de l'organisation.
-  - Conception et mise en œuvre de Gen-e2, méthode basée sur l'IA pour la création de produits numériques.
-  - Organisation des propositions commerciales et coordination des initiatives technologiques internationales.
-  - *En tant que Consultant Senior :* Accompagnement des clients dans leurs stratégies technologiques et conseil en architecture logicielle.
-  - Animation de la communauté technique interne, création du Career Path des consultants France et participation au recrutement.
-  - Formation et coaching des équipes sur les méthodologies agiles, technologies émergentes et meilleures pratiques de développement.
+  - *En tant que CTO (10/2024 - 10/2025) :* Stratégie technologique et participation au COMEX. Contribution à 15% de croissance du CA.
+  - Management de 50 professionnels techniques. Délivrance de 20-40 certifications GitHub Copilot.
+  - Conception de Gen-e2, framework de développement accéléré par IA. Initiative Quantum Computing.
+  - Presales : 6+ opportunités majeures (€15k-€500k+). Partenariats Scaleway, GitHub, Mistral.
+  - *En tant que Consultant Senior :* Missions clients (Bodic, Systel, TopTex, Beta.gouv, Nalo).
+  - Animation de la communauté technique interne, Career Path des consultants France, recrutement.
+  - *Stack :* Azure, AWS, OpenAI, Anthropic, LangChain, Python, C\#, TypeScript, Rust.
 ]
 
 #entry(
@@ -328,5 +328,62 @@
   - Mise en place de pratiques Software Craftsmanship
   - Refonte de l'architecture technique
   - #strong[Stack:] Python, Django
+
+  ==== Mission Bodic - Technical Lead (2024-2025)
+  #strong[Client:] Bodic
+  #strong[Durée:] 1.5 jours/semaine
+
+  - Optimisation API : temps de réponse réduit à 72ms
+  - Développement Outlook add-in avec intégration réussie
+  - Code reviews et décisions d'architecture
+  - Évolution vers rôle d'External CTO
+  - #strong[Stack:] Azure, C\#, REST API
+
+  ==== Mission Systel - Team Coach (mars-juin 2025)
+  #strong[Client:] Systel
+  #strong[Durée:] 30 jours
+
+  - Coaching quotidien d'une équipe de 3 développeurs
+  - Revue architecture MAC avec pattern BFF
+  - Préparation audit technique pour acquisition
+  - Facilitation rétrospectives et planification sprints
+  - #strong[Stack:] TFS, C\#
+
+  ==== Mission TopTex - Architecture API (2025)
+  #strong[Client:] TopTex
+  #strong[Durée:] 2-4 jours
+
+  - Étude architecture API et planification migration
+  - Architecture multi-instance Sage
+  - Feedback client : "très bien, carré, propre"
+
+  === En tant que CTO (oct. 2024 - oct. 2025)
+
+  ==== Leadership & Management
+  - Direction de la stratégie technologique et participation au COMEX
+  - Management de 50 professionnels techniques via organisation Hive Tech
+  - Contribution à 15% de croissance du CA
+  - 20-40 certifications GitHub Copilot délivrées
+
+  ==== Innovation & Gen-e2
+  - Conception de Gen-e2, framework de développement accéléré par IA
+  - Learn & Lunch hebdomadaires et ateliers Hands-on
+  - Initiative Quantum Computing : stage de 10 semaines
+  - Organisation Tech\&Toast : 70+ professionnels
+
+  ==== Presales & Business Development
+  - Gestion de 6+ opportunités majeures (€15k-€500k+)
+  - Clients presales : Natixis, CEVA Logistics, Aviva, Groupe BZ
+
+  ==== Partenariats Stratégiques
+  - Scaleway : partenariat cloud infrastructure
+  - GitHub : programme de certification Copilot
+  - Mistral : intégration Codestral dans Gen-e2
+
+  ==== Stack Technique
+  - #strong[Cloud:] Azure (Databricks, SQL Hyperscale, Cosmos DB), AWS (Bedrock), Scaleway
+  - #strong[AI/ML:] OpenAI, Anthropic, LangChain, OpenSearch, Pinecone, GitHub Copilot
+  - #strong[Langages:] Python, C\#, TypeScript, Rust
+  - #strong[Architecture:] MAC, BFF, REST API, microservices, multi-cloud
 ]
 
