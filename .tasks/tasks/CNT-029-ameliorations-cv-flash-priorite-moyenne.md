@@ -8,7 +8,7 @@
 |-------|--------|
 | **ID** | CNT-029 |
 | **Titre** | Améliorations CV Flash (priorité moyenne) |
-| **Statut** | ⏳ À faire |
+| **Statut** | 🔄 En cours |
 | **Priorité** | 🟡 Moyenne |
 | **Trigramme** | CNT |
 | **Section CV** | Multiple |
@@ -178,6 +178,7 @@ Closes CNT-029"
 
 | Date | Action | Détails |
 |------|--------|---------|
+| 2025-11-25 | En cours | Début du travail |
 | 2025-11-25 | Création | Tâche créée depuis CNT-015-R05/R06/R07/R08 |
 
 ---

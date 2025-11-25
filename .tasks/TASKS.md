@@ -42,7 +42,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | ID | Titre | Statut | Priorité | Créé le |
 |----|-------|--------|----------|---------|
 | [CNT-023](tasks/CNT-023-mettre-a-jour-photo-profil.md) | Mettre à jour la photo du CV | 🔄 En cours | 🟡 Moyenne | 2025-11-25 |
-| [CNT-029](tasks/CNT-029-ameliorations-cv-flash-priorite-moyenne.md) | Améliorations CV Flash (priorité moyenne) | ⏳ À faire | 🟡 Moyenne | 2025-11-25 |
+| [CNT-029](tasks/CNT-029-ameliorations-cv-flash-priorite-moyenne.md) | Améliorations CV Flash (priorité moyenne) | 🔄 En cours | 🟡 Moyenne | 2025-11-25 |
 | [TPL-001](tasks/TPL-001-cv-versions.md) | Versions courte et longue du CV | ⏳ À faire | 🟡 Moyenne | 2025-10-28 |
 | [QUA-001](tasks/QUA-001-verification.md) | Étapes de vérification du CV | ⏳ À faire | 🟡 Moyenne | 2025-10-28 |
 | [TPL-002](tasks/TPL-002-template-system.md) | Système de changement de template | ⏳ À faire | 🟢 Basse | 2025-10-28 |
