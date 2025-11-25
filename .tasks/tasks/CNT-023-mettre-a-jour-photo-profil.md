@@ -8,7 +8,7 @@
 |-------|--------|
 | **ID** | CNT-023 |
 | **Titre** | Mettre à jour la photo du CV |
-| **Statut** | ⏳ À faire |
+| **Statut** | 🔄 En cours |
 | **Priorité** | 🟡 Moyenne |
 | **Trigramme** | CNT |
 | **Section CV** | Sidebar |
@@ -170,6 +170,7 @@ Closes CNT-023"
 | Date | Action | Détails |
 |------|--------|---------|
 | 2025-11-25 | Création | Tâche créée |
+| 2025-11-25 | En cours | Début du travail |
 
 ---
 
