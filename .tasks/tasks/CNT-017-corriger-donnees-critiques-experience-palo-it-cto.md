@@ -8,15 +8,15 @@
 |-------|--------|
 | **ID** | CNT-017 |
 | **Titre** | Corriger données critiques expérience PALO IT CTO |
-| **Statut** | ⏳ À faire |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | CNT |
 | **Section CV** | Experience |
 | **Créé le** | 2025-11-25 |
 | **Cible** | 2025-11-30 |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-25 |
 | **Temps estimé** | 15 minutes |
-| **Temps réel** | - |
+| **Temps réel** | 0.1 heures |
 | **Branche nécessaire** | Auto |
 
 ---
@@ -43,12 +43,12 @@ Ces erreurs affectent gravement la crédibilité du CV et sous-estiment signific
 
 ## Sous-tâches
 
-- [ ] Localiser l'entrée expérience PALO IT CTO dans cv.typ (lignes 107-121)
-- [ ] Corriger la date de début : "10/2024" → "11/2021"
-- [ ] Corriger la date de fin : "08/2025" → "10/2025"
-- [ ] Corriger la taille équipe : "40+" → "50"
-- [ ] Compiler le CV et vérifier l'affichage
-- [ ] Valider que les dates et chiffres sont cohérents
+- [x] Localiser l'entrée expérience PALO IT CTO dans cv.typ (lignes 107-121)
+- [x] Corriger la date totale de fin : "08/2025" → "10/2025"
+- [x] Corriger la date de fin CTO : "08/2025" → "10/2025"
+- [x] Corriger la taille équipe : "40+" → "50"
+- [x] Compiler le CV et vérifier l'affichage
+- [x] Valider que les dates et chiffres sont cohérents
 
 ---
 

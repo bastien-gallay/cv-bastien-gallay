@@ -104,12 +104,12 @@
 
 #entry(
   title: "Consultant Technique Senior → Chief Technology Officer",
-  date: "02/2021 - 08/2025",
+  date: "02/2021 - 10/2025",
   institution: "PALO IT",
   location: "Bordeaux/Paris, France",
 )[
-  - *En tant que CTO (10/2024 - 08/2025) :* Responsable de la stratégie technologique et de l'innovation, avec participation au COMEX de l'entreprise.
-  - Management et mentorat des équipes techniques (40+ personnes) et développement des talents au sein de l'organisation.
+  - *En tant que CTO (10/2024 - 10/2025) :* Responsable de la stratégie technologique et de l'innovation, avec participation au COMEX de l'entreprise.
+  - Management et mentorat des équipes techniques (50 personnes) et développement des talents au sein de l'organisation.
   - Conception et mise en œuvre de Gen-e2, méthode basée sur l'IA pour la création de produits numériques.
   - Organisation des propositions commerciales et coordination des initiatives technologiques internationales.
   - *En tant que Consultant Senior :* Accompagnement des clients dans leurs stratégies technologiques et conseil en architecture logicielle.

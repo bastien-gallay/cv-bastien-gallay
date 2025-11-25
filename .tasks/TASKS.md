@@ -46,7 +46,6 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | [CNT-010](tasks/CNT-010-ajouter-section-benevolat.md) | Ajouter section Bénévolat | ⏳ À faire | 🔴 Haute | 2025-10-29 |
 | [CNT-015](tasks/CNT-015-analyse-cv-flash.md) | Analyse CV Flash (slide unique) | ⏳ À faire | 🔴 Haute | 2025-11-14 |
 | [CNT-016](tasks/CNT-016-enrichir-section-experience-detaillee-avec-descriptions-developpees.md) | Enrichir section Expérience détaillée avec descriptions développées | ⏳ À faire | 🔴 Haute | 2025-11-17 |
-| [CNT-017](tasks/CNT-017-corriger-donnees-critiques-experience-palo-it-cto.md) | Corriger données critiques expérience PALO IT CTO | ⏳ À faire | 🔴 Haute | 2025-11-25 |
 | [CNT-018](tasks/CNT-018-ajouter-stack-technique-complete-palo-it-cto.md) | Ajouter stack technique complète PALO IT CTO | ⏳ À faire | 🔴 Haute | 2025-11-25 |
 | [CNT-019](tasks/CNT-019-ajouter-projets-clients-et-resultats-business-palo-it-cto.md) | Ajouter projets clients et résultats business PALO IT CTO | ⏳ À faire | 🔴 Haute | 2025-11-25 |
 | [CNT-020](tasks/CNT-020-ajouter-activite-presales-et-business-development-palo-it-cto.md) | Ajouter activité presales et business development PALO IT CTO | ⏳ À faire | 🔴 Haute | 2025-11-25 |
@@ -65,6 +64,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
+| [CNT-017](tasks/CNT-017-corriger-donnees-critiques-experience-palo-it-cto.md) | Corriger données critiques expérience PALO IT CTO | ✅ Terminé | 🔴 Haute | 2025-11-25 |
 | [CNT-009](tasks/CNT-009-ajouter-experience-dekra.md) | Ajouter l'expérience DEKRA | ✅ Terminé | 🔴 Haute | 2025-11-25 |
 | [CNT-008](tasks/CNT-008-ajouter-experience-ibp.md) | Ajouter l'expérience i-BP | ✅ Terminé | 🔴 Haute | 2025-11-25 |
 | [CNT-014](tasks/CNT-014-analyse-experience-palo-it.md) | Analyse expérience PALO IT (journal/tâches CTO) | ✅ Terminé | 🔴 Haute | 2025-11-25 |
@@ -150,9 +150,9 @@ Closes TPL-001"
 ## Statistiques
 
 - **Total**: 24 tâches
-- **À faire**: 14
+- **À faire**: 13
 - **En cours**: 0
-- **Terminées**: 7
+- **Terminées**: 8
 - **Bloquées**: 0
 - **Archivées**: 8
 
