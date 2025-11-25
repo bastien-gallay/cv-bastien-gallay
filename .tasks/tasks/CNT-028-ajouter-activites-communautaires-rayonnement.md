@@ -8,13 +8,13 @@
 |-------|--------|
 | **ID** | CNT-028 |
 | **Titre** | Ajouter activités communautaires et rayonnement |
-| **Statut** | ⏳ À faire |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | CNT |
 | **Section CV** | Sidebar / Experience |
 | **Créé le** | 2025-11-25 |
 | **Cible** | 2025-11-30 |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-25 |
 | **Temps estimé** | 1h |
 | **Temps réel** | - |
 | **Branche nécessaire** | Non |
@@ -42,12 +42,12 @@ Intégrer les activités suivantes dans le CV:
 
 ## Sous-tâches
 
-- [ ] Décider de l'emplacement optimal (sidebar "Centres d'intérêt", nouvelle section, ou Upwiser)
-- [ ] Ajouter mention Google Launchpad Mentor
-- [ ] Ajouter mention Startup Weekend Coach
-- [ ] Ajouter mentions conférences (Agile Tour, Scrum Day)
-- [ ] Vérifier la compilation du CV
-- [ ] Valider le rendu PDF
+- [x] Décider de l'emplacement optimal (sidebar "Centres d'intérêt", nouvelle section, ou Upwiser)
+- [x] Ajouter mention Google Launchpad Mentor
+- [x] Ajouter mention Startup Weekend Coach
+- [x] Ajouter mentions conférences (Agile Tour, Scrum Day)
+- [x] Vérifier la compilation du CV
+- [x] Valider le rendu PDF
 
 ---
 

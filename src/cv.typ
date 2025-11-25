@@ -45,6 +45,11 @@
   - Management et leadership
   - Entrepreneuriat
 
+  = Rayonnement
+  - Mentor Google Launchpad
+  - Coach Startup Weekend
+  - Orateur Agile Tour & Scrum Day
+
   = Contact
   #contact-info()
 
