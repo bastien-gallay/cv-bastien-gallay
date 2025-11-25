@@ -53,6 +53,11 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | [PIP-003](tasks/PIP-003-build-word-format.md) | Build du CV au format Word | ⏳ À faire | 🟡 Moyenne | 2025-11-25 |
 | [LAY-001](tasks/LAY-001-sidebar-premiere-page-uniquement.md) | Sidebar uniquement sur la première page | ⏳ À faire | 🟡 Moyenne | 2025-11-25 |
 | [INF-007](tasks/INF-007-supprimer-cta-slash-commands-skills.md) | Supprimer CTA slash commands dans skills | ⏳ À faire | 🟢 Basse | 2025-11-25 |
+| [INF-008](tasks/INF-008-architecture-skills-candidature.md) | Architecture système skills candidature | ⏳ À faire | 🟡 Moyenne | 2025-11-25 |
+| [INF-009](tasks/INF-009-skill-analyse-offre-emploi.md) | Skill analyse d'offre d'emploi | ⏳ À faire | 🟡 Moyenne | 2025-11-25 |
+| [INF-010](tasks/INF-010-skill-analyse-adequation.md) | Skill analyse adéquation profil-poste | ⏳ À faire | 🟡 Moyenne | 2025-11-25 |
+| [INF-011](tasks/INF-011-skill-lettre-motivation.md) | Skill assistant lettre de motivation | ⏳ À faire | 🟡 Moyenne | 2025-11-25 |
+| [INF-012](tasks/INF-012-skill-cv-adapte.md) | Skill CV adapté à l'offre | ⏳ À faire | 🟡 Moyenne | 2025-11-25 |
 
 ---
 
@@ -157,8 +162,8 @@ Closes TPL-001"
 
 ## Statistiques
 
-- **Total**: 39 tâches
-- **À faire**: 12
+- **Total**: 44 tâches
+- **À faire**: 17
 - **En cours**: 0
 - **Terminées**: 0
 - **Bloquées**: 0
@@ -166,7 +171,7 @@ Closes TPL-001"
 
 **Prochains IDs disponibles par trigramme**:
 
-- CNT-032, TPL-004, QUA-002, PIP-004, INF-008, LAY-002, DOC-002
+- CNT-032, TPL-004, QUA-002, PIP-004, INF-013, LAY-002, DOC-002
 
 ---
 
