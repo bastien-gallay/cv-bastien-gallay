@@ -8,13 +8,13 @@
 |-------|--------|
 | **ID** | CNT-029 |
 | **Titre** | Améliorations CV Flash (priorité moyenne) |
-| **Statut** | 🔄 En cours |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🟡 Moyenne |
 | **Trigramme** | CNT |
 | **Section CV** | Multiple |
 | **Créé le** | 2025-11-25 |
 | **Cible** | 2025-12-05 |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-25 |
 | **Temps estimé** | 1h |
 | **Temps réel** | - |
 | **Branche nécessaire** | Non |
@@ -51,20 +51,20 @@ Traiter les recommandations de priorité moyenne des analyses CNT-015 et CNT-024
 
 **Depuis CNT-015:**
 
-- [ ] Ajouter mention enseignement supérieur (si établissements connus)
-- [ ] Quantifier l'activité de formation dans Upwiser (~15 sessions/an)
-- [ ] Ajouter "Design Thinking" dans les pills de compétences
-- [ ] Enrichir description i-BP avec "Communautés de Pratiques nationales"
+- [ ] Ajouter mention enseignement supérieur (si établissements connus) — *Reporté: noms des établissements requis*
+- [x] Quantifier l'activité de formation dans Upwiser (~15 sessions/an)
+- [x] Ajouter "Design Thinking" dans les pills de compétences
+- [x] Enrichir description i-BP avec "Communautés de Pratiques nationales"
 
 **Depuis CNT-024:**
 
-- [ ] Enrichir les pills avec Node.js, React, Java, BDD
-- [ ] Évaluer l'ajout d'une citation (Peter Drucker ou autre)
+- [x] Enrichir les pills avec Node.js, React, Java, BDD
+- [ ] Évaluer l'ajout d'une citation (Peter Drucker ou autre) — *Reporté: à évaluer ultérieurement*
 
 **Validation:**
 
-- [ ] Vérifier la compilation du CV
-- [ ] Valider le rendu PDF
+- [x] Vérifier la compilation du CV
+- [x] Valider le rendu PDF
 
 ---
 
@@ -178,6 +178,7 @@ Closes CNT-029"
 
 | Date | Action | Détails |
 |------|--------|---------|
+| 2025-11-25 | Terminé | Améliorations appliquées (6/8 items, 2 reportés) |
 | 2025-11-25 | En cours | Début du travail |
 | 2025-11-25 | Création | Tâche créée depuis CNT-015-R05/R06/R07/R08 |
 

@@ -22,7 +22,7 @@
     // scholar: "",
     // orcid: "0000-0000-0000-1955",
   ),
-  profile-picture: image("assets/identite.png"),
+  profile-picture: image("assets/photo-profile-pro.jpg"),
   accent-color: rgb("#4682b4"),
   // font-color: rgb("#333333"),
   header-color: rgb("#3b4f60"),
@@ -76,14 +76,19 @@
     "Scrum",
     "Kanban",
     "eXtreme Programming",
+    "Design Thinking",
     "IA",
     "Test Driven Development",
     "Spec Driven Development",
+    "BDD",
     "Clean Code",
     "Domain Driven Design",
     "TypeScript",
+    "Node.js",
+    "React",
     "SQL",
     "Python",
+    "Java",
     "C#",
     "C",
     "Rust",
@@ -128,7 +133,7 @@
   institution: "Upwiser",
   location: "Bordeaux, France",
 )[
-  - Animation de formations et d'ateliers sur l'agilité et le développement logiciel.
+  - Animation de formations (Agile, Lean, Design Thinking) : ~15 sessions/an depuis 2015.
   - Ingénierie pédagogique pour des programmes de formation sur mesure.
   - Réponse et obtention d'appels d'offre de formation des OPCO en action collectives.
   - Recrutement d'un coach agile pour renforcer l'accompagnement des équipes.
@@ -414,7 +419,7 @@
   #strong[Client:] i-BP, Nantes
 
   - Accompagnement de projets Agiles (Décisionnel, Livraison DevOps)
-  - Coaching de la communauté de pratique des équipiers Agiles
+  - Animation de Communautés de Pratiques nationales (équipiers Agiles)
   - Participation à des travaux transverses d'organisation
   - Mise en place de Coach Dating
   - #strong[Méthodes:] Scrum, Kanban, Lean Startup
