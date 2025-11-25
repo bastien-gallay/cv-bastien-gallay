@@ -300,3 +300,33 @@
   - Conseil en stratégie produit et organisation
 ]
 
+#entry(
+  title: [Consultant Technique Senior → Chief Technology Officer],
+  date: [02/2021 - 10/2025],
+  institution: [PALO IT],
+  location: [Bordeaux/Paris, France],
+)[
+  === Contexte
+  Évolution de Consultant Senior à CTO au sein d'un cabinet de conseil international spécialisé dans la transformation digitale et le développement durable.
+
+  === Missions clients
+
+  ==== Mission Beta.gouv - Lead Developer (juil. 2023 - janv. 2024)
+  #strong[Client:] Beta.gouv - MonEspaceNis2, France (Remote)
+  #strong[Durée:] 7 mois
+
+  - Création de l'infrastructure technique et de l'architecture applicative
+  - Développement de la plateforme en React / JavaScript / TypeScript
+  - Mise en place d'outils de mesure et de monitoring
+  - #strong[Stack:] React, TypeScript, JavaScript
+
+  ==== Mission Nalo - Coach Technique (fév. 2021 - fin 2021)
+  #strong[Client:] Nalo (Fintech), Paris
+  #strong[Durée:] ~10 mois (temps partiel)
+
+  - Coaching du CTO et accompagnement de l'équipe technique
+  - Mise en place de pratiques Software Craftsmanship
+  - Refonte de l'architecture technique
+  - #strong[Stack:] Python, Django
+]
+

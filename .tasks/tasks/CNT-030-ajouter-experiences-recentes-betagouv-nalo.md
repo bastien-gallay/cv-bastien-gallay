@@ -8,15 +8,15 @@
 |-------|--------|
 | **ID** | CNT-030 |
 | **Titre** | Ajouter expériences récentes Beta.gouv et Nalo |
-| **Statut** | 🔄 En cours |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | CNT |
 | **Section CV** | Experience |
 | **Créé le** | 2025-11-25 |
 | **Cible** | 2025-11-30 |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-25 |
 | **Temps estimé** | 1h |
-| **Temps réel** | - |
+| **Temps réel** | 0.5h |
 | **Branche nécessaire** | Non |
 
 ---
@@ -44,13 +44,13 @@ Ces deux expériences valorisent des compétences de haut niveau (Lead Developer
 
 ## Sous-tâches
 
-- [ ] Clarifier avec l'utilisateur les dates exactes de Beta.gouv
-- [ ] Clarifier avec l'utilisateur les dates exactes de Nalo
-- [ ] Déterminer le placement optimal (expérience principale ou Upwiser)
-- [ ] Ajouter entrée Beta.gouv / MonEspaceNis2 dans cv.typ
-- [ ] Ajouter entrée Nalo dans cv.typ
-- [ ] Vérifier la compilation du CV
-- [ ] Valider le rendu PDF
+- [x] Clarifier avec l'utilisateur les dates exactes de Beta.gouv
+- [x] Clarifier avec l'utilisateur les dates exactes de Nalo
+- [x] Déterminer le placement optimal (expérience principale ou Upwiser)
+- [x] Ajouter entrée Beta.gouv / MonEspaceNis2 dans cv.typ
+- [x] Ajouter entrée Nalo dans cv.typ
+- [x] Vérifier la compilation du CV
+- [x] Valider le rendu PDF
 
 ---
 
@@ -169,11 +169,11 @@ Closes CNT-030"
 
 ## Tests / Vérifications
 
-- [ ] Le CV compile sans erreur (`just build`)
-- [ ] Le PDF s'affiche correctement
-- [ ] Beta.gouv est visible dans les expériences
-- [ ] Nalo est visible (expérience principale ou Upwiser)
-- [ ] Les commits suivent la convention
+- [x] Le CV compile sans erreur (`just build`)
+- [x] Le PDF s'affiche correctement
+- [x] Beta.gouv est visible dans les expériences
+- [x] Nalo est visible (expérience principale ou Upwiser)
+- [x] Les commits suivent la convention
 
 ---
 
@@ -183,9 +183,17 @@ Closes CNT-030"
 |------|--------|---------|
 | 2025-11-25 | Création | Tâche créée depuis CNT-024-R01/R02 |
 | 2025-11-25 | En cours | Début du travail |
+| 2025-11-25 | Terminé | Missions Beta.gouv et Nalo ajoutées |
 
 ---
 
 ## Résultat final
 
-[À remplir une fois la tâche terminée]
+Ajout d'une section "Expérience détaillée" PALO IT avec deux missions clients :
+
+- **Beta.gouv / MonEspaceNis2** - Lead Developer (juil. 2023 - janv. 2024)
+  - Stack: React, TypeScript, JavaScript
+- **Nalo** - Coach Technique (fév. 2021 - fin 2021)
+  - Stack: Python, Django
+
+Les deux missions sont placées dans la section "Expérience détaillée" comme missions PALO IT (période 02/2021 - 10/2025).
