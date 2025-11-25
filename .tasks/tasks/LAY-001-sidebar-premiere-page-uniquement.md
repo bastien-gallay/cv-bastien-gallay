@@ -53,6 +53,8 @@ Cette structure répétée:
 - Transition fluide entre les deux layouts
 - Conservation de tout le contenu existant
 
+**Note:** Si des skills doivent être retirés de la sidebar pour tenir sur une page, les conserver dans la version exhaustive (`cv-exhaustive.typ`) pour pouvoir les réutiliser selon les offres.
+
 ---
 
 ## Sous-tâches

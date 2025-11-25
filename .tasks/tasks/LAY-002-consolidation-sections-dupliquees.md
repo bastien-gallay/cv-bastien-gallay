@@ -55,6 +55,8 @@ Cette structure crée:
 - Réduire le nombre de pages si possible
 - Améliorer la cohérence globale
 
+**Principe important:** Le contenu détaillé ne doit pas être supprimé mais déplacé vers la version exhaustive (`cv-exhaustive.typ`). Cette version sert de base de données pour adapter le CV à chaque offre.
+
 ---
 
 ## Sous-tâches
@@ -105,9 +107,10 @@ Cette structure crée:
 
 **Points d'attention:**
 
-- Préserver tout le contenu (ne pas perdre d'informations)
+- **Ne jamais supprimer de contenu** - déplacer vers cv-exhaustive.typ
 - Vérifier les références croisées
 - Tester compilation après chaque modification
+- La version exhaustive reste la source de vérité pour tout le contenu
 
 ---
 

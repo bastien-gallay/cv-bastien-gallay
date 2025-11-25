@@ -44,7 +44,10 @@ Selon les contextes de candidature, il est nécessaire d'avoir:
 Il faut donc:
 
 - Créer une version courte (1-2 pages) en sélectionnant l'essentiel
-- Considérer le CV actuel comme la version longue (à optimiser)
+- Conserver le CV actuel comme version exhaustive/référence
+- Pouvoir piocher dans la version longue pour adapter le CV à chaque offre
+
+**Principe clé:** La version longue (5 pages) sert de **base de données** de contenu. On ne supprime rien définitivement, on sélectionne ce qui est pertinent pour chaque candidature.
 
 ### Objectif
 
@@ -157,12 +160,14 @@ typst compile cv-long.typ
 - Compétences les plus pertinentes
 - Pas de centres d'intérêt détaillés
 
-**Critères version longue:**
+**Critères version longue (exhaustive):**
 
-- 2-3 pages selon le contenu disponible
-- Toutes les expériences pertinentes
+- 3-5 pages avec tout le contenu disponible
+- Toutes les expériences et missions détaillées
 - Détails des projets et accomplissements
 - Certifications et formations continues
+- Sert de **référence** pour créer des CV adaptés à chaque offre
+- Ne jamais supprimer de contenu de cette version
 
 **Après la création:**
 
@@ -254,9 +259,14 @@ Closes TPL-001"
 
 ```plaintext
 neat-cv/
-├── cv-short.typ       # Version 1 page
-├── cv-short.pdf       # PDF généré
-├── cv-long.typ        # Version 2+ pages
-├── cv-long.pdf        # PDF généré
-└── cv.typ             # Original (à conserver ou supprimer?)
+├── src/
+│   ├── cv.typ              # Version standard (2 pages)
+│   ├── cv-exhaustive.typ   # Version complète (5 pages) - BASE DE DONNÉES
+│   └── cv-short.typ        # Version courte (1 page)
+├── dist/
+│   ├── cv.pdf
+│   ├── cv-exhaustive.pdf
+│   └── cv-short.pdf
 ```
+
+**Important:** La version exhaustive (`cv-exhaustive.typ`) contient TOUT le contenu et sert de source pour créer des CV adaptés à chaque offre d'emploi.

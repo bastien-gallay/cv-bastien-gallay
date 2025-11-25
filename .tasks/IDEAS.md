@@ -12,7 +12,7 @@ Ce fichier collecte les idées d'améliorations futures issues des tâches termi
 
 ## Template (TPL)
 
-*Aucune idée pour l'instant*
+- [ ] Créer un workflow/skill pour adapter le CV à une offre d'emploi en piochant dans la version exhaustive (source: INF-001, 2025-11-25)
 
 ---
 
