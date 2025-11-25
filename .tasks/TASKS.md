@@ -51,7 +51,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | [CNT-024](tasks/CNT-024-analyse-cv-flash-2025.md) | Analyse CV Flash 2025 | 🔄 En cours | 🔴 Haute | 2025-11-25 |
 | [CNT-027](tasks/CNT-027-ajouter-missions-clients-upwiser-manquantes.md) | Ajouter les missions clients Upwiser manquantes | ⏳ À faire | 🔴 Haute | 2025-11-25 |
 | [CNT-028](tasks/CNT-028-ajouter-activites-communautaires-rayonnement.md) | Ajouter activités communautaires et rayonnement | ⏳ À faire | 🔴 Haute | 2025-11-25 |
-| [CNT-030](tasks/CNT-030-ajouter-experiences-recentes-betagouv-nalo.md) | Ajouter expériences récentes Beta.gouv et Nalo | ⏳ À faire | 🔴 Haute | 2025-11-25 |
+| [CNT-030](tasks/CNT-030-ajouter-experiences-recentes-betagouv-nalo.md) | Ajouter expériences récentes Beta.gouv et Nalo | 🔄 En cours | 🔴 Haute | 2025-11-25 |
 | [CNT-023](tasks/CNT-023-mettre-a-jour-photo-profil.md) | Mettre à jour la photo du CV | ⏳ À faire | 🟡 Moyenne | 2025-11-25 |
 | [CNT-029](tasks/CNT-029-ameliorations-cv-flash-priorite-moyenne.md) | Améliorations CV Flash (priorité moyenne) | ⏳ À faire | 🟡 Moyenne | 2025-11-25 |
 | [TPL-001](tasks/TPL-001-cv-versions.md) | Versions courte et longue du CV | ⏳ À faire | 🟡 Moyenne | 2025-10-28 |
@@ -157,7 +157,7 @@ Closes TPL-001"
 
 - **Total**: 30 tâches
 - **À faire**: 18
-- **En cours**: 1
+- **En cours**: 2
 - **Terminées**: 11
 - **Bloquées**: 0
 - **Archivées**: 8

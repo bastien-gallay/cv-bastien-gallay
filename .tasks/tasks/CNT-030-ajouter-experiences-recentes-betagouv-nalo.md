@@ -8,7 +8,7 @@
 |-------|--------|
 | **ID** | CNT-030 |
 | **Titre** | Ajouter expériences récentes Beta.gouv et Nalo |
-| **Statut** | ⏳ À faire |
+| **Statut** | 🔄 En cours |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | CNT |
 | **Section CV** | Experience |
@@ -182,6 +182,7 @@ Closes CNT-030"
 | Date | Action | Détails |
 |------|--------|---------|
 | 2025-11-25 | Création | Tâche créée depuis CNT-024-R01/R02 |
+| 2025-11-25 | En cours | Début du travail |
 
 ---
 
