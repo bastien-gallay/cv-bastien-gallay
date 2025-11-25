@@ -48,7 +48,7 @@ Créer un répertoire dédié aux ressources avec les caractéristiques suivante
 ## Sous-tâches
 
 - [ ] Analyser la structure actuelle de `.tasks/resources/`
-- [ ] Définir le nom et l'emplacement du nouveau répertoire (proposition : `resources/` ou `.resources/`)
+- [x] Définir le nom et l'emplacement du nouveau répertoire → **`resources/`** (validé)
 - [ ] Concevoir la nouvelle structure de répertoires
 - [ ] Migrer les ressources existantes vers le nouveau répertoire
 - [ ] Mettre à jour les références dans les fichiers de tâches
@@ -63,10 +63,10 @@ Créer un répertoire dédié aux ressources avec les caractéristiques suivante
 
 > Instructions spécifiques pour l'assistance IA
 
-**Structure proposée :**
+**Structure validée :**
 
 ```plaintext
-resources/                          # ou .resources/ pour le cacher
+resources/                          # Répertoire visible à la racine
 ├── README.md                       # Documentation du répertoire
 ├── audits/                         # Extractions de données sources
 │   └── {TASK-ID}/                  # Organisé par tâche d'audit
@@ -85,19 +85,16 @@ resources/                          # ou .resources/ pour le cacher
 └── external/                       # Ressources externes (CV de référence, etc.)
 ```
 
-**Considérations :**
+**Décisions validées :**
 
-1. **Nommage** :
-   - `resources/` : visible, explicite
-   - `.resources/` : caché, moins de risque de modification accidentelle
+1. **Nommage** : `resources/` (visible, explicite) ✅
+2. **Migration** : Toutes les ressources existantes seront migrées ✅
+3. **Protection** : Simple convention (documentation) ✅
 
-2. **Protection** :
-   - Ajouter un `.gitattributes` ou documentation pour signaler la nature sensible
-   - Possibilité d'ajouter un hook pre-commit pour alerter sur les modifications
+**Intégration à prévoir :**
 
-3. **Intégration** :
-   - Mettre à jour `config/paths.yml` du skill task-management
-   - Adapter les workflows `/analyze-source` et `/task-from-analysis`
+- Mettre à jour `config/paths.yml` du skill task-management
+- Adapter les workflows `/analyze-source` et `/task-from-analysis`
 
 **Fichiers à modifier :**
 
@@ -111,11 +108,11 @@ resources/                          # ou .resources/ pour le cacher
 
 > Rappels, références, notes personnelles
 
-**Décisions à prendre :**
+**Décisions prises (2025-11-25) :**
 
-- Nom du répertoire : `resources/` ou `.resources/` ?
-- Faut-il migrer toutes les ressources existantes ou seulement les futures ?
-- Niveau de protection souhaité (simple convention vs hooks)
+- ✅ Nom du répertoire : `resources/` (visible)
+- ✅ Migration : toutes les ressources existantes
+- ✅ Protection : simple convention (documentation)
 
 **Avantages attendus :**
 
@@ -136,6 +133,7 @@ resources/                          # ou .resources/ pour le cacher
 
 ### Tâches liées
 
+- [INF-006](./INF-006-extraire-scripts-tests-hors-claude.md) - Réorganisation similaire pour scripts/tests
 - Analyses existantes utilisant les ressources actuelles
 
 ### Ressources
