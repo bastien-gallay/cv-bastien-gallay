@@ -45,12 +45,12 @@ Un CV Flash 2025 a été fourni dans `.tasks/resources/sources-analyses/CV-Flash
 
 ## Sous-tâches
 
-- [ ] Extraire les informations du CV Flash 2025 (image PNG et PDF)
-- [ ] Créer le fichier d'extraction structuré dans `resources/audits/CNT-024/`
-- [ ] Comparer avec le CV Typst actuel (`src/cv.typ`)
-- [ ] Documenter les écarts identifiés
-- [ ] Créer les recommandations avec priorités
-- [ ] Mettre à jour le dashboard des analyses (ANALYSES.md)
+- [x] Extraire les informations du CV Flash 2025 (image PNG et PDF)
+- [x] Créer le fichier d'extraction structuré dans `resources/audits/CNT-024/`
+- [x] Comparer avec le CV Typst actuel (`src/cv.typ`)
+- [x] Documenter les écarts identifiés
+- [x] Créer les recommandations avec priorités
+- [x] Mettre à jour le dashboard des analyses (ANALYSES.md)
 
 ---
 
@@ -123,11 +123,11 @@ Closes CNT-024"
 
 ## Tests / Vérifications
 
-- [ ] Extraction complète des informations du CV Flash
-- [ ] Fichier d'audit créé dans `resources/audits/CNT-024/`
-- [ ] Analyse comparative documentée
-- [ ] Recommandations créées avec priorités
-- [ ] Dashboard ANALYSES.md mis à jour
+- [x] Extraction complète des informations du CV Flash
+- [x] Fichier d'audit créé dans `resources/audits/CNT-024/`
+- [x] Analyse comparative documentée
+- [x] Recommandations créées avec priorités
+- [x] Dashboard ANALYSES.md mis à jour
 
 ---
 

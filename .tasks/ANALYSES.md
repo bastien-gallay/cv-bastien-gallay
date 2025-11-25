@@ -31,6 +31,7 @@ Chaque analyse peut générer plusieurs **recommandations** qui sont suivies ind
 | [CNT-013](resources/analyses/CNT-013/) | CV Comparatif | CV 2019 (Mars 2019) | ✅ Terminé | 2025-11-14 | 14 total (2 très hautes, 4 hautes, 6 moyennes, 2 basses) | 0/14 (0%) |
 | [CNT-014](resources/analyses/CNT-014/) | Journal CTO | Journal CTO PALO IT (mars-juillet 2025) | ✅ Terminé | 2025-11-18 | 25 total (5 très hautes, 10 hautes, 7 moyennes, 3 basses) | 0/25 (0%) |
 | [CNT-015](resources/analyses/CNT-015/) | CV Flash | CV Flash 2021 (slide unique) | 📋 Partiellement traité | 2025-11-25 | 10 total (0 très haute, 4 hautes, 4 moyennes, 2 basses) | 8/10 (80%) |
+| [CNT-024](resources/analyses/CNT-024/) | CV Flash | CV Flash 2025 (slide unique) | 🔄 En cours | 2025-11-25 | 8 total (2 très hautes, 2 hautes, 3 moyennes, 1 basse) | 0/8 (0%) |
 
 ---
 
@@ -44,21 +45,21 @@ Les analyses sont archivées lorsque toutes leurs recommandations ont été trai
 
 ## Statistiques Globales
 
-- **Total analyses**: 4
-- **En cours**: 0
+- **Total analyses**: 5
+- **En cours**: 1
 - **Terminées**: 4
-- **Recommandations totales**: 68
-- **Recommandations pendantes**: 49 (72%)
+- **Recommandations totales**: 76
+- **Recommandations pendantes**: 57 (75%)
 - **Tâches créées depuis analyses**: 14
 
 ### Répartition par priorité
 
 | Priorité | Nombre | Pourcentage |
 |----------|--------|-------------|
-| 🔴🔴 Très Haute | 8 | 12% |
-| 🔴 Haute | 28 | 41% |
-| 🟡 Moyenne | 22 | 32% |
-| 🟢 Basse | 10 | 15% |
+| 🔴🔴 Très Haute | 10 | 13% |
+| 🔴 Haute | 30 | 39% |
+| 🟡 Moyenne | 25 | 33% |
+| 🟢 Basse | 11 | 15% |
 
 ---
 
@@ -315,6 +316,60 @@ La commande mettra automatiquement à jour:
 2. Enrichir section Upwiser avec les 5 missions manquantes
 3. Ajouter activités communautaires (Google Launchpad, Startup Weekend, conférences)
 4. Quantifier l'activité de formation (~15 sessions/an depuis 2015)
+
+---
+
+### CNT-024: Analyse CV Flash 2025
+
+**Objectif**: Analyser le CV Flash 2025 (format slide unique) pour identifier les informations récentes et comparer avec le CV Typst actuel
+
+**Sources analysées**:
+
+- CV Flash 2025: `.tasks/resources/sources-analyses/CV-Flash-2025/Extrait-CV-flash-2025.png`
+- CV actuel: `src/cv.typ`
+
+**Fichiers de ressources**:
+
+- Audits: [resources/audits/CNT-024/](resources/audits/CNT-024/)
+  - `cv-flash-2025-extraction.md` - Extraction structurée du CV Flash 2025
+- Analyses: [resources/analyses/CNT-024/](resources/analyses/CNT-024/)
+  - `audit-report.md` - Rapport d'analyse comparative
+  - `recommendations.md` - 8 recommandations détaillées
+  - `recommendations-status.md` - Suivi des recommandations
+
+**Résultats clés**:
+
+- **Positionnement CV Flash 2025**: "Coach Agile / CTO / Software Craftsman" (+20 ans)
+- **Positionnement CV Typst**: "Crafting Technology Officer" (25 ans)
+- **3 expériences clés absentes du CV Typst**:
+  - Beta.gouv / MonEspaceNis2 (Lead developer, React/TypeScript)
+  - Nalo (Coaching CTO, Python/Django)
+  - SeLoger.com (Développeur senior, React/TypeScript/Java)
+- **Certifications**: PSPO potentiellement manquante
+- **Activités communautaires sous-représentées**:
+  - Lead Lean Startup Bordeaux (2011-2016)
+  - Agile Tour Bordeaux (orateur/organisateur)
+  - Orateur événements agilité/management/business
+
+**Recommandations**: 8 total
+
+- 🔴🔴 Très Haute: 2 (Beta.gouv, Nalo)
+- 🔴 Haute: 2 (SeLoger.com, activités communautaires)
+- 🟡 Moyenne: 3 (PSPO, stack technique, Wanteeed)
+- 🟢 Basse: 1 (citation Peter Drucker)
+
+**Impact potentiel**:
+
+- **Priorité globale**: 🔴🔴 TRÈS HAUTE
+- **Problème principal**: 3 expériences récentes et significatives totalement absentes
+- **Bénéfice**: Mise à jour du CV avec expériences récentes (Beta.gouv, Nalo, SeLoger)
+
+**Prochaines actions**:
+
+1. Créer tâches pour expériences manquantes via `/task-from-analysis --analysis-id=CNT-024 --filter=very-high`
+2. Clarifier les dates exactes des missions (Beta.gouv, Nalo, SeLoger)
+3. Vérifier si PSPO est détenu
+4. Enrichir activités communautaires avec dates précises
 
 ---
 
