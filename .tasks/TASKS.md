@@ -44,7 +44,6 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | [CNT-010](tasks/CNT-010-ajouter-section-benevolat.md) | Ajouter section Bénévolat | ⏳ À faire | 🔴 Haute | 2025-10-29 |
 | [CNT-016](tasks/CNT-016-enrichir-section-experience-detaillee-avec-descriptions-developpees.md) | Enrichir section Expérience détaillée avec descriptions développées | ⏳ À faire | 🔴 Haute | 2025-11-17 |
 | [CNT-027](tasks/CNT-027-ajouter-missions-clients-upwiser-manquantes.md) | Ajouter les missions clients Upwiser manquantes | ⏳ À faire | 🔴 Haute | 2025-11-25 |
-| [CNT-031](tasks/CNT-031-enrichir-experience-palo-it-cto-complete.md) | Enrichir l'expérience PALO IT CTO (consolidation) | 🔄 En cours | 🔴 Haute | 2025-11-25 |
 | [CNT-028](tasks/CNT-028-ajouter-activites-communautaires-rayonnement.md) | Ajouter activités communautaires et rayonnement | ⏳ À faire | 🔴 Haute | 2025-11-25 |
 | [CNT-023](tasks/CNT-023-mettre-a-jour-photo-profil.md) | Mettre à jour la photo du CV | ⏳ À faire | 🟡 Moyenne | 2025-11-25 |
 | [CNT-029](tasks/CNT-029-ameliorations-cv-flash-priorite-moyenne.md) | Améliorations CV Flash (priorité moyenne) | ⏳ À faire | 🟡 Moyenne | 2025-11-25 |
@@ -61,6 +60,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
+| [CNT-031](tasks/CNT-031-enrichir-experience-palo-it-cto-complete.md) | Enrichir l'expérience PALO IT CTO (consolidation) | ✅ Terminé | 🔴 Haute | 2025-11-25 |
 | [CNT-024](tasks/CNT-024-analyse-cv-flash-2025.md) | Analyse CV Flash 2025 | ✅ Terminé | 🔴 Haute | 2025-11-25 |
 | [CNT-030](tasks/CNT-030-ajouter-experiences-recentes-betagouv-nalo.md) | Ajouter expériences récentes Beta.gouv et Nalo | ✅ Terminé | 🔴 Haute | 2025-11-25 |
 | [CNT-015](tasks/CNT-015-analyse-cv-flash.md) | Analyse CV Flash (slide unique) | ✅ Terminé | 🔴 Haute | 2025-11-25 |
@@ -152,9 +152,9 @@ Closes TPL-001"
 ## Statistiques
 
 - **Total**: 26 tâches
-- **À faire**: 12
-- **En cours**: 1
-- **Terminées**: 13
+- **À faire**: 11
+- **En cours**: 0
+- **Terminées**: 14
 - **Bloquées**: 0
 - **Archivées**: 13
 

@@ -8,13 +8,13 @@
 |-------|--------|
 | **ID** | CNT-031 |
 | **Titre** | Enrichir l'expérience PALO IT CTO (consolidation) |
-| **Statut** | 🔄 En cours |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | CNT |
 | **Section CV** | Experience |
 | **Créé le** | 2025-11-25 |
 | **Cible** | 2025-11-25 |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-25 |
 | **Temps estimé** | 1 heure |
 | **Temps réel** | - |
 | **Branche nécessaire** | Auto |

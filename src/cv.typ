@@ -264,6 +264,93 @@
 
 = Expérience détaillée
 
+
+#entry(
+  title: [Consultant Technique Senior → Chief Technology Officer],
+  date: [02/2021 - 10/2025],
+  institution: [PALO IT],
+  location: [Bordeaux/Paris, France],
+)[
+  === Contexte
+  Évolution de Consultant Senior à CTO au sein d'un cabinet de conseil international spécialisé dans la transformation digitale et le développement durable.
+ === En tant que CTO (oct. 2024 - oct. 2025)
+
+  ==== Leadership & Management
+  - Direction de la stratégie technologique et participation au COMEX
+  - Management de 50 professionnels techniques via organisation Hive Tech
+  - Contribution à 15% de croissance du CA
+  - 20-40 certifications GitHub Copilot délivrées
+
+  ==== Innovation & Gen-e2
+  - Conception de Gen-e2, framework de développement accéléré par IA
+  - Learn & Lunch hebdomadaires et ateliers Hands-on
+  - Initiative Quantum Computing : stage de 10 semaines
+  - Organisation Tech\&Toast : 70+ professionnels
+
+  ==== Presales & Business Development
+  - Gestion de 6+ opportunités majeures (€15k-€500k+)
+  - Clients presales : Natixis, CEVA Logistics, Aviva, Groupe BZ
+
+  ==== Partenariats Stratégiques
+  - Scaleway : partenariat cloud infrastructure
+  - GitHub : programme de certification Copilot
+  - Mistral : intégration Codestral dans Gen-e2
+
+  ==== Stack Technique
+  - #strong[Cloud:] Azure (Databricks, SQL Hyperscale, Cosmos DB), AWS (Bedrock), Scaleway
+  - #strong[AI/ML:] OpenAI, Anthropic, Mistral, GitHub Copilot
+  - #strong[Langages:] Python, Java, TypeScript, Rust
+  - #strong[Architecture:] DDD, BFF, REST API, microservices, multi-cloud
+
+  === Missions clients
+
+  ==== Mission Bodic - Technical Lead (2024-2025)
+  #strong[Client:] Bodic
+  #strong[Durée:] 1.5 jours/semaine
+
+  - Optimisation API : temps de réponse réduit à 72ms
+  - Développement Outlook add-in avec intégration réussie
+  - Code reviews et décisions d'architecture
+  - Évolution vers rôle d'External CTO
+  - #strong[Stack:] Azure, TypeScript, REST API, PostgreSQL, GitHub Copilot, GitHub Actions
+
+  ==== Mission Systel - Team Coach (mars-juin 2025)
+  #strong[Client:] Systel
+  #strong[Durée:] 30 jours
+
+  - Coaching quotidien d'une équipe de 3 développeurs
+  - Revue architecture MAC avec pattern BFF
+  - Préparation audit technique pour acquisition
+  - Facilitation rétrospectives et planification sprints
+  - #strong[Stack:] TFS, Java, Angular, Spring Boot, Azure DevOp
+
+  ==== Mission TopTex - Architecture API (2025)
+  #strong[Client:] TopTex
+  #strong[Durée:] 2-4 jours
+
+  - Étude architecture API et planification migration
+  - Architecture multi-instance Sage
+  - Feedback client : "très bien, carré, propre"
+
+  ==== Mission Beta.gouv - Lead Developer (juil. 2023 - janv. 2024)
+  #strong[Client:] Beta.gouv - MonEspaceNis2, France (Remote)
+  #strong[Durée:] 7 mois
+
+  - Création de l'infrastructure technique et de l'architecture applicative
+  - Développement de la plateforme en React / JavaScript / TypeScript
+  - Mise en place d'outils de mesure et de monitoring
+  - #strong[Stack:] React, TypeScript, JavaScript, NestJS, PostgreSQL, Docker, GitHub Actions, Playwright, Sentry, Storybook
+
+  ==== Mission Nalo - Coach Technique (fév. 2021 - fin 2021)
+  #strong[Client:] Nalo (Fintech), Paris
+  #strong[Durée:] ~10 mois (temps partiel)
+
+  - Coaching du CTO et accompagnement de l'équipe technique
+  - Mise en place de pratiques Software Craftsmanship
+  - Refonte de l'architecture technique
+  - #strong[Stack:] Python, Django, TDD, DDD, CI/CD
+]
+
 #entry(
   title: [Gérant & Coach Agile],
   date: [09/2013 - 02/2021],
@@ -299,91 +386,3 @@
   - Création et animation du cercle Lean Startup Bordeaux
   - Conseil en stratégie produit et organisation
 ]
-
-#entry(
-  title: [Consultant Technique Senior → Chief Technology Officer],
-  date: [02/2021 - 10/2025],
-  institution: [PALO IT],
-  location: [Bordeaux/Paris, France],
-)[
-  === Contexte
-  Évolution de Consultant Senior à CTO au sein d'un cabinet de conseil international spécialisé dans la transformation digitale et le développement durable.
-
-  === Missions clients
-
-  ==== Mission Beta.gouv - Lead Developer (juil. 2023 - janv. 2024)
-  #strong[Client:] Beta.gouv - MonEspaceNis2, France (Remote)
-  #strong[Durée:] 7 mois
-
-  - Création de l'infrastructure technique et de l'architecture applicative
-  - Développement de la plateforme en React / JavaScript / TypeScript
-  - Mise en place d'outils de mesure et de monitoring
-  - #strong[Stack:] React, TypeScript, JavaScript
-
-  ==== Mission Nalo - Coach Technique (fév. 2021 - fin 2021)
-  #strong[Client:] Nalo (Fintech), Paris
-  #strong[Durée:] ~10 mois (temps partiel)
-
-  - Coaching du CTO et accompagnement de l'équipe technique
-  - Mise en place de pratiques Software Craftsmanship
-  - Refonte de l'architecture technique
-  - #strong[Stack:] Python, Django
-
-  ==== Mission Bodic - Technical Lead (2024-2025)
-  #strong[Client:] Bodic
-  #strong[Durée:] 1.5 jours/semaine
-
-  - Optimisation API : temps de réponse réduit à 72ms
-  - Développement Outlook add-in avec intégration réussie
-  - Code reviews et décisions d'architecture
-  - Évolution vers rôle d'External CTO
-  - #strong[Stack:] Azure, C\#, REST API
-
-  ==== Mission Systel - Team Coach (mars-juin 2025)
-  #strong[Client:] Systel
-  #strong[Durée:] 30 jours
-
-  - Coaching quotidien d'une équipe de 3 développeurs
-  - Revue architecture MAC avec pattern BFF
-  - Préparation audit technique pour acquisition
-  - Facilitation rétrospectives et planification sprints
-  - #strong[Stack:] TFS, C\#
-
-  ==== Mission TopTex - Architecture API (2025)
-  #strong[Client:] TopTex
-  #strong[Durée:] 2-4 jours
-
-  - Étude architecture API et planification migration
-  - Architecture multi-instance Sage
-  - Feedback client : "très bien, carré, propre"
-
-  === En tant que CTO (oct. 2024 - oct. 2025)
-
-  ==== Leadership & Management
-  - Direction de la stratégie technologique et participation au COMEX
-  - Management de 50 professionnels techniques via organisation Hive Tech
-  - Contribution à 15% de croissance du CA
-  - 20-40 certifications GitHub Copilot délivrées
-
-  ==== Innovation & Gen-e2
-  - Conception de Gen-e2, framework de développement accéléré par IA
-  - Learn & Lunch hebdomadaires et ateliers Hands-on
-  - Initiative Quantum Computing : stage de 10 semaines
-  - Organisation Tech\&Toast : 70+ professionnels
-
-  ==== Presales & Business Development
-  - Gestion de 6+ opportunités majeures (€15k-€500k+)
-  - Clients presales : Natixis, CEVA Logistics, Aviva, Groupe BZ
-
-  ==== Partenariats Stratégiques
-  - Scaleway : partenariat cloud infrastructure
-  - GitHub : programme de certification Copilot
-  - Mistral : intégration Codestral dans Gen-e2
-
-  ==== Stack Technique
-  - #strong[Cloud:] Azure (Databricks, SQL Hyperscale, Cosmos DB), AWS (Bedrock), Scaleway
-  - #strong[AI/ML:] OpenAI, Anthropic, LangChain, OpenSearch, Pinecone, GitHub Copilot
-  - #strong[Langages:] Python, C\#, TypeScript, Rust
-  - #strong[Architecture:] MAC, BFF, REST API, microservices, multi-cloud
-]
-
