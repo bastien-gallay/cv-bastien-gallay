@@ -31,21 +31,38 @@ Ces améliorations sont souhaitables mais non critiques. Elles permettent d'enri
 
 ### Objectif
 
-Traiter les 4 recommandations de priorité moyenne:
+Traiter les recommandations de priorité moyenne des analyses CNT-015 et CNT-024:
+
+**Depuis CNT-015:**
 
 1. **R05 - Enseignement supérieur:** Ajouter le rôle d'intervenant enseignant
 2. **R06 - Quantifier formation:** Ajouter métriques (~15 sessions/an depuis 2015)
 3. **R07 - Design Thinking:** Ajouter aux compétences (pills)
 4. **R08 - i-BP national:** Enrichir avec dimension nationale
 
+**Depuis CNT-024:**
+
+5. **CNT-024-R06 - Enrichir stack technique:** Ajouter Node.js, React, Java, BDD aux pills
+6. **CNT-024-R08 - Citation Peter Drucker:** Considérer l'ajout d'une citation inspirante
+
 ---
 
 ## Sous-tâches
+
+**Depuis CNT-015:**
 
 - [ ] Ajouter mention enseignement supérieur (si établissements connus)
 - [ ] Quantifier l'activité de formation dans Upwiser (~15 sessions/an)
 - [ ] Ajouter "Design Thinking" dans les pills de compétences
 - [ ] Enrichir description i-BP avec "Communautés de Pratiques nationales"
+
+**Depuis CNT-024:**
+
+- [ ] Enrichir les pills avec Node.js, React, Java, BDD
+- [ ] Évaluer l'ajout d'une citation (Peter Drucker ou autre)
+
+**Validation:**
+
 - [ ] Vérifier la compilation du CV
 - [ ] Valider le rendu PDF
 
@@ -101,7 +118,9 @@ Traiter les 4 recommandations de priorité moyenne:
 - Design Thinking complète le triptyque Agile/Lean/Design Thinking
 
 **Source:**
-Recommandations CNT-015-R05, R06, R07, R08 de l'analyse CV Flash
+
+- Recommandations CNT-015-R05, R06, R07, R08 de l'analyse CV Flash 2021
+- Recommandations CNT-024-R06, R08 de l'analyse CV Flash 2025
 
 ---
 
