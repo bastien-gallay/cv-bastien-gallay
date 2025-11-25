@@ -8,13 +8,13 @@
 |-------|--------|
 | **ID** | CNT-033 |
 | **Titre** | Améliorer la section "À propos" avec métriques d'impact |
-| **Statut** | ⏳ À faire |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | CNT (Content) |
 | **Section CV** | Sidebar / À propos |
 | **Créé le** | 2025-11-25 |
 | **Cible** | - |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-25 |
 | **Temps estimé** | 45 min |
 | **Temps réel** | - |
 | **Branche nécessaire** | Non |
@@ -49,10 +49,10 @@ Cette formulation:
 
 ## Sous-tâches
 
-- [ ] Identifier les métriques clés du CV (15% croissance, 50 personnes, etc.)
-- [ ] Rédiger une nouvelle version orientée résultats
-- [ ] Valider que ça tient dans l'espace sidebar
-- [ ] Compiler et vérifier le rendu
+- [x] Identifier les métriques clés du CV (15% croissance, 50 personnes, etc.)
+- [x] Rédiger une nouvelle version orientée résultats
+- [x] Valider que ça tient dans l'espace sidebar
+- [x] Compiler et vérifier le rendu
 
 ---
 
@@ -142,10 +142,10 @@ Closes CNT-033"
 
 ## Tests / Vérifications
 
-- [ ] Le CV compile sans erreur
-- [ ] Le texte tient dans la sidebar
-- [ ] Les métriques sont exactes et vérifiables
-- [ ] Le ton reste professionnel
+- [x] Le CV compile sans erreur
+- [x] Le texte tient dans la sidebar
+- [x] Les métriques sont exactes et vérifiables
+- [x] Le ton reste professionnel
 
 ---
 
@@ -159,4 +159,12 @@ Closes CNT-033"
 
 ## Résultat final
 
-[À remplir une fois la tâche terminée]
+**Avant:**
+> "Passionné de logiciel depuis l'enfance, j'accompagne les équipes techniques dans l'innovation et la transformation digitale depuis plus de 25 ans."
+
+**Après:**
+> "CTO avec 25 ans d'expérience. Expert IA Générative et transformation Agile. Management de 50 professionnels techniques, contribution à 15% de croissance CA."
+
+- Métriques clés intégrées (50 personnes, 15% croissance)
+- Expertise IA mise en avant
+- Texte concis et impactant

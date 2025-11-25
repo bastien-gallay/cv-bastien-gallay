@@ -38,7 +38,7 @@
 
 #side[
   = A propos
-  Passionné de logiciel depuis l'enfance, j'accompagne les équipes techniques dans l'innovation et la transformation digitale depuis plus de 25 ans.
+  CTO avec 25 ans d'expérience. Expert IA Générative et transformation Agile. Management de 50 professionnels techniques, contribution à 15% de croissance CA.
 
   = Centres d'intérêt
   - Intelligence artificielle

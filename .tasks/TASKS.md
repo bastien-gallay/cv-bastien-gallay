@@ -41,9 +41,9 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Score | Créé le |
 |----|-------|--------|----------|-------|---------|
-| [CNT-033](tasks/CNT-033-ameliorer-section-a-propos.md) | Améliorer section "À propos" avec métriques | ⏳ À faire | 🔴 Haute | 10.00 | 2025-11-25 |
 | [CNT-034](tasks/CNT-034-restructurer-experience-palo-it.md) | Restructurer expérience PALO IT par résultats | ⏳ À faire | 🔴 Haute | 8.00 | 2025-11-25 |
 | [QUA-001](tasks/QUA-001-verification.md) | Étapes de vérification du CV | ⏳ À faire | 🟡 Moyenne | 5.93 | 2025-10-28 |
+| [TPL-004](tasks/TPL-004-extraction-donnees-structurees.md) | Extraire les données du CV (prérequis TPL-001/002/003) | ⏳ À faire | 🟡 Moyenne | 5.00 | 2025-11-25 |
 | [TPL-001](tasks/TPL-001-cv-versions.md) | Versions courte et longue du CV | ⏳ À faire | 🟡 Moyenne | 4.45 | 2025-10-28 |
 | [TPL-002](tasks/TPL-002-template-system.md) | Système de changement de template | ⏳ À faire | 🟢 Basse | 2.96 | 2025-10-28 |
 | [LAY-001](tasks/LAY-001-sidebar-premiere-page-uniquement.md) | Sidebar uniquement sur la première page | ⏳ À faire | 🟡 Moyenne | 2.50 | 2025-11-25 |
@@ -68,6 +68,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
+| [CNT-033](tasks/CNT-033-ameliorer-section-a-propos.md) | Améliorer section "À propos" avec métriques | ✅ Terminé | 🔴 Haute | 2025-11-25 |
 | [CNT-032](tasks/CNT-032-moderniser-entete-cv.md) | Moderniser l'en-tête du CV (titre + adresse) | ✅ Terminé | 🔴 Haute | 2025-11-25 |
 | [INF-001](tasks/INF-001-mcp-integration.md) | Améliorer visuellement le CV avec l'aide de Claude | ✅ Terminé | 🟡 Moyenne | 2025-11-25 |
 
@@ -167,16 +168,16 @@ Closes TPL-001"
 
 ## Statistiques
 
-- **Total**: 49 tâches
+- **Total**: 50 tâches
 - **À faire**: 19
 - **En cours**: 0
-- **Terminées**: 2
+- **Terminées**: 3
 - **Bloquées**: 0
 - **Archivées**: 28
 
 **Prochains IDs disponibles par trigramme**:
 
-- CNT-035, TPL-004, QUA-002, PIP-004, INF-013, LAY-004, DOC-002
+- CNT-035, TPL-005, QUA-002, PIP-004, INF-013, LAY-004, DOC-002
 
 ---
 
