@@ -47,6 +47,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | [PIP-001](tasks/PIP-001-cicd-pipeline.md) | CI/CD pour publication automatique | ⏳ À faire | 🟢 Basse | 2025-10-28 |
 | [INF-001](tasks/INF-001-mcp-integration.md) | Améliorer visuellement le CV avec l'aide de Claude | ⏳ À faire | 🟡 Moyenne | 2025-10-28 |
 | [INF-003](tasks/INF-003-perenniser-ameliorer-script-priorites.md) | Pérenniser et améliorer le script Python de calcul des priorités | ⏳ À faire | 🔴 Haute | 2025-11-16 |
+| [INF-005](tasks/INF-005-repertoire-ressources-dedie.md) | Répertoire dédié aux ressources d'analyse | ⏳ À faire | 🟡 Moyenne | 2025-11-25 |
 
 ---
 
@@ -151,8 +152,8 @@ Closes TPL-001"
 
 ## Statistiques
 
-- **Total**: 33 tâches
-- **À faire**: 6
+- **Total**: 34 tâches
+- **À faire**: 7
 - **En cours**: 0
 - **Terminées**: 0
 - **Bloquées**: 0
@@ -160,7 +161,7 @@ Closes TPL-001"
 
 **Prochains IDs disponibles par trigramme**:
 
-- CNT-032, TPL-003, QUA-002, PIP-003, INF-005, LAY-001, DOC-002
+- CNT-032, TPL-003, QUA-002, PIP-003, INF-006, LAY-001, DOC-002
 
 ---
 
