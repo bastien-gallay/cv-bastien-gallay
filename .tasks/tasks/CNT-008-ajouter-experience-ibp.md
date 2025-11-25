@@ -8,15 +8,15 @@
 |-------|--------|
 | **ID** | CNT-008 |
 | **Titre** | Ajouter l'expérience i-BP |
-| **Statut** | ⏳ À faire |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | CNT |
 | **Section CV** | Experience |
 | **Créé le** | 2025-10-29 |
 | **Cible** | - |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-25 |
 | **Temps estimé** | 0.5 heures |
-| **Temps réel** | - |
+| **Temps réel** | 0.3 heures |
 | **Branche nécessaire** | Auto |
 
 ---
@@ -53,15 +53,15 @@ Enrichir la section "= Expérience détaillée" avec cette mission freelance i-B
 
 ## Sous-tâches
 
-- [ ] Coordonner avec CNT-016 (enrichissement section détaillée)
-- [ ] Coordonner avec CNT-009 (mission DEKRA, même période Upwiser)
-- [ ] Identifier l'emplacement exact dans la section "= Expérience détaillée" (ligne 253+)
-- [ ] Créer une sous-section pour Upwiser avec missions détaillées
-- [ ] Ajouter la mission i-BP comme entrée détaillée
-- [ ] Rédiger une description développée basée sur les points LinkedIn
-- [ ] Compiler le CV avec `just build`
-- [ ] Vérifier le rendu dans le PDF
-- [ ] Vérifier que la section ne déborde pas (max 3-4 pages total)
+- [x] Coordonner avec CNT-016 (enrichissement section détaillée)
+- [x] Coordonner avec CNT-009 (mission DEKRA, même période Upwiser)
+- [x] Identifier l'emplacement exact dans la section "= Expérience détaillée" (ligne 253+)
+- [x] Créer une sous-section pour Upwiser avec missions détaillées
+- [x] Ajouter la mission i-BP comme entrée détaillée
+- [x] Rédiger une description développée basée sur les points LinkedIn
+- [x] Compiler le CV avec `just build`
+- [x] Vérifier le rendu dans le PDF
+- [x] Vérifier que la section ne déborde pas (max 3-4 pages total)
 
 ---
 

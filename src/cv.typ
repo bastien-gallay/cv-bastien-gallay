@@ -252,3 +252,30 @@
 
 = Expérience détaillée
 
+#entry(
+  title: [Gérant & Coach Agile],
+  date: [09/2013 - 02/2021],
+  institution: [Upwiser],
+  location: [Bordeaux, France],
+)[
+  === Contexte
+  Création de ma société de conseil en agilité et développement logiciel, accompagnant startups et PME dans leur transformation numérique et organisationnelle.
+
+  === Missions principales
+
+  ==== Mission i-BP - Coach Agile (avr. 2015 - sept. 2015)
+  #strong[Client:] i-BP, Nantes
+
+  - Accompagnement de projets Agiles (Décisionnel, Livraison DevOps)
+  - Coaching de la communauté de pratique des équipiers Agiles
+  - Participation à des travaux transverses d'organisation
+  - Mise en place de Coach Dating
+  - #strong[Méthodes:] Scrum, Kanban, Lean Startup
+
+  === Autres activités
+  - Animation de formations et ateliers en agilité
+  - Accompagnement d'une centaine de startups et PME
+  - Création et animation du cercle Lean Startup Bordeaux
+  - Conseil en stratégie produit et organisation
+]
+
