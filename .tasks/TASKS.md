@@ -54,31 +54,31 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
-| [CNT-023](tasks/CNT-023-mettre-a-jour-photo-profil.md) | Mettre à jour la photo du CV | ✅ Terminé | 🟡 Moyenne | 2025-11-25 |
-| [CNT-029](tasks/CNT-029-ameliorations-cv-flash-priorite-moyenne.md) | Améliorations CV Flash (priorité moyenne) | ✅ Terminé | 🟡 Moyenne | 2025-11-25 |
-| [CNT-016](tasks/CNT-016-enrichir-section-experience-detaillee-avec-descriptions-developpees.md) | Enrichir section Expérience détaillée avec descriptions développées | ✅ Terminé | 🔴 Haute | 2025-11-25 |
-| [CNT-027](tasks/CNT-027-ajouter-missions-clients-upwiser-manquantes.md) | Ajouter les missions clients manquantes | ✅ Terminé | 🔴 Haute | 2025-11-25 |
-| [CNT-010](tasks/CNT-010-ajouter-section-benevolat.md) | Ajouter section Bénévolat | ✅ Terminé | 🔴 Haute | 2025-11-25 |
-| [CNT-028](tasks/CNT-028-ajouter-activites-communautaires-rayonnement.md) | Ajouter activités communautaires et rayonnement | ✅ Terminé | 🔴 Haute | 2025-11-25 |
-| [CNT-031](tasks/CNT-031-enrichir-experience-palo-it-cto-complete.md) | Enrichir l'expérience PALO IT CTO (consolidation) | ✅ Terminé | 🔴 Haute | 2025-11-25 |
-| [CNT-024](tasks/CNT-024-analyse-cv-flash-2025.md) | Analyse CV Flash 2025 | ✅ Terminé | 🔴 Haute | 2025-11-25 |
-| [CNT-030](tasks/CNT-030-ajouter-experiences-recentes-betagouv-nalo.md) | Ajouter expériences récentes Beta.gouv et Nalo | ✅ Terminé | 🔴 Haute | 2025-11-25 |
-| [CNT-015](tasks/CNT-015-analyse-cv-flash.md) | Analyse CV Flash (slide unique) | ✅ Terminé | 🔴 Haute | 2025-11-25 |
-| [CNT-006](tasks/CNT-006-ajouter-certifications-manquantes.md) | Ajouter les certifications manquantes | ✅ Terminé | 🔴 Haute | 2025-11-25 |
-| [CNT-005](tasks/CNT-005-corriger-dates-debut-freelance.md) | Corriger les dates de début Freelance | ✅ Terminé | 🔴 Haute | 2025-11-25 |
-| [CNT-017](tasks/CNT-017-corriger-donnees-critiques-experience-palo-it-cto.md) | Corriger données critiques expérience PALO IT CTO | ✅ Terminé | 🔴 Haute | 2025-11-25 |
-| [CNT-009](tasks/CNT-009-ajouter-experience-dekra.md) | Ajouter l'expérience DEKRA | ✅ Terminé | 🔴 Haute | 2025-11-25 |
-| [CNT-008](tasks/CNT-008-ajouter-experience-ibp.md) | Ajouter l'expérience i-BP | ✅ Terminé | 🔴 Haute | 2025-11-25 |
-| [CNT-014](tasks/CNT-014-analyse-experience-palo-it.md) | Analyse expérience PALO IT (journal/tâches CTO) | ✅ Terminé | 🔴 Haute | 2025-11-25 |
-| [INF-004](tasks/INF-004-migrer-systeme-gestion-taches-vers-skill-claude-unifie.md) | Migrer le système de gestion de tâches vers un Skill Claude unifié | ✅ Terminé | 🔴 Haute | 2025-11-17 |
-| [PIP-002](tasks/PIP-002-privilegier-questionnaires-interactifs-commandes.md) | Privilégier les questionnaires interactifs dans les commandes de tâches | ✅ Terminé | 🔴 Haute | 2025-11-16 |
-| [CNT-004](tasks/CNT-004-corriger-dates-boonty.md) | Corriger les dates de Boonty | ✅ Terminé | 🔴 Haute | 2025-11-16 |
-| [CNT-002](tasks/CNT-002-corriger-ecart-critique-upwiser.md) | Corriger l'écart critique sur Upwiser | ✅ Terminé | 🔴 Haute | 2025-11-16 |
 
 Les tâches archivées sont déplacées dans [.archived/](.archived/).
 
-**Tâches archivées:** 8 tâches
+**Tâches archivées:** 27 tâches
 
+- CNT-031 (2025-11-25)
+- CNT-030 (2025-11-25)
+- CNT-029 (2025-11-25)
+- CNT-028 (2025-11-25)
+- CNT-027 (2025-11-25)
+- CNT-024 (2025-11-25)
+- CNT-023 (2025-11-25)
+- CNT-017 (2025-11-25)
+- CNT-016 (2025-11-25)
+- CNT-015 (2025-11-25)
+- CNT-014 (2025-11-25)
+- CNT-010 (2025-11-25)
+- CNT-009 (2025-11-25)
+- CNT-008 (2025-11-25)
+- CNT-006 (2025-11-25)
+- CNT-005 (2025-11-25)
+- CNT-004 (2025-11-16)
+- CNT-002 (2025-11-16)
+- PIP-002 (2025-11-16)
+- INF-004 (2025-11-17)
 - CNT-013 (2025-11-14)
 - CNT-012 (2025-11-15)
 - CNT-011 (2025-11-15)
@@ -154,9 +154,9 @@ Closes TPL-001"
 - **Total**: 26 tâches
 - **À faire**: 6
 - **En cours**: 0
-- **Terminées**: 17
+- **Terminées**: 0
 - **Bloquées**: 0
-- **Archivées**: 13
+- **Archivées**: 27
 
 **Prochains IDs disponibles par trigramme**:
 
