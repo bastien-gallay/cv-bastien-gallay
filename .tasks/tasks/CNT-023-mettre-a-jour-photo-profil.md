@@ -8,13 +8,13 @@
 |-------|--------|
 | **ID** | CNT-023 |
 | **Titre** | Mettre à jour la photo du CV |
-| **Statut** | 🔄 En cours |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🟡 Moyenne |
 | **Trigramme** | CNT |
 | **Section CV** | Sidebar |
 | **Créé le** | 2025-11-25 |
 | **Cible** | - |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-25 |
 | **Temps estimé** | 1.5 heures |
 | **Temps réel** | - |
 | **Branche nécessaire** | Non |
@@ -40,13 +40,13 @@ Le CV utilise actuellement une photo de profil (`identite.png`) mais une nouvell
 
 ## Sous-tâches
 
-- [ ] Analyser les dimensions et format requis par le template neat-cv pour la photo
-- [ ] Examiner la photo actuelle (identite.png) pour comprendre les spécifications
-- [ ] Préparer photo-profile-pro.jpg (recadrage, redimensionnement si nécessaire)
-- [ ] Mettre à jour la référence dans cv.typ
-- [ ] Compiler le CV et vérifier le rendu PDF
-- [ ] Ajuster si nécessaire (taille, qualité, positionnement)
-- [ ] Décider du sort de l'ancienne photo (conserver en backup ou supprimer)
+- [x] Analyser les dimensions et format requis par le template neat-cv pour la photo
+- [x] Examiner la photo actuelle (identite.png) pour comprendre les spécifications
+- [x] Préparer photo-profile-pro.jpg (recadrage, redimensionnement si nécessaire)
+- [x] Mettre à jour la référence dans cv.typ
+- [x] Compiler le CV et vérifier le rendu PDF
+- [x] Ajuster si nécessaire (taille, qualité, positionnement)
+- [x] Décider du sort de l'ancienne photo (conserver en backup ou supprimer) — *Conservée*
 
 ---
 
@@ -155,13 +155,13 @@ Closes CNT-023"
 
 ## Tests / Vérifications
 
-- [ ] Le CV compile sans erreur (`just build`)
-- [ ] Le PDF s'affiche correctement
-- [ ] La photo est bien positionnée dans la sidebar
-- [ ] La qualité de la photo est optimale (pas de pixelisation)
-- [ ] La taille du fichier PDF reste raisonnable
-- [ ] Le cadrage met bien en valeur le visage
-- [ ] Les proportions sont respectées (pas de déformation)
+- [x] Le CV compile sans erreur (`just build`)
+- [x] Le PDF s'affiche correctement
+- [x] La photo est bien positionnée dans la sidebar
+- [x] La qualité de la photo est optimale (pas de pixelisation)
+- [x] La taille du fichier PDF reste raisonnable
+- [x] Le cadrage met bien en valeur le visage
+- [x] Les proportions sont respectées (pas de déformation)
 
 ---
 
@@ -169,23 +169,24 @@ Closes CNT-023"
 
 | Date | Action | Détails |
 |------|--------|---------|
-| 2025-11-25 | Création | Tâche créée |
+| 2025-11-25 | Terminé | Photo mise à jour, ancienne conservée en backup |
 | 2025-11-25 | En cours | Début du travail |
+| 2025-11-25 | Création | Tâche créée |
 
 ---
 
 ## Résultat final
 
-[À remplir une fois la tâche terminée]
-
 **Ce qui a été fait:**
 
-- [À compléter]
+- Photo mise à jour vers `photo-profile-pro.jpg` (72 Ko vs 437 Ko)
+- Ancienne photo `identite.png` conservée en backup
+- CV compilé et vérifié
 
 **Difficultés rencontrées:**
 
-- [À compléter]
+- Aucune, la photo était déjà au bon format
 
 **Améliorations futures:**
 
-- [À compléter]
+- Supprimer l'ancienne photo si plus nécessaire
