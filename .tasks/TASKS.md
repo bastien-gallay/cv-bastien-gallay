@@ -42,7 +42,6 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | ID | Titre | Statut | Priorité | Créé le |
 |----|-------|--------|----------|---------|
 | [CNT-010](tasks/CNT-010-ajouter-section-benevolat.md) | Ajouter section Bénévolat | ⏳ À faire | 🔴 Haute | 2025-10-29 |
-| [CNT-015](tasks/CNT-015-analyse-cv-flash.md) | Analyse CV Flash (slide unique) | ⏳ À faire | 🔴 Haute | 2025-11-14 |
 | [CNT-016](tasks/CNT-016-enrichir-section-experience-detaillee-avec-descriptions-developpees.md) | Enrichir section Expérience détaillée avec descriptions développées | ⏳ À faire | 🔴 Haute | 2025-11-17 |
 | [CNT-018](tasks/CNT-018-ajouter-stack-technique-complete-palo-it-cto.md) | Ajouter stack technique complète PALO IT CTO | ⏳ À faire | 🔴 Haute | 2025-11-25 |
 | [CNT-019](tasks/CNT-019-ajouter-projets-clients-et-resultats-business-palo-it-cto.md) | Ajouter projets clients et résultats business PALO IT CTO | ⏳ À faire | 🔴 Haute | 2025-11-25 |
@@ -63,6 +62,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
+| [CNT-015](tasks/CNT-015-analyse-cv-flash.md) | Analyse CV Flash (slide unique) | ✅ Terminé | 🔴 Haute | 2025-11-25 |
 | [CNT-006](tasks/CNT-006-ajouter-certifications-manquantes.md) | Ajouter les certifications manquantes | ✅ Terminé | 🔴 Haute | 2025-11-25 |
 | [CNT-005](tasks/CNT-005-corriger-dates-debut-freelance.md) | Corriger les dates de début Freelance | ✅ Terminé | 🔴 Haute | 2025-11-25 |
 | [CNT-017](tasks/CNT-017-corriger-donnees-critiques-experience-palo-it-cto.md) | Corriger données critiques expérience PALO IT CTO | ✅ Terminé | 🔴 Haute | 2025-11-25 |
@@ -151,9 +151,9 @@ Closes TPL-001"
 ## Statistiques
 
 - **Total**: 25 tâches
-- **À faire**: 15
+- **À faire**: 14
 - **En cours**: 0
-- **Terminées**: 10
+- **Terminées**: 11
 - **Bloquées**: 0
 - **Archivées**: 8
 
