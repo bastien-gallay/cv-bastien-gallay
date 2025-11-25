@@ -41,7 +41,6 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Créé le |
 |----|-------|--------|----------|---------|
-| [CNT-010](tasks/CNT-010-ajouter-section-benevolat.md) | Ajouter section Bénévolat | ⏳ À faire | 🔴 Haute | 2025-10-29 |
 | [CNT-016](tasks/CNT-016-enrichir-section-experience-detaillee-avec-descriptions-developpees.md) | Enrichir section Expérience détaillée avec descriptions développées | ⏳ À faire | 🔴 Haute | 2025-11-17 |
 | [CNT-027](tasks/CNT-027-ajouter-missions-clients-upwiser-manquantes.md) | Ajouter les missions clients Upwiser manquantes | ⏳ À faire | 🔴 Haute | 2025-11-25 |
 | [CNT-023](tasks/CNT-023-mettre-a-jour-photo-profil.md) | Mettre à jour la photo du CV | ⏳ À faire | 🟡 Moyenne | 2025-11-25 |
@@ -59,6 +58,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
+| [CNT-010](tasks/CNT-010-ajouter-section-benevolat.md) | Ajouter section Bénévolat | ✅ Terminé | 🔴 Haute | 2025-11-25 |
 | [CNT-028](tasks/CNT-028-ajouter-activites-communautaires-rayonnement.md) | Ajouter activités communautaires et rayonnement | ✅ Terminé | 🔴 Haute | 2025-11-25 |
 | [CNT-031](tasks/CNT-031-enrichir-experience-palo-it-cto-complete.md) | Enrichir l'expérience PALO IT CTO (consolidation) | ✅ Terminé | 🔴 Haute | 2025-11-25 |
 | [CNT-024](tasks/CNT-024-analyse-cv-flash-2025.md) | Analyse CV Flash 2025 | ✅ Terminé | 🔴 Haute | 2025-11-25 |

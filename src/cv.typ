@@ -266,6 +266,40 @@
   institution: "Scaled Agile, Inc.",
 )[]
 
+= Bénévolat
+
+#entry(
+  title: "Organisateur Agile Tour Bordeaux",
+  date: "2011 - Aujourd'hui",
+  institution: "Agile Tour",
+  location: "Bordeaux, France",
+)[
+  - Organisation de la conférence annuelle (150+ participants)
+  - Coordination des speakers et du programme
+]
+
+#entry(
+  title: "Fondateur Lean Startup Bordeaux",
+  date: "2012 - 2018",
+  institution: "Lean Startup Circle",
+  location: "Bordeaux, France",
+)[
+  - Animation de meetups réguliers sur le Lean Startup
+  - Coaching de startups et entrepreneurs locaux
+]
+
+#entry(
+  title: "Co-fondateur Collectif Quinconces",
+  date: "2016 - 2018",
+  institution: "Collectif Quinconces",
+  location: "Bordeaux, France",
+)[
+  - Organisation et collaboration de TPE et Indépendants du numérique
+  - Prospection de clients et de partenaires
+  - Animation de réunions et de brainstorming
+  - Gestion de projet et de la documentation
+  - Synchronisation des missions
+]
 
 = Expérience détaillée
 

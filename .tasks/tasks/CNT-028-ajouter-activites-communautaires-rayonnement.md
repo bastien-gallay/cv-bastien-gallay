@@ -58,6 +58,7 @@ Intégrer les activités suivantes dans le CV:
 **Options d'intégration:**
 
 1. **Sidebar - Enrichir "Centres d'intérêt":**
+
    ```typst
    = Centres d'intérêt
    - Intelligence artificielle
@@ -67,6 +68,7 @@ Intégrer les activités suivantes dans le CV:
    ```
 
 2. **Sidebar - Nouvelle section "Rayonnement":**
+
    ```typst
    = Rayonnement
    - Mentor Google Launchpad

@@ -8,13 +8,13 @@
 |-------|--------|
 | **ID** | CNT-010 |
 | **Titre** | Ajouter section Bénévolat |
-| **Statut** | ⏳ À faire |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | CNT |
 | **Section CV** | General |
 | **Créé le** | 2025-10-29 |
 | **Cible** | - |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-25 |
 | **Temps estimé** | 1.0 heures |
 | **Temps réel** | - |
 | **Branche nécessaire** | Auto |
@@ -45,15 +45,15 @@ Créer une section Bénévolat complète qui valorise l'engagement communautaire
 
 ## Sous-tâches
 
-- [ ] Déterminer l'emplacement exact (après ligne 250)
-- [ ] Créer la structure de la nouvelle section
-- [ ] Ajouter Agile Tour Bordeaux (2011-aujourd'hui)
-- [ ] Ajouter Lean Startup Bordeaux (2012-2018)
-- [ ] Ajouter Collectif Quinconces (2016-2018)
-- [ ] Vérifier le format et l'alignement avec le reste du CV
-- [ ] Compiler le CV avec `just build`
-- [ ] Vérifier que le layout reste sur 2 pages
-- [ ] Vérifier le rendu dans le PDF
+- [x] Déterminer l'emplacement exact (après ligne 250)
+- [x] Créer la structure de la nouvelle section
+- [x] Ajouter Agile Tour Bordeaux (2011-aujourd'hui)
+- [x] Ajouter Lean Startup Bordeaux (2012-2018)
+- [x] Ajouter Collectif Quinconces (2016-2018)
+- [x] Vérifier le format et l'alignement avec le reste du CV
+- [x] Compiler le CV avec `just build`
+- [x] Vérifier que le layout reste sur 2 pages
+- [x] Vérifier le rendu dans le PDF
 
 ---
 
