@@ -48,7 +48,6 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | [CNT-020](tasks/CNT-020-ajouter-activite-presales-et-business-development-palo-it-cto.md) | Ajouter activité presales et business development PALO IT CTO | ⏳ À faire | 🔴 Haute | 2025-11-25 |
 | [CNT-021](tasks/CNT-021-ajouter-partenariats-strategiques-palo-it-cto.md) | Ajouter partenariats stratégiques PALO IT CTO | ⏳ À faire | 🔴 Haute | 2025-11-25 |
 | [CNT-022](tasks/CNT-022-ajouter-initiatives-innovation-et-formation-palo-it-cto.md) | Ajouter initiatives innovation et formation PALO IT CTO | ⏳ À faire | 🔴 Haute | 2025-11-25 |
-| [CNT-024](tasks/CNT-024-analyse-cv-flash-2025.md) | Analyse CV Flash 2025 | 🔄 En cours | 🔴 Haute | 2025-11-25 |
 | [CNT-027](tasks/CNT-027-ajouter-missions-clients-upwiser-manquantes.md) | Ajouter les missions clients Upwiser manquantes | ⏳ À faire | 🔴 Haute | 2025-11-25 |
 | [CNT-028](tasks/CNT-028-ajouter-activites-communautaires-rayonnement.md) | Ajouter activités communautaires et rayonnement | ⏳ À faire | 🔴 Haute | 2025-11-25 |
 | [CNT-023](tasks/CNT-023-mettre-a-jour-photo-profil.md) | Mettre à jour la photo du CV | ⏳ À faire | 🟡 Moyenne | 2025-11-25 |
@@ -66,6 +65,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
+| [CNT-024](tasks/CNT-024-analyse-cv-flash-2025.md) | Analyse CV Flash 2025 | ✅ Terminé | 🔴 Haute | 2025-11-25 |
 | [CNT-030](tasks/CNT-030-ajouter-experiences-recentes-betagouv-nalo.md) | Ajouter expériences récentes Beta.gouv et Nalo | ✅ Terminé | 🔴 Haute | 2025-11-25 |
 | [CNT-015](tasks/CNT-015-analyse-cv-flash.md) | Analyse CV Flash (slide unique) | ✅ Terminé | 🔴 Haute | 2025-11-25 |
 | [CNT-006](tasks/CNT-006-ajouter-certifications-manquantes.md) | Ajouter les certifications manquantes | ✅ Terminé | 🔴 Haute | 2025-11-25 |
@@ -157,8 +157,8 @@ Closes TPL-001"
 
 - **Total**: 30 tâches
 - **À faire**: 17
-- **En cours**: 1
-- **Terminées**: 12
+- **En cours**: 0
+- **Terminées**: 13
 - **Bloquées**: 0
 - **Archivées**: 8
 
