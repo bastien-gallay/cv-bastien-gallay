@@ -8,13 +8,13 @@
 |-------|--------|
 | **ID** | CNT-032 |
 | **Titre** | Moderniser l'en-tête du CV (titre poste + coordonnées) |
-| **Statut** | ⏳ À faire |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | CNT (Content) |
 | **Section CV** | Header |
 | **Créé le** | 2025-11-25 |
 | **Cible** | - |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-25 |
 | **Temps estimé** | 30 min |
 | **Temps réel** | - |
 | **Branche nécessaire** | Non |
@@ -45,10 +45,10 @@ Le titre actuel "Crafting Technology Officer" est original mais risqué:
 
 ## Sous-tâches
 
-- [ ] Modifier le titre de "Crafting Technology Officer" vers "Chief Technology Officer (CTO) | IA & Transformation Agile"
-- [ ] Simplifier l'adresse: "Bordeaux, France" (supprimer la rue)
-- [ ] Vérifier que le titre reste cohérent avec le reste du CV
-- [ ] Compiler et vérifier le rendu
+- [x] Modifier le titre de "Crafting Technology Officer" vers "Chief Technology Officer (CTO) | IA & Transformation Agile"
+- [x] Simplifier l'adresse: "Bordeaux, France" (supprimer la rue)
+- [x] Vérifier que le titre reste cohérent avec le reste du CV
+- [x] Compiler et vérifier le rendu
 
 ---
 
@@ -141,10 +141,10 @@ Closes CNT-032"
 
 ## Tests / Vérifications
 
-- [ ] Le CV compile sans erreur
-- [ ] Le titre est lisible et professionnel
-- [ ] L'adresse est simplifiée
-- [ ] Le rendu PDF est correct
+- [x] Le CV compile sans erreur
+- [x] Le titre est lisible et professionnel
+- [x] L'adresse est simplifiée
+- [x] Le rendu PDF est correct
 
 ---
 
@@ -158,4 +158,6 @@ Closes CNT-032"
 
 ## Résultat final
 
-[À remplir une fois la tâche terminée]
+- Titre changé de "Crafting Technology Officer" vers "Chief Technology Officer (CTO) | IA & Transformation Agile"
+- Adresse simplifiée de "17 rue du Petit Goave, 33000 Bordeaux, France" vers "Bordeaux, France"
+- CV compilé avec succès (5 pages)

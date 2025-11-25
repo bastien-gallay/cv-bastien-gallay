@@ -41,7 +41,6 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Score | Créé le |
 |----|-------|--------|----------|-------|---------|
-| [CNT-032](tasks/CNT-032-moderniser-entete-cv.md) | Moderniser l'en-tête du CV (titre + adresse) | ⏳ À faire | 🔴 Haute | 10.00 | 2025-11-25 |
 | [CNT-033](tasks/CNT-033-ameliorer-section-a-propos.md) | Améliorer section "À propos" avec métriques | ⏳ À faire | 🔴 Haute | 10.00 | 2025-11-25 |
 | [CNT-034](tasks/CNT-034-restructurer-experience-palo-it.md) | Restructurer expérience PALO IT par résultats | ⏳ À faire | 🔴 Haute | 8.00 | 2025-11-25 |
 | [QUA-001](tasks/QUA-001-verification.md) | Étapes de vérification du CV | ⏳ À faire | 🟡 Moyenne | 5.93 | 2025-10-28 |
@@ -69,6 +68,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
+| [CNT-032](tasks/CNT-032-moderniser-entete-cv.md) | Moderniser l'en-tête du CV (titre + adresse) | ✅ Terminé | 🔴 Haute | 2025-11-25 |
 | [INF-001](tasks/INF-001-mcp-integration.md) | Améliorer visuellement le CV avec l'aide de Claude | ✅ Terminé | 🟡 Moyenne | 2025-11-25 |
 
 Les tâches archivées sont déplacées dans [.archived/](.archived/).
@@ -168,9 +168,9 @@ Closes TPL-001"
 ## Statistiques
 
 - **Total**: 49 tâches
-- **À faire**: 20
+- **À faire**: 19
 - **En cours**: 0
-- **Terminées**: 1
+- **Terminées**: 2
 - **Bloquées**: 0
 - **Archivées**: 28
 
