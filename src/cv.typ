@@ -419,9 +419,92 @@
   - Mise en place de Coach Dating
   - #strong[Méthodes:] Scrum, Kanban, Lean Startup
 
+  ==== Mission Dronisos - Scrum Master
+  #strong[Client:] Dronisos (Startup événementiel), Bordeaux
+
+  - Structuration de l'équipe R&D
+  - Réorganisation des démonstrations pour l'innovation technique
+  - #strong[Méthodes:] Scrum, Lean Startup
+
+  ==== Mission Mieux Placer - Coach Agile
+  #strong[Client:] Mieux Placer (Fintech), Paris
+
+  - Accompagnement du Product Owner
+  - Formation des équipes de production
+  - #strong[Méthodes:] Scrum, Formation
+
+  ==== Mission Wanteeed.com - PO & Coach Agile (2020)
+  #strong[Client:] Wanteeed.com (Startup Web), Bordeaux
+  #strong[Durée:] 6 mois
+
+  - Product Owner remplaçant
+  - Coach Agile pour startup de 20 personnes
+  - Élaboration d'un modèle organisationnel agile
+  - #strong[Méthodes:] Scrum, Coaching Agile
+
+  ==== Mission Groupe SeLoger/Logic Immo - Développeur & Architecte (2020-2021)
+  #strong[Client:] Groupe SeLoger/Logic Immo, Paris
+  #strong[Durée:] 4 mois
+
+  - Audit de la solution en place et proposition d'une architecture cible
+  - Développement du nouveau système
+  - #strong[Stack:] Architecture logicielle, Développement
+
   === Autres activités
   - Animation de formations et ateliers en agilité
   - Accompagnement d'une centaine de startups et PME
   - Création et animation du cercle Lean Startup Bordeaux
   - Conseil en stratégie produit et organisation
+]
+
+#entry(
+  title: [Consultant Technique],
+  date: [08/2006 - 09/2010],
+  institution: [Cast Consulting],
+  location: [Paris, France],
+)[
+  === Contexte
+  Consultant technique au sein d'une ESN spécialisée dans le développement Web, intervenant sur des projets clients variés dans différents secteurs.
+
+  === Missions clients
+
+  ==== Mission JOA Online - Product Owner (07/2009 - 10/2010)
+  #strong[Client:] JOA Online (Jeux en ligne), Paris
+  #strong[Durée:] 16 mois
+
+  - Product Owner d'une équipe de 10 personnes (France/Portugal)
+  - Mise en place de Scrum distribué
+  - Coordination de 10 sociétés sous-traitantes implantées en Europe
+  - Suivi de l'appel d'offre jusqu'à la mise en production
+  - #strong[Méthodes:] Scrum distribué, Product Management
+
+  ==== Mission Pixmania/TheLink.com - Chef de projet (09/2007 - 12/2008)
+  #strong[Client:] Fotovista/Pixmania (E-commerce téléphonie), Paris
+  #strong[Durée:] 16 mois
+
+  - Management d'une équipe de 7 développeurs
+  - Coordination internationale avec Londres
+  - Architecture, spécification et conception techniques
+  - Développement et maintenance de 6 applications
+  - #strong[Stack:] PHP, MySQL, Web, coordination internationale
+
+  ==== Mission La Poste/DECLIC - Architecte (01/2008 - 08/2008)
+  #strong[Client:] La Poste, Paris
+  #strong[Durée:] 8 mois
+
+  - Architecture SOA .Net
+  - #strong[Stack:] .Net, SOA
+
+  ==== Mission CEA GCAO - MOA (12/2008 - 08/2009)
+  #strong[Client:] CEA (nucléaire), Saclay
+  #strong[Durée:] 8 mois
+
+  - Maîtrise d'ouvrage et maquettage
+  - Documents confidentiels
+
+  ==== Mission Nespresso - Développeur (09/2008 - 12/2008)
+  #strong[Client:] Nespresso, Paris
+  #strong[Durée:] 3 mois
+
+  - Développement sites professionnels
 ]

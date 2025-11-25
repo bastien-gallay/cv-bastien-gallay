@@ -8,13 +8,13 @@
 |-------|--------|
 | **ID** | CNT-027 |
 | **Titre** | Ajouter les missions clients Upwiser manquantes |
-| **Statut** | ⏳ À faire |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | CNT |
 | **Section CV** | Experience |
 | **Créé le** | 2025-11-25 |
 | **Cible** | 2025-11-30 |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-25 |
 | **Temps estimé** | 1.5h |
 | **Temps réel** | - |
 | **Branche nécessaire** | Non |
@@ -43,14 +43,14 @@ Enrichir la section "Expérience détaillée" Upwiser avec les missions suivante
 
 ## Sous-tâches
 
-- [ ] Rechercher des détails supplémentaires sur chaque mission (dates, durée, contexte)
-- [ ] Ajouter mission Dronisos dans cv.typ
-- [ ] Ajouter mission Wanteeed.com dans cv.typ
-- [ ] Ajouter mission Mieux Placer dans cv.typ
-- [ ] Ajouter mission Groupe SeLoger/Logic Immo dans cv.typ
-- [ ] Ajouter mission JOA Online dans cv.typ
-- [ ] Vérifier la compilation du CV
-- [ ] Valider le rendu PDF
+- [x] Rechercher des détails supplémentaires sur chaque mission (dates, durée, contexte)
+- [x] Ajouter mission Dronisos dans cv.typ
+- [x] Ajouter mission Wanteeed.com dans cv.typ
+- [x] Ajouter mission Mieux Placer dans cv.typ
+- [x] Ajouter mission Groupe SeLoger/Logic Immo dans cv.typ
+- [x] Ajouter mission JOA Online dans cv.typ
+- [x] Vérifier la compilation du CV
+- [x] Valider le rendu PDF
 
 ---
 
