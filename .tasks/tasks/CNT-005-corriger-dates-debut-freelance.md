@@ -8,7 +8,7 @@
 |-------|--------|
 | **ID** | CNT-005 |
 | **Titre** | Corriger les dates de début Freelance |
-| **Statut** | ⏳ À faire |
+| **Statut** | 🔄 En cours |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | CNT |
 | **Section CV** | Experience |
