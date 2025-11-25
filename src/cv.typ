@@ -263,6 +263,15 @@
 
   === Missions principales
 
+  ==== Mission DEKRA - Coach Agile (oct. 2013 - janv. 2015)
+  #strong[Client:] DEKRA, Bordeaux
+  #strong[Durée:] 1 an 4 mois
+
+  - Scrum Master pour projet de refonte logiciel interne
+  - Mise en place de feature teams et coordination multi-équipes
+  - Coaching et formation des nouveaux Scrum Masters
+  - Accompagnement à l'adoption de bonnes pratiques Agile
+
   ==== Mission i-BP - Coach Agile (avr. 2015 - sept. 2015)
   #strong[Client:] i-BP, Nantes
 

@@ -43,7 +43,6 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 |----|-------|--------|----------|---------|
 | [CNT-005](tasks/CNT-005-corriger-dates-debut-freelance.md) | Corriger les dates de début Freelance | ⏳ À faire | 🔴 Haute | 2025-10-29 |
 | [CNT-006](tasks/CNT-006-ajouter-certifications-manquantes.md) | Ajouter les certifications manquantes | ⏳ À faire | 🔴 Haute | 2025-10-29 |
-| [CNT-009](tasks/CNT-009-ajouter-experience-dekra.md) | Ajouter l'expérience DEKRA | ⏳ À faire | 🔴 Haute | 2025-10-29 |
 | [CNT-010](tasks/CNT-010-ajouter-section-benevolat.md) | Ajouter section Bénévolat | ⏳ À faire | 🔴 Haute | 2025-10-29 |
 | [CNT-015](tasks/CNT-015-analyse-cv-flash.md) | Analyse CV Flash (slide unique) | ⏳ À faire | 🔴 Haute | 2025-11-14 |
 | [CNT-016](tasks/CNT-016-enrichir-section-experience-detaillee-avec-descriptions-developpees.md) | Enrichir section Expérience détaillée avec descriptions développées | ⏳ À faire | 🔴 Haute | 2025-11-17 |
@@ -66,6 +65,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
+| [CNT-009](tasks/CNT-009-ajouter-experience-dekra.md) | Ajouter l'expérience DEKRA | ✅ Terminé | 🔴 Haute | 2025-11-25 |
 | [CNT-008](tasks/CNT-008-ajouter-experience-ibp.md) | Ajouter l'expérience i-BP | ✅ Terminé | 🔴 Haute | 2025-11-25 |
 | [CNT-014](tasks/CNT-014-analyse-experience-palo-it.md) | Analyse expérience PALO IT (journal/tâches CTO) | ✅ Terminé | 🔴 Haute | 2025-11-25 |
 | [INF-004](tasks/INF-004-migrer-systeme-gestion-taches-vers-skill-claude-unifie.md) | Migrer le système de gestion de tâches vers un Skill Claude unifié | ✅ Terminé | 🔴 Haute | 2025-11-17 |
@@ -150,9 +150,9 @@ Closes TPL-001"
 ## Statistiques
 
 - **Total**: 24 tâches
-- **À faire**: 15
+- **À faire**: 14
 - **En cours**: 0
-- **Terminées**: 6
+- **Terminées**: 7
 - **Bloquées**: 0
 - **Archivées**: 8
 
