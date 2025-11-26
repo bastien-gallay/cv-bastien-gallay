@@ -11,19 +11,25 @@ This is a CV (curriculum vitae) project written in Typst, a modern markup-based 
 ### Building the CV
 
 ```bash
-# Compile the CV to PDF
+# Compile the full CV to PDF
 just build
+
+# Compile the short CV (1 page)
+just build-short
+
+# Compile all versions (full + short)
+just build-all
 
 # Watch mode - automatically recompile on changes
 just watch
-
-# Compile with custom output name
-just build output.pdf
 ```
 
 ### Viewing the Output
 
-The compiled PDF is saved as `dist/cv.pdf`.
+The compiled PDFs are saved in `dist/`:
+
+- `dist/cv.pdf` - Full version (~4 pages, exhaustive)
+- `dist/cv-short.pdf` - Short version (1 page, for quick applications)
 
 ## Project Structure
 
@@ -43,7 +49,8 @@ neat-cv/
 │   ├── TASKS.md               # Tasks dashboard
 │   └── TASK_RULES.md          # Rules and workflow
 ├── dist/                      # Build outputs (gitignored)
-│   └── cv.pdf                 # Generated PDF
+│   ├── cv.pdf                 # Full CV (~4 pages)
+│   └── cv-short.pdf           # Short CV (1 page)
 ├── docs/                      # Project documentation
 │   └── GIT_WORKFLOW.md        # Git conventions
 ├── scripts/                   # Build and verification scripts
@@ -62,7 +69,8 @@ neat-cv/
 │   │   └── profile.png        # Alternative profile
 │   ├── data/                  # Data files
 │   │   └── publications.yml   # Bibliography data
-│   ├── cv.typ                 # Main CV source
+│   ├── cv.typ                 # Full CV source (exhaustive, ~4 pages)
+│   ├── cv-short.typ           # Short CV source (1 page)
 │   └── manifest.yml           # Font manifest
 ├── .claude/                   # Claude Code configuration
 │   └── commands/              # Custom slash commands

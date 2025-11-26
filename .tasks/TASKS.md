@@ -42,7 +42,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | ID | Titre | Statut | Priorité | Score | Créé le |
 |----|-------|--------|----------|-------|---------|
 | [QUA-002](tasks/QUA-002-verification-orthographique-grammaticale.md) | Vérification orthographique et grammaticale | ⏳ À faire | 🟡 Moyenne | - | 2025-11-26 |
-| [TPL-001](tasks/TPL-001-cv-versions.md) | Versions courte et longue du CV | ⏳ À faire | 🟡 Moyenne | 4.45 | 2025-10-28 |
+| [TPL-001](tasks/TPL-001-cv-versions.md) | Versions courte et longue du CV | 🔄 En cours | 🟡 Moyenne | 4.45 | 2025-10-28 |
 | [TPL-002](tasks/TPL-002-template-system.md) | Système de changement de template | ⏳ À faire | 🟢 Basse | 2.96 | 2025-10-28 |
 | [LAY-002](tasks/LAY-002-consolidation-sections-dupliquees.md) | Consolider les sections dupliquées (Études, Expérience) | ⏳ À faire | 🟡 Moyenne | 2.50 | 2025-11-25 |
 | [LAY-003](tasks/LAY-003-reorganiser-competences-3-poles.md) | Réorganiser compétences en 3 pôles thématiques | ⏳ À faire | 🟡 Moyenne | 2.50 | 2025-11-25 |

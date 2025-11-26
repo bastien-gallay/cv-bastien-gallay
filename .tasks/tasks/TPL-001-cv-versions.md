@@ -8,7 +8,7 @@
 |-------|--------|
 | **ID** | TPL-001 |
 | **Titre** | Créer versions courte (1 page) et longue (2+ pages) du CV |
-| **Statut** | ⏳ À faire |
+| **Statut** | 🔄 En cours |
 | **Priorité** | 🟡 Moyenne |
 | **Trigramme** | TPL (Template) |
 | **Section CV** | General |

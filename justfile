@@ -4,12 +4,27 @@
 # Default recipe (runs when you type `just`)
 default: build
 
-# Build the CV
+# Build the CV (default: full version)
 build:
     @echo "Building CV..."
     @mkdir -p dist
     typst compile src/cv.typ dist/cv.pdf
     @echo "✓ Built dist/cv.pdf"
+
+# Build short CV (1 page)
+build-short:
+    @echo "Building short CV..."
+    @mkdir -p dist
+    typst compile src/cv-short.typ dist/cv-short.pdf
+    @echo "✓ Built dist/cv-short.pdf"
+
+# Build all CV versions
+build-all:
+    @echo "Building all CV versions..."
+    @mkdir -p dist
+    typst compile src/cv.typ dist/cv.pdf
+    typst compile src/cv-short.typ dist/cv-short.pdf
+    @echo "✓ Built dist/cv.pdf and dist/cv-short.pdf"
 
 # Watch for changes and rebuild automatically
 watch:
