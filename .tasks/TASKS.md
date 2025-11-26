@@ -42,7 +42,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | ID | Titre | Statut | Priorité | Score | Créé le |
 |----|-------|--------|----------|-------|---------|
 | [CNT-035](tasks/CNT-035-ajouter-mission-fircosoft.md) | Ajouter la mission Fircosoft (LexisNexis) | ⏳ À faire | 🟡 Moyenne | - | 2025-11-25 |
-| [QUA-001](tasks/QUA-001-verification.md) | Étapes de vérification du CV | ⏳ À faire | 🟡 Moyenne | 5.93 | 2025-10-28 |
+| [QUA-001](tasks/QUA-001-verification.md) | Étapes de vérification du CV | 🔄 En cours | 🟡 Moyenne | 5.93 | 2025-10-28 |
 | [TPL-004](tasks/TPL-004-extraction-donnees-structurees.md) | Extraire les données du CV (prérequis TPL-001/002/003) | ⏳ À faire | 🟡 Moyenne | 5.00 | 2025-11-25 |
 | [TPL-001](tasks/TPL-001-cv-versions.md) | Versions courte et longue du CV | ⏳ À faire | 🟡 Moyenne | 4.45 | 2025-10-28 |
 | [TPL-002](tasks/TPL-002-template-system.md) | Système de changement de template | ⏳ À faire | 🟢 Basse | 2.96 | 2025-10-28 |
@@ -171,7 +171,7 @@ Closes TPL-001"
 
 - **Total**: 51 tâches
 - **À faire**: 19
-- **En cours**: 0
+- **En cours**: 1
 - **Terminées**: 4
 - **Bloquées**: 0
 - **Archivées**: 28

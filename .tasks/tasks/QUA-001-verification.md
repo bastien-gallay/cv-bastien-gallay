@@ -8,7 +8,7 @@
 |-------|--------|
 | **ID** | QUA-001 |
 | **Titre** | Ajouter étapes de vérification du CV |
-| **Statut** | ⏳ À faire |
+| **Statut** | 🔄 En cours |
 | **Priorité** | 🟡 Moyenne |
 | **Trigramme** | QUA (Quality) |
 | **Section CV** | General |
@@ -203,6 +203,7 @@ Closes QUA-001"
 | Date | Action | Détails |
 |------|--------|---------|
 | 2025-10-28 | Création | Tâche créée dans le cadre de l'initialisation du système de tâches |
+| 2025-11-26 | En cours | Début du travail |
 
 ---
 
