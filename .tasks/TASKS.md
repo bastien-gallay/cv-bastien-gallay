@@ -41,7 +41,6 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Score | Créé le |
 |----|-------|--------|----------|-------|---------|
-| [CNT-025](tasks/CNT-025-remplacer-15-ca-par-chiffres-presales.md) | Remplacer "15% CA" par chiffres presales | ✅ Terminé | 🟡 Moyenne | - | 2025-11-26 |
 | [QUA-002](tasks/QUA-002-verification-orthographique-grammaticale.md) | Vérification orthographique et grammaticale | ⏳ À faire | 🟡 Moyenne | - | 2025-11-26 |
 | [TPL-001](tasks/TPL-001-cv-versions.md) | Versions courte et longue du CV | ⏳ À faire | 🟡 Moyenne | 4.45 | 2025-10-28 |
 | [TPL-002](tasks/TPL-002-template-system.md) | Système de changement de template | ⏳ À faire | 🟢 Basse | 2.96 | 2025-10-28 |
@@ -66,6 +65,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
+| [CNT-025](tasks/CNT-025-remplacer-15-ca-par-chiffres-presales.md) | Remplacer "15% CA" par chiffres presales | ✅ Terminé | 🟡 Moyenne | 2025-11-26 |
 | [LAY-001](tasks/LAY-001-sidebar-premiere-page-uniquement.md) | Sidebar uniquement sur la première page | ✅ Terminé | 🟡 Moyenne | 2025-11-26 |
 | [TPL-004](tasks/TPL-004-extraction-donnees-structurees.md) | Extraire les données du CV (prérequis TPL-001/002/003) | ✅ Terminé | 🟡 Moyenne | 2025-11-26 |
 | [CNT-035](tasks/CNT-035-ajouter-mission-fircosoft.md) | Ajouter la mission Fircosoft (LexisNexis) | ✅ Terminé | 🟡 Moyenne | 2025-11-26 |

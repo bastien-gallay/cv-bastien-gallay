@@ -128,7 +128,7 @@ Pilotage de 6+ opportunités presales majeures (€15k-€500k+)
 - [x] Le CV compile sans erreur (`just build`)
 - [x] Le PDF s'affiche correctement
 - [x] Les 3 occurrences sont mises à jour de manière cohérente
-- [ ] Les commits suivent la convention
+- [x] Les commits suivent la convention
 
 ---
 
