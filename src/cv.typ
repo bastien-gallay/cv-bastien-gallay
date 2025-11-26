@@ -383,6 +383,18 @@
   - Mise en place d'outils de mesure et de monitoring
   - #strong[Stack:] React, TypeScript, JavaScript, NestJS, PostgreSQL, Docker, GitHub Actions, Playwright, Sentry, Storybook
 
+  ==== Mission Fircosoft - Développeur Senior (mars 2021 - juin 2023)
+  #strong[Client:] Fircosoft (LexisNexis Risk Solutions), Bordeaux
+  #strong[Durée:] 2 ans 4 mois
+
+  - Développement de solutions de filtrage des transactions et listes de sanctions pour institutions bancaires
+  - Création d'une infrastructure de test automatisé multi-systèmes (Linux, AIX, HP-UX, Solaris)
+  - Mise en place de CI/CD pour langages propriétaires (Claire, FKScript)
+  - TDD et génération de documentation par les tests automatisés
+  - Mob-programming et pair-programming intensifs en environnement SAFe (train 80+ personnes)
+  - #strong[Domaine:] Conformité financière (AML, KYC, FATF, DORA), SWIFT, ISO 20022
+  - #strong[Stack:] Claire, FKScript, Python, C, Oracle, SQL Server, DB2
+
   ==== Mission Nalo - Coach Technique (fév. 2021 - fin 2021)
   #strong[Client:] Nalo (Fintech), Paris
   #strong[Durée:] ~10 mois (temps partiel)

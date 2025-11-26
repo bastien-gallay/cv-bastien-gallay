@@ -42,7 +42,6 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | ID | Titre | Statut | Priorité | Score | Créé le |
 |----|-------|--------|----------|-------|---------|
 | [QUA-002](tasks/QUA-002-verification-orthographique-grammaticale.md) | Vérification orthographique et grammaticale | ⏳ À faire | 🟡 Moyenne | - | 2025-11-26 |
-| [CNT-035](tasks/CNT-035-ajouter-mission-fircosoft.md) | Ajouter la mission Fircosoft (LexisNexis) | ⏳ À faire | 🟡 Moyenne | - | 2025-11-25 |
 | [TPL-004](tasks/TPL-004-extraction-donnees-structurees.md) | Extraire les données du CV (prérequis TPL-001/002/003) | ⏳ À faire | 🟡 Moyenne | 5.00 | 2025-11-25 |
 | [TPL-001](tasks/TPL-001-cv-versions.md) | Versions courte et longue du CV | ⏳ À faire | 🟡 Moyenne | 4.45 | 2025-10-28 |
 | [TPL-002](tasks/TPL-002-template-system.md) | Système de changement de template | ⏳ À faire | 🟢 Basse | 2.96 | 2025-10-28 |
@@ -68,6 +67,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
+| [CNT-035](tasks/CNT-035-ajouter-mission-fircosoft.md) | Ajouter la mission Fircosoft (LexisNexis) | ✅ Terminé | 🟡 Moyenne | 2025-11-26 |
 | [QUA-001](tasks/QUA-001-verification.md) | Étapes de vérification du CV | ✅ Terminé | 🟡 Moyenne | 2025-11-26 |
 | [CNT-034](tasks/CNT-034-restructurer-experience-palo-it.md) | Restructurer expérience PALO IT par résultats | ✅ Terminé | 🔴 Haute | 2025-11-25 |
 | [CNT-033](tasks/CNT-033-ameliorer-section-a-propos.md) | Améliorer section "À propos" avec métriques | ✅ Terminé | 🔴 Haute | 2025-11-25 |
@@ -171,9 +171,9 @@ Closes TPL-001"
 ## Statistiques
 
 - **Total**: 52 tâches
-- **À faire**: 19
+- **À faire**: 18
 - **En cours**: 0
-- **Terminées**: 5
+- **Terminées**: 6
 - **Bloquées**: 0
 - **Archivées**: 28
 

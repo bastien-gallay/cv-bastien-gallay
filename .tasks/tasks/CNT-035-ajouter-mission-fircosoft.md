@@ -8,15 +8,15 @@
 |-------|--------|
 | **ID** | CNT-035 |
 | **Titre** | Ajouter la mission Fircosoft (LexisNexis) |
-| **Statut** | ⏳ À faire |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🟡 Moyenne |
 | **Trigramme** | CNT |
 | **Section CV** | Experience |
 | **Créé le** | 2025-11-25 |
 | **Cible** | - |
-| **Terminé le** | (à remplir lors de la complétion) |
+| **Terminé le** | 2025-11-26 |
 | **Temps estimé** | 1 heure |
-| **Temps réel** | (à remplir après) |
+| **Temps réel** | 0.5 heure |
 | **Branche nécessaire** | Non |
 
 ---
@@ -141,11 +141,11 @@ L'entrée doit suivre le format des autres expériences dans cv.typ avec `#entry
 
 ## Tests / Vérifications
 
-- [ ] Le CV compile sans erreur (`just build`)
-- [ ] Le PDF s'affiche correctement
-- [ ] L'entrée est positionnée chronologiquement
-- [ ] Les dates sont cohérentes avec les autres missions
-- [ ] Le contenu suit le style des autres expériences
+- [x] Le CV compile sans erreur (`just build`)
+- [x] Le PDF s'affiche correctement
+- [x] L'entrée est positionnée chronologiquement
+- [x] Les dates sont cohérentes avec les autres missions
+- [x] Le contenu suit le style des autres expériences
 
 ---
 
@@ -154,9 +154,17 @@ L'entrée doit suivre le format des autres expériences dans cv.typ avec `#entry
 | Date | Action | Détails |
 |------|--------|---------|
 | 2025-11-25 | Création | Tâche créée depuis audit mission Fircosoft |
+| 2025-11-26 | Terminé | Mission ajoutée comme mission client PALO IT |
 
 ---
 
 ## Résultat final
 
-[À remplir une fois la tâche terminée]
+Mission Fircosoft ajoutée dans la section "Expérience détaillée" de PALO IT (page 3 du CV) :
+
+- **Titre** : Mission Fircosoft - Développeur Senior (mars 2021 - juin 2023)
+- **Client** : Fircosoft (LexisNexis Risk Solutions), Bordeaux
+- **Durée** : 2 ans 4 mois
+- **Contenu** : Développement solutions de filtrage AML/KYC, infrastructure de test multi-systèmes, CI/CD langages propriétaires, TDD, mob-programming SAFe
+- **Stack** : Claire, FKScript, Python, C, Oracle, SQL Server, DB2
+- **Domaine** : Conformité financière (AML, KYC, FATF, DORA), SWIFT, ISO 20022
