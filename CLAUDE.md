@@ -30,6 +30,7 @@ The compiled PDF is saved as `dist/cv.pdf`.
 ```text
 neat-cv/
 ├── CLAUDE.md                  # This file - project instructions
+├── VERIFICATION.md            # Quality verification checklist
 ├── .tasks/                    # Task management system
 │   ├── tasks/                 # Individual task files
 │   ├── .archived/             # Archived completed tasks
@@ -45,9 +46,13 @@ neat-cv/
 │   └── cv.pdf                 # Generated PDF
 ├── docs/                      # Project documentation
 │   └── GIT_WORKFLOW.md        # Git conventions
-├── scripts/                   # Build scripts
+├── scripts/                   # Build and verification scripts
 │   ├── build.sh
-│   └── watch.sh
+│   ├── watch.sh
+│   ├── verify-build.sh        # Compilation verification
+│   ├── verify-dates.sh        # Date consistency check
+│   ├── verify-format.sh       # Format verification
+│   └── verify-all.sh          # Run all verifications
 ├── src/                       # Typst sources
 │   ├── assets/                # Images
 │   │   ├── identite.png       # Profile photo
@@ -120,6 +125,51 @@ The `publications.yml` file uses Typst's bibliography format with YAML structure
 - Font size: 10pt
 - Color scheme: Professional blue (#4682b4 accent, #3b4f60 headers)
 - The CV is currently a 5-page document (as of November 2025)
+
+## Quality Verification
+
+The project includes a comprehensive verification system to ensure CV quality before distribution.
+
+### Quick Commands
+
+```bash
+# Run all verification checks
+just verify
+
+# Individual checks
+scripts/verify-build.sh    # Compilation check
+scripts/verify-dates.sh    # Date consistency check
+scripts/verify-format.sh   # Formatting check
+```
+
+### Verification Scripts
+
+| Script | Purpose |
+|--------|---------|
+| `verify-build.sh` | Verifies Typst compilation succeeds and PDF is generated |
+| `verify-dates.sh` | Checks date consistency (format, chronological order, no future dates) |
+| `verify-format.sh` | Validates structure, contact info, and formatting |
+| `verify-all.sh` | Runs all verification scripts in sequence |
+
+### Manual Checklist
+
+For comprehensive pre-distribution verification, see [VERIFICATION.md](VERIFICATION.md) which includes:
+
+- Compilation checks
+- Contact information verification
+- Spelling and grammar review
+- Date consistency validation
+- Style consistency review
+- Visual formatting check
+- Content professionalism review
+- Confidentiality check
+- Length and readability assessment
+
+### Recommended Workflow
+
+1. **During Development**: Run `just validate` after each significant change
+2. **Before Export**: Run `just verify` for automated checks
+3. **Before Distribution**: Complete the [VERIFICATION.md](VERIFICATION.md) checklist
 
 ## Task Management System
 

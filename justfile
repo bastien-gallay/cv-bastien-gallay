@@ -34,6 +34,10 @@ validate:
     @echo "Validating CV..."
     @typst compile src/cv.typ --diagnostic-format=short > /dev/null 2>&1 && echo "✓ Validation passed" || (echo "✗ Validation failed" && exit 1)
 
+# Run all verification scripts
+verify:
+    @scripts/verify-all.sh
+
 # Show available recipes
 list:
     @just --list
