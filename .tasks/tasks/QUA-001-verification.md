@@ -8,13 +8,13 @@
 |-------|--------|
 | **ID** | QUA-001 |
 | **Titre** | Ajouter étapes de vérification du CV |
-| **Statut** | ⏳ À faire |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🟡 Moyenne |
 | **Trigramme** | QUA (Quality) |
 | **Section CV** | General |
 | **Créé le** | 2025-10-28 |
 | **Cible** | 2025-11-10 |
-| **Terminé le** | |
+| **Terminé le** | 2025-11-26 |
 | **Temps estimé** | 3-4 heures |
 | **Temps réel** | |
 | **Branche nécessaire** | Auto |
@@ -42,14 +42,14 @@ Mettre en place un système de vérification comprenant:
 
 ## Sous-tâches
 
-- [ ] Créer une checklist de vérification manuelle (VERIFICATION.md)
-- [ ] Identifier les vérifications automatisables
+- [x] Créer une checklist de vérification manuelle (VERIFICATION.md)
+- [x] Identifier les vérifications automatisables
 - [ ] Créer un script de vérification orthographique (si possible avec Typst)
-- [ ] Créer un script de vérification de cohérence (dates, formatage)
-- [ ] Créer un script de vérification de compilation (PDF généré sans erreur)
-- [ ] Documenter le processus de vérification dans CLAUDE.md
+- [x] Créer un script de vérification de cohérence (dates, formatage)
+- [x] Créer un script de vérification de compilation (PDF généré sans erreur)
+- [x] Documenter le processus de vérification dans CLAUDE.md
 - [ ] (Optionnel) Créer un pre-commit hook Git
-- [ ] Tester l'ensemble du processus de vérification
+- [x] Tester l'ensemble du processus de vérification
 
 ---
 
@@ -188,13 +188,13 @@ Closes QUA-001"
 
 ## Tests / Vérifications
 
-- [ ] VERIFICATION.md est complet et clair
-- [ ] Tous les scripts s'exécutent sans erreur
-- [ ] `verify-build.sh` détecte les erreurs de compilation
-- [ ] `verify-dates.sh` détecte les incohérences de dates
-- [ ] `verify-all.sh` exécute tous les scripts correctement
-- [ ] La documentation dans CLAUDE.md est à jour
-- [ ] Les scripts sont exécutables (chmod +x)
+- [x] VERIFICATION.md est complet et clair
+- [x] Tous les scripts s'exécutent sans erreur
+- [x] `verify-build.sh` détecte les erreurs de compilation
+- [x] `verify-dates.sh` détecte les incohérences de dates
+- [x] `verify-all.sh` exécute tous les scripts correctement
+- [x] La documentation dans CLAUDE.md est à jour
+- [x] Les scripts sont exécutables (chmod +x)
 
 ---
 
@@ -203,14 +203,25 @@ Closes QUA-001"
 | Date | Action | Détails |
 |------|--------|---------|
 | 2025-10-28 | Création | Tâche créée dans le cadre de l'initialisation du système de tâches |
+| 2025-11-26 | En cours | Début du travail |
+| 2025-11-26 | Terminé | Système de vérification complet |
+| 2025-11-26 | Refactoring | Railway Programming pattern appliqué (136 tests) |
 
 ---
 
 ## Résultat final
 
-[À remplir une fois la tâche terminée]
+**Livrables créés:**
 
-**Structure finale attendue:**
+- `VERIFICATION.md` - Checklist complète de vérification manuelle (10 sections)
+- `scripts/verify-build.sh` - Vérifie la compilation Typst et génération PDF
+- `scripts/verify-dates.sh` - Vérifie la cohérence des dates (format, ordre, pas de futur)
+- `scripts/verify-format.sh` - Vérifie structure, contacts et formatage
+- `scripts/verify-all.sh` - Exécute toutes les vérifications
+- `justfile` - Ajout de la commande `just verify`
+- `CLAUDE.md` - Section "Quality Verification" documentée
+
+**Structure finale:**
 
 ```plaintext
 neat-cv/
@@ -222,3 +233,34 @@ neat-cv/
 │   └── verify-all.sh       # Lancement de toutes les vérifications
 └── CLAUDE.md               # Mis à jour avec processus de vérification
 ```
+
+**Refactoring Railway Programming (2025-11-26):**
+
+```plaintext
+scripts/
+├── lib/                          # Bibliothèque partagée
+│   ├── __init__.py
+│   ├── types.py                  # NewType + TypeGuard
+│   ├── result.py                 # Result générique
+│   └── context.py                # Context avec bind/map
+├── tests/
+│   └── test_lib.py               # 22 tests
+└── verification/
+    ├── build.py                  # BuildContext Railway
+    ├── dates.py                  # DatesContext Railway
+    ├── format.py                 # FormatContext Railway
+    ├── runner.py                 # RunnerContext Railway
+    └── tests/
+        ├── conftest.py           # Fixtures partagées
+        ├── test_build.py         # 20 tests
+        ├── test_dates.py         # 26 tests
+        ├── test_format.py        # 47 tests
+        └── test_runner.py        # 21 tests
+```
+
+**Total: 136 tests passant**
+
+**Non implémenté (optionnel):**
+
+- Script de vérification orthographique (nécessiterait outils externes)
+- Pre-commit hook Git (peut être ajouté ultérieurement)

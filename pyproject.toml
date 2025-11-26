@@ -1,0 +1,19 @@
+[project]
+name = "neat-cv"
+version = "1.0.0"
+description = "CV project written in Typst with verification tools"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["scripts/verification/tests", ".claude/skills/task-management/tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100

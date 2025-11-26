@@ -34,6 +34,24 @@ validate:
     @echo "Validating CV..."
     @typst compile src/cv.typ --diagnostic-format=short > /dev/null 2>&1 && echo "✓ Validation passed" || (echo "✗ Validation failed" && exit 1)
 
+# Run all verification scripts (Python)
+verify:
+    @uv run python -m scripts.verification
+
+# Run verification with specific check
+verify-build:
+    @uv run python -m scripts.verification --build
+
+verify-dates:
+    @uv run python -m scripts.verification --dates
+
+verify-format:
+    @uv run python -m scripts.verification --format
+
+# Run verification tests
+test-verify:
+    @uv run --extra dev pytest scripts/verification/tests/ -v
+
 # Show available recipes
 list:
     @just --list
