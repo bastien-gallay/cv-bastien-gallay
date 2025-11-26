@@ -16,7 +16,6 @@ from pathlib import Path
 
 
 def find_project_root() -> Path:
-    """Find the project root by looking for src/cv.typ."""
     current = Path.cwd()
     while current != current.parent:
         if (current / "src" / "cv.typ").exists():
@@ -26,7 +25,6 @@ def find_project_root() -> Path:
 
 
 def main() -> int:
-    """Main entry point."""
     parser = argparse.ArgumentParser(
         description="Verify CV quality",
         formatter_class=argparse.RawDescriptionHelpFormatter,

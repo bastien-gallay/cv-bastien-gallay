@@ -1,32 +1,25 @@
-"""Date verification module.
-
-Verifies date consistency in the CV:
-- No future dates
-- Consistent date formats
-- Chronological order in sections
-"""
-
 import re
 from dataclasses import dataclass, field
 from datetime import date
 from pathlib import Path
+from typing import Callable
+
+from scripts.lib import ValidatedContent
+
+MM_YYYY_PATTERN = re.compile(r"\b(\d{1,2})/(\d{4})\b")
+YEAR_PATTERN = re.compile(r"\b(19|20)\d{2}\b")
 
 
-@dataclass
+@dataclass(frozen=True)
 class DateInfo:
-    """Information about a date found in the CV."""
-
     year: int
     month: int | None = None
     line_number: int = 0
     line_content: str = ""
-    is_end_date: bool = False
 
 
 @dataclass
 class DatesResult:
-    """Result of date verification."""
-
     success: bool
     errors: list[str] = field(default_factory=list)
     warnings: list[str] = field(default_factory=list)
@@ -34,17 +27,31 @@ class DatesResult:
     format_stats: dict[str, int] = field(default_factory=dict)
 
 
-# Patterns for date extraction
-YEAR_PATTERN = re.compile(r"\b(19|20)\d{2}\b")
-MM_YYYY_PATTERN = re.compile(r"\b(\d{1,2})/(\d{4})\b")
-DATE_LINE_PATTERN = re.compile(r'date:\s*["\[]?(.+?)["\]]?\s*,?\s*$', re.IGNORECASE)
+DatesStep = Callable[["DatesContext"], "DatesContext"]
+
+
+@dataclass
+class DatesContext:
+    content: ValidatedContent
+    result: DatesResult
+    current_year: int = field(default_factory=lambda: date.today().year)
+
+    def bind(self, func: DatesStep) -> "DatesContext":
+        if not self.result.success:
+            return self
+        return func(self)
+
+    def map(self, func: DatesStep) -> "DatesContext":
+        return func(self)
+
+
+def is_comment_line(line: str) -> bool:
+    return line.strip().startswith("//")
 
 
 def extract_dates_from_line(line: str, line_number: int) -> list[DateInfo]:
-    """Extract all dates from a line of text."""
     dates = []
 
-    # Check for MM/YYYY format
     for match in MM_YYYY_PATTERN.finditer(line):
         month = int(match.group(1))
         year = int(match.group(2))
@@ -58,7 +65,6 @@ def extract_dates_from_line(line: str, line_number: int) -> list[DateInfo]:
                 )
             )
 
-    # Check for standalone years (only if no MM/YYYY found to avoid duplicates)
     if not dates:
         for match in YEAR_PATTERN.finditer(line):
             year = int(match.group(0))
@@ -74,22 +80,12 @@ def extract_dates_from_line(line: str, line_number: int) -> list[DateInfo]:
     return dates
 
 
-def is_comment_line(line: str) -> bool:
-    """Check if a line is a Typst comment."""
-    stripped = line.strip()
-    return stripped.startswith("//")
-
-
-def extract_all_dates(cv_content: str) -> list[DateInfo]:
-    """Extract all dates from CV content."""
+def extract_all_dates(content: str) -> list[DateInfo]:
     all_dates = []
 
-    for i, line in enumerate(cv_content.split("\n"), start=1):
-        # Skip commented lines
+    for i, line in enumerate(content.split("\n"), start=1):
         if is_comment_line(line):
             continue
-
-        # Look for date: fields specifically
         if "date:" in line.lower() or "Date" in line:
             dates = extract_dates_from_line(line, i)
             all_dates.extend(dates)
@@ -97,43 +93,36 @@ def extract_all_dates(cv_content: str) -> list[DateInfo]:
     return all_dates
 
 
-def check_future_dates(dates: list[DateInfo], current_year: int) -> list[str]:
-    """Check for dates in the future."""
-    errors = []
-    for date_info in dates:
-        if date_info.year > current_year:
-            errors.append(
+def step_extract_dates(ctx: DatesContext) -> DatesContext:
+    ctx.result.dates_found = extract_all_dates(ctx.content)
+    return ctx
+
+
+def step_check_future_dates(ctx: DatesContext) -> DatesContext:
+    for date_info in ctx.result.dates_found:
+        if date_info.year > ctx.current_year:
+            ctx.result.errors.append(
                 f"Année future détectée: {date_info.year} (ligne {date_info.line_number})"
             )
-    return errors
+            ctx.result.success = False
+    return ctx
 
 
-def check_old_dates(
-    dates: list[DateInfo], threshold_year: int = 1990
-) -> list[str]:
-    """Check for suspiciously old dates (except birth dates)."""
-    warnings = []
-    for date_info in dates:
-        # Skip birth date lines
+def step_check_old_dates(ctx: DatesContext, threshold_year: int = 1990) -> DatesContext:
+    for date_info in ctx.result.dates_found:
         if "naissance" in date_info.line_content.lower():
             continue
         if date_info.year < threshold_year:
-            warnings.append(
+            ctx.result.warnings.append(
                 f"Année très ancienne: {date_info.year} (ligne {date_info.line_number})"
             )
-    return warnings
+    return ctx
 
 
-def count_date_formats(cv_content: str) -> dict[str, int]:
-    """Count occurrences of different date formats."""
-    stats = {
-        "mm_yyyy": 0,
-        "yyyy_only": 0,
-        "aujourdhui": 0,
-        "present": 0,
-    }
+def step_count_formats(ctx: DatesContext) -> DatesContext:
+    stats = {"mm_yyyy": 0, "yyyy_only": 0, "aujourdhui": 0, "present": 0}
 
-    for line in cv_content.split("\n"):
+    for line in ctx.content.split("\n"):
         if is_comment_line(line):
             continue
         if "date:" not in line.lower():
@@ -141,7 +130,7 @@ def count_date_formats(cv_content: str) -> dict[str, int]:
 
         if MM_YYYY_PATTERN.search(line):
             stats["mm_yyyy"] += 1
-        elif YEAR_PATTERN.search(line) and not MM_YYYY_PATTERN.search(line):
+        elif YEAR_PATTERN.search(line):
             stats["yyyy_only"] += 1
 
         if "aujourd" in line.lower():
@@ -149,55 +138,36 @@ def count_date_formats(cv_content: str) -> dict[str, int]:
         if "présent" in line.lower() or "present" in line.lower():
             stats["present"] += 1
 
-    return stats
+    ctx.result.format_stats = stats
+    return ctx
 
 
 def verify_dates(project_root: Path | None = None) -> DatesResult:
-    """Run all date verification checks.
-
-    Args:
-        project_root: Path to the project root. If None, uses current directory.
-
-    Returns:
-        DatesResult with verification results.
-    """
     if project_root is None:
         project_root = Path.cwd()
     project_root = Path(project_root)
 
-    result = DatesResult(success=True)
     cv_file = project_root / "src" / "cv.typ"
-
     if not cv_file.exists():
-        result.errors.append(f"Fichier CV introuvable: {cv_file}")
-        result.success = False
-        return result
+        return DatesResult(
+            success=False,
+            errors=[f"Fichier CV introuvable: {cv_file}"],
+        )
 
-    content = cv_file.read_text(encoding="utf-8")
-    current_year = date.today().year
+    content = ValidatedContent(cv_file.read_text(encoding="utf-8"))
 
-    # Extract all dates
-    result.dates_found = extract_all_dates(content)
+    ctx = (
+        DatesContext(content=content, result=DatesResult(success=True))
+        .map(step_extract_dates)
+        .bind(step_check_future_dates)
+        .map(step_check_old_dates)
+        .map(step_count_formats)
+    )
 
-    # Check for future dates
-    future_errors = check_future_dates(result.dates_found, current_year)
-    result.errors.extend(future_errors)
-
-    # Check for old dates
-    old_warnings = check_old_dates(result.dates_found)
-    result.warnings.extend(old_warnings)
-
-    # Count date formats
-    result.format_stats = count_date_formats(content)
-
-    # Set success based on errors (warnings don't fail)
-    result.success = len(result.errors) == 0
-
-    return result
+    return ctx.result
 
 
 def print_result(result: DatesResult) -> None:
-    """Print date verification result to console."""
     print("=== Vérification des dates ===")
     print()
 
@@ -239,7 +209,6 @@ def print_result(result: DatesResult) -> None:
 if __name__ == "__main__":
     import sys
 
-    # Find project root
     current = Path.cwd()
     while current != current.parent:
         if (current / "src" / "cv.typ").exists():

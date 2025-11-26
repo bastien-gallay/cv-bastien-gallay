@@ -1,31 +1,10 @@
-"""Format verification module.
-
-Verifies formatting and structure of the CV:
-- Required sections present
-- Contact information present
-- No encoding issues
-- Basic formatting checks
-"""
-
 import re
 from dataclasses import dataclass, field
 from pathlib import Path
+from typing import Callable
 
+from scripts.lib import ValidatedContent
 
-@dataclass
-class FormatResult:
-    """Result of format verification."""
-
-    success: bool
-    errors: list[str] = field(default_factory=list)
-    warnings: list[str] = field(default_factory=list)
-    sections_found: list[str] = field(default_factory=list)
-    entry_count: int = 0
-    line_count: int = 0
-    char_count: int = 0
-
-
-# Required sections in the CV
 REQUIRED_SECTIONS = [
     "Expérience",
     "Etudes",
@@ -34,7 +13,6 @@ REQUIRED_SECTIONS = [
     "Langues",
 ]
 
-# Patterns
 EMAIL_PATTERN = re.compile(r"email:\s*[\"']?[\w.+-]+@[\w.-]+\.\w+[\"']?", re.IGNORECASE)
 PHONE_PATTERN = re.compile(r"phone:", re.IGNORECASE)
 LINKEDIN_PATTERN = re.compile(r"linkedin:", re.IGNORECASE)
@@ -44,22 +22,46 @@ ENCODING_ERROR_PATTERN = re.compile(r"\?{3,}")
 FRENCH_CHARS_PATTERN = re.compile(r"[éèêëàâäùûüîïôöç]", re.IGNORECASE)
 
 
+@dataclass
+class FormatResult:
+    success: bool
+    errors: list[str] = field(default_factory=list)
+    warnings: list[str] = field(default_factory=list)
+    sections_found: list[str] = field(default_factory=list)
+    entry_count: int = 0
+    line_count: int = 0
+    char_count: int = 0
+
+
+FormatStep = Callable[["FormatContext"], "FormatContext"]
+
+
+@dataclass
+class FormatContext:
+    content: ValidatedContent
+    result: FormatResult
+
+    def bind(self, func: FormatStep) -> "FormatContext":
+        if not self.result.success:
+            return self
+        return func(self)
+
+    def map(self, func: FormatStep) -> "FormatContext":
+        return func(self)
+
+
 def check_sections(content: str) -> tuple[list[str], list[str]]:
-    """Check for required sections in the CV."""
     found = []
     missing = []
-
     for section in REQUIRED_SECTIONS:
         if section in content:
             found.append(section)
         else:
             missing.append(section)
-
     return found, missing
 
 
 def check_contact_info(content: str) -> tuple[list[str], list[str]]:
-    """Check for required contact information."""
     found = []
     missing = []
 
@@ -82,92 +84,102 @@ def check_contact_info(content: str) -> tuple[list[str], list[str]]:
 
 
 def count_entries(content: str) -> int:
-    """Count the number of #entry() calls."""
     return len(ENTRY_PATTERN.findall(content))
 
 
 def check_trailing_whitespace(content: str) -> int:
-    """Count lines with trailing whitespace."""
     return len(TRAILING_WHITESPACE_PATTERN.findall(content))
 
 
 def check_encoding_errors(content: str) -> bool:
-    """Check for encoding error markers (???)."""
     return bool(ENCODING_ERROR_PATTERN.search(content))
 
 
 def check_french_chars(content: str) -> bool:
-    """Check if French accented characters are present."""
     return bool(FRENCH_CHARS_PATTERN.search(content))
 
 
+def step_fill_statistics(ctx: FormatContext) -> FormatContext:
+    ctx.result.line_count = len(ctx.content.split("\n"))
+    ctx.result.char_count = len(ctx.content)
+    return ctx
+
+
+def step_verify_sections(ctx: FormatContext) -> FormatContext:
+    found, missing = check_sections(ctx.content)
+    ctx.result.sections_found = found
+    for section in missing:
+        ctx.result.warnings.append(f"Section '{section}' manquante")
+    return ctx
+
+
+def step_verify_contact(ctx: FormatContext) -> FormatContext:
+    _, missing = check_contact_info(ctx.content)
+    for item in missing:
+        if item == "email":
+            ctx.result.errors.append("Email manquant ou invalide")
+            ctx.result.success = False
+        else:
+            ctx.result.warnings.append(f"{item.capitalize()} manquant")
+    return ctx
+
+
+def step_verify_entries(ctx: FormatContext) -> FormatContext:
+    ctx.result.entry_count = count_entries(ctx.content)
+    if ctx.result.entry_count < 5:
+        ctx.result.warnings.append(f"Peu d'entrées dans le CV ({ctx.result.entry_count})")
+    return ctx
+
+
+def step_verify_whitespace(ctx: FormatContext) -> FormatContext:
+    trailing_ws = check_trailing_whitespace(ctx.content)
+    if trailing_ws > 0:
+        ctx.result.warnings.append(f"{trailing_ws} lignes avec espaces en fin de ligne")
+    return ctx
+
+
+def step_verify_encoding(ctx: FormatContext) -> FormatContext:
+    if check_encoding_errors(ctx.content):
+        ctx.result.errors.append("Caractères d'encodage invalides (???) détectés")
+        ctx.result.success = False
+    return ctx
+
+
+def step_verify_french_chars(ctx: FormatContext) -> FormatContext:
+    if not check_french_chars(ctx.content):
+        ctx.result.warnings.append("Pas de caractères accentués détectés")
+    return ctx
+
+
 def verify_format(project_root: Path | None = None) -> FormatResult:
-    """Run all format verification checks.
-
-    Args:
-        project_root: Path to the project root. If None, uses current directory.
-
-    Returns:
-        FormatResult with verification results.
-    """
     if project_root is None:
         project_root = Path.cwd()
     project_root = Path(project_root)
 
-    result = FormatResult(success=True)
     cv_file = project_root / "src" / "cv.typ"
-
     if not cv_file.exists():
-        result.errors.append(f"Fichier CV introuvable: {cv_file}")
-        result.success = False
-        return result
+        return FormatResult(
+            success=False,
+            errors=[f"Fichier CV introuvable: {cv_file}"],
+        )
 
-    content = cv_file.read_text(encoding="utf-8")
+    content = ValidatedContent(cv_file.read_text(encoding="utf-8"))
 
-    # File statistics
-    result.line_count = len(content.split("\n"))
-    result.char_count = len(content)
+    ctx = (
+        FormatContext(content=content, result=FormatResult(success=True))
+        .map(step_fill_statistics)
+        .map(step_verify_sections)
+        .bind(step_verify_contact)
+        .map(step_verify_entries)
+        .map(step_verify_whitespace)
+        .bind(step_verify_encoding)
+        .map(step_verify_french_chars)
+    )
 
-    # Check sections
-    found_sections, missing_sections = check_sections(content)
-    result.sections_found = found_sections
-    for section in missing_sections:
-        result.warnings.append(f"Section '{section}' manquante")
-
-    # Check contact info
-    found_contact, missing_contact = check_contact_info(content)
-    for item in missing_contact:
-        if item == "email":
-            result.errors.append("Email manquant ou invalide")
-        else:
-            result.warnings.append(f"{item.capitalize()} manquant")
-
-    # Count entries
-    result.entry_count = count_entries(content)
-    if result.entry_count < 5:
-        result.warnings.append(f"Peu d'entrées dans le CV ({result.entry_count})")
-
-    # Check trailing whitespace
-    trailing_ws = check_trailing_whitespace(content)
-    if trailing_ws > 0:
-        result.warnings.append(f"{trailing_ws} lignes avec espaces en fin de ligne")
-
-    # Check encoding errors
-    if check_encoding_errors(content):
-        result.errors.append("Caractères d'encodage invalides (???) détectés")
-
-    # Check French characters
-    if not check_french_chars(content):
-        result.warnings.append("Pas de caractères accentués détectés")
-
-    # Set success based on errors
-    result.success = len(result.errors) == 0
-
-    return result
+    return ctx.result
 
 
 def print_result(result: FormatResult) -> None:
-    """Print format verification result to console."""
     print("=== Vérification du formatage ===")
     print()
 
@@ -238,7 +250,6 @@ def print_result(result: FormatResult) -> None:
 if __name__ == "__main__":
     import sys
 
-    # Find project root
     current = Path.cwd()
     while current != current.parent:
         if (current / "src" / "cv.typ").exists():
