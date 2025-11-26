@@ -118,12 +118,10 @@
   institution: "PALO IT",
   location: "Bordeaux/Paris, France",
 )[
-  - *En tant que CTO (10/2024 - 10/2025) :* Stratégie technologique et participation au COMEX. Contribution à 15% de croissance du CA.
-  - Management de 50 professionnels techniques. Délivrance de 20-40 certifications GitHub Copilot.
-  - Conception de Gen-e2, framework de développement accéléré par IA. Initiative Quantum Computing.
-  - Presales : 6+ opportunités majeures (€15k-€500k+). Partenariats Scaleway, GitHub, Mistral.
-  - *En tant que Consultant Senior :* Missions clients (Bodic, Systel, TopTex, Beta.gouv, Nalo).
-  - Animation de la communauté technique interne, Career Path des consultants France, recrutement.
+  - *Innovation IA :* Conception de Gen-e2, framework de développement accéléré par IA. 20-40 certifications GitHub Copilot. Partenariats Scaleway, GitHub, Mistral.
+  - *Leadership :* Direction stratégie technologique et COMEX. Contribution à 15% de croissance CA. Management de 50 professionnels techniques.
+  - *Business :* Presales 6+ opportunités majeures (€15k-€500k+). Initiative Quantum Computing.
+  - *Missions Clients :* Bodic (External CTO, API optimisée à 72ms), Beta.gouv (Lead Dev, 7 mois).
   - *Stack :* Azure, AWS, OpenAI, Anthropic, LangChain, Python, C\#, TypeScript, Rust.
 ]
 

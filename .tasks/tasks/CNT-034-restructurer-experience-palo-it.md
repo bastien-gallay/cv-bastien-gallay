@@ -8,13 +8,13 @@
 |-------|--------|
 | **ID** | CNT-034 |
 | **Titre** | Restructurer l'expérience PALO IT par résultats (pas par tâches) |
-| **Statut** | ⏳ À faire |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | CNT (Content) |
 | **Section CV** | Experience |
 | **Créé le** | 2025-11-25 |
 | **Cible** | - |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-25 |
 | **Temps estimé** | 1-2 heures |
 | **Temps réel** | - |
 | **Branche nécessaire** | Auto |
@@ -48,13 +48,13 @@ L'expérience PALO IT est la vitrine actuelle du CV. Elle doit être structurée
 
 ## Sous-tâches
 
-- [ ] Analyser la structure actuelle de la section PALO IT
-- [ ] Identifier les 5-7 réalisations les plus impactantes
-- [ ] Réorganiser avec l'IA/Innovation en premier
-- [ ] Ajouter/mettre en avant les métriques business
-- [ ] Sélectionner 2-3 missions clients à garder (Bodic, Beta.gouv)
-- [ ] Déplacer le détail des autres missions vers cv-exhaustive.typ
-- [ ] Compiler et vérifier le rendu
+- [x] Analyser la structure actuelle de la section PALO IT
+- [x] Identifier les 5-7 réalisations les plus impactantes
+- [x] Réorganiser avec l'IA/Innovation en premier
+- [x] Ajouter/mettre en avant les métriques business
+- [x] Sélectionner 2-3 missions clients à garder (Bodic, Beta.gouv)
+- [ ] Déplacer le détail des autres missions vers cv-exhaustive.typ (reporté à TPL-001)
+- [x] Compiler et vérifier le rendu
 
 ---
 
@@ -162,11 +162,11 @@ Closes CNT-034"
 
 ## Tests / Vérifications
 
-- [ ] Le CV compile sans erreur
-- [ ] L'IA/Innovation apparaît en premier
-- [ ] Les métriques business sont visibles
-- [ ] Les missions hands-on sont présentes
-- [ ] Le contenu supprimé est dans cv-exhaustive.typ
+- [x] Le CV compile sans erreur
+- [x] L'IA/Innovation apparaît en premier
+- [x] Les métriques business sont visibles
+- [x] Les missions hands-on sont présentes
+- [ ] Le contenu supprimé est dans cv-exhaustive.typ (reporté à TPL-001)
 
 ---
 
@@ -180,4 +180,19 @@ Closes CNT-034"
 
 ## Résultat final
 
-[À remplir une fois la tâche terminée]
+**Nouvelle structure PALO IT (version courte):**
+
+1. *Innovation IA :* Gen-e2, Copilot, Partenariats (Scaleway, GitHub, Mistral)
+2. *Leadership :* COMEX, 15% croissance, Management 50 personnes
+3. *Business :* Presales €15k-€500k+, Quantum Computing
+4. *Missions Clients :* Bodic (External CTO), Beta.gouv (Lead Dev)
+5. *Stack :* Azure, AWS, OpenAI, etc.
+
+**Améliorations:**
+
+- IA/Innovation mise en premier (différenciation)
+- Section condensée de 7 à 5 bullet points
+- Seules les missions hands-on conservées (Bodic, Beta.gouv)
+- Version détaillée conservée dans "Expérience détaillée"
+
+**Note:** La création de cv-exhaustive.typ est reportée à TPL-001 (versions courte/longue)
