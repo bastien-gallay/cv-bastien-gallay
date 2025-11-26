@@ -8,15 +8,15 @@
 |-------|--------|
 | **ID** | TPL-004 |
 | **Titre** | Extraire les données du CV dans un format structuré réutilisable |
-| **Statut** | ⏳ À faire |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🟡 Moyenne |
 | **Trigramme** | TPL (Template) |
 | **Section CV** | General |
 | **Créé le** | 2025-11-25 |
 | **Cible** | - |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-26 |
 | **Temps estimé** | 2-3 heures |
-| **Temps réel** | - |
+| **Temps réel** | 1 heure |
 | **Branche nécessaire** | Auto |
 
 ---
@@ -49,18 +49,18 @@ Créer un fichier `cv-data.typ` contenant toutes les données du CV dans un form
 
 ## Sous-tâches
 
-- [ ] Analyser la structure actuelle de [cv.typ](../../src/cv.typ)
-- [ ] Définir le schéma de données (structure des variables)
-- [ ] Extraire les informations personnelles (nom, titre, contact, réseaux)
-- [ ] Extraire les expériences professionnelles (toutes les missions)
-- [ ] Extraire la formation (tous les diplômes)
-- [ ] Extraire les compétences (techniques, méthodologies, soft skills)
-- [ ] Extraire les langues et niveaux
-- [ ] Extraire les certifications
-- [ ] Extraire les centres d'intérêt
-- [ ] Créer `src/cv-data.typ` avec les données structurées
-- [ ] Vérifier que `cv.typ` peut importer et utiliser ces données
-- [ ] Documenter le format dans le fichier
+- [x] Analyser la structure actuelle de [cv.typ](../../src/cv.typ)
+- [x] Définir le schéma de données (structure des variables)
+- [x] Extraire les informations personnelles (nom, titre, contact, réseaux)
+- [x] Extraire les expériences professionnelles (toutes les missions)
+- [x] Extraire la formation (tous les diplômes)
+- [x] Extraire les compétences (techniques, méthodologies, soft skills)
+- [x] Extraire les langues et niveaux
+- [x] Extraire les certifications
+- [x] Extraire les centres d'intérêt
+- [x] Créer `src/cv-data.typ` avec les données structurées
+- [x] Vérifier que `cv.typ` peut importer et utiliser ces données
+- [x] Documenter le format dans le fichier
 
 ---
 
@@ -248,11 +248,11 @@ Closes TPL-004"
 
 ## Tests / Vérifications
 
-- [ ] Le fichier `cv-data.typ` compile sans erreur
-- [ ] Toutes les données du CV original sont présentes
-- [ ] La structure est cohérente et documentée
-- [ ] `cv.typ` peut importer les données (test d'import)
-- [ ] Aucune perte d'information par rapport à l'original
+- [x] Le fichier `cv-data.typ` compile sans erreur
+- [x] Toutes les données du CV original sont présentes
+- [x] La structure est cohérente et documentée
+- [x] `cv.typ` peut importer les données (test d'import)
+- [x] Aucune perte d'information par rapport à l'original
 
 ---
 
@@ -261,22 +261,35 @@ Closes TPL-004"
 | Date | Action | Détails |
 |------|--------|---------|
 | 2025-11-25 | Création | Tâche créée pour harmoniser les prérequis TPL |
+| 2025-11-26 | Terminé | Fichier cv-data.typ créé avec toutes les données structurées |
 
 ---
 
 ## Résultat final
 
-[À remplir une fois la tâche terminée]
+Fichier `src/cv-data.typ` créé avec toutes les données du CV extraites dans un format structuré Typst.
 
 **Ce qui a été fait :**
 
-- [Liste des réalisations]
+- Analyse complète de la structure de cv.typ
+- Extraction de toutes les données dans un dictionnaire Typst structuré
+- 12 sections de données : personal, social, about, interests, influence, languages, skills, experiences, experiences-detailed, education, education-detailed, certifications, volunteering, style
+- Documentation inline du format
+- Test d'import réussi
 
 **Structure finale :**
 
 ```text
 src/
-├── cv.typ           # CV principal (importe cv-data.typ)
-├── cv-data.typ      # Données structurées (NOUVEAU)
+├── cv.typ           # CV principal
+├── cv-data.typ      # Données structurées (NOUVEAU - 600+ lignes)
 └── assets/          # Images
+```
+
+**Usage :**
+
+```typst
+#import "cv-data.typ": cv-data
+#cv-data.personal.firstname  // "Bastien"
+#cv-data.skills.all          // Liste de toutes les compétences
 ```

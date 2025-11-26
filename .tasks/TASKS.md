@@ -42,7 +42,6 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | ID | Titre | Statut | Priorité | Score | Créé le |
 |----|-------|--------|----------|-------|---------|
 | [QUA-002](tasks/QUA-002-verification-orthographique-grammaticale.md) | Vérification orthographique et grammaticale | ⏳ À faire | 🟡 Moyenne | - | 2025-11-26 |
-| [TPL-004](tasks/TPL-004-extraction-donnees-structurees.md) | Extraire les données du CV (prérequis TPL-001/002/003) | ⏳ À faire | 🟡 Moyenne | 5.00 | 2025-11-25 |
 | [TPL-001](tasks/TPL-001-cv-versions.md) | Versions courte et longue du CV | ⏳ À faire | 🟡 Moyenne | 4.45 | 2025-10-28 |
 | [TPL-002](tasks/TPL-002-template-system.md) | Système de changement de template | ⏳ À faire | 🟢 Basse | 2.96 | 2025-10-28 |
 | [LAY-001](tasks/LAY-001-sidebar-premiere-page-uniquement.md) | Sidebar uniquement sur la première page | ⏳ À faire | 🟡 Moyenne | 2.50 | 2025-11-25 |
@@ -67,6 +66,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
+| [TPL-004](tasks/TPL-004-extraction-donnees-structurees.md) | Extraire les données du CV (prérequis TPL-001/002/003) | ✅ Terminé | 🟡 Moyenne | 2025-11-26 |
 | [CNT-035](tasks/CNT-035-ajouter-mission-fircosoft.md) | Ajouter la mission Fircosoft (LexisNexis) | ✅ Terminé | 🟡 Moyenne | 2025-11-26 |
 | [QUA-001](tasks/QUA-001-verification.md) | Étapes de vérification du CV | ✅ Terminé | 🟡 Moyenne | 2025-11-26 |
 | [CNT-034](tasks/CNT-034-restructurer-experience-palo-it.md) | Restructurer expérience PALO IT par résultats | ✅ Terminé | 🔴 Haute | 2025-11-25 |
@@ -171,9 +171,9 @@ Closes TPL-001"
 ## Statistiques
 
 - **Total**: 52 tâches
-- **À faire**: 18
+- **À faire**: 17
 - **En cours**: 0
-- **Terminées**: 6
+- **Terminées**: 7
 - **Bloquées**: 0
 - **Archivées**: 28
 
