@@ -98,14 +98,16 @@ Pour une vérification automatique, exécuter: `just validate`
 ## Scripts de Vérification Automatique
 
 ```bash
-# Vérifier la compilation
-just validate
+# Exécuter toutes les vérifications
+just verify
 
-# Ou manuellement:
-scripts/verify-build.sh    # Compilation
-scripts/verify-dates.sh    # Cohérence des dates
-scripts/verify-format.sh   # Formatage de base
-scripts/verify-all.sh      # Toutes les vérifications
+# Vérifications individuelles
+just verify-build   # Compilation
+just verify-dates   # Cohérence des dates
+just verify-format  # Formatage de base
+
+# Exécuter les tests de vérification
+just test-verify
 ```
 
 ## Fréquence de Vérification

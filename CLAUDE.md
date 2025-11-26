@@ -49,10 +49,13 @@ neat-cv/
 ├── scripts/                   # Build and verification scripts
 │   ├── build.sh
 │   ├── watch.sh
-│   ├── verify-build.sh        # Compilation verification
-│   ├── verify-dates.sh        # Date consistency check
-│   ├── verify-format.sh       # Format verification
-│   └── verify-all.sh          # Run all verifications
+│   └── verification/          # Python verification module
+│       ├── __init__.py
+│       ├── build.py           # Compilation verification
+│       ├── dates.py           # Date consistency check
+│       ├── format.py          # Format verification
+│       ├── runner.py          # Run all verifications
+│       └── tests/             # Pytest unit tests
 ├── src/                       # Typst sources
 │   ├── assets/                # Images
 │   │   ├── identite.png       # Profile photo
@@ -137,19 +140,25 @@ The project includes a comprehensive verification system to ensure CV quality be
 just verify
 
 # Individual checks
-scripts/verify-build.sh    # Compilation check
-scripts/verify-dates.sh    # Date consistency check
-scripts/verify-format.sh   # Formatting check
+just verify-build   # Compilation check
+just verify-dates   # Date consistency check
+just verify-format  # Formatting check
+
+# Run verification tests
+just test-verify
 ```
 
-### Verification Scripts
+### Verification Module
 
-| Script | Purpose |
+The verification system is implemented as a Python module in `scripts/verification/`:
+
+| Module | Purpose |
 |--------|---------|
-| `verify-build.sh` | Verifies Typst compilation succeeds and PDF is generated |
-| `verify-dates.sh` | Checks date consistency (format, chronological order, no future dates) |
-| `verify-format.sh` | Validates structure, contact info, and formatting |
-| `verify-all.sh` | Runs all verification scripts in sequence |
+| `build.py` | Verifies Typst compilation succeeds and PDF is generated |
+| `dates.py` | Checks date consistency (format, chronological order, no future dates) |
+| `format.py` | Validates structure, contact info, and formatting |
+| `runner.py` | Runs all verification checks in sequence |
+| `tests/` | Pytest unit tests (53 tests) |
 
 ### Manual Checklist
 
