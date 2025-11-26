@@ -41,6 +41,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Score | Créé le |
 |----|-------|--------|----------|-------|---------|
+| [QUA-002](tasks/QUA-002-verification-orthographique-grammaticale.md) | Vérification orthographique et grammaticale | ⏳ À faire | 🟡 Moyenne | - | 2025-11-26 |
 | [CNT-035](tasks/CNT-035-ajouter-mission-fircosoft.md) | Ajouter la mission Fircosoft (LexisNexis) | ⏳ À faire | 🟡 Moyenne | - | 2025-11-25 |
 | [TPL-004](tasks/TPL-004-extraction-donnees-structurees.md) | Extraire les données du CV (prérequis TPL-001/002/003) | ⏳ À faire | 🟡 Moyenne | 5.00 | 2025-11-25 |
 | [TPL-001](tasks/TPL-001-cv-versions.md) | Versions courte et longue du CV | ⏳ À faire | 🟡 Moyenne | 4.45 | 2025-10-28 |
@@ -169,8 +170,8 @@ Closes TPL-001"
 
 ## Statistiques
 
-- **Total**: 51 tâches
-- **À faire**: 18
+- **Total**: 52 tâches
+- **À faire**: 19
 - **En cours**: 0
 - **Terminées**: 5
 - **Bloquées**: 0
@@ -178,7 +179,7 @@ Closes TPL-001"
 
 **Prochains IDs disponibles par trigramme**:
 
-- CNT-036, TPL-005, QUA-002, PIP-004, INF-013, LAY-004, DOC-002
+- CNT-036, TPL-005, QUA-003, PIP-004, INF-013, LAY-004, DOC-002
 
 ---
 
