@@ -34,7 +34,7 @@
   // SIDEBAR CONTENT
   [
     = A propos
-    CTO avec 25 ans d'expérience. Expert IA Générative et transformation Agile. Management de 50 professionnels techniques, contribution à 15% de croissance CA.
+    CTO avec 25 ans d'expérience. Expert IA Générative et transformation Agile. Management de 50 professionnels techniques, pilotage de 6+ opportunités presales (€15k-€500k+).
 
     = Centres d'intérêt
     - Intelligence artificielle
@@ -88,7 +88,7 @@
       location: "Bordeaux/Paris, France",
     )[
       - *Innovation IA :* Conception de Gen-e2, framework de développement accéléré par IA. 20-40 certifications GitHub Copilot. Partenariats Scaleway, GitHub, Mistral.
-      - *Leadership :* Direction stratégie technologique et COMEX. Contribution à 15% de croissance CA. Management de 50 professionnels techniques.
+      - *Leadership :* Direction stratégie technologique et COMEX. Pilotage presales 6+ opportunités (€15k-€500k+). Management de 50 professionnels techniques.
       - *Business :* Presales 6+ opportunités majeures (€15k-€500k+). Initiative Quantum Computing.
       - *Missions Clients :* Bodic (External CTO, API optimisée à 72ms), Beta.gouv (Lead Dev, 7 mois).
       - *Stack :* Azure, AWS, OpenAI, Anthropic, LangChain, Python, C\#, TypeScript, Rust.
@@ -295,7 +295,7 @@
     ==== Leadership & Management
     - Direction de la stratégie technologique et participation au COMEX
     - Management de 50 professionnels techniques via organisation Hive Tech
-    - Contribution à 15% de croissance du CA
+    - Pilotage de 6+ opportunités presales majeures (€15k-€500k+)
     - 20-40 certifications GitHub Copilot délivrées
 
     ==== Innovation & Gen-e2

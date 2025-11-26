@@ -41,7 +41,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Score | Créé le |
 |----|-------|--------|----------|-------|---------|
-| [CNT-025](tasks/CNT-025-remplacer-15-ca-par-chiffres-presales.md) | Remplacer "15% CA" par chiffres presales | ⏳ À faire | 🟡 Moyenne | - | 2025-11-26 |
+| [CNT-025](tasks/CNT-025-remplacer-15-ca-par-chiffres-presales.md) | Remplacer "15% CA" par chiffres presales | ✅ Terminé | 🟡 Moyenne | - | 2025-11-26 |
 | [QUA-002](tasks/QUA-002-verification-orthographique-grammaticale.md) | Vérification orthographique et grammaticale | ⏳ À faire | 🟡 Moyenne | - | 2025-11-26 |
 | [TPL-001](tasks/TPL-001-cv-versions.md) | Versions courte et longue du CV | ⏳ À faire | 🟡 Moyenne | 4.45 | 2025-10-28 |
 | [TPL-002](tasks/TPL-002-template-system.md) | Système de changement de template | ⏳ À faire | 🟢 Basse | 2.96 | 2025-10-28 |
@@ -172,9 +172,9 @@ Closes TPL-001"
 ## Statistiques
 
 - **Total**: 53 tâches
-- **À faire**: 17
+- **À faire**: 16
 - **En cours**: 0
-- **Terminées**: 8
+- **Terminées**: 9
 - **Bloquées**: 0
 - **Archivées**: 28
 

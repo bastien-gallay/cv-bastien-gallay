@@ -8,7 +8,7 @@
 |-------|--------|
 | **ID** | CNT-025 |
 | **Titre** | Remplacer "15% CA" par chiffres presales |
-| **Statut** | ⏳ À faire |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🟡 Moyenne |
 | **Trigramme** | CNT |
 | **Section CV** | Experience |
@@ -45,11 +45,11 @@ Remplacer les 3 occurrences de "15% CA" par des formulations basées sur les chi
 
 ## Sous-tâches
 
-- [ ] Modifier section "À propos" (cv.typ:41)
-- [ ] Modifier résumé expérience PALO IT (cv.typ:111)
-- [ ] Modifier détails expérience CTO (cv.typ:312)
-- [ ] Mettre à jour cv-data.typ (lignes 37, 140, 232)
-- [ ] Compiler et vérifier le rendu
+- [x] Modifier section "À propos" (cv.typ:41)
+- [x] Modifier résumé expérience PALO IT (cv.typ:111)
+- [x] Modifier détails expérience CTO (cv.typ:312)
+- [x] Mettre à jour cv-data.typ (lignes 37, 140, 232)
+- [x] Compiler et vérifier le rendu
 
 ---
 
@@ -125,9 +125,9 @@ Pilotage de 6+ opportunités presales majeures (€15k-€500k+)
 
 ## Tests / Vérifications
 
-- [ ] Le CV compile sans erreur (`just build`)
-- [ ] Le PDF s'affiche correctement
-- [ ] Les 3 occurrences sont mises à jour de manière cohérente
+- [x] Le CV compile sans erreur (`just build`)
+- [x] Le PDF s'affiche correctement
+- [x] Les 3 occurrences sont mises à jour de manière cohérente
 - [ ] Les commits suivent la convention
 
 ---
