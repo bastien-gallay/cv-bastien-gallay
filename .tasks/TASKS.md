@@ -44,7 +44,6 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | [QUA-002](tasks/QUA-002-verification-orthographique-grammaticale.md) | Vérification orthographique et grammaticale | ⏳ À faire | 🟡 Moyenne | - | 2025-11-26 |
 | [TPL-001](tasks/TPL-001-cv-versions.md) | Versions courte et longue du CV | ⏳ À faire | 🟡 Moyenne | 4.45 | 2025-10-28 |
 | [TPL-002](tasks/TPL-002-template-system.md) | Système de changement de template | ⏳ À faire | 🟢 Basse | 2.96 | 2025-10-28 |
-| [LAY-001](tasks/LAY-001-sidebar-premiere-page-uniquement.md) | Sidebar uniquement sur la première page | ⏳ À faire | 🟡 Moyenne | 2.50 | 2025-11-25 |
 | [LAY-002](tasks/LAY-002-consolidation-sections-dupliquees.md) | Consolider les sections dupliquées (Études, Expérience) | ⏳ À faire | 🟡 Moyenne | 2.50 | 2025-11-25 |
 | [LAY-003](tasks/LAY-003-reorganiser-competences-3-poles.md) | Réorganiser compétences en 3 pôles thématiques | ⏳ À faire | 🟡 Moyenne | 2.50 | 2025-11-25 |
 | [INF-005](tasks/INF-005-repertoire-ressources-dedie.md) | Répertoire dédié aux ressources d'analyse | ⏳ À faire | 🟡 Moyenne | 2.50 | 2025-11-25 |
@@ -66,6 +65,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
+| [LAY-001](tasks/LAY-001-sidebar-premiere-page-uniquement.md) | Sidebar uniquement sur la première page | ✅ Terminé | 🟡 Moyenne | 2025-11-26 |
 | [TPL-004](tasks/TPL-004-extraction-donnees-structurees.md) | Extraire les données du CV (prérequis TPL-001/002/003) | ✅ Terminé | 🟡 Moyenne | 2025-11-26 |
 | [CNT-035](tasks/CNT-035-ajouter-mission-fircosoft.md) | Ajouter la mission Fircosoft (LexisNexis) | ✅ Terminé | 🟡 Moyenne | 2025-11-26 |
 | [QUA-001](tasks/QUA-001-verification.md) | Étapes de vérification du CV | ✅ Terminé | 🟡 Moyenne | 2025-11-26 |
@@ -171,9 +171,9 @@ Closes TPL-001"
 ## Statistiques
 
 - **Total**: 52 tâches
-- **À faire**: 17
+- **À faire**: 16
 - **En cours**: 0
-- **Terminées**: 7
+- **Terminées**: 8
 - **Bloquées**: 0
 - **Archivées**: 28
 

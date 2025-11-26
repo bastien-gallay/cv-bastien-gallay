@@ -8,13 +8,13 @@
 |-------|--------|
 | **ID** | LAY-001 |
 | **Titre** | Réduire la sidebar à la première page uniquement |
-| **Statut** | ⏳ À faire |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🟡 Moyenne |
 | **Trigramme** | LAY (Layout) |
 | **Section CV** | Sidebar / Layout |
 | **Créé le** | 2025-11-25 |
 | **Cible** | - |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-26 |
 | **Temps estimé** | 2-3 heures |
 | **Temps réel** | - |
 | **Branche nécessaire** | Auto |
@@ -59,14 +59,14 @@ Cette structure répétée:
 
 ## Sous-tâches
 
-- [ ] Analyser la structure actuelle du template `neat-cv`
-- [ ] Identifier les options de configuration pour le layout multi-pages
-- [ ] Tester si `neat-cv` supporte nativement ce comportement
-- [ ] Si non supporté : explorer les alternatives (override, fork, custom)
-- [ ] Réduire/réorganiser le contenu de la sidebar si nécessaire
-- [ ] Implémenter le layout différencié page 1 vs pages suivantes
-- [ ] Vérifier le rendu sur toutes les pages
-- [ ] Ajuster les espacements et marges si nécessaire
+- [x] Analyser la structure actuelle du template `neat-cv`
+- [x] Identifier les options de configuration pour le layout multi-pages
+- [x] Tester si `neat-cv` supporte nativement ce comportement
+- [x] Si non supporté : explorer les alternatives (override, fork, custom)
+- [x] Réduire/réorganiser le contenu de la sidebar si nécessaire
+- [x] Implémenter le layout différencié page 1 vs pages suivantes
+- [x] Vérifier le rendu sur toutes les pages
+- [x] Ajuster les espacements et marges si nécessaire
 
 ---
 
@@ -213,12 +213,12 @@ Closes LAY-001"
 
 ## Tests / Vérifications
 
-- [ ] La sidebar apparaît uniquement sur la page 1
-- [ ] Les pages 2+ utilisent toute la largeur
-- [ ] Tout le contenu de la sidebar est visible sur la page 1
-- [ ] La transition entre les pages est fluide
-- [ ] Le CV compile sans erreur
-- [ ] Le rendu PDF est correct
+- [x] La sidebar apparaît uniquement sur la page 1
+- [x] Les pages 2+ utilisent toute la largeur
+- [x] Tout le contenu de la sidebar est visible sur la page 1
+- [x] La transition entre les pages est fluide
+- [x] Le CV compile sans erreur
+- [x] Le rendu PDF est correct
 
 ---
 
@@ -227,21 +227,53 @@ Closes LAY-001"
 | Date | Action | Détails |
 |------|--------|---------|
 | 2025-11-25 | Création | Tâche créée pour optimiser le layout multi-pages |
+| 2025-11-26 | Terminé | Réduction des skills de 23 à 12, sidebar tient sur page 1 |
 
 ---
 
 ## Résultat final
 
-[À remplir une fois la tâche terminée]
-
 **Ce qui a été fait :**
 
-- [Liste des réalisations]
+1. Analyse du template neat-cv : ne supporte pas nativement la sidebar sur page 1 uniquement
+2. Création d'un fork local du template (`src/neat-cv-local.typ`) avec nouvelle architecture :
+   - `cv-setup()` : Configuration du document
+   - `cv-page-one()` : Page 1 avec sidebar + contenu principal
+   - `cv-continued()` : Pages 2+ en pleine largeur
+3. Restructuration de cv.typ pour utiliser cette nouvelle architecture
+4. Réduction de la liste des skills de 23 à 12 éléments
 
 **Approche retenue :**
 
-- [Description de la solution choisie]
+- Fork local du template neat-cv avec séparation explicite page 1 / pages 2+
+- Utilisation de `#pagebreak()` pour marquer la transition vers le layout pleine largeur
+- Structure : `cv-setup` → `cv-page-one(sidebar, main)` → `pagebreak` → `cv-continued[...]`
+
+**Fichiers créés/modifiés :**
+
+- `src/neat-cv-local.typ` (nouveau) : Fork local de neat-cv v0.4.0 avec support sidebar page 1 uniquement
+- `src/cv.typ` : Restructuré pour utiliser le nouveau template
 
 **Ajustements de contenu :**
 
-- [Modifications de la sidebar si nécessaire]
+Skills retirés :
+
+- BDD, Design Thinking, Management, Architecture
+- Scrum, Kanban, React, eXtreme Programming
+- Spec Driven Development, Java, C
+
+Skills ajoutés :
+
+- Agile, C#, Rust, Node.js, SQL
+
+Skills conservés :
+
+- Lean, IA, TDD, Clean Code, DDD, TypeScript, Python
+
+**Liste finale (12 skills) :**
+Agile, Lean, IA, TDD, Clean Code, DDD, TypeScript, Node.js, Python, C#, Rust, SQL
+
+**Résultat PDF :**
+
+- Page 1 : Sidebar avec photo, contact, langues, expertises + expériences principales
+- Pages 2-5 : Pleine largeur (études détails, certifications, bénévolat, expérience détaillée)
