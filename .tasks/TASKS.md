@@ -43,9 +43,9 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 |----|-------|--------|----------|-------|---------|
 | [CNT-036](tasks/CNT-036-condensation-impact-business.md) | Condensation et impact business (version longue) | ⏳ À faire | 🔴 Haute | 5.00 | 2025-11-27 |
 | [CNT-037](tasks/CNT-037-optimisation-version-courte.md) | Optimisation version courte (1 page) | ⏳ À faire | 🟡 Moyenne | 5.00 | 2025-11-27 |
+| [LAY-004](tasks/LAY-004-equilibrer-contenu-premiere-page-cv-long.md) | Équilibrer le contenu de la première page du CV long | ⏳ À faire | 🟡 Moyenne | 5.00 | 2025-11-27 |
 | [INF-010](tasks/INF-010-skill-analyse-adequation.md) | Skill analyse adéquation profil-poste | ⏳ À faire | 🔴 Haute | 3.40 | 2025-11-25 |
 | [INF-009](tasks/INF-009-skill-analyse-offre-emploi.md) | Skill analyse d'offre d'emploi | ⏳ À faire | 🔴 Haute | 3.40 | 2025-11-25 |
-| [INF-006](tasks/INF-006-extraire-scripts-tests-hors-claude.md) | Extraire scripts et tests hors de `.claude/` | ⏳ À faire | 🔴 Haute | 3.40 | 2025-11-25 |
 | [TPL-002](tasks/TPL-002-template-system.md) | Système de changement de template | ⏳ À faire | 🟢 Basse | 3.00 | 2025-10-28 |
 | [LAY-002](tasks/LAY-002-consolidation-sections-dupliquees.md) | Consolider les sections dupliquées (Études, Expérience) | ⏳ À faire | 🟡 Moyenne | 2.60 | 2025-11-25 |
 | [PIP-003](tasks/PIP-003-build-word-format.md) | Build du CV au format Word | ⏳ À faire | 🟡 Moyenne | 2.60 | 2025-11-25 |
@@ -57,6 +57,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | [QUA-002](tasks/QUA-002-verification-orthographique-grammaticale.md) | Vérification orthographique et grammaticale | ⏳ À faire | 🟡 Moyenne | 1.70 | 2025-11-26 |
 | [INF-003](tasks/INF-003-perenniser-ameliorer-script-priorites.md) | Pérenniser et améliorer le script Python de calcul des priorités | ⏳ À faire | 🟢 Basse | 1.55 | 2025-11-16 |
 | [TPL-003](tasks/TPL-003-cv-from-scratch-alternatives.md) | CV from scratch - Structurations alternatives | ⏳ À faire | 🟡 Moyenne | 1.30 | 2025-11-25 |
+| [INF-006](tasks/INF-006-extraire-scripts-tests-hors-claude.md) | Extraire scripts et tests hors de `.claude/` | ⏳ À faire | 🔴 Haute | 3.40 | 2025-11-25 |
 
 ---
 
