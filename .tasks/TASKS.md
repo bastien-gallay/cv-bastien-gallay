@@ -41,6 +41,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Score | Créé le |
 |----|-------|--------|----------|-------|---------|
+| [LAY-005](tasks/LAY-005-zoom-photo-profil.md) | Zoomer sur le visage dans la photo de profil | ✅ Terminé | 🟡 Moyenne | 10.00 | 2025-11-27 |
 | [CNT-036](tasks/CNT-036-condensation-impact-business.md) | Condensation et impact business (version longue) | ⏳ À faire | 🔴 Haute | 5.00 | 2025-11-27 |
 | [CNT-037](tasks/CNT-037-optimisation-version-courte.md) | Optimisation version courte (1 page) | ⏳ À faire | 🟡 Moyenne | 5.00 | 2025-11-27 |
 | [LAY-004](tasks/LAY-004-equilibrer-contenu-premiere-page-cv-long.md) | Équilibrer le contenu de la première page du CV long | ⏳ À faire | 🟡 Moyenne | 5.00 | 2025-11-27 |
@@ -175,8 +176,8 @@ Closes TPL-001"
 
 ## Statistiques
 
-- **Total**: 57 tâches
-- **À faire**: 16
+- **Total**: 58 tâches
+- **À faire**: 17
 - **En cours**: 0
 - **Terminées**: 1
 - **Bloquées**: 0
@@ -184,7 +185,7 @@ Closes TPL-001"
 
 **Prochains IDs disponibles par trigramme**:
 
-- CNT-038, TPL-005, QUA-003, PIP-004, INF-013, LAY-004, DOC-003
+- CNT-038, TPL-005, QUA-003, PIP-004, INF-013, LAY-006, DOC-003
 
 ---
 
