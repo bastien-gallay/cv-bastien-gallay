@@ -8,13 +8,13 @@
 |-------|--------|
 | **ID** | INF-005 |
 | **Titre** | Créer un répertoire dédié aux ressources d'analyse hors `.tasks/` |
-| **Statut** | 🔄 En cours |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🟡 Moyenne |
 | **Trigramme** | INF (Infrastructure) |
 | **Section CV** | N/A |
 | **Créé le** | 2025-11-25 |
 | **Cible** | - |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-27 |
 | **Temps estimé** | 2-3 heures |
 | **Temps réel** | - |
 | **Branche nécessaire** | Auto |
@@ -47,15 +47,15 @@ Créer un répertoire dédié aux ressources avec les caractéristiques suivante
 
 ## Sous-tâches
 
-- [ ] Analyser la structure actuelle de `.tasks/resources/`
+- [x] Analyser la structure actuelle de `.tasks/resources/`
 - [x] Définir le nom et l'emplacement du nouveau répertoire → **`resources/`** (validé)
-- [ ] Concevoir la nouvelle structure de répertoires
-- [ ] Migrer les ressources existantes vers le nouveau répertoire
-- [ ] Mettre à jour les références dans les fichiers de tâches
-- [ ] Mettre à jour CLAUDE.md avec la nouvelle structure
-- [ ] Configurer le chemin par défaut dans le skill task-management
-- [ ] Documenter les conventions d'utilisation
-- [ ] Tester les workflows d'analyse avec la nouvelle structure
+- [x] Concevoir la nouvelle structure de répertoires
+- [x] Migrer les ressources existantes vers le nouveau répertoire
+- [x] Mettre à jour les références dans les fichiers de tâches
+- [x] Mettre à jour CLAUDE.md avec la nouvelle structure
+- [x] Configurer le chemin par défaut dans le skill task-management
+- [x] Documenter les conventions d'utilisation (resources/README.md)
+- [x] Tester les workflows d'analyse avec la nouvelle structure
 
 ---
 
