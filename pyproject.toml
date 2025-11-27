@@ -9,9 +9,20 @@ dependencies = []
 dev = [
     "pytest>=8.0.0",
 ]
+reports = [
+    "matplotlib>=3.8.0",
+    "numpy>=1.26.0",
+]
+
+[project.scripts]
+generate-cfd = "scripts.reports.generate_cfd:main"
 
 [tool.pytest.ini_options]
-testpaths = ["scripts/verification/tests", "scripts/task_management/tests"]
+testpaths = [
+    "scripts/verification/tests",
+    "scripts/task_management/tests",
+    "scripts/reports/tests",
+]
 pythonpath = ["."]
 
 [tool.ruff]

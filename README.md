@@ -57,8 +57,10 @@ neat-cv/
 ├── dist/                      # Build outputs (gitignored)
 │   └── cv.pdf                 # Generated PDF
 ├── docs/                      # Project documentation
-│   └── GIT_WORKFLOW.md        # Git conventions
+│   ├── GIT_WORKFLOW.md        # Git conventions
+│   └── WEEKLY_REPORTS.md      # Weekly reports & CFD
 ├── scripts/                   # Python scripts and verification
+│   ├── reports/               # Weekly reports module
 │   ├── task_management/       # Task management module
 │   └── verification/          # Verification scripts
 ├── src/                       # Typst sources
@@ -135,6 +137,24 @@ See [.tasks/TASKS.md](.tasks/TASKS.md) for the current task list.
 - **INF** (Infrastructure) - Technical infrastructure
 - **LAY** (Layout) - Visual design
 - **DOC** (Documentation) - Documentation
+
+## Weekly Reports
+
+Track progress with Cumulative Flow Diagrams (CFD) and weekly reports.
+
+```bash
+# Generate CFD from JSON data
+uv run --with matplotlib --with numpy scripts/reports/generate_cfd.py \
+  --data .tasks/reports/2025-W48-data.json --output .tasks/reports/
+```
+
+Reports in `.tasks/reports/`:
+
+- `YYYY-WNN-recap.md` - Markdown report
+- `YYYY-WNN-cfd.png` - CFD visualization
+- `YYYY-WNN-data.json` - Raw data
+
+See [docs/WEEKLY_REPORTS.md](docs/WEEKLY_REPORTS.md) for documentation.
 
 ## Git Workflow
 

@@ -1,0 +1,42 @@
+{
+  "week": "2025-W48",
+  "title": "Cumulative Flow Diagram - Semaine 48 (25-27 nov 2025)",
+  "description": "Données du flux de tâches pour la semaine 48",
+  "data": [
+    {
+      "date": "2025-11-24",
+      "backlog": 29,
+      "in_progress": 0,
+      "done": 12,
+      "comment": "Dimanche soir - état initial avant la semaine"
+    },
+    {
+      "date": "2025-11-25",
+      "backlog": 22,
+      "in_progress": 0,
+      "done": 32,
+      "comment": "Lundi soir - 20 tâches terminées, 12 créées"
+    },
+    {
+      "date": "2025-11-26",
+      "backlog": 19,
+      "in_progress": 0,
+      "done": 37,
+      "comment": "Mardi soir - 5 tâches terminées, 5 créées"
+    },
+    {
+      "date": "2025-11-27",
+      "backlog": 17,
+      "in_progress": 0,
+      "done": 40,
+      "comment": "Mercredi soir - 3 tâches terminées, 2 créées"
+    }
+  ],
+  "summary": {
+    "tasks_completed": 28,
+    "tasks_created": 19,
+    "net_backlog_change": -12,
+    "avg_wip": 0.5,
+    "avg_lead_time_days": 0.5
+  }
+}
