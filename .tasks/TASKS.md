@@ -41,7 +41,6 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Score | Créé le |
 |----|-------|--------|----------|-------|---------|
-| [DOC-002](tasks/DOC-002-guide-optimisation-linkedin.md) | Guide d'optimisation LinkedIn pour positionnement consultant | 🔄 En cours | 🔴 Haute | - | 2025-11-27 |
 | [LAY-003](tasks/LAY-003-reorganiser-competences-3-poles.md) | Réorganiser compétences en 3 pôles thématiques | ⏳ À faire | 🟡 Moyenne | 5.20 | 2025-11-25 |
 | [TPL-002](tasks/TPL-002-template-system.md) | Système de changement de template | ⏳ À faire | 🟢 Basse | 3.00 | 2025-10-28 |
 | [LAY-002](tasks/LAY-002-consolidation-sections-dupliquees.md) | Consolider les sections dupliquées (Études, Expérience) | ⏳ À faire | 🟡 Moyenne | 2.60 | 2025-11-25 |
@@ -65,6 +64,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
+| [DOC-002](tasks/DOC-002-guide-optimisation-linkedin.md) | Guide d'optimisation LinkedIn pour positionnement consultant | ✅ Terminé | 🔴 Haute | 2025-11-27 |
 | [TPL-001](tasks/TPL-001-cv-versions.md) | Versions courte et longue du CV | ✅ Terminé | 🟡 Moyenne | 2025-11-27 |
 | [CNT-025](tasks/CNT-025-remplacer-15-ca-par-chiffres-presales.md) | Remplacer "15% CA" par chiffres presales | ✅ Terminé | 🟡 Moyenne | 2025-11-26 |
 | [LAY-001](tasks/LAY-001-sidebar-premiere-page-uniquement.md) | Sidebar uniquement sur la première page | ✅ Terminé | 🟡 Moyenne | 2025-11-26 |
