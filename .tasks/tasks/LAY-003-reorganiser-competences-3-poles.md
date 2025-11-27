@@ -64,6 +64,30 @@ Proposer 3 pôles clairs:
 
 > Instructions spécifiques pour l'assistance IA
 
+### Mode interactif
+
+> **IMPORTANT** : Cette tâche nécessite une validation utilisateur avant exécution.
+
+#### Questions au démarrage
+
+Avant de commencer les modifications, poser les questions suivantes :
+
+1. **Noms des pôles** : Les intitulés "Leadership", "Tech & IA", "Méthodologie" vous conviennent-ils ? Alternatives : "Management", "Technologie", "Agilité"
+2. **Priorisation Leadership** : Quels éléments de leadership mettre en avant ? (Management 50+, COMEX, Recrutement, Stratégie Tech)
+3. **Focus IA** : GenAI doit-il apparaître en premier dans "Tech & IA" pour capter l'attention des recruteurs ?
+4. **Langages de programmation** : Faut-il les inclure (Python, TypeScript) ou se concentrer sur les compétences de niveau CTO ?
+5. **Certifications méthodologiques** : Mentionner "SAFe SPC5" ou simplement "SAFe" ?
+
+#### Processus
+
+1. Poser les questions ci-dessus
+2. Attendre les réponses de l'utilisateur
+3. Proposer la structure complète basée sur les réponses
+4. Demander validation avant d'appliquer
+5. Itérer si nécessaire
+
+---
+
 **Structure recommandée (audit):**
 
 ```typst

@@ -42,6 +42,8 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | ID | Titre | Statut | Priorité | Score | Créé le |
 |----|-------|--------|----------|-------|---------|
 | [LAY-003](tasks/LAY-003-reorganiser-competences-3-poles.md) | Réorganiser compétences en 3 pôles thématiques | ⏳ À faire | 🟡 Moyenne | 5.20 | 2025-11-25 |
+| [CNT-036](tasks/CNT-036-condensation-impact-business.md) | Condensation et impact business (version longue) | ⏳ À faire | 🔴 Haute | 5.00 | 2025-11-27 |
+| [CNT-037](tasks/CNT-037-optimisation-version-courte.md) | Optimisation version courte (1 page) | ⏳ À faire | 🟡 Moyenne | 5.00 | 2025-11-27 |
 | [TPL-002](tasks/TPL-002-template-system.md) | Système de changement de template | ⏳ À faire | 🟢 Basse | 3.00 | 2025-10-28 |
 | [LAY-002](tasks/LAY-002-consolidation-sections-dupliquees.md) | Consolider les sections dupliquées (Études, Expérience) | ⏳ À faire | 🟡 Moyenne | 2.60 | 2025-11-25 |
 | [INF-005](tasks/INF-005-repertoire-ressources-dedie.md) | Répertoire dédié aux ressources d'analyse | ⏳ À faire | 🟡 Moyenne | 2.60 | 2025-11-25 |
@@ -172,16 +174,16 @@ Closes TPL-001"
 
 ## Statistiques
 
-- **Total**: 54 tâches
-- **À faire**: 15
-- **En cours**: 1
-- **Terminées**: 10
+- **Total**: 56 tâches
+- **À faire**: 17
+- **En cours**: 0
+- **Terminées**: 11
 - **Bloquées**: 0
 - **Archivées**: 28
 
 **Prochains IDs disponibles par trigramme**:
 
-- CNT-036, TPL-005, QUA-003, PIP-004, INF-013, LAY-004, DOC-003
+- CNT-038, TPL-005, QUA-003, PIP-004, INF-013, LAY-004, DOC-003
 
 ---
 

@@ -77,6 +77,29 @@ Cette structure crée:
 
 > Instructions spécifiques pour l'assistance IA
 
+### Mode interactif
+
+> **IMPORTANT** : Cette tâche nécessite une validation utilisateur avant exécution.
+
+#### Questions au démarrage
+
+Avant de commencer les modifications, poser les questions suivantes :
+
+1. **Stratégie de consolidation** : Préférez-vous garder les versions résumées (CV plus court) ou les versions détaillées (plus d'impact) ?
+2. **Section Études** : Faut-il garder le détail des mémoires de fin d'études ou simplifier à "DEA + École" ?
+3. **Section Expérience** : Le tableau récapitulatif page 1 apporte-t-il de la valeur ou crée-t-il de la redondance ?
+4. **Objectif de pages** : Viser 3 pages ou moins ?
+
+#### Processus
+
+1. Poser les questions ci-dessus
+2. Attendre les réponses de l'utilisateur
+3. Proposer les modifications basées sur les réponses
+4. Demander validation avant d'appliquer
+5. Itérer si nécessaire
+
+---
+
 **Stratégies possibles:**
 
 ### Option A: Tout en résumé (CV court)
@@ -97,11 +120,11 @@ Cette structure crée:
 - Afficher résumé OU détails selon la variable
 - Prépare le terrain pour TPL-001 (versions)
 
-**Recommandation:** Option C, car elle:
+**Recommandation:** Option B (audit novembre 2025), car :
 
-- Résout le problème immédiat
-- Facilite TPL-001 (versions courte/longue)
-- Permet flexibilité future
+- Le tableau récapitulatif crée un doublon sans valeur ajoutée
+- La version détaillée apporte plus d'impact business
+- TPL-001 (versions) est déjà terminé → pas besoin de conditionnelle
 
 **Fichiers à modifier:**
 
@@ -109,7 +132,7 @@ Cette structure crée:
 
 **Points d'attention:**
 
-- **Ne jamais supprimer de contenu** - déplacer vers cv-exhaustive.typ
+- **Ne jamais supprimer de contenu** - déplacer vers cv-exhaustive.typ si nécessaire
 - Vérifier les références croisées
 - Tester compilation après chaque modification
 - La version exhaustive reste la source de vérité pour tout le contenu
