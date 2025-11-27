@@ -735,7 +735,7 @@ tests/fixtures/
 
 - [Agent Skills Documentation](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview)
 - [Progressive Disclosure](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)
-- [Existing Priority Script](../../../scripts/priority_weight.py)
+- [Priority Scorer](../../../scripts/task_management/algorithms/priority_scorer.py)
 - [Task Rules (DoR/DoD)](../../.tasks/TASK_RULES.md)
 
 ---

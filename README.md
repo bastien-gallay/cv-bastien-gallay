@@ -32,14 +32,11 @@ just validate
 **Alternative (without just):**
 
 ```bash
-# Build
-./scripts/build.sh
-
-# Watch
-./scripts/watch.sh
-
-# Or use Typst directly
+# Use Typst directly
 typst compile src/cv.typ dist/cv.pdf
+
+# Watch mode
+typst watch src/cv.typ dist/cv.pdf
 ```
 
 ### View the Output
@@ -61,9 +58,9 @@ neat-cv/
 │   └── cv.pdf                 # Generated PDF
 ├── docs/                      # Project documentation
 │   └── GIT_WORKFLOW.md        # Git conventions
-├── scripts/                   # Build scripts
-│   ├── build.sh
-│   └── watch.sh
+├── scripts/                   # Python scripts and verification
+│   ├── task_management/       # Task management module
+│   └── verification/          # Verification scripts
 ├── src/                       # Typst sources
 │   ├── assets/                # Images
 │   │   ├── identite.png       # Profile photo

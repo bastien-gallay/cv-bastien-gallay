@@ -59,7 +59,7 @@ Idée issue de la tâche CNT-002 (2025-11-16).
 - [x] Documenter l'utilisation et les paramètres
 - [x] Mettre à jour `/task-next` pour utiliser le nouveau script
 - [ ] Ajouter des tests unitaires pour `priority_scorer.py`
-- [ ] Supprimer l'ancien script `scripts/priority_weight.py`
+- [x] Supprimer l'ancien script `scripts/priority_weight.py`
 
 ---
 
@@ -178,7 +178,7 @@ Closes INF-003"
 - [x] `/task-next` fonctionne correctement avec le nouveau script
 - [x] La documentation est claire et complète
 - [ ] Les tests unitaires passent
-- [ ] L'ancien script est supprimé
+- [x] L'ancien script est supprimé
 
 ---
 

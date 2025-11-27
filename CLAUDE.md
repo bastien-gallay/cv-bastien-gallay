@@ -56,8 +56,11 @@ neat-cv/
 ├── docs/                      # Project documentation
 │   └── GIT_WORKFLOW.md        # Git conventions
 ├── scripts/                   # Build and verification scripts
-│   ├── build.sh
-│   ├── watch.sh
+│   ├── lib/                   # Shared Python utilities
+│   ├── reports/               # Reporting scripts (CFD, weekly)
+│   ├── task_management/       # Task management Python module
+│   ├── tests/                 # Tests for lib module
+│   ├── update_priority_scores.py  # WSJF priority scoring
 │   └── verification/          # Python verification module
 │       ├── __init__.py
 │       ├── build.py           # Compilation verification
