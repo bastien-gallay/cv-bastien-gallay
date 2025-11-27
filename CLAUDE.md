@@ -130,6 +130,25 @@ When modifying the CV:
 - The CV is designed for A4 paper with a 4.5cm sidebar
 - Accent color scheme uses blue tones for professional appearance
 
+### CV Decisions Reference
+
+**IMPORTANT:** Before modifying CV content (CNT), layout (LAY), or template (TPL), consult the decisions file:
+
+- **File:** [resources/profile/cv-decisions.md](resources/profile/cv-decisions.md)
+
+This file contains:
+
+- Strategic positioning decisions with justifications
+- Skills organization and prioritization choices
+- Alternatives reserved for targeted CV adaptations
+- Historical log of all content decisions
+
+**Workflow:**
+
+1. **Before changes:** Check existing decisions for relevant guidance
+2. **During changes:** Apply documented decisions consistently
+3. **After changes:** Document new decisions with justifications in the file
+
 ### Publications File
 
 The `publications.yml` file uses Typst's bibliography format with YAML structure. Currently contains placeholder data that should be replaced with actual publications if needed.
