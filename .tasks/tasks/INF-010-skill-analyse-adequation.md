@@ -9,7 +9,7 @@
 | **ID** | INF-010 |
 | **Titre** | Skill d'analyse de l'adéquation profil-poste |
 | **Statut** | ⏳ À faire |
-| **Priorité** | 🟡 Moyenne |
+| **Priorité** | 🔴 Haute |
 | **Trigramme** | INF (Infrastructure) |
 | **Section CV** | N/A |
 | **Créé le** | 2025-11-25 |

@@ -9,7 +9,7 @@
 | **ID** | INF-012 |
 | **Titre** | Skill de génération de CV adapté à l'offre |
 | **Statut** | ⏳ À faire |
-| **Priorité** | 🟡 Moyenne |
+| **Priorité** | 🔴 Haute |
 | **Trigramme** | INF (Infrastructure) |
 | **Section CV** | N/A |
 | **Créé le** | 2025-11-25 |

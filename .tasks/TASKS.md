@@ -44,20 +44,19 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | [LAY-003](tasks/LAY-003-reorganiser-competences-3-poles.md) | Réorganiser compétences en 3 pôles thématiques | ⏳ À faire | 🟡 Moyenne | 5.20 | 2025-11-25 |
 | [CNT-036](tasks/CNT-036-condensation-impact-business.md) | Condensation et impact business (version longue) | ⏳ À faire | 🔴 Haute | 5.00 | 2025-11-27 |
 | [CNT-037](tasks/CNT-037-optimisation-version-courte.md) | Optimisation version courte (1 page) | ⏳ À faire | 🟡 Moyenne | 5.00 | 2025-11-27 |
+| [INF-010](tasks/INF-010-skill-analyse-adequation.md) | Skill analyse adéquation profil-poste | ⏳ À faire | 🔴 Haute | 3.40 | 2025-11-25 |
+| [INF-009](tasks/INF-009-skill-analyse-offre-emploi.md) | Skill analyse d'offre d'emploi | ⏳ À faire | 🔴 Haute | 3.40 | 2025-11-25 |
 | [TPL-002](tasks/TPL-002-template-system.md) | Système de changement de template | ⏳ À faire | 🟢 Basse | 3.00 | 2025-10-28 |
 | [LAY-002](tasks/LAY-002-consolidation-sections-dupliquees.md) | Consolider les sections dupliquées (Études, Expérience) | ⏳ À faire | 🟡 Moyenne | 2.60 | 2025-11-25 |
-| [INF-005](tasks/INF-005-repertoire-ressources-dedie.md) | Répertoire dédié aux ressources d'analyse | ⏳ À faire | 🟡 Moyenne | 2.60 | 2025-11-25 |
+| [INF-005](tasks/INF-005-repertoire-ressources-dedie.md) | Répertoire dédié aux ressources d'analyse | ⏳ À faire | 🔴 Haute | 2.60 | 2025-11-25 |
 | [PIP-003](tasks/PIP-003-build-word-format.md) | Build du CV au format Word | ⏳ À faire | 🟡 Moyenne | 2.60 | 2025-11-25 |
+| [INF-012](tasks/INF-012-skill-cv-adapte.md) | Skill CV adapté à l'offre | ⏳ À faire | 🔴 Haute | 2.55 | 2025-11-25 |
+| [INF-008](tasks/INF-008-architecture-skills-candidature.md) | Architecture système skills candidature | ⏳ À faire | 🔴 Haute | 2.55 | 2025-11-25 |
 | [PIP-001](tasks/PIP-001-cicd-pipeline.md) | CI/CD pour publication automatique | ⏳ À faire | 🟢 Basse | 2.50 | 2025-10-28 |
 | [INF-007](tasks/INF-007-supprimer-cta-slash-commands-skills.md) | Supprimer CTA slash commands dans skills | ⏳ À faire | 🟢 Basse | 2.20 | 2025-11-25 |
-| [INF-010](tasks/INF-010-skill-analyse-adequation.md) | Skill analyse adéquation profil-poste | ⏳ À faire | 🟡 Moyenne | 1.73 | 2025-11-25 |
-| [INF-009](tasks/INF-009-skill-analyse-offre-emploi.md) | Skill analyse d'offre d'emploi | ⏳ À faire | 🟡 Moyenne | 1.73 | 2025-11-25 |
 | [INF-011](tasks/INF-011-skill-lettre-motivation.md) | Skill assistant lettre de motivation | ⏳ À faire | 🟡 Moyenne | 1.73 | 2025-11-25 |
-| [INF-006](tasks/INF-006-extraire-scripts-tests-hors-claude.md) | Extraire scripts et tests hors de `.claude/` | ⏳ À faire | 🟡 Moyenne | 1.73 | 2025-11-25 |
 | [QUA-002](tasks/QUA-002-verification-orthographique-grammaticale.md) | Vérification orthographique et grammaticale | ⏳ À faire | 🟡 Moyenne | 1.70 | 2025-11-26 |
 | [INF-003](tasks/INF-003-perenniser-ameliorer-script-priorites.md) | Pérenniser et améliorer le script Python de calcul des priorités | ⏳ À faire | 🟢 Basse | 1.55 | 2025-11-16 |
-| [INF-012](tasks/INF-012-skill-cv-adapte.md) | Skill CV adapté à l'offre | ⏳ À faire | 🟡 Moyenne | 1.30 | 2025-11-25 |
-| [INF-008](tasks/INF-008-architecture-skills-candidature.md) | Architecture système skills candidature | ⏳ À faire | 🟡 Moyenne | 1.30 | 2025-11-25 |
 | [TPL-003](tasks/TPL-003-cv-from-scratch-alternatives.md) | CV from scratch - Structurations alternatives | ⏳ À faire | 🟡 Moyenne | 1.30 | 2025-11-25 |
 
 ---

@@ -9,7 +9,7 @@
 | **ID** | INF-008 |
 | **Titre** | Architecture globale du système de skills candidature |
 | **Statut** | ⏳ À faire |
-| **Priorité** | 🟡 Moyenne |
+| **Priorité** | 🔴 Haute |
 | **Trigramme** | INF (Infrastructure) |
 | **Section CV** | N/A |
 | **Créé le** | 2025-11-25 |

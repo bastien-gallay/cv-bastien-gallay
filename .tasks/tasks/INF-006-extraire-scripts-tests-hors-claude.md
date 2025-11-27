@@ -9,7 +9,7 @@
 | **ID** | INF-006 |
 | **Titre** | Extraire scripts, tests et paramètres hors de `.claude/` |
 | **Statut** | ⏳ À faire |
-| **Priorité** | 🟡 Moyenne |
+| **Priorité** | 🔴 Haute |
 | **Trigramme** | INF (Infrastructure) |
 | **Section CV** | N/A |
 | **Créé le** | 2025-11-25 |
