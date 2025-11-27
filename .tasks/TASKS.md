@@ -41,7 +41,6 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Score | Créé le |
 |----|-------|--------|----------|-------|---------|
-| [LAY-003](tasks/LAY-003-reorganiser-competences-3-poles.md) | Réorganiser compétences en 3 pôles thématiques | 🔄 En cours | 🟡 Moyenne | 5.20 | 2025-11-25 |
 | [CNT-036](tasks/CNT-036-condensation-impact-business.md) | Condensation et impact business (version longue) | ⏳ À faire | 🔴 Haute | 5.00 | 2025-11-27 |
 | [CNT-037](tasks/CNT-037-optimisation-version-courte.md) | Optimisation version courte (1 page) | ⏳ À faire | 🟡 Moyenne | 5.00 | 2025-11-27 |
 | [INF-010](tasks/INF-010-skill-analyse-adequation.md) | Skill analyse adéquation profil-poste | ⏳ À faire | 🔴 Haute | 3.40 | 2025-11-25 |
@@ -65,6 +64,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
+| [LAY-003](tasks/LAY-003-reorganiser-competences-3-poles.md) | Réorganiser compétences en 3 pôles thématiques | ✅ Terminé | 🟡 Moyenne | 2025-11-27 |
 
 Les tâches archivées sont déplacées dans [.archived/](.archived/).
 
@@ -175,9 +175,9 @@ Closes TPL-001"
 ## Statistiques
 
 - **Total**: 57 tâches
-- **À faire**: 17
-- **En cours**: 1
-- **Terminées**: 0
+- **À faire**: 16
+- **En cours**: 0
+- **Terminées**: 1
 - **Bloquées**: 0
 - **Archivées**: 40
 

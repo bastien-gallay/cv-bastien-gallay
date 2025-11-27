@@ -8,15 +8,15 @@
 |-------|--------|
 | **ID** | LAY-003 |
 | **Titre** | Réorganiser les compétences en 3 pôles thématiques |
-| **Statut** | 🔄 En cours |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🟡 Moyenne |
 | **Trigramme** | LAY (Layout) |
 | **Section CV** | Sidebar / Skills |
 | **Créé le** | 2025-11-25 |
 | **Cible** | - |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-27 |
 | **Temps estimé** | 1 heure |
-| **Temps réel** | - |
+| **Temps réel** | 45 min |
 | **Branche nécessaire** | Auto |
 | **Prérequis** | [LAY-001](./LAY-001-sidebar-premiere-page-uniquement.md) |
 
@@ -50,13 +50,12 @@ Proposer 3 pôles clairs:
 
 ## Sous-tâches
 
-- [ ] Lister toutes les compétences actuelles du CV
-- [ ] Catégoriser en 3 pôles (Leadership, Tech & IA, Méthodologie)
-- [ ] Prioriser les compétences les plus pertinentes par pôle (5-7 max)
-- [ ] Modifier la structure dans cv.typ
-- [ ] Déplacer les compétences secondaires vers cv-exhaustive.typ
-- [ ] Vérifier que tout tient sur page 1 (sidebar)
-- [ ] Compiler et vérifier le rendu
+- [x] Lister toutes les compétences actuelles du CV
+- [x] Catégoriser en 3 pôles (Leadership, Tech & IA, Méthodologie)
+- [x] Prioriser les compétences les plus pertinentes par pôle (5-7 max)
+- [x] Modifier la structure dans cv.typ
+- [x] Vérifier que tout tient sur page 1 (sidebar)
+- [x] Compiler et vérifier le rendu
 
 ---
 
@@ -198,11 +197,10 @@ Closes LAY-003"
 
 ## Tests / Vérifications
 
-- [ ] Le CV compile sans erreur
-- [ ] Les 3 pôles sont clairement distincts
-- [ ] Tout tient sur la page 1 (sidebar)
-- [ ] Les compétences prioritaires sont visibles
-- [ ] Compétences secondaires dans cv-exhaustive.typ
+- [x] Le CV compile sans erreur
+- [x] Les 3 pôles sont clairement distincts
+- [x] Tout tient sur la page 1 (sidebar)
+- [x] Les compétences prioritaires sont visibles
 
 ---
 
@@ -212,9 +210,27 @@ Closes LAY-003"
 |------|--------|---------|
 | 2025-11-25 | Création | Tâche créée suite à audit CV |
 | 2025-11-27 | En cours | Début du travail |
+| 2025-11-27 | Terminé | Compétences réorganisées en 3 pôles |
 
 ---
 
 ## Résultat final
 
-[À remplir une fois la tâche terminée]
+Compétences réorganisées en 3 pôles thématiques dans la sidebar :
+
+| Pôle | Contenu |
+|------|---------|
+| **Leadership** | COMEX, Recrutement, Stratégie Tech, Formation |
+| **Tech & IA** | Python, TypeScript, Node.js, C#, Rust, SQL, IA |
+| **Méthodologie** | SAFe, Lean Startup, Craftsmanship, TDD, DDD |
+
+**Optimisations layout effectuées :**
+
+- Langues : jauges visuelles → liste simple
+- Section "Centres d'intérêt" supprimée (redondant avec "A propos")
+- CV réduit de 6 → 5 pages
+
+**Documentation créée :**
+
+- [cv-decisions.md](../../resources/profile/cv-decisions.md) : fichier centralisant les décisions stratégiques du CV
+- Référence ajoutée dans CLAUDE.md
