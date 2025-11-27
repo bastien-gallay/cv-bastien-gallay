@@ -56,8 +56,11 @@ neat-cv/
 ├── docs/                      # Project documentation
 │   └── GIT_WORKFLOW.md        # Git conventions
 ├── scripts/                   # Build and verification scripts
-│   ├── build.sh
-│   ├── watch.sh
+│   ├── lib/                   # Shared Python utilities
+│   ├── reports/               # Reporting scripts (CFD, weekly)
+│   ├── task_management/       # Task management Python module
+│   ├── tests/                 # Tests for lib module
+│   ├── update_priority_scores.py  # WSJF priority scoring
 │   └── verification/          # Python verification module
 │       ├── __init__.py
 │       ├── build.py           # Compilation verification
@@ -126,6 +129,25 @@ When modifying the CV:
 - Language proficiency uses `item-with-level()` with 1-5 scale
 - The CV is designed for A4 paper with a 4.5cm sidebar
 - Accent color scheme uses blue tones for professional appearance
+
+### CV Decisions Reference
+
+**IMPORTANT:** Before modifying CV content (CNT), layout (LAY), or template (TPL), consult the decisions file:
+
+- **File:** [resources/profile/cv-decisions.md](resources/profile/cv-decisions.md)
+
+This file contains:
+
+- Strategic positioning decisions with justifications
+- Skills organization and prioritization choices
+- Alternatives reserved for targeted CV adaptations
+- Historical log of all content decisions
+
+**Workflow:**
+
+1. **Before changes:** Check existing decisions for relevant guidance
+2. **During changes:** Apply documented decisions consistently
+3. **After changes:** Document new decisions with justifications in the file
 
 ### Publications File
 

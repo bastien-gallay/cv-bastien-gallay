@@ -36,11 +36,6 @@
     = A propos
     CTO avec 25 ans d'expérience. Expert IA Générative et transformation Agile. Management de 50 professionnels techniques, pilotage de 6+ opportunités presales (€15k-€500k+).
 
-    = Centres d'intérêt
-    - Intelligence artificielle
-    - Management et leadership
-    - Entrepreneuriat
-
     = Rayonnement
     - Mentor Google Launchpad
     - Coach Startup Weekend
@@ -57,23 +52,35 @@
     #social-links()
 
     = Langues
-    #item-with-level("Français", 5, subtitle: "Langue maternelle")
-    #item-with-level("Anglais", 4, subtitle: "Courant")
+    - *Français :* Langue maternelle
+    - *Anglais :* Courant
 
-    = Expertises
+    = Leadership
     #item-pills((
-      "Agile",
-      "Lean",
-      "IA",
-      "Test Driven Development",
-      "Clean Code",
-      "Domain Driven Design",
+      "COMEX",
+      "Recrutement",
+      "Stratégie Tech",
+      "Formation",
+    ))
+
+    = Tech & IA
+    #item-pills((
+      "Python",
       "TypeScript",
       "Node.js",
-      "Python",
       "C#",
       "Rust",
       "SQL",
+      "IA",
+    ))
+
+    = Méthodologie
+    #item-pills((
+      "SAFe",
+      "Lean Startup",
+      "Craftsmanship",
+      "TDD",
+      "DDD",
     ))
   ],
 
