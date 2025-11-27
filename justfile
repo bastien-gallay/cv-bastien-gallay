@@ -67,6 +67,14 @@ verify-format:
 test-verify:
     @uv run --extra dev pytest scripts/verification/tests/ -v
 
+# Update priority scores in TASKS.md
+update-scores:
+    @uv run python scripts/update_priority_scores.py
+
+# Update priority scores (dry run)
+update-scores-dry:
+    @uv run python scripts/update_priority_scores.py --dry-run --verbose
+
 # Show available recipes
 list:
     @just --list
