@@ -42,7 +42,6 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | ID | Titre | Statut | Priorité | Score | Créé le |
 |----|-------|--------|----------|-------|---------|
 | [QUA-002](tasks/QUA-002-verification-orthographique-grammaticale.md) | Vérification orthographique et grammaticale | ⏳ À faire | 🟡 Moyenne | - | 2025-11-26 |
-| [TPL-001](tasks/TPL-001-cv-versions.md) | Versions courte et longue du CV | 🔄 En cours | 🟡 Moyenne | 4.45 | 2025-10-28 |
 | [TPL-002](tasks/TPL-002-template-system.md) | Système de changement de template | ⏳ À faire | 🟢 Basse | 2.96 | 2025-10-28 |
 | [LAY-002](tasks/LAY-002-consolidation-sections-dupliquees.md) | Consolider les sections dupliquées (Études, Expérience) | ⏳ À faire | 🟡 Moyenne | 2.50 | 2025-11-25 |
 | [LAY-003](tasks/LAY-003-reorganiser-competences-3-poles.md) | Réorganiser compétences en 3 pôles thématiques | ⏳ À faire | 🟡 Moyenne | 2.50 | 2025-11-25 |
@@ -65,6 +64,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
+| [TPL-001](tasks/TPL-001-cv-versions.md) | Versions courte et longue du CV | ✅ Terminé | 🟡 Moyenne | 2025-11-27 |
 | [CNT-025](tasks/CNT-025-remplacer-15-ca-par-chiffres-presales.md) | Remplacer "15% CA" par chiffres presales | ✅ Terminé | 🟡 Moyenne | 2025-11-26 |
 | [LAY-001](tasks/LAY-001-sidebar-premiere-page-uniquement.md) | Sidebar uniquement sur la première page | ✅ Terminé | 🟡 Moyenne | 2025-11-26 |
 | [TPL-004](tasks/TPL-004-extraction-donnees-structurees.md) | Extraire les données du CV (prérequis TPL-001/002/003) | ✅ Terminé | 🟡 Moyenne | 2025-11-26 |
@@ -172,9 +172,9 @@ Closes TPL-001"
 ## Statistiques
 
 - **Total**: 53 tâches
-- **À faire**: 16
+- **À faire**: 15
 - **En cours**: 0
-- **Terminées**: 9
+- **Terminées**: 10
 - **Bloquées**: 0
 - **Archivées**: 28
 

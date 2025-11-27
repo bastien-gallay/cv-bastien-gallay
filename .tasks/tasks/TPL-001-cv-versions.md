@@ -8,13 +8,13 @@
 |-------|--------|
 | **ID** | TPL-001 |
 | **Titre** | Créer versions courte (1 page) et longue (2+ pages) du CV |
-| **Statut** | 🔄 En cours |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🟡 Moyenne |
 | **Trigramme** | TPL (Template) |
 | **Section CV** | General |
 | **Créé le** | 2025-10-28 |
 | **Cible** | 2025-11-05 |
-| **Terminé le** | |
+| **Terminé le** | 2025-11-27 |
 | **Temps estimé** | 4-6 heures |
 | **Temps réel** | |
 | **Branche nécessaire** | Oui |
@@ -62,16 +62,15 @@ Produire une structure de fichiers permettant de générer facilement les deux v
 
 ## Sous-tâches
 
-- [ ] Analyser le contenu actuel de [cv.typ](../../src/cv.typ) (2 pages)
-- [ ] Identifier les sections essentielles pour la version courte
-- [ ] Concevoir l'architecture (fichiers séparés vs conditionnels)
-- [ ] Créer `cv-short.typ` (version 1 page)
-- [ ] Créer `cv-long.typ` (version 2+ pages)
-- [ ] Optionnel: créer `cv-content.typ` pour le contenu partagé
-- [ ] Adapter le build script pour compiler les deux versions
-- [ ] Vérifier la mise en page des deux versions
-- [ ] Mettre à jour [CLAUDE.md](../../CLAUDE.md) avec les nouvelles commandes
-- [ ] Tester la génération des deux PDFs
+- [x] Analyser le contenu actuel de [cv.typ](../../src/cv.typ)
+- [x] Identifier les sections essentielles pour la version courte
+- [x] Concevoir l'architecture (fichiers séparés)
+- [x] Créer `cv-short.typ` (version 1 page)
+- [x] Conserver `cv.typ` comme version exhaustive (5 pages)
+- [x] Adapter le build script pour compiler les deux versions (`just build-all`)
+- [x] Vérifier la mise en page des deux versions
+- [x] Mettre à jour [CLAUDE.md](../../CLAUDE.md) avec les nouvelles commandes
+- [x] Tester la génération des deux PDFs
 
 ---
 
@@ -240,14 +239,14 @@ Closes TPL-001"
 
 ## Tests / Vérifications
 
-- [ ] cv-short.typ compile sans erreur
-- [ ] cv-long.typ compile sans erreur
-- [ ] La version courte fait bien 1 page
-- [ ] La version longue fait 2+ pages
-- [ ] Le contenu est cohérent entre les deux versions
-- [ ] Les deux PDFs s'affichent correctement
-- [ ] CLAUDE.md est à jour avec les nouvelles commandes
-- [ ] Les noms de fichiers de sortie sont clairs (cv-short.pdf, cv-long.pdf)
+- [x] cv-short.typ compile sans erreur
+- [x] cv.typ (exhaustif) compile sans erreur
+- [x] La version courte fait bien 1 page
+- [x] La version exhaustive fait 5 pages
+- [x] Le contenu est cohérent entre les deux versions
+- [x] Les deux PDFs s'affichent correctement
+- [x] CLAUDE.md est à jour avec les nouvelles commandes
+- [x] Les noms de fichiers de sortie sont clairs (cv.pdf, cv-short.pdf)
 
 ---
 
@@ -256,25 +255,29 @@ Closes TPL-001"
 | Date | Action | Détails |
 |------|--------|---------|
 | 2025-10-28 | Création | Tâche créée dans le cadre de l'initialisation du système de tâches |
+| 2025-11-27 | Terminé | CV court créé (1 page), build-all fonctionnel |
 
 ---
 
 ## Résultat final
-
-[À remplir une fois la tâche terminée]
 
 **Structure finale:**
 
 ```plaintext
 neat-cv/
 ├── src/
-│   ├── cv.typ              # Version standard (2 pages)
-│   ├── cv-exhaustive.typ   # Version complète (5 pages) - BASE DE DONNÉES
-│   └── cv-short.typ        # Version courte (1 page)
+│   ├── cv.typ              # Version exhaustive (5 pages) - BASE DE DONNÉES
+│   ├── cv-short.typ        # Version courte (1 page)
+│   └── cv-data.typ         # Données structurées partagées
 ├── dist/
-│   ├── cv.pdf
-│   ├── cv-exhaustive.pdf
-│   └── cv-short.pdf
+│   ├── cv.pdf              # 5 pages
+│   └── cv-short.pdf        # 1 page
 ```
 
-**Important:** La version exhaustive (`cv-exhaustive.typ`) contient TOUT le contenu et sert de source pour créer des CV adaptés à chaque offre d'emploi.
+**Commandes:**
+
+- `just build` - Compile cv.typ → cv.pdf
+- `just build-short` - Compile cv-short.typ → cv-short.pdf
+- `just build-all` - Compile les deux versions
+
+**Important:** La version exhaustive (`cv.typ`) contient TOUT le contenu et sert de source pour créer des CV adaptés à chaque offre d'emploi.
