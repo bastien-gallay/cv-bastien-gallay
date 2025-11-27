@@ -29,12 +29,12 @@
 // ============================================================================
 
 #cv-page-one(
-  profile-picture: image("assets/photo-profile-pro.jpg"),
+  profile-picture: image("assets/reshaped-pic.png"),
 
   // SIDEBAR CONTENT
   [
     = A propos
-    CTO avec 25 ans d'expérience. Expert IA Générative et transformation Agile. Management de 50 professionnels techniques, pilotage de 6+ opportunités presales (€15k-€500k+).
+    CTO avec 25 ans d'expérience. Expert IA Générative et transformation Agile. Management de 50 professionnels techniques, pilotage de 6+ opportunités presales (€15k-€500k+). Basé Bordeaux, présence Paris régulière.
 
     = Rayonnement
     - Mentor Google Launchpad
@@ -90,7 +90,7 @@
 
     #entry(
       title: "Consultant Technique Senior → Chief Technology Officer",
-      date: "02/2021 - 10/2025",
+      date: "02/2021 - 08/2025",
       institution: "PALO IT",
       location: "Bordeaux/Paris, France",
     )[
@@ -107,15 +107,10 @@
       institution: "Upwiser",
       location: "Bordeaux, France",
     )[
-      - Animation de formations (Agile, Lean, Design Thinking) : ~15 sessions/an depuis 2015.
-      - Ingénierie pédagogique pour des programmes de formation sur mesure.
-      - Réponse et obtention d'appels d'offre de formation des OPCO en action collectives.
-      - Recrutement d'un coach agile pour renforcer l'accompagnement des équipes.
-      - Conseil en organisation et gestion de projets pour améliorer la productivité et la qualité.
-      - Coaching individuel et d'équipe pour favoriser la collaboration et la communication.
-      - Création du cercle Lean Startup Bordeaux pour promouvoir l'innovation locale.
-      - Prises de parole lors d'événements et conférences sur l'agilité et les startups.
-      - Accompagnement de près de 100 startups et PME dans leur transformation agile et leur gestion de l'innovation.
+      - Pilotage de transformations Agiles à l'échelle (SAFe, Scrum) pour grands comptes (Dekra, i-BP).
+      - Structuration R&D et coaching CTOs pour scale-ups (Dronisos, Wanteeed, Nalo, SeLoger).
+      - Accompagnement de *~100 startups et PME* dans leur transformation agile.
+      - Animation de formations Agile (*~15 sessions/an*) et ingénierie pédagogique.
     ]
 
     #entry(
@@ -135,22 +130,14 @@
       institution: "Cast Consulting",
       location: "Paris, France",
     )[
-      - Intervention sur des projets clients variés, principalement dans le domaine Web.
-      - Domaines métiers : e-commerce, jeux d'argent, nucléaire, etc.
-      - Environnement de développement : Java, PHP, SQL Server, Oracle, etc.
+      - Product Owner JOA Online (équipe 10p, Scrum distribué, coordination 10 sous-traitants).
+      - Chef de projet Pixmania/TheLink (équipe 7 dev, coordination internationale).
     ]
 
     #entry(
       title: "Développeur Web",
-      date: "06/2004 - 07/2006",
-      institution: "Boonty (devenu Nexway)",
-      location: "Paris, France",
-    )[]
-
-    #entry(
-      title: "Webmaster ",
-      date: "06/2002 - 06/2004",
-      institution: "Indépendant",
+      date: "06/2002 - 07/2006",
+      institution: "Boonty/Nexway, Indépendant",
       location: "Paris, France",
     )[]
 
@@ -173,117 +160,24 @@
 #pagebreak()
 
 #cv-continued[
-  = Etudes - Détails
-
-  #entry(
-    title: "DEA Réalité Virtuelle et Maîtrise des Systèmes Complexes - Mention Bien",
-    date: "2002",
-    institution: "Institut National de Sciences et Techniques Nucléaires (INSTN)",
-    location: "Sacclay (91), France",
-    [Sujet de recherche: _"Comparaison des algorithmes de classification pour la segmentation multitexturées"_.],
-  )
-
-  #entry(
-    title: "Licence et Maîtrise d'Informatique - Mention Bien",
-    date: "2001",
-    institution: "Université de Picardie Jules Verne",
-    location: "Amiens (80), France",
-    [Mémoire: _"Complexité des algorithmes quantiques"_.],
-  )
-
-  #entry(
-    title: "Diplôme Universitaire de Technologie (DUT) Informatique",
-    date: "1999",
-    institution: "Institut Universitaire de Technologie (IUT) d'Amiens",
-    location: "Amiens (80), France",
-    [Mémoire: _"Recherche de chemins pour une horde de robots"_.],
-  )
-
-  #entry(
-    title: "Baccalauréat Scientifique - Mention Bien",
-    date: "1996",
-    institution: "Lycée Jean Moulin",
-    location: "Les Andelys (27), France",
-    [Spécialité: _"Sciences de l'Ingénieur"_, Option: _"Informatique"_],
-  )
-
   = Certifications
 
   #entry(
-    title: "Certification Scrum Master",
-    date: "2008",
-    institution: "Scrum Alliance",
-  )[]
-
-  #entry(
-    title: "Professional Scrum Master",
-    date: "2015",
-    institution: "Scrum.org",
-  )[]
-
-  #entry(
-    title: "Scaled Professional Scrum (SPS)",
-    date: "2016",
-    institution: "Scrum.org",
-  )[]
-
-  #entry(
-    title: "Professional Scrum with Kanban",
-    date: "2017",
-    institution: "Scrum.org",
-  )[]
-
-  #entry(
-    title: "Scaled Professional Scrum (Nexus)",
-    date: "2017",
-    institution: "Scrum.org",
-  )[]
-
-  #entry(
-    title: "Professional Scrum Developer (PSD-I)",
-    date: "2018",
-    institution: "Scrum.org",
-  )[]
-
-  #entry(
-    title: "SAFe Program Consultant (SPC4 et SPC5)",
-    date: "2018, 2020",
-    institution: "Scaled Agile, Inc.",
-  )[]
+    title: "Certifications Scrum & SAFe",
+    date: "2008 - 2020",
+    institution: "Scrum.org, Scrum Alliance, Scaled Agile",
+  )[
+    PSM I & II, PSD, SPS (Nexus), PSK, SAFe SPC5
+  ]
 
   = Bénévolat
 
   #entry(
-    title: "Organisateur Agile Tour Bordeaux",
+    title: "Engagement communautaire Agile",
     date: "2011 - Aujourd'hui",
-    institution: "Agile Tour",
     location: "Bordeaux, France",
   )[
-    - Organisation de la conférence annuelle (150+ participants)
-    - Coordination des speakers et du programme
-  ]
-
-  #entry(
-    title: "Fondateur Lean Startup Bordeaux",
-    date: "2012 - 2018",
-    institution: "Lean Startup Circle",
-    location: "Bordeaux, France",
-  )[
-    - Animation de meetups réguliers sur le Lean Startup
-    - Coaching de startups et entrepreneurs locaux
-  ]
-
-  #entry(
-    title: "Co-fondateur Collectif Quinconces",
-    date: "2016 - 2018",
-    institution: "Collectif Quinconces",
-    location: "Bordeaux, France",
-  )[
-    - Organisation et collaboration de TPE et Indépendants du numérique
-    - Prospection de clients et de partenaires
-    - Animation de réunions et de brainstorming
-    - Gestion de projet et de la documentation
-    - Synchronisation des missions
+    Organisateur Agile Tour Bordeaux (150+ participants/an), Fondateur Lean Startup Bordeaux (2012-2018), Co-fondateur Collectif Quinconces (2016-2018).
   ]
 
   = Expérience détaillée
@@ -291,13 +185,13 @@
 
   #entry(
     title: [Consultant Technique Senior → Chief Technology Officer],
-    date: [02/2021 - 10/2025],
+    date: [02/2021 - 08/2025],
     institution: [PALO IT],
     location: [Bordeaux/Paris, France],
   )[
     === Contexte
     Évolution de Consultant Senior à CTO au sein d'un cabinet de conseil international spécialisé dans la transformation digitale et le développement durable.
-   === En tant que CTO (oct. 2024 - oct. 2025)
+   === En tant que CTO (oct. 2024 - août 2025)
 
     ==== Leadership & Management
     - Direction de la stratégie technologique et participation au COMEX
@@ -328,63 +222,23 @@
 
     === Missions clients
 
-    ==== Mission Bodic - Technical Lead (2024-2025)
-    #strong[Client:] Bodic
-    #strong[Durée:] 1.5 jours/semaine
+    ==== Bodic - External CTO (2024-2025, 1.5j/sem)
+    API optimisée à 72ms, Outlook add-in. #strong[Stack:] Azure, TypeScript, PostgreSQL.
 
-    - Optimisation API : temps de réponse réduit à 72ms
-    - Développement Outlook add-in avec intégration réussie
-    - Code reviews et décisions d'architecture
-    - Évolution vers rôle d'External CTO
-    - #strong[Stack:] Azure, TypeScript, REST API, PostgreSQL, GitHub Copilot, GitHub Actions
+    ==== Systel - Team Coach (2025, 30j)
+    Coaching équipe 3 dev, audit technique acquisition. #strong[Stack:] Java, Angular, Spring Boot.
 
-    ==== Mission Systel - Team Coach (mars-juin 2025)
-    #strong[Client:] Systel
-    #strong[Durée:] 30 jours
+    ==== TopTex - Architecture API (2025, 4j)
+    Étude migration API multi-instance Sage.
 
-    - Coaching quotidien d'une équipe de 3 développeurs
-    - Revue architecture MAC avec pattern BFF
-    - Préparation audit technique pour acquisition
-    - Facilitation rétrospectives et planification sprints
-    - #strong[Stack:] TFS, Java, Angular, Spring Boot, Azure DevOp
+    ==== Beta.gouv - Lead Dev (2023-2024, 7 mois)
+    Création infrastructure MonEspaceNis2. #strong[Stack:] React, TypeScript, NestJS, PostgreSQL.
 
-    ==== Mission TopTex - Architecture API (2025)
-    #strong[Client:] TopTex
-    #strong[Durée:] 2-4 jours
+    ==== Fircosoft - Dev Senior (2021-2023, 2 ans 4 mois)
+    Filtrage transactions bancaires, CI/CD langages propriétaires, SAFe 80+ personnes. #strong[Domaine:] AML, KYC, SWIFT. #strong[Stack:] Python, C, Oracle.
 
-    - Étude architecture API et planification migration
-    - Architecture multi-instance Sage
-    - Feedback client : "très bien, carré, propre"
-
-    ==== Mission Beta.gouv - Lead Developer (juil. 2023 - janv. 2024)
-    #strong[Client:] Beta.gouv - MonEspaceNis2, France (Remote)
-    #strong[Durée:] 7 mois
-
-    - Création de l'infrastructure technique et de l'architecture applicative
-    - Développement de la plateforme en React / JavaScript / TypeScript
-    - Mise en place d'outils de mesure et de monitoring
-    - #strong[Stack:] React, TypeScript, JavaScript, NestJS, PostgreSQL, Docker, GitHub Actions, Playwright, Sentry, Storybook
-
-    ==== Mission Fircosoft - Développeur Senior (mars 2021 - juin 2023)
-    #strong[Client:] Fircosoft (LexisNexis Risk Solutions), Bordeaux
-    #strong[Durée:] 2 ans 4 mois
-
-    - Développement de solutions de filtrage des transactions et listes de sanctions pour institutions bancaires
-    - Création d'une infrastructure de test automatisé multi-systèmes (Linux, AIX, HP-UX, Solaris)
-    - Mise en place de CI/CD pour langages propriétaires (Claire, FKScript)
-    - TDD et génération de documentation par les tests automatisés
-    - Mob-programming et pair-programming intensifs en environnement SAFe (train 80+ personnes)
-    - #strong[Domaine:] Conformité financière (AML, KYC, FATF, DORA), SWIFT, ISO 20022
-    - #strong[Stack:] Claire, FKScript, Python, C, Oracle, SQL Server, DB2
-
-    ==== Mission Nalo - Coach Technique (fév. 2021 - fin 2021)
-    #strong[Client:] Nalo (Fintech), Paris
-    #strong[Durée:] ~10 mois (temps partiel)
-
-    - Coaching du CTO et accompagnement de l'équipe technique
-    - Mise en place de pratiques Software Craftsmanship
-    - Refonte de l'architecture technique
-    - #strong[Stack:] Python, Django, TDD, DDD, CI/CD
+    ==== Nalo - Coach Technique (2021, 10 mois)
+    Coaching CTO, Software Craftsmanship. #strong[Stack:] Python, Django, TDD, DDD.
   ]
 
   #entry(
@@ -393,117 +247,25 @@
     institution: [Upwiser],
     location: [Bordeaux, France],
   )[
-    === Contexte
-    Création de ma société de conseil en agilité et développement logiciel, accompagnant startups et PME dans leur transformation numérique et organisationnelle.
-
     === Missions principales
 
-    ==== Mission DEKRA - Coach Agile (oct. 2013 - janv. 2015)
-    #strong[Client:] DEKRA, Bordeaux
-    #strong[Durée:] 1 an 4 mois
+    ==== DEKRA - Coach Agile (2013-2015, 16 mois)
+    Scrum Master refonte logiciel, feature teams, coaching Scrum Masters. #strong[Méthodes:] Scrum, Coaching.
 
-    - Scrum Master pour projet de refonte logiciel interne
-    - Mise en place de feature teams et coordination multi-équipes
-    - Coaching et formation des nouveaux Scrum Masters
-    - Accompagnement à l'adoption de bonnes pratiques Agile
+    ==== i-BP - Coach Agile (2015, 6 mois)
+    Projets Agiles (Décisionnel, DevOps), Communautés de Pratiques nationales. #strong[Méthodes:] Scrum, Kanban.
 
-    ==== Mission i-BP - Coach Agile (avr. 2015 - sept. 2015)
-    #strong[Client:] i-BP, Nantes
+    ==== Dronisos - Scrum Master
+    Structuration R&D startup événementiel drones. #strong[Méthodes:] Scrum, Lean Startup.
 
-    - Accompagnement de projets Agiles (Décisionnel, Livraison DevOps)
-    - Animation de Communautés de Pratiques nationales (équipiers Agiles)
-    - Participation à des travaux transverses d'organisation
-    - Mise en place de Coach Dating
-    - #strong[Méthodes:] Scrum, Kanban, Lean Startup
+    ==== Mieux Placer - Coach Agile
+    Coaching Product Owner, formation équipes Fintech. #strong[Méthodes:] Scrum.
 
-    ==== Mission Dronisos - Scrum Master
-    #strong[Client:] Dronisos (Startup événementiel), Bordeaux
+    ==== Wanteeed - PO & Coach Agile (2020, 6 mois)
+    Product Owner, modèle organisationnel startup 20 personnes. #strong[Méthodes:] Scrum.
 
-    - Structuration de l'équipe R&D
-    - Réorganisation des démonstrations pour l'innovation technique
-    - #strong[Méthodes:] Scrum, Lean Startup
-
-    ==== Mission Mieux Placer - Coach Agile
-    #strong[Client:] Mieux Placer (Fintech), Paris
-
-    - Accompagnement du Product Owner
-    - Formation des équipes de production
-    - #strong[Méthodes:] Scrum, Formation
-
-    ==== Mission Wanteeed.com - PO & Coach Agile (2020)
-    #strong[Client:] Wanteeed.com (Startup Web), Bordeaux
-    #strong[Durée:] 6 mois
-
-    - Product Owner remplaçant
-    - Coach Agile pour startup de 20 personnes
-    - Élaboration d'un modèle organisationnel agile
-    - #strong[Méthodes:] Scrum, Coaching Agile
-
-    ==== Mission Groupe SeLoger/Logic Immo - Développeur & Architecte (2020-2021)
-    #strong[Client:] Groupe SeLoger/Logic Immo, Paris
-    #strong[Durée:] 4 mois
-
-    - Audit de la solution en place et proposition d'une architecture cible
-    - Développement du nouveau système
-    - #strong[Stack:] Architecture logicielle, Développement
-
-    === Autres activités
-    - Animation de formations et ateliers en agilité
-    - Accompagnement d'une centaine de startups et PME
-    - Création et animation du cercle Lean Startup Bordeaux
-    - Conseil en stratégie produit et organisation
-  ]
-
-  #entry(
-    title: [Consultant Technique],
-    date: [08/2006 - 09/2010],
-    institution: [Cast Consulting],
-    location: [Paris, France],
-  )[
-    === Contexte
-    Consultant technique au sein d'une ESN spécialisée dans le développement Web, intervenant sur des projets clients variés dans différents secteurs.
-
-    === Missions clients
-
-    ==== Mission JOA Online - Product Owner (07/2009 - 10/2010)
-    #strong[Client:] JOA Online (Jeux en ligne), Paris
-    #strong[Durée:] 16 mois
-
-    - Product Owner d'une équipe de 10 personnes (France/Portugal)
-    - Mise en place de Scrum distribué
-    - Coordination de 10 sociétés sous-traitantes implantées en Europe
-    - Suivi de l'appel d'offre jusqu'à la mise en production
-    - #strong[Méthodes:] Scrum distribué, Product Management
-
-    ==== Mission Pixmania/TheLink.com - Chef de projet (09/2007 - 12/2008)
-    #strong[Client:] Fotovista/Pixmania (E-commerce téléphonie), Paris
-    #strong[Durée:] 16 mois
-
-    - Management d'une équipe de 7 développeurs
-    - Coordination internationale avec Londres
-    - Architecture, spécification et conception techniques
-    - Développement et maintenance de 6 applications
-    - #strong[Stack:] PHP, MySQL, Web, coordination internationale
-
-    ==== Mission La Poste/DECLIC - Architecte (01/2008 - 08/2008)
-    #strong[Client:] La Poste, Paris
-    #strong[Durée:] 8 mois
-
-    - Architecture SOA .Net
-    - #strong[Stack:] .Net, SOA
-
-    ==== Mission CEA GCAO - MOA (12/2008 - 08/2009)
-    #strong[Client:] CEA (nucléaire), Saclay
-    #strong[Durée:] 8 mois
-
-    - Maîtrise d'ouvrage et maquettage
-    - Documents confidentiels
-
-    ==== Mission Nespresso - Développeur (09/2008 - 12/2008)
-    #strong[Client:] Nespresso, Paris
-    #strong[Durée:] 3 mois
-
-    - Développement sites professionnels
+    ==== SeLoger/Logic Immo - Architecte (2020-2021, 4 mois)
+    Audit et refonte architecture. #strong[Stack:] Architecture logicielle.
   ]
 
   #entry(
@@ -512,33 +274,22 @@
     institution: [CDiscount],
     location: [Bordeaux, France],
   )[
-    === Contexte
-    Responsable technique au sein de l'un des leaders français du e-commerce, en charge de la plateforme de paiement et de la gestion de projets techniques.
+    - Responsable technique plateforme paiement (*1 milliard € CA annuel*)
+    - Équipe 5 personnes local + 10 centre de service
+    - Certification *PCI DSS*, méthodes *Scrum/Scrumban*, anonymisation données (précurseur RGPD)
+    - #strong[Stack:] C\#, .Net, SQL Server
+  ]
 
-    === Responsabilités et réalisations
+  #entry(
+    title: [Consultant Technique],
+    date: [08/2006 - 09/2010],
+    institution: [Cast Consulting],
+    location: [Paris, France],
+  )[
+    ==== JOA Online - Product Owner (2009-2010, 16 mois)
+    Équipe 10p (France/Portugal), Scrum distribué, coordination 10 sous-traitants Europe.
 
-    ==== Plateforme de paiement
-    - Responsable technique de la plateforme de paiement
-    - Obtention de la certification *PCI DSS* (Payment Card Industry Data Security Standard)
-    - Refonte technique de l'application vers un mode *SaaS*
-    - Maintenance et évolution des applications en production
-
-    ==== Gestion de projets
-    - Mise en place des méthodes *Scrum* et *Scrumban*
-    - Gestion de *200 jours de projet par mois* en moyenne
-    - Prise en charge des développements au forfait
-
-    ==== Données et conformité
-    - Industrialisation de l'anonymisation des données clients (précurseur RGPD)
-
-    ==== Animation technique
-    - Création de *déjeuners Scrum* pour partager les bonnes pratiques
-    - Animation de *Coding Dojos internes* pour la montée en compétences
-    - Coaching des développeurs et chefs de projets
-
-    === Stack technique
-    - #strong[Langages:] C\#, .Net, SQL Server
-    - #strong[Méthodes:] Scrum, Scrumban, TDD
-    - #strong[Domaine:] E-commerce, paiement en ligne, sécurité
+    ==== Pixmania - Chef de projet (2007-2008, 16 mois)
+    Équipe 7 dev, coordination internationale Londres, 6 applications. #strong[Stack:] PHP, MySQL.
   ]
 ]
