@@ -13,10 +13,12 @@ tasks:
 
 # Analysis paths
 analysis:
-  root: ".tasks/resources"
-  audits_dir: ".tasks/resources/audits"
-  analyses_dir: ".tasks/resources/analyses"
-  templates_dir: ".tasks/resources/templates"
+  root: "resources"
+  audits_dir: "resources/audits"
+  analyses_dir: "resources/analyses"
+  templates_dir: "resources/templates"
+  profile_dir: "resources/profile"
+  external_dir: "resources/external"
   dashboard: ".tasks/ANALYSES.md"
 
 # Skill paths (self-reference)

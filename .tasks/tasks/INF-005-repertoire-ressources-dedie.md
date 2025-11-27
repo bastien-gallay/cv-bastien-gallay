@@ -8,7 +8,7 @@
 |-------|--------|
 | **ID** | INF-005 |
 | **Titre** | Créer un répertoire dédié aux ressources d'analyse hors `.tasks/` |
-| **Statut** | ⏳ À faire |
+| **Statut** | 🔄 En cours |
 | **Priorité** | 🟡 Moyenne |
 | **Trigramme** | INF (Infrastructure) |
 | **Section CV** | N/A |

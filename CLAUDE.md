@@ -40,14 +40,16 @@ neat-cv/
 ├── .tasks/                    # Task management system
 │   ├── tasks/                 # Individual task files
 │   ├── .archived/             # Archived completed tasks
-│   ├── resources/             # Analysis and audit resources
-│   │   ├── audits/            # Source data extractions
-│   │   ├── analyses/          # Comparative analysis results
-│   │   └── templates/         # Reusable templates
 │   ├── ANALYSES.md            # Analysis dashboard
 │   ├── IDEAS.md               # Ideas backlog
 │   ├── TASKS.md               # Tasks dashboard
 │   └── TASK_RULES.md          # Rules and workflow
+├── resources/                 # Analysis and audit resources
+│   ├── audits/                # Source data extractions
+│   ├── analyses/              # Comparative analysis results
+│   ├── templates/             # Reusable templates
+│   ├── external/              # External reference documents
+│   └── profile/               # Professional profile reference
 ├── dist/                      # Build outputs (gitignored)
 │   ├── cv.pdf                 # Full CV (~4 pages)
 │   └── cv-short.pdf           # Short CV (1 page)
@@ -288,25 +290,26 @@ The analysis system enables:
 ### Directory Structure
 
 ```text
-.tasks/
-├── resources/
-│   ├── audits/                     # Source data extractions
-│   │   └── {TASK-ID}/
-│   │       ├── linkedin-profile.md  # Raw LinkedIn data
-│   │       ├── github-profile.md    # Raw GitHub data
-│   │       └── cv-snapshot.md       # CV state at audit time
-│   ├── analyses/                    # Analysis results
-│   │   └── {TASK-ID}/
-│   │       ├── audit-report.md           # Comparative analysis
-│   │       ├── recommendations.md        # Detailed recommendations
-│   │       ├── recommendations-status.md # Tracking file (for /task-from-analysis)
-│   │       ├── action-plan.md            # Implementation plan
-│   │       └── metrics.md                # Statistics and metrics
-│   └── templates/                   # Reusable templates
-│       ├── audit-template.md
-│       ├── recommendations-template.md
-│       └── source-extraction-template.md
-└── ANALYSES.md                      # Analysis dashboard
+resources/                           # Dedicated resources directory (project root)
+├── README.md                        # Documentation
+├── audits/                          # Source data extractions
+│   └── {TASK-ID}/
+│       ├── linkedin-profile.md      # Raw LinkedIn data
+│       ├── github-profile.md        # Raw GitHub data
+│       └── cv-snapshot.md           # CV state at audit time
+├── analyses/                        # Analysis results
+│   └── {TASK-ID}/
+│       ├── audit-report.md          # Comparative analysis
+│       ├── recommendations.md       # Detailed recommendations
+│       ├── recommendations-status.md # Tracking file (for /task-from-analysis)
+│       ├── action-plan.md           # Implementation plan
+│       └── metrics.md               # Statistics and metrics
+├── templates/                       # Reusable templates
+│   ├── audit-template.md
+│   ├── recommendations-template.md
+│   └── source-extraction-template.md
+├── external/                        # External reference documents (CVs, etc.)
+└── profile/                         # Professional profile reference
 ```
 
 ### Analysis Commands
@@ -321,7 +324,7 @@ This command provides interactive guidance to extract data from external sources
 
 - Supports LinkedIn, GitHub, external CVs, websites, and other sources
 - Uses templates for consistent data structure
-- Saves extracted data to `.tasks/resources/audits/{TASK-ID}/`
+- Saves extracted data to `resources/audits/{TASK-ID}/`
 - Links to parent analysis task if provided
 
 **Create Tasks from Recommendations:**
@@ -357,7 +360,7 @@ This command transforms analysis recommendations into concrete tasks:
    ```
 
 3. **Perform Analysis:**
-   - Create comparative analysis in `.tasks/resources/analyses/CNT-001/`
+   - Create comparative analysis in `resources/analyses/CNT-001/`
    - Use `audit-template.md` for structure
    - Document gaps, inconsistencies, and recommendations
    - Create `recommendations-status.md` for tracking
@@ -390,7 +393,7 @@ Recommendations use the format `{ANALYSIS-ID}-R{NN}`:
 ### Key Files
 
 - [.tasks/ANALYSES.md](.tasks/ANALYSES.md) - Central dashboard for all analyses
-- [.tasks/resources/templates/](.tasks/resources/templates/) - Templates for audits and recommendations
+- [resources/templates/](resources/templates/) - Templates for audits and recommendations
 - Individual analysis folders contain all related files (audits, analysis results, tracking)
 
 ### Priority Levels

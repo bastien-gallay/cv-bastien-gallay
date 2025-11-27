@@ -11,8 +11,8 @@ Chaque analyse peut générer plusieurs **recommandations** qui sont suivies ind
 - **ID Analyse**: Utilise l'ID de la tâche qui a effectué l'analyse (ex: `CNT-001`)
 - **ID Recommandation**: Format `{ANALYSIS-ID}-R{NN}` (ex: `CNT-001-R05`)
 - **Fichiers de ressources**:
-  - Sources: `.tasks/resources/audits/{ANALYSIS-ID}/`
-  - Analyses: `.tasks/resources/analyses/{ANALYSIS-ID}/`
+  - Sources: `resources/audits/{ANALYSIS-ID}/`
+  - Analyses: `resources/analyses/{ANALYSIS-ID}/`
 
 ## Statuts possibles
 
@@ -134,7 +134,7 @@ La commande mettra automatiquement à jour:
 
 **Sources analysées**:
 
-- CV 2019: `.tasks/resources/sources-analyses/CV-2019/CV_Bastien_GALLAY_Coach_Agile-201903.docx(1).md`
+- CV 2019: `resources/external/CV-2019/CV_Bastien_GALLAY_Coach_Agile-201903.docx(1).md`
 - CV actuel: `src/cv.typ`
 
 **Fichiers de ressources**:
@@ -193,7 +193,7 @@ La commande mettra automatiquement à jour:
 
 **Sources analysées**:
 
-- Journal CTO PALO IT: `.tasks/resources/sources-analyses/extract-CTO-activities/`
+- Journal CTO PALO IT: `resources/external/extract-CTO-activities/`
   - `CTO-CV-Highlights-2025.md` - Highlights CV-ready (383 lignes)
   - `CTO-Analysis-March-July-2025.md` - Analyse détaillée de travail (936 lignes)
 - CV actuel: `src/cv.typ` lignes 106-118
@@ -268,7 +268,7 @@ La commande mettra automatiquement à jour:
 
 **Sources analysées**:
 
-- CV Flash 2021: `.tasks/resources/sources-analyses/CV-flash/CV_BGA_Court.2021.pdf`
+- CV Flash 2021: `resources/external/CV-flash/CV_BGA_Court.2021.pdf`
 - CV actuel: `src/cv.typ`
 
 **Fichiers de ressources**:
@@ -325,7 +325,7 @@ La commande mettra automatiquement à jour:
 
 **Sources analysées**:
 
-- CV Flash 2025: `.tasks/resources/sources-analyses/CV-Flash-2025/Extrait-CV-flash-2025.png`
+- CV Flash 2025: `resources/external/CV-Flash-2025/Extrait-CV-flash-2025.png`
 - CV actuel: `src/cv.typ`
 
 **Fichiers de ressources**:
