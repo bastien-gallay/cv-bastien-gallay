@@ -8,7 +8,7 @@
 |-------|--------|
 | **ID** | LAY-003 |
 | **Titre** | Réorganiser les compétences en 3 pôles thématiques |
-| **Statut** | ⏳ À faire |
+| **Statut** | 🔄 En cours |
 | **Priorité** | 🟡 Moyenne |
 | **Trigramme** | LAY (Layout) |
 | **Section CV** | Sidebar / Skills |
@@ -211,6 +211,7 @@ Closes LAY-003"
 | Date | Action | Détails |
 |------|--------|---------|
 | 2025-11-25 | Création | Tâche créée suite à audit CV |
+| 2025-11-27 | En cours | Début du travail |
 
 ---
 
