@@ -11,7 +11,7 @@ dev = [
 ]
 
 [tool.pytest.ini_options]
-testpaths = ["scripts/verification/tests", ".claude/skills/task-management/tests"]
+testpaths = ["scripts/verification/tests", "scripts/task_management/tests"]
 pythonpath = ["."]
 
 [tool.ruff]

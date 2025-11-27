@@ -44,9 +44,15 @@ This skill uses **progressive disclosure** (3 levels) to minimize context usage:
 
 1. **Level 1** (`SKILL.md`): Metadata (~200 tokens, always loaded)
 2. **Level 2** (`workflows/*.md`): Workflow instructions (~1-2k tokens, loaded on demand)
-3. **Level 3** (`scripts/`, `config/`, `templates/`): Implementation (loaded as needed or executed)
+3. **Level 3** (external): Implementation scripts and config (loaded as needed or executed)
 
 **Key benefit:** Python scripts execute and return only output, not code (~0 tokens for implementation).
+
+**Note:** Scripts, config, and tests are now located outside `.claude/` for better accessibility:
+
+- Scripts: `scripts/task_management/`
+- Config: `config/task_management/`
+- Tests: `scripts/task_management/tests/`
 
 See [skill-architecture-design.md](./skill-architecture-design.md) for complete architecture documentation.
 
@@ -56,11 +62,11 @@ See [skill-architecture-design.md](./skill-architecture-design.md) for complete 
 
 Configuration uses **YAML data + Python validation**:
 
-- **`config/priorities.yml`**: Priority levels (emojis, scores, default times)
-- **`config/trigrammes.yml`**: Task categories (CNT, TPL, QUA, PIP, LAY, DOC, INF)
-- **`config/paths.yml`**: File paths (`.tasks/`, templates, etc.)
+- **`config/task_management/priorities.yml`**: Priority levels (emojis, scores, default times)
+- **`config/task_management/trigrammes.yml`**: Task categories (CNT, TPL, QUA, PIP, LAY, DOC, INF)
+- **`config/task_management/paths.yml`**: File paths (`.tasks/`, templates, etc.)
 
-Configs are loaded once and cached in memory via `scripts/core/config_loader.py`.
+Configs are loaded once and cached in memory via `scripts/task_management/core/config_loader.py`.
 
 ---
 
@@ -70,29 +76,35 @@ Configs are loaded once and cached in memory via `scripts/core/config_loader.py`
 
 ```bash
 # Unit tests (pytest)
-uvx pytest tests/
+uv run --with pyyaml pytest scripts/task_management/tests/
 
 # Manual tests
-# See tests/MANUAL_TESTS.md for scenarios
+# See scripts/task_management/tests/MANUAL_TESTS.md for scenarios
 ```
 
 ### Project Structure
 
-```
+```text
+# Skill definition (in .claude/)
 .claude/skills/task-management/
 ├── SKILL.md                    # Entry point
 ├── README.md                   # This file
 ├── skill-architecture-design.md # Architecture docs
-├── config/                     # YAML configuration
 ├── workflows/                  # Markdown workflows
-├── scripts/                    # Python implementation
-│   ├── core/                  # Core utilities
-│   ├── algorithms/            # Algorithmic logic
-│   ├── validators/            # Validation
-│   ├── analysis/              # Analysis-specific
-│   └── utils/                 # Shared utilities
-├── templates/                  # Templates
-└── tests/                      # Unit + manual tests
+└── templates/                  # Templates
+
+# Implementation (at project root)
+scripts/task_management/
+├── core/                       # Core utilities
+├── algorithms/                 # Algorithmic logic (WSJF)
+├── validators/                 # DoR/DoD validation
+├── analysis/                   # Analysis-specific
+└── tests/                      # Unit tests
+
+config/task_management/
+├── priorities.yml              # Priority scoring
+├── trigrammes.yml              # Task categories
+└── paths.yml                   # File paths
 ```
 
 ---

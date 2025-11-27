@@ -4,10 +4,10 @@ import pytest
 from pathlib import Path
 import sys
 
-# Add scripts to path
-sys.path.insert(0, str(Path(__file__).parent.parent / "scripts"))
+# Add project root to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
 
-from core.file_parser import (
+from scripts.task_management.core.file_parser import (
     parse_metadata_table,
     extract_subtasks,
     extract_section,

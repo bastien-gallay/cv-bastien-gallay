@@ -10,13 +10,10 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Optional, Dict
 
-# Try relative import (when used as module), fall back to absolute (when run as script)
-try:
-    from ..core.config_loader import load_paths
-except ImportError:
-    # Add parent directory to path for CLI usage
-    sys.path.insert(0, str(Path(__file__).parent.parent))
-    from core.config_loader import load_paths
+# Add project root to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
+
+from scripts.task_management.core.config_loader import load_paths
 
 
 # ============================================================================

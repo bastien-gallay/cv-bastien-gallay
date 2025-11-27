@@ -222,13 +222,23 @@ The task management system is implemented as a **Claude Skill** with progressive
 **Architecture:**
 
 ```text
+# Skill definition
 .claude/skills/task-management/
 ├── workflows/        # Concise workflow documentation
-├── scripts/          # Deterministic Python logic
-│   ├── core/         # ID generation, validation, dashboard, Git
-│   └── analysis/     # Recommendation parsing
-├── config/           # YAML configuration (priorities, paths, trigrammes)
+└── templates/        # Reusable templates
+
+# Implementation (at project root)
+scripts/task_management/
+├── core/             # ID generation, validation, dashboard, Git
+├── algorithms/       # Priority scoring (WSJF)
+├── validators/       # DoR/DoD validation
+├── analysis/         # Recommendation parsing
 └── tests/            # 74 unit tests (pytest)
+
+config/task_management/
+├── priorities.yml    # Priority scoring config
+├── trigrammes.yml    # Task categories
+└── paths.yml         # File paths
 ```
 
 **Available Workflows:**

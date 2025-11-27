@@ -27,7 +27,7 @@ Collect task information from user:
 Execute ID generator:
 
 ```bash
-uv run --with pyyaml python3 .claude/skills/task-management/scripts/core/id_generator.py generate <TRIGRAMME> "<TITLE>"
+uv run --with pyyaml python3 scripts/task_management/core/id_generator.py generate <TRIGRAMME> "<TITLE>"
 ```
 
 This automatically:
@@ -49,7 +49,7 @@ Use the task template (`.tasks/tasks/TEMPLATE.md`):
 Update TASKS.md using dashboard_updater:
 
 ```python
-from scripts.core import dashboard_updater
+from scripts.task_management.core import dashboard_updater
 
 dashboard_updater.add_task_to_dashboard(
     task_id=task_id,
@@ -108,9 +108,9 @@ The workflow validates:
 
 ## Scripts Used
 
-- `scripts/core/id_generator.py` - Generate unique ID and filename
-- `scripts/core/dashboard_updater.py` - Update TASKS.md
-- `scripts/validators/dor_validator.py` - Validate task is ready (not used in create, but available)
+- `scripts/task_management/core/id_generator.py` - Generate unique ID and filename
+- `scripts/task_management/core/dashboard_updater.py` - Update TASKS.md
+- `scripts/task_management/validators/dor_validator.py` - Validate task is ready (not used in create, but available)
 
 ## Notes
 

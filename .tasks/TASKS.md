@@ -46,13 +46,13 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | [CNT-037](tasks/CNT-037-optimisation-version-courte.md) | Optimisation version courte (1 page) | ⏳ À faire | 🟡 Moyenne | 5.00 | 2025-11-27 |
 | [INF-010](tasks/INF-010-skill-analyse-adequation.md) | Skill analyse adéquation profil-poste | ⏳ À faire | 🔴 Haute | 3.40 | 2025-11-25 |
 | [INF-009](tasks/INF-009-skill-analyse-offre-emploi.md) | Skill analyse d'offre d'emploi | ⏳ À faire | 🔴 Haute | 3.40 | 2025-11-25 |
+| [INF-006](tasks/INF-006-extraire-scripts-tests-hors-claude.md) | Extraire scripts et tests hors de `.claude/` | ⏳ À faire | 🔴 Haute | 3.40 | 2025-11-25 |
 | [TPL-002](tasks/TPL-002-template-system.md) | Système de changement de template | ⏳ À faire | 🟢 Basse | 3.00 | 2025-10-28 |
 | [LAY-002](tasks/LAY-002-consolidation-sections-dupliquees.md) | Consolider les sections dupliquées (Études, Expérience) | ⏳ À faire | 🟡 Moyenne | 2.60 | 2025-11-25 |
 | [PIP-003](tasks/PIP-003-build-word-format.md) | Build du CV au format Word | ⏳ À faire | 🟡 Moyenne | 2.60 | 2025-11-25 |
 | [INF-012](tasks/INF-012-skill-cv-adapte.md) | Skill CV adapté à l'offre | ⏳ À faire | 🔴 Haute | 2.55 | 2025-11-25 |
 | [INF-008](tasks/INF-008-architecture-skills-candidature.md) | Architecture système skills candidature | ⏳ À faire | 🔴 Haute | 2.55 | 2025-11-25 |
 | [PIP-001](tasks/PIP-001-cicd-pipeline.md) | CI/CD pour publication automatique | ⏳ À faire | 🟢 Basse | 2.50 | 2025-10-28 |
-| [INF-006](tasks/INF-006-extraire-scripts-tests-hors-claude.md) | Extraire scripts et tests hors de `.claude/` | ⏳ À faire | 🔴 Haute | 2.40 | 2025-11-25 |
 | [INF-007](tasks/INF-007-supprimer-cta-slash-commands-skills.md) | Supprimer CTA slash commands dans skills | ⏳ À faire | 🟢 Basse | 2.20 | 2025-11-25 |
 | [INF-011](tasks/INF-011-skill-lettre-motivation.md) | Skill assistant lettre de motivation | ⏳ À faire | 🟡 Moyenne | 1.73 | 2025-11-25 |
 | [QUA-002](tasks/QUA-002-verification-orthographique-grammaticale.md) | Vérification orthographique et grammaticale | ⏳ À faire | 🟡 Moyenne | 1.70 | 2025-11-26 |
@@ -65,23 +65,23 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
-| [INF-005](tasks/INF-005-repertoire-ressources-dedie.md) | Répertoire dédié aux ressources d'analyse | ✅ Terminé | 🔴 Haute | 2025-11-27 |
-| [DOC-002](tasks/DOC-002-guide-optimisation-linkedin.md) | Guide d'optimisation LinkedIn pour positionnement consultant | ✅ Terminé | 🔴 Haute | 2025-11-27 |
-| [TPL-001](tasks/TPL-001-cv-versions.md) | Versions courte et longue du CV | ✅ Terminé | 🟡 Moyenne | 2025-11-27 |
-| [CNT-025](tasks/CNT-025-remplacer-15-ca-par-chiffres-presales.md) | Remplacer "15% CA" par chiffres presales | ✅ Terminé | 🟡 Moyenne | 2025-11-26 |
-| [LAY-001](tasks/LAY-001-sidebar-premiere-page-uniquement.md) | Sidebar uniquement sur la première page | ✅ Terminé | 🟡 Moyenne | 2025-11-26 |
-| [TPL-004](tasks/TPL-004-extraction-donnees-structurees.md) | Extraire les données du CV (prérequis TPL-001/002/003) | ✅ Terminé | 🟡 Moyenne | 2025-11-26 |
-| [CNT-035](tasks/CNT-035-ajouter-mission-fircosoft.md) | Ajouter la mission Fircosoft (LexisNexis) | ✅ Terminé | 🟡 Moyenne | 2025-11-26 |
-| [QUA-001](tasks/QUA-001-verification.md) | Étapes de vérification du CV | ✅ Terminé | 🟡 Moyenne | 2025-11-26 |
-| [CNT-034](tasks/CNT-034-restructurer-experience-palo-it.md) | Restructurer expérience PALO IT par résultats | ✅ Terminé | 🔴 Haute | 2025-11-25 |
-| [CNT-033](tasks/CNT-033-ameliorer-section-a-propos.md) | Améliorer section "À propos" avec métriques | ✅ Terminé | 🔴 Haute | 2025-11-25 |
-| [CNT-032](tasks/CNT-032-moderniser-entete-cv.md) | Moderniser l'en-tête du CV (titre + adresse) | ✅ Terminé | 🔴 Haute | 2025-11-25 |
-| [INF-001](tasks/INF-001-mcp-integration.md) | Améliorer visuellement le CV avec l'aide de Claude | ✅ Terminé | 🟡 Moyenne | 2025-11-25 |
 
 Les tâches archivées sont déplacées dans [.archived/](.archived/).
 
-**Tâches archivées:** 27 tâches
+**Tâches archivées:** 40 tâches
 
+- INF-005 (2025-11-27)
+- DOC-002 (2025-11-27)
+- TPL-001 (2025-11-27)
+- CNT-025 (2025-11-26)
+- LAY-001 (2025-11-26)
+- TPL-004 (2025-11-26)
+- CNT-035 (2025-11-26)
+- QUA-001 (2025-11-26)
+- CNT-034 (2025-11-25)
+- CNT-033 (2025-11-25)
+- CNT-032 (2025-11-25)
+- INF-001 (2025-11-25)
 - CNT-031 (2025-11-25)
 - CNT-030 (2025-11-25)
 - CNT-029 (2025-11-25)
@@ -177,9 +177,9 @@ Closes TPL-001"
 - **Total**: 57 tâches
 - **À faire**: 17
 - **En cours**: 0
-- **Terminées**: 12
+- **Terminées**: 0
 - **Bloquées**: 0
-- **Archivées**: 28
+- **Archivées**: 40
 
 **Prochains IDs disponibles par trigramme**:
 

@@ -113,9 +113,14 @@ _cache: Dict[str, any] = {}
 # ============================================================================
 
 def _get_config_path(filename: str) -> Path:
-    """Get path to config file."""
-    # Assume we're in scripts/core/, so config is ../../config/
-    return Path(__file__).parent.parent.parent / "config" / filename
+    """Get path to config file.
+
+    From scripts/task_management/core/ we need to go to project root,
+    then into config/task_management/.
+    """
+    # scripts/task_management/core/ -> scripts/task_management/ -> scripts/ -> project root
+    project_root = Path(__file__).parent.parent.parent.parent
+    return project_root / "config" / "task_management" / filename
 
 
 def _load_yaml(filename: str) -> dict:

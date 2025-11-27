@@ -9,10 +9,11 @@ from pathlib import Path
 from typing import List, Optional
 import sys
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
+# Add project root to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
 
-from core.config_loader import load_paths
-from core.file_parser import parse_task_file, get_task_status
+from scripts.task_management.core.config_loader import load_paths
+from scripts.task_management.core.file_parser import parse_task_file, get_task_status
 
 
 # ============================================================================

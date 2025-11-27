@@ -16,7 +16,7 @@ Read IDEAS.md and parse ideas:
 
 ```python
 from pathlib import Path
-from scripts.core import config_loader
+from scripts.task_management.core import config_loader
 
 paths = config_loader.load_paths()
 ideas_file = Path(paths.tasks_ideas)
@@ -144,7 +144,7 @@ def infer_task_data(idea):
 Use task-create workflow with pre-filled values:
 
 ```python
-from scripts.core import id_generator
+from scripts.task_management.core import id_generator
 
 for idea in selected:
     task_data = infer_task_data(idea)
@@ -205,7 +205,7 @@ mark_idea_completed(ideas_file, idea)
 Commit the new task and updated IDEAS.md:
 
 ```python
-from scripts.core import git_operations
+from scripts.task_management.core import git_operations
 
 git_operations.stage_files([
     f'.tasks/tasks/{filename}',
@@ -241,11 +241,11 @@ Utilisez /task-start pour commencer le travail.
 
 ## Scripts Used
 
-- `scripts/core/id_generator.py` - Generate task IDs
-- `scripts/core/file_parser.py` - Parse and update files
-- `scripts/core/dashboard_updater.py` - Update TASKS.md
-- `scripts/core/git_operations.py` - Git operations
-- `scripts/core/config_loader.py` - Get paths
+- `scripts/task_management/core/id_generator.py` - Generate task IDs
+- `scripts/task_management/core/file_parser.py` - Parse and update files
+- `scripts/task_management/core/dashboard_updater.py` - Update TASKS.md
+- `scripts/task_management/core/git_operations.py` - Git operations
+- `scripts/task_management/core/config_loader.py` - Get paths
 
 ## Notes
 

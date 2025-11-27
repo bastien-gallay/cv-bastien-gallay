@@ -21,14 +21,14 @@ analysis:
   external_dir: "resources/external"
   dashboard: ".tasks/ANALYSES.md"
 
-# Skill paths (self-reference)
+# Skill paths (updated for new structure)
 skill:
   root: ".claude/skills/task-management"
-  config_dir: ".claude/skills/task-management/config"
-  scripts_dir: ".claude/skills/task-management/scripts"
+  config_dir: "config/task_management"
+  scripts_dir: "scripts/task_management"
   templates_dir: ".claude/skills/task-management/templates"
   workflows_dir: ".claude/skills/task-management/workflows"
-  tests_dir: ".claude/skills/task-management/tests"
+  tests_dir: "scripts/task_management/tests"
 
 # CV paths
 cv:

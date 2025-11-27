@@ -15,7 +15,7 @@ task-start <TASK-ID> [--verbose]
 Validate task meets Definition of Ready:
 
 ```python
-from scripts.validators import dor_validator
+from scripts.task_management.validators import dor_validator
 
 result = dor_validator.validate_dor(task_id)
 
@@ -46,7 +46,7 @@ for issue in result.issues:
 Update status and history:
 
 ```python
-from scripts.core import file_parser
+from scripts.task_management.core import file_parser
 from pathlib import Path
 from datetime import date
 
@@ -75,7 +75,7 @@ task_file.write_text(content)
 Update TASKS.md:
 
 ```python
-from scripts.core import dashboard_updater
+from scripts.task_management.core import dashboard_updater
 
 dashboard_updater.update_task_status(task_id, '🔄 En cours')
 ```
@@ -85,7 +85,7 @@ dashboard_updater.update_task_status(task_id, '🔄 En cours')
 Check if branch needed from metadata field "Branche nécessaire":
 
 ```python
-from scripts.core import git_operations
+from scripts.task_management.core import git_operations
 
 # Parse metadata to get branch requirement
 branch_needed = metadata.get('Branche nécessaire', 'Auto')
@@ -98,7 +98,7 @@ should_create_branch = (
 
 if should_create_branch:
     # Generate slug from title
-    from scripts.core.id_generator import slugify
+    from scripts.task_management.core.id_generator import slugify
     slug = slugify(task_title)
 
     # Create and checkout branch
@@ -152,11 +152,11 @@ Prochaines étapes:
 
 ## Scripts Used
 
-- `scripts/validators/dor_validator.py` - Validate Definition of Ready
-- `scripts/core/file_parser.py` - Read task metadata (Edit to update)
-- `scripts/core/dashboard_updater.py` - Update TASKS.md
-- `scripts/core/git_operations.py` - Git branch and commit operations
-- `scripts/core/id_generator.py` - Slugify for branch names
+- `scripts/task_management/validators/dor_validator.py` - Validate Definition of Ready
+- `scripts/task_management/core/file_parser.py` - Read task metadata (Edit to update)
+- `scripts/task_management/core/dashboard_updater.py` - Update TASKS.md
+- `scripts/task_management/core/git_operations.py` - Git branch and commit operations
+- `scripts/task_management/core/id_generator.py` - Slugify for branch names
 
 ## Notes
 

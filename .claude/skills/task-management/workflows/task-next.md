@@ -20,7 +20,7 @@ task-next [--verbose] [--start]
 Execute le script de scoring:
 
 ```bash
-uv run --with pyyaml python3 .claude/skills/task-management/scripts/algorithms/priority_scorer.py --top 3
+uv run --with pyyaml python3 scripts/task_management/algorithms/priority_scorer.py --top 3
 ```
 
 ### 2. Affichage des Résultats
@@ -71,6 +71,6 @@ task-start <ID-suggéré>
 
 ## Notes
 
-- Algorithme implémenté dans `scripts/algorithms/priority_scorer.py`
+- Algorithme implémenté dans `scripts/task_management/algorithms/priority_scorer.py`
 - Configuration des priorités dans `config/priorities.yml`
 - Les tâches "🔄 En cours" et "✅ Terminé" sont automatiquement filtrées

@@ -220,11 +220,11 @@ Use --fix to automatically resolve fixable issues.
 
 ## Scripts Used
 
-- `scripts/core/file_parser.py` - Parse and validate task files
-- `scripts/core/id_generator.py` - Check ID uniqueness
-- `scripts/core/dashboard_updater.py` - Validate dashboard
-- `scripts/core/config_loader.py` - Load trigrammes
-- `scripts/analysis/recommendation_parser.py` - Validate recommendation tracking
+- `scripts/task_management/core/file_parser.py` - Parse and validate task files
+- `scripts/task_management/core/id_generator.py` - Check ID uniqueness
+- `scripts/task_management/core/dashboard_updater.py` - Validate dashboard
+- `scripts/task_management/core/config_loader.py` - Load trigrammes
+- `scripts/task_management/analysis/recommendation_parser.py` - Validate recommendation tracking
 
 ## Notes
 

@@ -4,11 +4,12 @@ import pytest
 from pathlib import Path
 import tempfile
 import shutil
-
 import sys
-sys.path.insert(0, str(Path(__file__).parent.parent / "scripts"))
 
-from core.id_generator import (
+# Add project root to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
+
+from scripts.task_management.core.id_generator import (
     slugify,
     find_existing_ids,
     get_next_number,

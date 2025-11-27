@@ -4,11 +4,12 @@ import pytest
 from pathlib import Path
 import tempfile
 import shutil
-
 import sys
-sys.path.insert(0, str(Path(__file__).parent.parent / "scripts"))
 
-from validators.dor_validator import (
+# Add project root to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
+
+from scripts.task_management.validators.dor_validator import (
     ValidationIssue,
     DorValidationResult,
     validate_file_exists,

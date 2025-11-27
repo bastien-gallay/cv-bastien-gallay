@@ -15,7 +15,7 @@ task-complete <TASK-ID>
 Validate task meets Definition of Done:
 
 ```bash
-uv run --with pyyaml python3 .claude/skills/task-management/scripts/validators/dod_validator.py <TASK-ID>
+uv run --with pyyaml python3 scripts/task_management/validators/dod_validator.py <TASK-ID>
 ```
 
 Checks:
@@ -56,7 +56,7 @@ Update task metadata:
 Create final commit:
 
 ```python
-from scripts.core import git_operations
+from scripts.task_management.core import git_operations
 
 message = git_operations.format_commit_message(
     commit_type='feat',  # or 'fix', 'refactor', etc.
@@ -76,7 +76,7 @@ git_operations.create_commit(message)
 Move task to completed section:
 
 ```python
-from scripts.core import dashboard_updater
+from scripts.task_management.core import dashboard_updater
 
 dashboard_updater.move_task_to_completed(
     task_id=task_id,
@@ -154,10 +154,10 @@ La tâche a été déplacée vers "Tâches terminées" dans TASKS.md.
 
 ## Scripts Used
 
-- `scripts/validators/dod_validator.py` - Validate Definition of Done
-- `scripts/core/git_operations.py` - Git branch/commit management
-- `scripts/core/dashboard_updater.py` - Update TASKS.md
-- `scripts/core/file_parser.py` - Read task file (Edit to update)
+- `scripts/task_management/validators/dod_validator.py` - Validate Definition of Done
+- `scripts/task_management/core/git_operations.py` - Git branch/commit management
+- `scripts/task_management/core/dashboard_updater.py` - Update TASKS.md
+- `scripts/task_management/core/file_parser.py` - Read task file (Edit to update)
 
 ## Notes
 

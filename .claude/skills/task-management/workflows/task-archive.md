@@ -140,10 +140,10 @@ La tâche a été retirée du dashboard actif.
 
 ## Scripts Used
 
-- `scripts/core/file_parser.py` - Validate task status
-- `scripts/core/config_loader.py` - Get archive paths
-- `scripts/core/dashboard_updater.py` - Remove from dashboard
-- `scripts/core/git_operations.py` - Commit archival
+- `scripts/task_management/core/file_parser.py` - Validate task status
+- `scripts/task_management/core/config_loader.py` - Get archive paths
+- `scripts/task_management/core/dashboard_updater.py` - Remove from dashboard
+- `scripts/task_management/core/git_operations.py` - Commit archival
 
 ## Notes
 

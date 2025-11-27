@@ -4,10 +4,10 @@ import pytest
 from pathlib import Path
 import sys
 
-# Add scripts directory to path
-sys.path.insert(0, str(Path(__file__).parent.parent / "scripts"))
+# Add project root to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
 
-from analysis.recommendation_parser import (
+from scripts.task_management.analysis.recommendation_parser import (
     Recommendation,
     parse_priority_header,
     parse_recommendation_item,

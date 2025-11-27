@@ -11,13 +11,10 @@ import unicodedata
 from pathlib import Path
 from typing import Optional, Tuple, List
 
-# Try relative import (when used as module), fall back to absolute (when run as script)
-try:
-    from .config_loader import load_paths, load_trigrammes
-except ImportError:
-    # Add parent directory to path for CLI usage
-    sys.path.insert(0, str(Path(__file__).parent.parent))
-    from core.config_loader import load_paths, load_trigrammes
+# Add project root to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
+
+from scripts.task_management.core.config_loader import load_paths, load_trigrammes
 
 
 # ============================================================================

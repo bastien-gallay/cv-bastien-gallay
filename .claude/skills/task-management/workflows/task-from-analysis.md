@@ -215,10 +215,10 @@ Fichier de suivi mis à jour: .tasks/resources/analyses/CNT-001/recommendations-
 
 ## Scripts Used
 
-- `scripts/analysis/recommendation_parser.py` - Parse and update recommendations
-- `scripts/core/id_generator.py` - Generate task IDs
-- `scripts/core/file_parser.py` - Parse task files
-- `scripts/core/dashboard_updater.py` - Update TASKS.md
+- `scripts/task_management/analysis/recommendation_parser.py` - Parse and update recommendations
+- `scripts/task_management/core/id_generator.py` - Generate task IDs
+- `scripts/task_management/core/file_parser.py` - Parse task files
+- `scripts/task_management/core/dashboard_updater.py` - Update TASKS.md
 
 ## Notes
 

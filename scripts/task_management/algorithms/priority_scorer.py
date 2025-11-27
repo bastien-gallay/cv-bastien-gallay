@@ -12,11 +12,11 @@ from pathlib import Path
 from typing import List, Optional
 import sys
 
-# Add parent directory to path for imports
-sys.path.insert(0, str(Path(__file__).parent.parent))
+# Add project root to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
 
-from core.config_loader import load_priorities, load_paths, get_priority_score
-from core.file_parser import parse_task_file, get_task_status, get_task_priority, parse_estimated_hours
+from scripts.task_management.core.config_loader import load_priorities, load_paths, get_priority_score
+from scripts.task_management.core.file_parser import parse_task_file, get_task_status, get_task_priority, parse_estimated_hours
 
 
 @dataclass
