@@ -26,10 +26,12 @@ build-all:
     typst compile src/cv-short.typ dist/cv-short.pdf
     @echo "✓ Built dist/cv.pdf and dist/cv-short.pdf"
 
-# Watch for changes and rebuild automatically
+# Watch for changes and rebuild automatically (both versions)
 watch:
-    @echo "Watching for changes..."
-    typst watch src/cv.typ dist/cv.pdf
+    @echo "Watching for changes (both CV versions)..."
+    @mkdir -p dist
+    typst watch src/cv.typ dist/cv.pdf &
+    typst watch src/cv-short.typ dist/cv-short.pdf
 
 # Clean build artifacts
 clean:
