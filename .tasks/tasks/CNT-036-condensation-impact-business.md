@@ -8,13 +8,13 @@
 |-------|--------|
 | **ID** | CNT-036 |
 | **Titre** | Condensation et impact business (version longue) |
-| **Statut** | 🔄 En cours |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | CNT (Content) |
 | **Section CV** | General |
 | **Créé le** | 2025-11-27 |
 | **Cible** | - |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-28 |
 | **Temps estimé** | 2-3 heures |
 | **Temps réel** | - |
 | **Branche nécessaire** | Oui |
