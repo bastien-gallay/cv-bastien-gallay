@@ -16,6 +16,10 @@
 #let accent-color = rgb("#4682b4")
 #let header-color = rgb("#3b4f60")
 
+// Typographie
+#let body-font = "Helvetica Neue"
+#let body-font-size = 10pt
+
 // Mise en page
 #let paper-size = "a4"
 #let side-width = 4.5cm

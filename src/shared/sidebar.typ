@@ -3,19 +3,13 @@
 
 #import "../neat-cv-local.typ": contact-info, item-pills, social-links
 
-// Texte "A propos" - version longue (avec détails presales)
-#let about-long = [
+// Texte "A propos" - version standard
+#let about-text = [
   CTO avec 25 ans d'expérience. Expert IA Générative et transformation Agile. Management de 50 professionnels techniques, pilotage de 6+ opportunités presales (€15k-€500k+). Basé Bordeaux, présence Paris régulière.
 ]
 
-// Texte "A propos" - version courte
-#let about-short = [
-  CTO avec 25 ans d'expérience. Expert IA Générative et transformation Agile. Management de 50 professionnels techniques. Basé Bordeaux, présence Paris régulière.
-]
-
 // Fonction pour générer le contenu de la sidebar
-// Paramètre: about-text - le texte "A propos" à utiliser (about-long ou about-short)
-#let sidebar-content(about-text) = [
+#let sidebar-content() = [
   = A propos
   #about-text
 

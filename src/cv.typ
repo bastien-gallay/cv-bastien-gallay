@@ -6,14 +6,15 @@
 )
 
 // Configuration partagée
-#import "shared/config.typ": author-config, accent-color, header-color, paper-size, side-width
-#import "shared/sidebar.typ": sidebar-content, about-long
+#import "shared/config.typ": *
+#import "shared/sidebar.typ": sidebar-content
 
 #show: cv-setup.with(
   author: author-config,
   accent-color: accent-color,
   header-color: header-color,
-  body-font-size: 10.5pt,
+  body-font: body-font,
+  body-font-size: body-font-size,
   paper-size: paper-size,
   side-width: side-width,
 )
@@ -26,14 +27,14 @@
   profile-picture: image("assets/photo-profile-pro.jpg"),
 
   // SIDEBAR CONTENT (partagé via shared/sidebar.typ)
-  sidebar-content(about-long),
+  sidebar-content(),
 
   // MAIN CONTENT (Page 1)
   [
     = Expérience Professionnelle
 
     #entry(
-      title: "Consultant Technique Senior → Chief Technology Officer",
+      title: "Consultant Tech → Chief Technology Officer",
       date: "02/2021 - 08/2025",
       institution: "PALO IT",
       location: "Bordeaux/Paris, France",

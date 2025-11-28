@@ -7,14 +7,15 @@
 )
 
 // Configuration partagée
-#import "shared/config.typ": author-config, accent-color, header-color, paper-size, side-width
-#import "shared/sidebar.typ": sidebar-content, about-short
+#import "shared/config.typ": *
+#import "shared/sidebar.typ": sidebar-content
 
 #show: cv-setup.with(
   author: author-config,
   accent-color: accent-color,
   header-color: header-color,
-  body-font-size: 11pt,  // Légèrement plus grand pour la version courte
+  body-font: body-font,
+  body-font-size: body-font-size,
   paper-size: paper-size,
   side-width: side-width,
 )
@@ -27,7 +28,7 @@
   profile-picture: image("assets/photo-profile-pro.jpg"),
 
   // SIDEBAR CONTENT (partagé via shared/sidebar.typ)
-  sidebar-content(about-short),
+  sidebar-content(),
 
   // MAIN CONTENT
   [
