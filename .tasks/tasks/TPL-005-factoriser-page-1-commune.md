@@ -113,6 +113,11 @@ La factorisation permettra :
 
 - [TPL-001](./.archived/TPL-001-cv-versions.md) - Création des versions short/long (archivée)
 - [LAY-001](./.archived/LAY-001-sidebar-premiere-page-uniquement.md) - Sidebar première page uniquement (archivée)
+- [LAY-004](./LAY-004-equilibrer-contenu-premiere-page-cv-long.md) - Équilibrer contenu page 1 (travail fusionné)
+
+### Note importante
+
+> **2025-11-28** : Cette tâche est fusionnée avec LAY-004. La factorisation sera réalisée dans le cadre de LAY-004 pour équilibrer et aligner les deux versions du CV.
 
 ---
 

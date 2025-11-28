@@ -101,6 +101,13 @@ Lors du travail sur cette tâche :
 - [LAY-001](./LAY-001-sidebar-premiere-page-uniquement.md) - Sidebar première page uniquement
 - [LAY-002](./LAY-002-consolidation-sections-dupliquees.md) - Consolidation sections dupliquées
 - [LAY-003](./LAY-003-reorganiser-competences-3-poles.md) - Réorganiser compétences
+- [TPL-005](./TPL-005-factoriser-page-1-commune.md) - Factoriser page 1 (fusionné dans cette tâche)
+
+### Scope étendu (2025-11-28)
+
+> Suite à l'analyse, la page 1 est déjà équilibrée. Le scope est étendu pour inclure la **factorisation** de la page 1 entre `cv.typ` et `cv-short.typ` (fusion avec TPL-005).
+>
+> **Impact sur CNT-037** : Après factorisation, les modifications de cv-short.typ devront considérer les fichiers partagés dans `src/shared/`.
 
 ---
 

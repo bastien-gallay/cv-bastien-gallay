@@ -166,9 +166,12 @@ Après CNT-036, propager :
 - Compiler après chaque modification (`just build-short`)
 - S'assurer de la cohérence avec le CV long
 
-**Prérequis recommandé:**
+**Prérequis recommandés:**
 
 - CNT-036 (Condensation et impact business) devrait être terminé avant pour propager les améliorations
+- TPL-005 / LAY-004 (Factorisation page 1) - après factorisation, les modifications de cv-short.typ devront :
+  - Modifier `src/shared/` pour les éléments communs (config, sidebar)
+  - Modifier uniquement `cv-short.typ` pour le contenu spécifique à la version courte
 
 ---
 
