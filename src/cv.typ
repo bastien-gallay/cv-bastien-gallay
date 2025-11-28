@@ -2,9 +2,8 @@
 // Uses local fork of neat-cv with cv-setup, cv-page-one, cv-continued
 
 #import "neat-cv-local.typ": (
-  cv-setup, cv-page-one, cv-continued,
-  contact-info, email-link, entry, item-pills, item-with-level,
-  publications, social-links,
+  contact-info, cv-continued, cv-page-one, cv-setup, email-link, entry, item-pills, item-with-level, publications,
+  social-links,
 )
 
 #show: cv-setup.with(
@@ -19,7 +18,7 @@
   ),
   accent-color: rgb("#4682b4"),
   header-color: rgb("#3b4f60"),
-  body-font-size: 10pt,
+  body-font-size: 10.5pt,
   paper-size: "a4",
   side-width: 4.5cm,
 )
@@ -29,7 +28,7 @@
 // ============================================================================
 
 #cv-page-one(
-  profile-picture: image("assets/reshaped-pic.png"),
+  profile-picture: image("assets/photo-profile-pro.jpg"),
 
   // SIDEBAR CONTENT
   [
@@ -51,7 +50,6 @@
 
     #social-links()
 
-    = Langues
     - *Français :* Langue maternelle
     - *Anglais :* Courant
 
@@ -150,6 +148,26 @@
       location: "Sacclay, France",
       [Sujet de recherche: _"Comparaison des algorithmes de classification pour la segmentation multitexturées"_.],
     )
+
+    = Certifications
+
+    #entry(
+      title: "Certifications Scrum & SAFe",
+      date: "2008 - 2020",
+      institution: "Scrum.org, Scrum Alliance, Scaled Agile",
+    )[
+      PSM I & II, PSD, SPS (Nexus), PSK, SAFe SPC5
+    ]
+
+    = Bénévolat
+
+    #entry(
+      title: "Engagement communautaire Agile",
+      date: "2011 - Aujourd'hui",
+      location: "Bordeaux, France",
+    )[
+      Organisateur Agile Tour Bordeaux (150+ participants/an), Fondateur Lean Startup Bordeaux (2012-2018), Co-fondateur Collectif Quinconces (2016-2018).
+    ]
   ],
 )
 
@@ -160,25 +178,6 @@
 #pagebreak()
 
 #cv-continued[
-  = Certifications
-
-  #entry(
-    title: "Certifications Scrum & SAFe",
-    date: "2008 - 2020",
-    institution: "Scrum.org, Scrum Alliance, Scaled Agile",
-  )[
-    PSM I & II, PSD, SPS (Nexus), PSK, SAFe SPC5
-  ]
-
-  = Bénévolat
-
-  #entry(
-    title: "Engagement communautaire Agile",
-    date: "2011 - Aujourd'hui",
-    location: "Bordeaux, France",
-  )[
-    Organisateur Agile Tour Bordeaux (150+ participants/an), Fondateur Lean Startup Bordeaux (2012-2018), Co-fondateur Collectif Quinconces (2016-2018).
-  ]
 
   = Expérience détaillée
 
@@ -191,7 +190,7 @@
   )[
     === Contexte
     Évolution de Consultant Senior à CTO au sein d'un cabinet de conseil international spécialisé dans la transformation digitale et le développement durable.
-   === En tant que CTO (oct. 2024 - août 2025)
+    === En tant que CTO (oct. 2024 - août 2025)
 
     ==== Leadership & Management
     - Direction de la stratégie technologique et participation au COMEX
@@ -222,23 +221,12 @@
 
     === Missions clients
 
-    ==== Bodic - External CTO (2024-2025, 1.5j/sem)
-    API optimisée à 72ms, Outlook add-in. #strong[Stack:] Azure, TypeScript, PostgreSQL.
-
-    ==== Systel - Team Coach (2025, 30j)
-    Coaching équipe 3 dev, audit technique acquisition. #strong[Stack:] Java, Angular, Spring Boot.
-
-    ==== TopTex - Architecture API (2025, 4j)
-    Étude migration API multi-instance Sage.
-
-    ==== Beta.gouv - Lead Dev (2023-2024, 7 mois)
-    Création infrastructure MonEspaceNis2. #strong[Stack:] React, TypeScript, NestJS, PostgreSQL.
-
-    ==== Fircosoft - Dev Senior (2021-2023, 2 ans 4 mois)
-    Filtrage transactions bancaires, CI/CD langages propriétaires, SAFe 80+ personnes. #strong[Domaine:] AML, KYC, SWIFT. #strong[Stack:] Python, C, Oracle.
-
-    ==== Nalo - Coach Technique (2021, 10 mois)
-    Coaching CTO, Software Craftsmanship. #strong[Stack:] Python, Django, TDD, DDD.
+    - *Bodic - External CTO (2024-2025, 1.5j/sem) :* API optimisée à 72ms, Outlook add-in. #strong[Stack:] Azure, TypeScript, PostgreSQL.
+    - *Systel - Team Coach (2025, 30j) :* Coaching équipe 3 dev, audit technique acquisition. #strong[Stack:] Java, Angular, Spring Boot.
+    - *TopTex - Architecture API (2025, 4j) :* Étude migration API multi-instance Sage.
+    - *Beta.gouv - Lead Dev (2023-2024, 7 mois) :* Création infrastructure MonEspaceNis2. #strong[Stack:] React, TypeScript, NestJS, PostgreSQL.
+    - *Fircosoft - Dev Senior (2021-2023, 2 ans 4 mois) :* Filtrage transactions bancaires, CI/CD langages propriétaires, SAFe 80+ personnes. #strong[Domaine:] AML, KYC, SWIFT. #strong[Stack:] Python, C, Oracle.
+    - *Nalo - Coach Technique (2021, 10 mois) :* Coaching CTO, Software Craftsmanship. #strong[Stack:] Python, Django, TDD, DDD.
   ]
 
   #entry(
@@ -249,23 +237,12 @@
   )[
     === Missions principales
 
-    ==== DEKRA - Coach Agile (2013-2015, 16 mois)
-    Scrum Master refonte logiciel, feature teams, coaching Scrum Masters. #strong[Méthodes:] Scrum, Coaching.
-
-    ==== i-BP - Coach Agile (2015, 6 mois)
-    Projets Agiles (Décisionnel, DevOps), Communautés de Pratiques nationales. #strong[Méthodes:] Scrum, Kanban.
-
-    ==== Dronisos - Scrum Master
-    Structuration R&D startup événementiel drones. #strong[Méthodes:] Scrum, Lean Startup.
-
-    ==== Mieux Placer - Coach Agile
-    Coaching Product Owner, formation équipes Fintech. #strong[Méthodes:] Scrum.
-
-    ==== Wanteeed - PO & Coach Agile (2020, 6 mois)
-    Product Owner, modèle organisationnel startup 20 personnes. #strong[Méthodes:] Scrum.
-
-    ==== SeLoger/Logic Immo - Architecte (2020-2021, 4 mois)
-    Audit et refonte architecture. #strong[Stack:] Architecture logicielle.
+    - *DEKRA - Coach Agile (2013-2015, 16 mois) :* Scrum Master refonte logiciel, feature teams, coaching Scrum Masters. #strong[Méthodes:] Scrum, Coaching.
+    - *i-BP - Coach Agile (2015, 6 mois) :* Projets Agiles (Décisionnel, DevOps), Communautés de Pratiques nationales. #strong[Méthodes:] Scrum, Kanban.
+    - *Dronisos - Scrum Master :* Structuration R&D startup événementiel drones. #strong[Méthodes:] Scrum, Lean Startup.
+    - *Mieux Placer - Coach Agile :* Coaching Product Owner, formation équipes Fintech. #strong[Méthodes:] Scrum.
+    - *Wanteeed - PO & Coach Agile (2020, 6 mois) :* Product Owner, modèle organisationnel startup 20 personnes. #strong[Méthodes:] Scrum.
+    - *SeLoger/Logic Immo - Architecte (2020-2021, 4 mois) :* Audit et refonte architecture. #strong[Stack:] Architecture logicielle.
   ]
 
   #entry(
@@ -286,10 +263,7 @@
     institution: [Cast Consulting],
     location: [Paris, France],
   )[
-    ==== JOA Online - Product Owner (2009-2010, 16 mois)
-    Équipe 10p (France/Portugal), Scrum distribué, coordination 10 sous-traitants Europe.
-
-    ==== Pixmania - Chef de projet (2007-2008, 16 mois)
-    Équipe 7 dev, coordination internationale Londres, 6 applications. #strong[Stack:] PHP, MySQL.
+    - *JOA Online - Product Owner (2009-2010, 16 mois) :* Équipe 10p (France/Portugal), Scrum distribué, coordination 10 sous-traitants Europe.
+    - *Pixmania - Chef de projet (2007-2008, 16 mois) :* Équipe 7 dev, coordination internationale Londres, 6 applications. #strong[Stack:] PHP, MySQL.
   ]
 ]

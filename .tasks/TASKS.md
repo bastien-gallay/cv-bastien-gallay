@@ -47,6 +47,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | [LAY-004](tasks/LAY-004-equilibrer-contenu-premiere-page-cv-long.md) | Équilibrer le contenu de la première page du CV long | ⏳ À faire | 🟡 Moyenne | 5.00 | 2025-11-27 |
 | [INF-010](tasks/INF-010-skill-analyse-adequation.md) | Skill analyse adéquation profil-poste | ⏳ À faire | 🔴 Haute | 3.40 | 2025-11-25 |
 | [INF-009](tasks/INF-009-skill-analyse-offre-emploi.md) | Skill analyse d'offre d'emploi | ⏳ À faire | 🔴 Haute | 3.40 | 2025-11-25 |
+| [TPL-005](tasks/TPL-005-factoriser-page-1-commune.md) | Factoriser page 1 commune entre cv.typ et cv-short.typ | ⏳ À faire | 🟡 Moyenne | - | 2025-11-28 |
 | [TPL-002](tasks/TPL-002-template-system.md) | Système de changement de template | ⏳ À faire | 🟢 Basse | 3.00 | 2025-10-28 |
 | [LAY-002](tasks/LAY-002-consolidation-sections-dupliquees.md) | Consolider les sections dupliquées (Études, Expérience) | ⏳ À faire | 🟡 Moyenne | 2.60 | 2025-11-25 |
 | [PIP-003](tasks/PIP-003-build-word-format.md) | Build du CV au format Word | ⏳ À faire | 🟡 Moyenne | 2.60 | 2025-11-25 |
@@ -176,8 +177,8 @@ Closes TPL-001"
 
 ## Statistiques
 
-- **Total**: 58 tâches
-- **À faire**: 17
+- **Total**: 59 tâches
+- **À faire**: 18
 - **En cours**: 0
 - **Terminées**: 1
 - **Bloquées**: 0
@@ -185,7 +186,7 @@ Closes TPL-001"
 
 **Prochains IDs disponibles par trigramme**:
 
-- CNT-038, TPL-005, QUA-003, PIP-004, INF-013, LAY-006, DOC-003
+- CNT-038, TPL-006, QUA-003, PIP-004, INF-013, LAY-006, DOC-003
 
 ---
 

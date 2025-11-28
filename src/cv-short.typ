@@ -34,32 +34,50 @@
   // SIDEBAR CONTENT
   [
     = A propos
-    CTO avec 25 ans d'expérience. Expert IA Générative et transformation Agile. Management de 50 professionnels techniques.
-
-    = Contact
-    #contact-info()
-
-    #social-links()
-
-    = Langues
-    #item-with-level("Français", 5, subtitle: "Langue maternelle")
-    #item-with-level("Anglais", 4, subtitle: "Courant")
+    CTO avec 25 ans d'expérience. Expert IA Générative et transformation Agile. Management de 50 professionnels techniques. Basé Bordeaux, présence Paris régulière.
 
     = Rayonnement
     - Mentor Google Launchpad
     - Coach Startup Weekend
     - Orateur Agile Tour & Scrum Day
 
-    = Expertises
+    = Contact
+    #contact-info()
+
+    = Informations
+    Nationalité : Français
+
+    Date de naissance : 3/03/1979
+
+    #social-links()
+
+    - *Français :* Langue maternelle
+    - *Anglais :* Courant
+
+    = Leadership
     #item-pills((
-      "Agile",
-      "IA / LLM",
-      "Leadership",
-      "TypeScript",
+      "COMEX",
+      "Recrutement",
+      "Stratégie Tech",
+      "Formation",
+    ))
+
+    = Tech & IA
+    #item-pills((
       "Python",
+      "TypeScript",
       "Node.js",
       "C#",
       "Rust",
+      "SQL",
+      "IA",
+    ))
+
+    = Méthodologie
+    #item-pills((
+      "SAFe",
+      "Lean Startup",
+      "Craftsmanship",
       "TDD",
       "DDD",
     ))
