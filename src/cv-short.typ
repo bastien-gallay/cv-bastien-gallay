@@ -10,6 +10,7 @@
 #import "shared/config.typ": *
 #import "shared/sidebar.typ": sidebar-content
 #import "shared/experiences.typ": experiences-page-1
+#import "shared/sections.typ": sections-page-1-short
 
 #show: cv-setup.with(
   author: author-config,
@@ -31,53 +32,9 @@
   // SIDEBAR CONTENT (partagé via shared/sidebar.typ)
   sidebar-content(),
 
-  // MAIN CONTENT
+  // MAIN CONTENT - utilise les modules partagés
   [
     #experiences-page-1
-
-    = Formation
-
-    #entry(
-      title: "DEA Réalité Virtuelle et Maîtrise des Systèmes Complexes - Mention Bien",
-      date: "2002",
-      institution: "INSTN (CEA Saclay)",
-      location: "Saclay, France",
-    )[
-      Recherche : _"Comparaison des algorithmes de classification pour la segmentation multitexturées"_.
-    ]
-
-    #entry(
-      title: "Maîtrise d'Informatique - Mention Bien",
-      date: "2001",
-      institution: "Université de Picardie Jules Verne",
-      location: "Amiens, France",
-    )[
-      Mémoire : _"Complexité des algorithmes quantiques"_.
-    ]
-
-    = Certifications
-
-    #entry(
-      title: "SAFe Program Consultant (SPC5)",
-      date: "2020",
-      institution: "Scaled Agile, Inc.",
-    )[]
-
-    #entry(
-      title: "Professional Scrum Master (PSM) & Developer (PSD-I)",
-      date: "2015-2018",
-      institution: "Scrum.org",
-    )[]
-
-    = Engagement communautaire
-
-    #entry(
-      title: "Organisateur Agile Tour Bordeaux",
-      date: "2011 - Aujourd'hui",
-      institution: "Agile Tour",
-      location: "Bordeaux",
-    )[
-      Organisation de la conférence annuelle (150+ participants). Coordination speakers et programme.
-    ]
+    #sections-page-1-short
   ],
 )

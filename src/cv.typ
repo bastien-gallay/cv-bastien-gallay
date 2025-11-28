@@ -9,6 +9,7 @@
 #import "shared/config.typ": *
 #import "shared/sidebar.typ": sidebar-content
 #import "shared/experiences.typ": experiences-page-1
+#import "shared/sections.typ": sections-page-1-full
 
 #show: cv-setup.with(
   author: author-config,
@@ -30,39 +31,10 @@
   // SIDEBAR CONTENT (partagé via shared/sidebar.typ)
   sidebar-content(),
 
-  // MAIN CONTENT (Page 1)
+  // MAIN CONTENT (Page 1) - utilise les modules partagés
   [
     #experiences-page-1
-
-    = Etudes
-
-    #entry(
-      title: "DEA Réalité Virtuelle et Maîtrise des Systèmes Complexes",
-      date: "2002",
-      institution: "Institut National de Sciences et Techniques Nucléaires (INSTN)",
-      location: "Sacclay, France",
-      [Sujet de recherche: _"Comparaison des algorithmes de classification pour la segmentation multitexturées"_.],
-    )
-
-    = Certifications
-
-    #entry(
-      title: "Certifications Scrum & SAFe",
-      date: "2008 - 2020",
-      institution: "Scrum.org, Scrum Alliance, Scaled Agile",
-    )[
-      PSM I & II, PSD, SPS (Nexus), PSK, SAFe SPC5
-    ]
-
-    = Bénévolat
-
-    #entry(
-      title: "Engagement communautaire Agile",
-      date: "2011 - Aujourd'hui",
-      location: "Bordeaux, France",
-    )[
-      Organisateur Agile Tour Bordeaux (150+ participants/an), Fondateur Lean Startup Bordeaux (2012-2018), Co-fondateur Collectif Quinconces (2016-2018).
-    ]
+    #sections-page-1-full
   ],
 )
 
