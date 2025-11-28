@@ -8,6 +8,7 @@
 // Configuration partagée
 #import "shared/config.typ": *
 #import "shared/sidebar.typ": sidebar-content
+#import "shared/experiences.typ": experiences-page-1
 
 #show: cv-setup.with(
   author: author-config,
@@ -31,60 +32,7 @@
 
   // MAIN CONTENT (Page 1)
   [
-    = Expérience Professionnelle
-
-    #entry(
-      title: "Consultant Tech → Chief Technology Officer",
-      date: "02/2021 - 08/2025",
-      institution: "PALO IT",
-      location: "Bordeaux/Paris, France",
-    )[
-      - *Innovation IA :* Conception de Gen-e2, framework de développement accéléré par IA. 20-40 certifications GitHub Copilot. Partenariats Scaleway, GitHub, Mistral.
-      - *Leadership :* Direction stratégie technologique et COMEX. Pilotage presales 6+ opportunités (€15k-€500k+). Management de 50 professionnels techniques.
-      - *Business :* Presales 6+ opportunités majeures (€15k-€500k+). Initiative Quantum Computing.
-      - *Missions Clients :* Bodic (External CTO, API optimisée à 72ms), Beta.gouv (Lead Dev, 7 mois).
-      - *Stack :* Azure, AWS, OpenAI, Anthropic, LangChain, Python, C\#, TypeScript, Rust.
-    ]
-
-    #entry(
-      title: "Gérant & Coach Agile",
-      date: "09/2013 - 02/2021",
-      institution: "Upwiser",
-      location: "Bordeaux, France",
-    )[
-      - Pilotage de transformations Agiles à l'échelle (SAFe, Scrum) pour grands comptes (Dekra, i-BP).
-      - Structuration R&D et coaching CTOs pour scale-ups (Dronisos, Wanteeed, Nalo, SeLoger).
-      - Accompagnement de *~100 startups et PME* dans leur transformation agile.
-      - Animation de formations Agile (*~15 sessions/an*) et ingénierie pédagogique.
-    ]
-
-    #entry(
-      title: "Chef de projet technique et Scrum Master",
-      date: "10/2010 - 10/2013",
-      institution: "CDiscount",
-      location: "Bordeaux, France",
-    )[
-      - Gestion de projets techniques et Scrum Master pour des projets clients variés.
-      - Environnement de développement .Net, C\#, SQL Server.
-      - Responsable technique de la plateforme de paiement.
-    ]
-
-    #entry(
-      title: "Consultant Technique",
-      date: "08/2006 - 09/2010",
-      institution: "Cast Consulting",
-      location: "Paris, France",
-    )[
-      - Product Owner JOA Online (équipe 10p, Scrum distribué, coordination 10 sous-traitants).
-      - Chef de projet Pixmania/TheLink (équipe 7 dev, coordination internationale).
-    ]
-
-    #entry(
-      title: "Développeur Web",
-      date: "06/2002 - 07/2006",
-      institution: "Boonty/Nexway, Indépendant",
-      location: "Paris, France",
-    )[]
+    #experiences-page-1
 
     = Etudes
 
