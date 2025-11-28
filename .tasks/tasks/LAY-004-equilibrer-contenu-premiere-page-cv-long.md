@@ -8,7 +8,7 @@
 |-------|--------|
 | **ID** | LAY-004 |
 | **Titre** | Équilibrer le contenu de la première page du CV long |
-| **Statut** | ⏳ À faire |
+| **Statut** | 🔄 En cours |
 | **Priorité** | 🟡 Moyenne |
 | **Trigramme** | LAY |
 | **Section CV** | General |
@@ -139,6 +139,7 @@ Closes LAY-004"
 
 | Date | Action | Détails |
 |------|--------|---------|
+| 2025-11-28 | En cours | Début du travail |
 | 2025-11-27 | Création | Tâche créée |
 
 ---
