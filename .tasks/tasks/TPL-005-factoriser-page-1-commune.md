@@ -8,15 +8,15 @@
 |-------|--------|
 | **ID** | TPL-005 |
 | **Titre** | Factoriser page 1 commune entre cv.typ et cv-short.typ |
-| **Statut** | ⏳ À faire |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🟡 Moyenne |
 | **Trigramme** | TPL |
 | **Section CV** | General |
 | **Créé le** | 2025-11-28 |
 | **Cible** | - |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-28 |
 | **Temps estimé** | 2 heures |
-| **Temps réel** | - |
+| **Temps réel** | (fusionné avec LAY-004) |
 | **Branche nécessaire** | Oui |
 
 ---
@@ -151,10 +151,13 @@ Closes TPL-005"
 
 | Date | Action | Détails |
 |------|--------|---------|
+| 2025-11-28 | Terminé | Fusionné et réalisé dans LAY-004 |
 | 2025-11-28 | Création | Tâche créée suite au réalignement visuel des deux versions |
 
 ---
 
 ## Résultat final
 
-[À remplir une fois la tâche terminée]
+**Note :** Cette tâche a été fusionnée et réalisée dans le cadre de LAY-004.
+
+Voir [LAY-004](./LAY-004-equilibrer-contenu-premiere-page-cv-long.md) pour les détails complets.

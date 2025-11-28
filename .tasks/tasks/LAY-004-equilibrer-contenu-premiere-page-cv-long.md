@@ -8,15 +8,15 @@
 |-------|--------|
 | **ID** | LAY-004 |
 | **Titre** | Équilibrer le contenu de la première page du CV long |
-| **Statut** | 🔄 En cours |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🟡 Moyenne |
 | **Trigramme** | LAY |
 | **Section CV** | General |
 | **Créé le** | 2025-11-27 |
 | **Cible** | - |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-28 |
 | **Temps estimé** | 1 heure |
-| **Temps réel** | - |
+| **Temps réel** | 45 min |
 | **Branche nécessaire** | Non |
 
 ---
@@ -40,11 +40,11 @@ Améliorer l'équilibre visuel de la première page en :
 
 ## Sous-tâches
 
-- [ ] Analyser visuellement le PDF actuel pour identifier l'étendue du problème
-- [ ] Identifier les options d'amélioration (espacement, contenu, police)
-- [ ] Implémenter les ajustements dans `cv.typ`
-- [ ] Vérifier que le changement n'impacte pas négativement les pages suivantes
-- [ ] Compiler et valider visuellement le résultat
+- [x] Analyser visuellement le PDF actuel pour identifier l'étendue du problème
+- [x] Identifier les options d'amélioration (espacement, contenu, police)
+- [x] Implémenter les ajustements (factorisation avec TPL-005)
+- [x] Vérifier que le changement n'impacte pas négativement les pages suivantes
+- [x] Compiler et valider visuellement le résultat
 
 ---
 
@@ -146,6 +146,7 @@ Closes LAY-004"
 
 | Date | Action | Détails |
 |------|--------|---------|
+| 2025-11-28 | Terminé | Factorisation réalisée (fusion avec TPL-005) |
 | 2025-11-28 | En cours | Début du travail |
 | 2025-11-27 | Création | Tâche créée |
 
@@ -153,16 +154,22 @@ Closes LAY-004"
 
 ## Résultat final
 
-[À remplir une fois la tâche terminée]
-
 **Ce qui a été fait :**
 
-- [Liste des réalisations]
+- Analyse visuelle : la page 1 était déjà bien équilibrée (travaux CNT-036 précédents)
+- Scope étendu : factorisation de la page 1 entre cv.typ et cv-short.typ (fusion TPL-005)
+- Création de `src/shared/config.typ` (infos auteur, couleurs, layout)
+- Création de `src/shared/sidebar.typ` (sidebar paramétrable avec "A propos" long/court)
+- Refactorisation de cv.typ et cv-short.typ pour utiliser les modules partagés
+- Documentation mise à jour dans CLAUDE.md
 
-**Difficultés rencontrées :**
+**Résultat :**
 
-- [Problèmes et solutions]
+- Les deux versions du CV partagent maintenant la configuration et la sidebar
+- Modification centralisée des infos de contact
+- Cohérence garantie entre les versions
 
 **Améliorations futures :**
 
-- [Idées pour aller plus loin]
+- Factoriser également les expériences communes (si pertinent)
+- Créer des variantes de sidebar pour des CV ciblés
