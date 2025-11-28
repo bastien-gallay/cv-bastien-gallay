@@ -74,6 +74,9 @@ neat-cv/
 │   │   └── profile.png        # Alternative profile
 │   ├── data/                  # Data files
 │   │   └── publications.yml   # Bibliography data
+│   ├── shared/                # Shared content between CV versions
+│   │   ├── config.typ         # Author info, colors, layout settings
+│   │   └── sidebar.typ        # Sidebar content (parameterized)
 │   ├── cv.typ                 # Full CV source (exhaustive, ~4 pages)
 │   ├── cv-short.typ           # Short CV source (1 page)
 │   └── manifest.yml           # Font manifest
@@ -87,30 +90,48 @@ neat-cv/
 
 ### Template Import
 
-The CV uses the `neat-cv` template imported with:
+The CV uses a local fork of `neat-cv` template with shared configuration:
 
 ```typst
-#import "@preview/neat-cv:0.4.0": (
-  contact-info, cv, email-link, entry, item-pills, item-with-level,
-  publications, side, social-links,
-)
+#import "neat-cv-local.typ": (cv-setup, cv-page-one, cv-continued, entry, ...)
+
+// Shared configuration
+#import "shared/config.typ": author-config, accent-color, header-color, ...
+#import "shared/sidebar.typ": sidebar-content, about-long
 ```
+
+### Shared Content Architecture
+
+Both CV versions (`cv.typ` and `cv-short.typ`) share common content via `src/shared/`:
+
+| File | Content | Usage |
+|------|---------|-------|
+| `config.typ` | Author info, colors, layout settings | Both versions |
+| `sidebar.typ` | Sidebar content with parameterized "A propos" | Both versions |
+
+**Modifying shared content:**
+
+- **Author info** (name, email, phone): Edit `shared/config.typ`
+- **Sidebar sections** (Contact, Skills, etc.): Edit `shared/sidebar.typ`
+- **"A propos" text**: Two variants in `sidebar.typ`:
+  - `about-long`: Full version with presales details (used by cv.typ)
+  - `about-short`: Condensed version (used by cv-short.typ)
 
 ### Key Components
 
-**Document Configuration** (lines 6-37):
+**Document Configuration**:
 
-- Uses `cv.with()` to set global parameters
-- Configures personal information (name, email, phone, address, position)
+- Uses `cv-setup.with()` to set global parameters from shared config
+- Configures personal information via `author-config` from `shared/config.typ`
 - Sets visual styling (accent color: `#4682b4`, header color: `#3b4f60`)
 - Profile picture, fonts, paper size (A4), and sidebar width
 
-**Sidebar** (`#side[]` block, lines 39-101):
+**Sidebar** (via `shared/sidebar.typ`):
 
 - Contact information and social links
-- Languages with proficiency levels using `item-with-level()`
+- Languages with proficiency levels
 - Skills displayed as pills using `item-pills()`
-- About section and interests
+- "A propos" section (parameterized for long/short versions)
 
 **Main Content** (lines 103-255):
 
