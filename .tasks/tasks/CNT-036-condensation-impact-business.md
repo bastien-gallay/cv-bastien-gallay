@@ -8,7 +8,7 @@
 |-------|--------|
 | **ID** | CNT-036 |
 | **Titre** | Condensation et impact business (version longue) |
-| **Statut** | ⏳ À faire |
+| **Statut** | 🔄 En cours |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | CNT (Content) |
 | **Section CV** | General |
