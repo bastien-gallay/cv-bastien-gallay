@@ -2,25 +2,20 @@
 // Uses local fork of neat-cv with cv-setup, cv-page-one, cv-continued
 
 #import "neat-cv-local.typ": (
-  contact-info, cv-continued, cv-page-one, cv-setup, email-link, entry, item-pills, item-with-level, publications,
-  social-links,
+  cv-continued, cv-page-one, cv-setup, email-link, entry, publications,
 )
 
+// Configuration partagée
+#import "shared/config.typ": author-config, accent-color, header-color, paper-size, side-width
+#import "shared/sidebar.typ": sidebar-content, about-long
+
 #show: cv-setup.with(
-  author: (
-    firstname: "Bastien",
-    lastname: "Gallay",
-    email: "bastien@gallay.org",
-    address: [Bordeaux, France],
-    phone: "(+33) 06 72 66 47 38",
-    position: "Chief Technology Officer (CTO) | IA & Transformation Agile",
-    linkedin: "bastiengallay",
-  ),
-  accent-color: rgb("#4682b4"),
-  header-color: rgb("#3b4f60"),
+  author: author-config,
+  accent-color: accent-color,
+  header-color: header-color,
   body-font-size: 10.5pt,
-  paper-size: "a4",
-  side-width: 4.5cm,
+  paper-size: paper-size,
+  side-width: side-width,
 )
 
 // ============================================================================
@@ -30,57 +25,8 @@
 #cv-page-one(
   profile-picture: image("assets/photo-profile-pro.jpg"),
 
-  // SIDEBAR CONTENT
-  [
-    = A propos
-    CTO avec 25 ans d'expérience. Expert IA Générative et transformation Agile. Management de 50 professionnels techniques, pilotage de 6+ opportunités presales (€15k-€500k+). Basé Bordeaux, présence Paris régulière.
-
-    = Rayonnement
-    - Mentor Google Launchpad
-    - Coach Startup Weekend
-    - Orateur Agile Tour & Scrum Day
-
-    = Contact
-    #contact-info()
-
-    = Informations
-    Nationalité : Français
-
-    Date de naissance : 3/03/1979
-
-    #social-links()
-
-    - *Français :* Langue maternelle
-    - *Anglais :* Courant
-
-    = Leadership
-    #item-pills((
-      "COMEX",
-      "Recrutement",
-      "Stratégie Tech",
-      "Formation",
-    ))
-
-    = Tech & IA
-    #item-pills((
-      "Python",
-      "TypeScript",
-      "Node.js",
-      "C#",
-      "Rust",
-      "SQL",
-      "IA",
-    ))
-
-    = Méthodologie
-    #item-pills((
-      "SAFe",
-      "Lean Startup",
-      "Craftsmanship",
-      "TDD",
-      "DDD",
-    ))
-  ],
+  // SIDEBAR CONTENT (partagé via shared/sidebar.typ)
+  sidebar-content(about-long),
 
   // MAIN CONTENT (Page 1)
   [
