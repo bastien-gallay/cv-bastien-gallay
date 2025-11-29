@@ -8,7 +8,7 @@
 |-------|--------|
 | **ID** | CNT-037 |
 | **Titre** | Optimisation version courte (1 page) |
-| **Statut** | ⏳ À faire |
+| **Statut** | 🔄 En cours |
 | **Priorité** | 🟡 Moyenne |
 | **Trigramme** | CNT (Content) |
 | **Section CV** | General |
@@ -244,6 +244,7 @@ Closes CNT-037"
 
 | Date | Action | Détails |
 |------|--------|---------|
+| 2025-11-29 | En cours | Début du travail |
 | 2025-11-27 | Création | Tâche créée suite aux retours expert recrutement |
 
 ---

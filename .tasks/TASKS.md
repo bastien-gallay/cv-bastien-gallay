@@ -41,7 +41,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Score | Créé le |
 |----|-------|--------|----------|-------|---------|
-| [CNT-037](tasks/CNT-037-optimisation-version-courte.md) | Optimisation version courte (1 page) | ⏳ À faire | 🟡 Moyenne | 5.10 | 2025-11-27 |
+| [CNT-037](tasks/CNT-037-optimisation-version-courte.md) | Optimisation version courte (1 page) | 🔄 En cours | 🟡 Moyenne | 5.10 | 2025-11-27 |
 | [INF-010](tasks/INF-010-skill-analyse-adequation.md) | Skill analyse adéquation profil-poste | ⏳ À faire | 🔴 Haute | 3.43 | 2025-11-25 |
 | [INF-009](tasks/INF-009-skill-analyse-offre-emploi.md) | Skill analyse d'offre d'emploi | ⏳ À faire | 🔴 Haute | 3.43 | 2025-11-25 |
 | [TPL-002](tasks/TPL-002-template-system.md) | Système de changement de template | ⏳ À faire | 🟢 Basse | 3.02 | 2025-10-28 |
@@ -178,8 +178,8 @@ Closes TPL-001"
 ## Statistiques
 
 - **Total**: 59 tâches
-- **À faire**: 15
-- **En cours**: 0
+- **À faire**: 14
+- **En cours**: 1
 - **Terminées**: 4
 - **Bloquées**: 0
 - **Archivées**: 40
