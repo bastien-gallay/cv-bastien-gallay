@@ -41,7 +41,6 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Score | Créé le |
 |----|-------|--------|----------|-------|---------|
-| [CNT-037](tasks/CNT-037-optimisation-version-courte.md) | Optimisation version courte (1 page) | 🔄 En cours | 🟡 Moyenne | 5.10 | 2025-11-27 |
 | [INF-010](tasks/INF-010-skill-analyse-adequation.md) | Skill analyse adéquation profil-poste | ⏳ À faire | 🔴 Haute | 3.43 | 2025-11-25 |
 | [INF-009](tasks/INF-009-skill-analyse-offre-emploi.md) | Skill analyse d'offre d'emploi | ⏳ À faire | 🔴 Haute | 3.43 | 2025-11-25 |
 | [TPL-002](tasks/TPL-002-template-system.md) | Système de changement de template | ⏳ À faire | 🟢 Basse | 3.02 | 2025-10-28 |
@@ -64,6 +63,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
+| [CNT-037](tasks/CNT-037-optimisation-version-courte.md) | Optimisation version courte (1 page) | ✅ Terminé | 🟡 Moyenne | 2025-11-29 |
 | [LAY-004](tasks/LAY-004-equilibrer-contenu-premiere-page-cv-long.md) | Équilibrer contenu page 1 + factorisation (TPL-005) | ✅ Terminé | 🟡 Moyenne | 2025-11-28 |
 | [TPL-005](tasks/TPL-005-factoriser-page-1-commune.md) | Factoriser page 1 commune (fusionné LAY-004) | ✅ Terminé | 🟡 Moyenne | 2025-11-28 |
 | [LAY-005](tasks/LAY-005-zoom-photo-profil.md) | Zoomer sur le visage dans la photo de profil | ✅ Terminé | 🟡 Moyenne | 2025-11-27 |
@@ -178,9 +178,9 @@ Closes TPL-001"
 ## Statistiques
 
 - **Total**: 59 tâches
-- **À faire**: 14
-- **En cours**: 1
-- **Terminées**: 4
+- **À faire**: 15
+- **En cours**: 0
+- **Terminées**: 5
 - **Bloquées**: 0
 - **Archivées**: 40
 

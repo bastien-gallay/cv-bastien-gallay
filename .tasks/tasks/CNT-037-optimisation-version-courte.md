@@ -8,15 +8,15 @@
 |-------|--------|
 | **ID** | CNT-037 |
 | **Titre** | Optimisation version courte (1 page) |
-| **Statut** | 🔄 En cours |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🟡 Moyenne |
 | **Trigramme** | CNT (Content) |
 | **Section CV** | General |
 | **Créé le** | 2025-11-27 |
 | **Cible** | - |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-29 |
 | **Temps estimé** | 1 heure |
-| **Temps réel** | - |
+| **Temps réel** | 15 min |
 | **Branche nécessaire** | Non |
 
 ---
@@ -244,6 +244,7 @@ Closes CNT-037"
 
 | Date | Action | Détails |
 |------|--------|---------|
+| 2025-11-29 | Terminé | Optimisation section Tech & IA |
 | 2025-11-29 | En cours | Début du travail |
 | 2025-11-27 | Création | Tâche créée suite aux retours expert recrutement |
 
@@ -251,4 +252,4 @@ Closes CNT-037"
 
 ## Résultat final
 
-[À remplir une fois la tâche terminée]
+Section "Tech & IA" optimisée pour ATS avec pills mis à jour : GenAI Dev, Python, TypeScript, Azure, React, Node.js, C#, Rust. SQL retiré, "IA" remplacé par "GenAI Dev" pour associer l'IA au développement. Les deux CVs (short et long) partagent la même sidebar via shared/sidebar.typ.
