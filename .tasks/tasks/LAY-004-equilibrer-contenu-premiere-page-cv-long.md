@@ -134,11 +134,11 @@ Closes LAY-004"
 
 ## Tests / Vérifications
 
-- [ ] Le CV compile sans erreur (`just build`)
-- [ ] Le PDF s'affiche correctement
-- [ ] La première page est visuellement équilibrée
-- [ ] Les pages suivantes ne sont pas négativement impactées
-- [ ] La version courte n'est pas affectée
+- [x] Le CV compile sans erreur (`just build`)
+- [x] Le PDF s'affiche correctement
+- [x] La première page est visuellement équilibrée
+- [x] Les pages suivantes ne sont pas négativement impactées
+- [x] La version courte n'est pas affectée (utilise les mêmes modules partagés)
 
 ---
 
@@ -146,8 +146,8 @@ Closes LAY-004"
 
 | Date | Action | Détails |
 |------|--------|---------|
-| 2025-11-28 | Terminé | Factorisation réalisée (fusion avec TPL-005) |
-| 2025-11-28 | En cours | Début du travail |
+| 2025-11-29 | Complété | Factorisation complète (config, sidebar, experiences, sections) |
+| 2025-11-28 | En cours | Début factorisation (config, sidebar) |
 | 2025-11-27 | Création | Tâche créée |
 
 ---
@@ -157,19 +157,25 @@ Closes LAY-004"
 **Ce qui a été fait :**
 
 - Analyse visuelle : la page 1 était déjà bien équilibrée (travaux CNT-036 précédents)
-- Scope étendu : factorisation de la page 1 entre cv.typ et cv-short.typ (fusion TPL-005)
-- Création de `src/shared/config.typ` (infos auteur, couleurs, layout)
-- Création de `src/shared/sidebar.typ` (sidebar paramétrable avec "A propos" long/court)
-- Refactorisation de cv.typ et cv-short.typ pour utiliser les modules partagés
-- Documentation mise à jour dans CLAUDE.md
+- Scope étendu : factorisation complète de la page 1 entre cv.typ et cv-short.typ (fusion TPL-005)
+
+**Modules partagés créés (`src/shared/`) :**
+
+| Fichier | Contenu | Variantes |
+|---------|---------|-----------|
+| `config.typ` | Auteur, couleurs, polices, layout | - |
+| `sidebar.typ` | Sidebar avec about, rayonnement, skills | - |
+| `experiences.typ` | 5 expériences individuelles | `experiences-page-1` |
+| `sections.typ` | Formation, Certifications, Engagement | `sections-page-1-full`, `sections-page-1-short` |
 
 **Résultat :**
 
-- Les deux versions du CV partagent maintenant la configuration et la sidebar
-- Modification centralisée des infos de contact
+- Les deux versions du CV partagent maintenant toute la page 1
+- Modification centralisée : infos contact, expériences, formations, certifications
 - Cohérence garantie entre les versions
+- Architecture modulaire permettant des CV ciblés (sélection d'expériences/sections)
 
-**Améliorations futures :**
+**Différences entre versions :**
 
-- Factoriser également les expériences communes (si pertinent)
-- Créer des variantes de sidebar pour des CV ciblés
+- `cv.typ` → `sections-page-1-full` (2 formations : DEA + Maîtrise)
+- `cv-short.typ` → `sections-page-1-short` (1 formation : DEA uniquement)
