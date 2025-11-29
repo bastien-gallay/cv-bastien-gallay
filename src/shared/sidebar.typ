@@ -41,13 +41,14 @@
 
   = Tech & IA
   #item-pills((
+    "GenAI Dev",
     "Python",
     "TypeScript",
+    "Azure",
+    "React",
     "Node.js",
     "C#",
     "Rust",
-    "SQL",
-    "IA",
   ))
 
   = Méthodologie

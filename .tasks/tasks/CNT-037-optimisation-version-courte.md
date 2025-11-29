@@ -45,13 +45,13 @@ Retours d'un expert recrutement tech (novembre 2025) :
 
 ## Sous-tâches
 
-- [ ] Améliorer visibilité stack technique
-- [ ] Ajouter contexte volume Cdiscount
-- [ ] Vérifier section Rayonnement
-- [ ] Propager titre amélioré du CV long
-- [ ] Propager résumé vendeur condensé
-- [ ] Mettre chiffres business en gras
-- [ ] Vérifier compilation et rendu final
+- [x] Améliorer visibilité stack technique
+- [x] Ajouter contexte volume Cdiscount (déjà présent : 1 milliard € CA)
+- [x] Vérifier section Rayonnement (conservée)
+- [x] Propager titre amélioré du CV long (déjà synchronisé via shared/config.typ)
+- [x] Propager résumé vendeur condensé (déjà synchronisé via shared/sidebar.typ)
+- [x] Mettre chiffres business en gras (déjà présent)
+- [x] Vérifier compilation et rendu final
 
 ---
 
@@ -230,13 +230,13 @@ Closes CNT-037"
 
 ## Tests / Vérifications
 
-- [ ] Le CV compile sans erreur (`just build-short`)
-- [ ] Le CV reste sur 1 page
-- [ ] La stack technique est visible rapidement
-- [ ] Le contexte Cdiscount est ajouté
-- [ ] La section Rayonnement est préservée
-- [ ] Les améliorations du CV long sont propagées
-- [ ] La cohérence avec cv.typ est maintenue
+- [x] Le CV compile sans erreur (`just build-short`)
+- [x] Le CV reste sur 1 page
+- [x] La stack technique est visible rapidement
+- [x] Le contexte Cdiscount est ajouté
+- [x] La section Rayonnement est préservée
+- [x] Les améliorations du CV long sont propagées
+- [x] La cohérence avec cv.typ est maintenue
 
 ---
 
