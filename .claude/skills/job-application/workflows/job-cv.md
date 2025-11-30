@@ -1,6 +1,6 @@
 # Job-CV Workflow
 
-Génère une version du CV adaptée à une offre d'emploi spécifique.
+Génère une version du CV adaptée à une offre d'emploi spécifique avec questionnaire interactif.
 
 ## Usage
 
@@ -10,14 +10,283 @@ job-cv [--format=short|long] [--dry-run] [--application=ID]
 
 **Options:**
 
-- `--format`: Version courte (1 page) ou longue (2+ pages). Défaut: auto selon le poste
+- `--format`: Version courte (1 page) ou longue (2+ pages). Défaut: miroir de l'annonce
 - `--dry-run`: Affiche les modifications sans générer les fichiers
 - `--application`: ID de candidature spécifique. Défaut: dernière analyse
 
 ## Prérequis
 
 1. Une analyse d'offre doit exister (`job-analyze`)
-2. Une analyse d'adéquation doit exister (`job-fit`)
+2. Une analyse d'adéquation doit exister et être validée (`job-fit`)
+
+## Workflow d'exécution
+
+### Étape 1: Charger les données
+
+```text
+Charger:
+- data/applications/{app_id}/{app_id}-analysis.md
+- data/applications/{app_id}/{app_id}-fit-report.md
+
+Extraire:
+- keywords: liste des mots-clés ATS
+- requirements: exigences must-have et nice-to-have
+- strengths: points forts identifiés
+- gaps: lacunes identifiées
+- job_word_count: nombre de mots de l'annonce
+- company_type: type d'entreprise (startup, grand groupe, cabinet)
+```
+
+### Étape 2: Recommander le format CV (miroir de l'annonce)
+
+**Logique de recommandation:**
+
+| Critère annonce | Format recommandé |
+|-----------------|-------------------|
+| < 500 mots | Court (1 page) |
+| > 500 mots | Long (2+ pages) |
+| Startup, scale-up | Court |
+| Grand groupe, cabinet conseil | Long |
+| "CV détaillé demandé" | Long |
+| Candidature spontanée | Court |
+
+**Question de confirmation:**
+
+```json
+{
+  "question": "L'annonce semble {courte/longue}. Je recommande le format {court/long}. Confirmer ?",
+  "header": "Format CV",
+  "multiSelect": false,
+  "options": ["Oui, format {court/long}", "Non, format {long/court}", "Autre: texte libre"]
+}
+```
+
+**Fallback textuel:**
+
+```text
+Format de CV recommandé
+
+L'annonce semble {courte/longue} ({n} mots, {type_entreprise}).
+Je recommande le format {court/long}.
+
+1. Oui, format {court/long}
+2. Non, format {long/court}
+3. Autre (précisez)
+```
+
+### Étape 3: Questionnaire de personnalisation
+
+**Q1 - Titre du poste:**
+
+```json
+{
+  "question": "Quel titre afficher sur le CV ?",
+  "header": "Titre",
+  "multiSelect": false,
+  "options": ["Garder : {titre_actuel}", "Adapter : {suggestion_basée_offre}", "Autre: texte libre"]
+}
+```
+
+**Q2 - Ordre des expériences:**
+
+```json
+{
+  "question": "Comment ordonner les expériences ?",
+  "header": "Ordre XP",
+  "multiSelect": false,
+  "options": ["Automatique (par pertinence)", "Chronologique inverse", "Autre: texte libre"]
+}
+```
+
+**Q3 - Expériences à omettre:**
+
+```json
+{
+  "question": "Y a-t-il des expériences à omettre ?",
+  "header": "Omettre",
+  "multiSelect": true,
+  "options": ["Aucune", "{exp_1_name}", "{exp_2_name}", "Autre: texte libre"]
+}
+```
+
+**Q4 - Mots-clés ATS:**
+
+```json
+{
+  "question": "Quels mots-clés ATS prioriser ?",
+  "header": "Mots-clés",
+  "multiSelect": false,
+  "options": ["Tous les mots-clés identifiés", "Sélection manuelle...", "Autre: texte libre"]
+}
+```
+
+**Q5 - Sidebar:**
+
+```json
+{
+  "question": "Comment adapter la sidebar ?",
+  "header": "Sidebar",
+  "multiSelect": false,
+  "options": ["Automatique (réordonner par pertinence)", "Garder l'ordre actuel", "Autre: texte libre"]
+}
+```
+
+**Fallback textuel:**
+
+```text
+Personnalisation du CV
+
+1. Titre du poste ?
+   a) Garder : "{titre_actuel}"
+   b) Adapter : "{suggestion}"
+   c) Autre (précisez)
+
+2. Ordre des expériences ?
+   a) Automatique (par pertinence)
+   b) Chronologique inverse
+   c) Autre (précisez)
+
+3. Expériences à omettre ?
+   a) Aucune
+   b) Liste (précisez)
+
+4. Mots-clés ATS ?
+   a) Tous les mots-clés identifiés
+   b) Sélection manuelle (précisez)
+
+5. Sidebar ?
+   a) Automatique (réordonner)
+   b) Garder l'ordre actuel
+
+Répondez par les lettres ou détaillez.
+```
+
+### Étape 4: Sauvegarder les choix
+
+Créer/mettre à jour `data/applications/{app_id}/{app_id}-modifications.md`:
+
+```markdown
+# Modifications CV : {job_title} @ {company}
+
+**Date:** {date}
+**Format choisi:** {short|long}
+
+## Choix utilisateur
+
+- **Titre:** {choix}
+- **Ordre expériences:** {choix}
+- **Expériences omises:** {choix}
+- **Mots-clés ATS:** {choix}
+- **Sidebar:** {choix}
+
+## Adaptations appliquées
+
+{détails des modifications}
+```
+
+### Étape 5: Calculer les adaptations
+
+```text
+adaptations = {
+    experiences_order: [exp ranked by relevance],
+    experiences_detail: {exp_name: level},
+    experiences_omit: [exp to omit],
+    sidebar_skills: [skills reordered],
+    about_text: "texte adapté",
+    keywords_to_inject: [prioritized keywords],
+    format: "short" | "long",
+    title: "titre adapté",
+}
+```
+
+### Étape 6: Générer le fichier Typst
+
+Créer `data/applications/{app_id}/{app_id}-cv-adapted.typ`:
+
+```typst
+// CV adapté pour: {job_title} @ {company}
+// Date: {date}
+// Score d'adéquation: {score}/100
+
+#import "../../../src/neat-cv-local.typ": (...)
+#import "../../../src/shared/config.typ": *
+#import "../../../src/shared/experiences.typ": *
+#import "../../../src/shared/sections.typ": *
+
+// Métadonnées document
+#set document(
+  title: "CV - Bastien Gallay - {Poste} @ {Entreprise}",
+  author: "Bastien Gallay",
+  date: datetime.today(),
+)
+
+// Configuration adaptée
+#let author-adapted = (
+  ..author-config,
+  position: "{position_adaptée}",
+)
+
+// Sidebar adaptée
+#let sidebar-adapted() = [
+  = A propos
+  {about_text_adapted}
+
+  // ... sections réordonnées
+]
+
+// Expériences adaptées
+#let experiences-adapted = [
+  = Expérience Professionnelle
+
+  // Expériences dans le nouvel ordre
+]
+
+// Document
+#show: cv-setup.with(author: author-adapted, ...)
+#cv-page-one(
+  profile-picture: image("../../../src/assets/photo-profile-pro.jpg"),
+  sidebar-adapted(),
+  [#experiences-adapted ...]
+)
+```
+
+**Important - Chemins relatifs:**
+
+- Le fichier est dans `data/applications/{app_id}/`
+- Les imports doivent utiliser `../../../src/` (3 niveaux)
+
+### Étape 7: Compiler le PDF
+
+```bash
+just build-adapted {app_id}
+```
+
+### Étape 8: Vérification visuelle
+
+Lire le PDF généré et vérifier:
+
+1. **Nombre de pages:** Correspond au format choisi (1 pour court, 2+ pour long)
+2. **Pas de page supplémentaire:** Pas de page presque vide en fin de document
+3. **Zones blanches:** Pas de grosse zone blanche en fin de colonne/page
+4. **Lisibilité:** Pas de texte tronqué ou qui déborde
+5. **Cohérence:** Les sections sont complètes
+
+**Si problème détecté:**
+
+```text
+Problème détecté dans le CV généré:
+
+- Type: {débordement|zone_blanche|page_supplémentaire|...}
+- Localisation: {page X, section Y}
+- Description: {détails}
+
+Action proposée:
+- {ajuster contenu|changer format|réduire expériences|...}
+
+Voulez-vous que j'applique cette correction ?
+```
+
+Régénérer si nécessaire.
 
 ## Règles d'adaptation
 
@@ -48,16 +317,7 @@ Réordonner par score décroissant
 | `exp-cast` | Consultant @ Cast | 2006-2010 | Conseil, Gestion projet |
 | `exp-dev-web` | Dev Web @ Boonty | 2002-2006 | Développement |
 
-**Règles de sélection:**
-
-- Poste technique senior/CTO: `exp-palo-it` en premier, développer détails
-- Poste coaching/transformation: `exp-upwiser` en premier
-- Poste e-commerce/retail: `exp-cdiscount` plus visible
-- Toujours garder les 3-4 expériences les plus récentes minimum
-
 ### 2. Ajustement du niveau de détail
-
-**Par expérience:**
 
 | Pertinence | Niveau de détail | Actions |
 |------------|------------------|---------|
@@ -70,22 +330,14 @@ Réordonner par score décroissant
 
 **Sources des mots-clés:**
 
-- `analysis.md` > section "Mots-clés ATS"
-- `fit-report.md` > section "Exigences satisfaites"
+- `{app_id}-analysis.md` > section "Mots-clés ATS"
+- `{app_id}-fit-report.md` > section "Exigences satisfaites"
 
 **Règles d'injection:**
 
-1. **Priorité 1 - Titres et headers:**
-   - Inclure dans le titre du poste si pertinent
-   - Exemple: "CTO | Expert IA & Cloud" si poste Cloud
-
-2. **Priorité 2 - Bullet points d'expérience:**
-   - Reformuler pour inclure les termes exacts de l'offre
-   - Exemple: "DevOps" -> "CI/CD et pratiques DevOps"
-
-3. **Priorité 3 - Section Skills sidebar:**
-   - Réordonner pour mettre en premier les skills demandés
-   - Ajouter des skills si possédés mais absents
+1. **Priorité 1 - Titres:** Inclure dans le titre du poste si pertinent
+2. **Priorité 2 - Bullet points:** Reformuler pour inclure les termes exacts
+3. **Priorité 3 - Sidebar:** Réordonner skills demandés en premier
 
 **Contraintes:**
 
@@ -95,134 +347,12 @@ Réordonner par score décroissant
 
 ### 4. Adaptation de la sidebar
 
-**Sections modifiables (src/shared/sidebar.typ):**
-
 | Section | Adaptation possible |
 |---------|---------------------|
 | A propos | Reformuler selon le poste ciblé |
 | Leadership | Réordonner pills par pertinence |
 | Tech & IA | Réordonner, ajouter/retirer pills |
-| Méthodologie | Réordonner selon contexte (Agile, DevOps...) |
-
-### 5. Choix du format
-
-**Critères de décision:**
-
-| Contexte | Format recommandé |
-|----------|-------------------|
-| Startup, scale-up | Court (1 page) |
-| Grand groupe, cabinet | Long (2 pages) |
-| Poste senior/direction | Long avec détails |
-| Candidature spontanée | Court |
-| Offre avec "CV détaillé demandé" | Long |
-
-**Implémentation:**
-
-- Court: utiliser `cv-short.typ` comme base
-- Long: utiliser `cv.typ` comme base
-
-## Workflow d'exécution
-
-### Étape 1: Charger les données
-
-```text
-Charger:
-- data/applications/{app_id}/analysis.md
-- data/applications/{app_id}/fit-report.md
-
-Extraire:
-- keywords: liste des mots-clés ATS
-- requirements: exigences must-have et nice-to-have
-- strengths: points forts identifiés
-- gaps: lacunes identifiées
-```
-
-### Étape 2: Calculer les adaptations
-
-```text
-adaptations = {
-    experiences_order: [exp ranked by relevance],
-    experiences_detail: {exp_name: level},
-    sidebar_skills: [skills reordered],
-    about_text: "texte adapté",
-    keywords_to_inject: [prioritized keywords],
-    format: "short" | "long",
-}
-```
-
-### Étape 3: Générer le fichier Typst
-
-Créer `data/applications/{app_id}/cv-adapted.typ`:
-
-```typst
-// cv-adapted.typ
-// Généré automatiquement pour: {job_title} @ {company}
-// Date: {date}
-
-#import "../../src/neat-cv-local.typ": ...
-#import "../../src/shared/config.typ": *
-
-// Configuration adaptée
-#let author-adapted = (
-  ..author-config,
-  position: "{position_adaptée}",
-)
-
-// Sidebar adaptée
-#let sidebar-adapted() = [
-  = A propos
-  {about_text_adapted}
-
-  // ... sections réordonnées avec skills adaptés
-]
-
-// Expériences réordonnées et adaptées
-#let experiences-adapted = [
-  = Expérience Professionnelle
-
-  // Expériences dans le nouvel ordre avec détails ajustés
-]
-
-// Document
-#show: cv-setup.with(author: author-adapted, ...)
-#cv-page-one(sidebar-adapted(), [#experiences-adapted ...])
-```
-
-### Étape 4: Compiler le PDF
-
-```bash
-just build-adapted {app_id}
-```
-
-### Étape 5: Générer le rapport de modifications
-
-Créer `data/applications/{app_id}/modifications.md`:
-
-```markdown
-## CV adapté pour : {job_title} @ {company}
-
-### Modifications apportées
-
-**Expériences réorganisées:**
-1. {exp_name} -> Position 1 (était position {old_pos})
-2. {exp_name} -> Développée (+{n} bullet points)
-
-**Mots-clés intégrés:**
-- "{keyword}" ajouté dans {section}
-- "{keyword}" mis en avant dans sidebar
-
-**Compétences ajustées:**
-- {skill} déplacé en premier
-- {skill} ajouté (présent dans profil, demandé dans offre)
-
-**Format:**
-- Version {short|long} sélectionnée
-- Raison: {justification}
-
-### Fichiers générés
-- cv-adapted.typ - Source Typst
-- cv-adapted.pdf - PDF compilé
-```
+| Méthodologie | Réordonner selon contexte |
 
 ## Output
 
@@ -230,9 +360,9 @@ Créer `data/applications/{app_id}/modifications.md`:
 
 ```text
 data/applications/{app_id}/
-|-- cv-adapted.typ          # Source Typst adaptée
-|-- cv-adapted.pdf          # PDF compilé
-`-- modifications.md        # Rapport des modifications
+├── {app_id}-modifications.md    # Choix utilisateur et modifications
+├── {app_id}-cv-adapted.typ      # Source Typst adaptée
+└── {app_id}-cv-adapted.pdf      # PDF compilé et vérifié
 ```
 
 ### Confirmation affichée
@@ -249,8 +379,10 @@ Modifications principales:
 - {n} mots-clés ATS intégrés
 - Sidebar adaptée
 
+Vérification visuelle: OK
+
 Fichiers:
-- data/applications/{app_id}/cv-adapted.pdf
+- [{app_id}-cv-adapted.pdf](data/applications/{app_id}/{app_id}-cv-adapted.pdf)
 
 Vérifiez le CV avant envoi!
 ```
@@ -261,3 +393,4 @@ Vérifiez le CV avant envoi!
 2. **Ne jamais mentir** sur les compétences ou expériences
 3. **Garder la cohérence** avec le CV source
 4. **Documenter** les modifications pour traçabilité
+5. **Vérification visuelle** systématique après compilation

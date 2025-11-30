@@ -80,7 +80,7 @@ Exemple: google-2025-11-30
 
 ### Étape 6: Générer le rapport
 
-Créer `data/applications/{app_id}/analysis.md`:
+Créer `data/applications/{app_id}/{app_id}-analysis.md`:
 
 ```markdown
 # Analyse : {Titre du poste} @ {Entreprise}
@@ -148,7 +148,7 @@ Créer `data/applications/{app_id}/analysis.md`:
 
 ### Étape 7: Sauvegarder l'offre originale
 
-Créer `data/applications/{app_id}/job-posting.md`:
+Créer `data/applications/{app_id}/{app_id}-job-posting.md`:
 
 ```markdown
 # Offre originale
@@ -167,8 +167,8 @@ Créer `data/applications/{app_id}/job-posting.md`:
 
 ```text
 data/applications/{app_id}/
-|-- job-posting.md      # Offre originale
-`-- analysis.md         # Analyse structurée
+├── {app_id}-job-posting.md   # Offre originale
+└── {app_id}-analysis.md      # Analyse structurée
 ```
 
 ### Confirmation affichée

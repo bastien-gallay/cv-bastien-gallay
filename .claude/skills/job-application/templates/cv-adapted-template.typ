@@ -1,5 +1,5 @@
 // Template de CV adapté
-// Copier ce fichier vers data/applications/{app_id}/cv-adapted.typ
+// Copier ce fichier vers data/applications/{app_id}/{app_id}-cv-adapted.typ
 // et personnaliser selon l'analyse
 
 // Imports depuis data/applications/{app_id}/ (3 niveaux de profondeur)
@@ -16,6 +16,17 @@
 
 // Sections additionnelles
 #import "../../../src/shared/sections.typ": *
+
+// =============================================================================
+// MÉTADONNÉES DOCUMENT
+// =============================================================================
+
+// TODO: Adapter le titre avec le poste et l'entreprise
+#set document(
+  title: "CV - Bastien Gallay - {Poste} @ {Entreprise}",
+  author: "Bastien Gallay",
+  date: datetime.today(),
+)
 
 // =============================================================================
 // CONFIGURATION ADAPTÉE
