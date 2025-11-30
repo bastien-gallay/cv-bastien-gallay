@@ -16,12 +16,60 @@ from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
 
-# Configuration
+import yaml
+
+# Configuration paths
+CONFIG_PATH = Path("config/task_management/priorities.yml")
 TASKS_DIR = Path(".tasks/tasks")
 TASKS_MD = Path(".tasks/TASKS.md")
 
-PRIORITY_SCORES = {"🔴 Haute": 10, "🟡 Moyenne": 5, "🟢 Basse": 2}
-DEFAULT_TIMES = {"🔴 Haute": 8, "🟡 Moyenne": 4, "🟢 Basse": 2}
+
+def load_config() -> dict:
+    """Load priority configuration from YAML file."""
+    if CONFIG_PATH.exists():
+        return yaml.safe_load(CONFIG_PATH.read_text())
+    return {}
+
+
+CONFIG = load_config()
+
+# Priority scores from config
+PRIORITY_SCORES = {
+    f"{p['emoji']} Haute": p["score"]
+    for k, p in CONFIG.get("task_priorities", {}).items()
+    if k == "high"
+} | {
+    f"{p['emoji']} Moyenne": p["score"]
+    for k, p in CONFIG.get("task_priorities", {}).items()
+    if k == "medium"
+} | {
+    f"{p['emoji']} Basse": p["score"]
+    for k, p in CONFIG.get("task_priorities", {}).items()
+    if k == "low"
+}
+# Fallback if config not loaded
+if not PRIORITY_SCORES:
+    PRIORITY_SCORES = {"🔴 Haute": 10, "🟡 Moyenne": 5, "🟢 Basse": 2}
+
+DEFAULT_TIMES = {
+    f"{p['emoji']} Haute": p["default_time_hours"]
+    for k, p in CONFIG.get("task_priorities", {}).items()
+    if k == "high"
+} | {
+    f"{p['emoji']} Moyenne": p["default_time_hours"]
+    for k, p in CONFIG.get("task_priorities", {}).items()
+    if k == "medium"
+} | {
+    f"{p['emoji']} Basse": p["default_time_hours"]
+    for k, p in CONFIG.get("task_priorities", {}).items()
+    if k == "low"
+}
+if not DEFAULT_TIMES:
+    DEFAULT_TIMES = {"🔴 Haute": 8, "🟡 Moyenne": 4, "🟢 Basse": 2}
+
+# Age scoring from config
+AGE_DIVISOR = CONFIG.get("age_scoring", {}).get("divisor", 10)
+AGE_MAX_SCORE = CONFIG.get("age_scoring", {}).get("max_score", 5.0)
 
 
 @dataclass
@@ -76,13 +124,16 @@ def calculate_urgency(target: str, today: datetime) -> float:
 
 
 def calculate_age(created: str, today: datetime) -> float:
-    """Calculate age score based on creation date."""
+    """Calculate age score based on creation date.
+
+    Uses AGE_DIVISOR and AGE_MAX_SCORE from config to control weight.
+    """
     if not created:
         return 0.0
     try:
         created_date = datetime.strptime(created, "%Y-%m-%d")
         days_old = (today - created_date).days
-        return min(days_old / 10.0, 5.0)  # Cap at 5 points
+        return min(days_old / AGE_DIVISOR, AGE_MAX_SCORE)
     except ValueError:
         pass
     return 0.0

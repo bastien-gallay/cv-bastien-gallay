@@ -41,3 +41,9 @@ urgency_scores:
   week: 5          # Target < 7 days
   month: 2         # Target < 30 days
   none: 0          # No target date
+
+# Age scoring (for WSJF algorithm)
+# Reduced weight to prevent old low-priority tasks from outranking recent high-priority ones
+age_scoring:
+  divisor: 20       # 1 point per N days (was 10, now 20 = half weight)
+  max_score: 2.5    # Cap at this value (was 5, now 2.5 = half weight)

@@ -3,7 +3,9 @@ name = "neat-cv"
 version = "1.0.0"
 description = "CV project written in Typst with verification tools"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "pyyaml>=6.0",
+]
 
 [project.optional-dependencies]
 dev = [
