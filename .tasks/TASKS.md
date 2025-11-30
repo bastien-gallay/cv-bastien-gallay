@@ -51,6 +51,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | [INF-011](tasks/INF-011-skill-lettre-motivation.md) | Skill assistant lettre de motivation | ⏳ À faire | 🟡 Moyenne | 1.77 | 2025-11-25 |
 | [QUA-002](tasks/QUA-002-verification-orthographique-grammaticale.md) | Vérification orthographique et grammaticale | ⏳ À faire | 🟡 Moyenne | 1.73 | 2025-11-26 |
 | [INF-003](tasks/INF-003-perenniser-ameliorer-script-priorites.md) | Pérenniser et améliorer le script Python de calcul des priorités | ⏳ À faire | 🟢 Basse | 1.60 | 2025-11-16 |
+| [INF-013](tasks/INF-013-integration-askuserquestion-skills.md) | Intégration AskUserQuestion dans les skills | ⏳ À faire | 🟢 Basse | - | 2025-11-30 |
 | [TPL-003](tasks/TPL-003-cv-from-scratch-alternatives.md) | CV from scratch - Structurations alternatives | ⏳ À faire | 🟡 Moyenne | 1.32 | 2025-11-25 |
 | [CNT-036](tasks/CNT-036-condensation-impact-business.md) | Condensation et impact business (version longue) | ⏳ À faire | 🔴 Haute | 5.00 | 2025-11-27 |
 | [INF-006](tasks/INF-006-extraire-scripts-tests-hors-claude.md) | Extraire scripts et tests hors de `.claude/` | ⏳ À faire | 🔴 Haute | 3.40 | 2025-11-25 |
@@ -177,8 +178,8 @@ Closes TPL-001"
 
 ## Statistiques
 
-- **Total**: 59 tâches
-- **À faire**: 12
+- **Total**: 60 tâches
+- **À faire**: 13
 - **En cours**: 1
 - **Terminées**: 7
 - **Bloquées**: 0
@@ -186,7 +187,7 @@ Closes TPL-001"
 
 **Prochains IDs disponibles par trigramme**:
 
-- CNT-038, TPL-006, QUA-003, PIP-004, INF-013, LAY-006, DOC-003
+- CNT-038, TPL-006, QUA-003, PIP-004, INF-014, LAY-006, DOC-003
 
 ---
 
