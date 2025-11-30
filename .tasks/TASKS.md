@@ -41,6 +41,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Score | Créé le |
 |----|-------|--------|----------|-------|---------|
+| [INF-014](tasks/INF-014-reviser-poids-anciennete-wsjf.md) | Réviser le poids de l'ancienneté dans le calcul WSJF | 🔄 En cours | 🔴 Haute | 10.00 | 2025-11-30 |
 | [TPL-002](tasks/TPL-002-template-system.md) | Système de changement de template | ⏳ À faire | 🟢 Basse | 3.06 | 2025-10-28 |
 | [LAY-002](tasks/LAY-002-consolidation-sections-dupliquees.md) | Consolider les sections dupliquées (Études, Expérience) | ⏳ À faire | 🟡 Moyenne | 2.75 | 2025-11-25 |
 | [PIP-003](tasks/PIP-003-build-word-format.md) | Build du CV au format Word | ⏳ À faire | 🟡 Moyenne | 2.75 | 2025-11-25 |
@@ -52,7 +53,6 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | [INF-003](tasks/INF-003-perenniser-ameliorer-script-priorites.md) | Pérenniser et améliorer le script Python de calcul des priorités | ⏳ À faire | 🟢 Basse | 1.70 | 2025-11-16 |
 | [TPL-003](tasks/TPL-003-cv-from-scratch-alternatives.md) | CV from scratch - Structurations alternatives | ⏳ À faire | 🟡 Moyenne | 1.38 | 2025-11-25 |
 | [INF-013](tasks/INF-013-integration-askuserquestion-skills.md) | Intégration AskUserQuestion dans les skills | ⏳ À faire | 🟢 Basse | 1.00 | 2025-11-30 |
-| [INF-014](tasks/INF-014-reviser-poids-anciennete-wsjf.md) | Réviser le poids de l'ancienneté dans le calcul WSJF | ⏳ À faire | 🔴 Haute | - | 2025-11-30 |
 
 ---
 
@@ -185,8 +185,8 @@ Closes TPL-001"
 ## Statistiques
 
 - **Total**: 67 tâches
-- **À faire**: 12
-- **En cours**: 0
+- **À faire**: 11
+- **En cours**: 1
 - **Terminées**: 0
 - **Bloquées**: 0
 - **Archivées**: 55

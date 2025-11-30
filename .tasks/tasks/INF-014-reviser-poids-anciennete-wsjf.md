@@ -8,7 +8,7 @@
 |-------|--------|
 | **ID** | INF-014 |
 | **Titre** | Réviser le poids de l'ancienneté dans le calcul WSJF |
-| **Statut** | ⏳ À faire |
+| **Statut** | 🔄 En cours |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | INF (Infrastructure) |
 | **Section CV** | N/A |
@@ -115,6 +115,7 @@ Closes INF-014"
 | Date | Action | Détails |
 |------|--------|---------|
 | 2025-11-30 | Création | Tâche créée |
+| 2025-11-30 | En cours | Début du travail |
 
 ---
 
