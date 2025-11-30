@@ -509,3 +509,23 @@ class TestParserEdgeCases:
 
         assert "Python" in job.title or "Développeur" in job.title
         assert len(job.must_have) > 0 or len(job.nice_to_have) > 0
+
+    def test_parse_required_profile_section(self):
+        """Should extract requirements from 'Required Profile:' section."""
+        linkedin_style = """CTO - TechStartup
+
+Location: Paris
+Employment Type: Full-time
+
+Required Profile:
+
+- Solid software engineering background
+- Strong knowledge of cloud architectures
+- Natural leadership capabilities
+"""
+        job = parse_job_posting(linkedin_style)
+
+        assert job.title == "CTO"
+        assert len(job.must_have) >= 3
+        must_have_text = " ".join(job.must_have).lower()
+        assert "engineering" in must_have_text or "leadership" in must_have_text

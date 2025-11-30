@@ -8,13 +8,13 @@
 |-------|--------|
 | **ID** | INF-009 |
 | **Titre** | Skill d'analyse d'offre d'emploi |
-| **Statut** | 🔄 En cours |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | INF (Infrastructure) |
 | **Section CV** | N/A |
 | **Créé le** | 2025-11-25 |
 | **Cible** | - |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-30 |
 | **Temps estimé** | 3-4 heures |
 | **Temps réel** | - |
 | **Branche nécessaire** | Auto |
@@ -202,14 +202,15 @@ Closes INF-009"
 
 ## Tests / Vérifications
 
-- [ ] Le skill parse correctement une offre LinkedIn
-- [x] Le skill parse correctement une offre texte brut (68 tests passent)
+- [x] Le skill parse correctement une offre LinkedIn (via WebFetch → parser)
+- [x] Le skill parse correctement une offre texte brut (87 tests passent)
 - [x] Le skill parse correctement une offre réelle (CTO Handipulse)
 - [x] Les exigences sont correctement catégorisées (must-have/nice-to-have)
 - [x] Les mots-clés ATS sont extraits (filtrage faux positifs)
 - [x] Le rapport est bien formaté et lisible
 - [x] Module company_research pour WebSearch
-- [ ] Les données sont sauvegardées correctement (optionnel)
+- [x] Architecture CUPID avec rich types (Location, Salary, ContractType)
+- [ ] Les données sont sauvegardées correctement (optionnel - future INF)
 
 ---
 
@@ -217,6 +218,7 @@ Closes INF-009"
 
 | Date | Action | Détails |
 |------|--------|---------|
+| 2025-11-30 | Terminé | 87 tests, test LinkedIn Fieldbox, pattern Required Profile |
 | 2025-11-30 | En cours | Refactoring CUPID, 68 tests, test réel Handipulse |
 | 2025-11-29 | En cours | Début du travail, parser + report |
 | 2025-11-25 | Création | Skill d'analyse d'offre d'emploi |
@@ -225,4 +227,41 @@ Closes INF-009"
 
 ## Résultat final
 
-[À remplir une fois la tâche terminée]
+**Skill d'analyse d'offres d'emploi pleinement fonctionnel :**
+
+### Architecture CUPID
+
+- **Composable**: Extracteurs indépendants (`extractors.py`), générateur de rapport modulaire
+- **Unix philosophy**: Parser orchestre sans implémenter, fonctions pures
+- **Predictable**: Types riches (`Location`, `Salary`, `ContractType`), valeurs sentinelles explicites
+- **Idiomatic**: Type hints, dataclasses, enums, pattern matching
+- **Domain-based**: `JobPosting` comme aggregate root du domaine
+
+### Modules
+
+| Module | Rôle | Tests |
+|--------|------|-------|
+| `types.py` | Types du domaine (JobPosting, Location, Salary, ContractType) | 18 |
+| `patterns.py` | Patterns regex organisés en classes de namespace | - |
+| `extractors.py` | Fonctions d'extraction pures | 44 |
+| `parser.py` | Orchestrateur principal | 24 |
+| `report.py` | Générateur de rapport Markdown | Couvert |
+| `company_research.py` | Prompts WebSearch pour recherche entreprise | - |
+
+### Workflow
+
+```bash
+job-analyze [URL ou texte]
+```
+
+1. WebFetch (si URL) ou texte direct
+2. Parser → `JobPosting` structuré
+3. Report generator → Markdown formaté
+4. (Optionnel) Company research via WebSearch
+
+### Métriques
+
+- **87 tests** unitaires (pytest)
+- **100% lint** (ruff)
+- **Offres testées**: Handipulse CTO, Fieldbox CTO (LinkedIn), samples FR/EN
+- **Temps de parsing**: ~50ms

@@ -16,6 +16,8 @@ class SectionHeaders:
         "Must-have",
         r"Compétences\s+techniques\s+recherchées",
         r"Profil\s+recherché",
+        r"Required\s+Profile",
+        r"Qualifications",
     )
 
     NICE_TO_HAVE: Final[tuple[str, ...]] = (
