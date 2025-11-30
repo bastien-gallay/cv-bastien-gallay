@@ -8,13 +8,13 @@
 |-------|--------|
 | **ID** | INF-014 |
 | **Titre** | Réviser le poids de l'ancienneté dans le calcul WSJF |
-| **Statut** | 🔄 En cours |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | INF (Infrastructure) |
 | **Section CV** | N/A |
 | **Créé le** | 2025-11-30 |
 | **Cible** | - |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-30 |
 | **Temps estimé** | 1 heure |
 | **Temps réel** | - |
 | **Branche nécessaire** | Non |
@@ -116,6 +116,7 @@ Closes INF-014"
 |------|--------|---------|
 | 2025-11-30 | Création | Tâche créée |
 | 2025-11-30 | En cours | Début du travail |
+| 2025-11-30 | Terminé | Implémentation config YAML + script modifié |
 
 ---
 

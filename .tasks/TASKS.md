@@ -41,7 +41,6 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Score | Créé le |
 |----|-------|--------|----------|-------|---------|
-| [INF-014](tasks/INF-014-reviser-poids-anciennete-wsjf.md) | Réviser le poids de l'ancienneté dans le calcul WSJF | 🔄 En cours | 🔴 Haute | - | 2025-11-30 |
 | [TPL-002](tasks/TPL-002-template-system.md) | Système de changement de template | ⏳ À faire | 🟢 Basse | 2.73 | 2025-10-28 |
 | [LAY-002](tasks/LAY-002-consolidation-sections-dupliquees.md) | Consolider les sections dupliquées (Études, Expérience) | ⏳ À faire | 🟡 Moyenne | 2.62 | 2025-11-25 |
 | [PIP-003](tasks/PIP-003-build-word-format.md) | Build du CV au format Word | ⏳ À faire | 🟡 Moyenne | 2.62 | 2025-11-25 |
@@ -60,6 +59,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
+| [INF-014](tasks/INF-014-reviser-poids-anciennete-wsjf.md) | Réviser le poids de l'ancienneté dans le calcul WSJF | ✅ Terminé | 🔴 Haute | 2025-11-30 |
 
 Les tâches archivées sont déplacées dans [.archived/](.archived/).
 
@@ -186,8 +186,8 @@ Closes TPL-001"
 
 - **Total**: 67 tâches
 - **À faire**: 11
-- **En cours**: 1
-- **Terminées**: 0
+- **En cours**: 0
+- **Terminées**: 1
 - **Bloquées**: 0
 - **Archivées**: 55
 
