@@ -41,18 +41,16 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Score | Créé le |
 |----|-------|--------|----------|-------|---------|
-| [INF-010](tasks/INF-010-skill-analyse-adequation.md) | Skill analyse adéquation profil-poste | ⏳ À faire | 🔴 Haute | 3.43 | 2025-11-25 |
-| [INF-009](tasks/INF-009-skill-analyse-offre-emploi.md) | Skill analyse d'offre d'emploi | ⏳ À faire | 🔴 Haute | 3.43 | 2025-11-25 |
 | [TPL-002](tasks/TPL-002-template-system.md) | Système de changement de template | ⏳ À faire | 🟢 Basse | 3.02 | 2025-10-28 |
 | [LAY-002](tasks/LAY-002-consolidation-sections-dupliquees.md) | Consolider les sections dupliquées (Études, Expérience) | ⏳ À faire | 🟡 Moyenne | 2.65 | 2025-11-25 |
 | [PIP-003](tasks/PIP-003-build-word-format.md) | Build du CV au format Word | ⏳ À faire | 🟡 Moyenne | 2.65 | 2025-11-25 |
-| [INF-012](tasks/INF-012-skill-cv-adapte.md) | Skill CV adapté à l'offre | ⏳ À faire | 🔴 Haute | 2.58 | 2025-11-25 |
 | [INF-008](tasks/INF-008-architecture-skills-candidature.md) | Architecture système skills candidature | ⏳ À faire | 🔴 Haute | 2.58 | 2025-11-25 |
 | [PIP-001](tasks/PIP-001-cicd-pipeline.md) | CI/CD pour publication automatique | ⏳ À faire | 🟢 Basse | 2.52 | 2025-10-28 |
 | [INF-007](tasks/INF-007-supprimer-cta-slash-commands-skills.md) | Supprimer CTA slash commands dans skills | ⏳ À faire | 🟢 Basse | 2.30 | 2025-11-25 |
 | [INF-011](tasks/INF-011-skill-lettre-motivation.md) | Skill assistant lettre de motivation | ⏳ À faire | 🟡 Moyenne | 1.77 | 2025-11-25 |
 | [QUA-002](tasks/QUA-002-verification-orthographique-grammaticale.md) | Vérification orthographique et grammaticale | ⏳ À faire | 🟡 Moyenne | 1.73 | 2025-11-26 |
 | [INF-003](tasks/INF-003-perenniser-ameliorer-script-priorites.md) | Pérenniser et améliorer le script Python de calcul des priorités | ⏳ À faire | 🟢 Basse | 1.60 | 2025-11-16 |
+| [INF-013](tasks/INF-013-integration-askuserquestion-skills.md) | Intégration AskUserQuestion dans les skills | ⏳ À faire | 🟢 Basse | - | 2025-11-30 |
 | [TPL-003](tasks/TPL-003-cv-from-scratch-alternatives.md) | CV from scratch - Structurations alternatives | ⏳ À faire | 🟡 Moyenne | 1.32 | 2025-11-25 |
 | [CNT-036](tasks/CNT-036-condensation-impact-business.md) | Condensation et impact business (version longue) | ⏳ À faire | 🔴 Haute | 5.00 | 2025-11-27 |
 | [INF-006](tasks/INF-006-extraire-scripts-tests-hors-claude.md) | Extraire scripts et tests hors de `.claude/` | ⏳ À faire | 🔴 Haute | 3.40 | 2025-11-25 |
@@ -63,6 +61,9 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
+| [INF-012](tasks/INF-012-skill-cv-adapte.md) | Skill CV adapté à l'offre | ✅ Terminé | 🔴 Haute | 2025-11-30 |
+| [INF-010](tasks/INF-010-skill-analyse-adequation.md) | Skill analyse adéquation profil-poste | ✅ Terminé | 🔴 Haute | 2025-11-30 |
+| [INF-009](tasks/INF-009-skill-analyse-offre-emploi.md) | Skill analyse d'offre d'emploi | ✅ Terminé | 🔴 Haute | 2025-11-30 |
 | [CNT-037](tasks/CNT-037-optimisation-version-courte.md) | Optimisation version courte (1 page) | ✅ Terminé | 🟡 Moyenne | 2025-11-29 |
 | [LAY-004](tasks/LAY-004-equilibrer-contenu-premiere-page-cv-long.md) | Équilibrer contenu page 1 + factorisation (TPL-005) | ✅ Terminé | 🟡 Moyenne | 2025-11-28 |
 | [TPL-005](tasks/TPL-005-factoriser-page-1-commune.md) | Factoriser page 1 commune (fusionné LAY-004) | ✅ Terminé | 🟡 Moyenne | 2025-11-28 |
@@ -177,16 +178,16 @@ Closes TPL-001"
 
 ## Statistiques
 
-- **Total**: 59 tâches
-- **À faire**: 15
+- **Total**: 60 tâches
+- **À faire**: 12
 - **En cours**: 0
-- **Terminées**: 5
+- **Terminées**: 8
 - **Bloquées**: 0
 - **Archivées**: 40
 
 **Prochains IDs disponibles par trigramme**:
 
-- CNT-038, TPL-006, QUA-003, PIP-004, INF-013, LAY-006, DOC-003
+- CNT-038, TPL-006, QUA-003, PIP-004, INF-014, LAY-006, DOC-003
 
 ---
 

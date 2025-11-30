@@ -46,6 +46,13 @@ release:
     typst compile src/cv.typ dist/cv-{{`date +%Y-%m-%d`}}.pdf
     @echo "✓ Built dist/cv-{{`date +%Y-%m-%d`}}.pdf"
 
+# Build adapted CV for a specific application (slug naming convention)
+build-adapted app_id:
+    @echo "Building adapted CV for {{app_id}}..."
+    @mkdir -p data/applications/{{app_id}}
+    typst compile --root . data/applications/{{app_id}}/{{app_id}}-cv-adapted.typ data/applications/{{app_id}}/{{app_id}}-cv-adapted.pdf
+    @echo "✓ Built data/applications/{{app_id}}/{{app_id}}-cv-adapted.pdf"
+
 # Validate CV compiles without errors
 validate:
     @echo "Validating CV..."

@@ -8,15 +8,15 @@
 |-------|--------|
 | **ID** | INF-012 |
 | **Titre** | Skill de génération de CV adapté à l'offre |
-| **Statut** | ⏳ À faire |
+| **Statut** | ✅ Terminé |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | INF (Infrastructure) |
 | **Section CV** | N/A |
 | **Créé le** | 2025-11-25 |
 | **Cible** | - |
-| **Terminé le** | - |
+| **Terminé le** | 2025-11-30 |
 | **Temps estimé** | 4-5 heures |
-| **Temps réel** | - |
+| **Temps réel** | ~4h |
 | **Branche nécessaire** | Auto |
 
 ---
@@ -70,13 +70,13 @@ INF-009 → INF-010
 
 ## Sous-tâches
 
-- [ ] Définir les règles d'adaptation (ordre, détail, keywords)
-- [ ] Créer le mécanisme de modification du CV Typst
-- [ ] Implémenter l'injection des mots-clés ATS
-- [ ] Ajouter la réorganisation des sections
-- [ ] Créer le workflow `/job-cv`
-- [ ] Intégrer la compilation PDF automatique
-- [ ] Tester avec différents types de postes
+- [x] Définir les règles d'adaptation (ordre, détail, keywords)
+- [x] Créer le mécanisme de modification du CV Typst
+- [x] Implémenter l'injection des mots-clés ATS
+- [x] Ajouter la réorganisation des sections
+- [x] Créer le workflow `/job-cv`
+- [x] Intégrer la compilation PDF automatique
+- [x] Tester avec différents types de postes
 
 ---
 
@@ -239,12 +239,12 @@ Closes INF-012"
 
 ## Tests / Vérifications
 
-- [ ] Le CV adapté compile sans erreur
-- [ ] Les mots-clés sont correctement intégrés
-- [ ] L'ordre des expériences est pertinent
-- [ ] Le format PDF est correct
-- [ ] Le rapport de modifications est clair
-- [ ] Les informations restent véridiques
+- [x] Le CV adapté compile sans erreur
+- [x] Les mots-clés sont correctement intégrés
+- [x] L'ordre des expériences est pertinent
+- [x] Le format PDF est correct
+- [x] Le rapport de modifications est clair
+- [x] Les informations restent véridiques
 
 ---
 
@@ -253,9 +253,37 @@ Closes INF-012"
 | Date | Action | Détails |
 |------|--------|---------|
 | 2025-11-25 | Création | Skill de génération de CV adapté |
+| 2025-11-30 | En cours | Début du travail |
+| 2025-11-30 | Terminé | Skill job-application v1.1.0 complet |
 
 ---
 
 ## Résultat final
 
-[À remplir une fois la tâche terminée]
+Skill `job-application` v1.1.0 créé avec les fonctionnalités suivantes :
+
+**Workflows implémentés :**
+
+- `job-analyze` : Analyse d'offres d'emploi (URL ou texte)
+- `job-fit` : Évaluation de l'adéquation profil-poste avec validation interactive
+- `job-cv` : Génération de CV adapté avec questionnaire de personnalisation
+
+**Fonctionnalités clés :**
+
+- Validation interactive du fit-report (AskUserQuestion pattern)
+- Confirmation avant génération CV (arrêt si fit insuffisant)
+- Choix du format CV en miroir de l'annonce (courte→court, longue→long)
+- Questionnaire de personnalisation (titre, ordre expériences, mots-clés, sidebar)
+- Vérification visuelle post-compilation
+- Nommage avec slug (`{app_id}-analysis.md`, `{app_id}-cv-adapted.pdf`)
+- Métadonnées document Typst
+
+**Fichiers créés :**
+
+- `.claude/skills/job-application/SKILL.md`
+- `.claude/skills/job-application/workflows/job-analyze.md`
+- `.claude/skills/job-application/workflows/job-fit.md`
+- `.claude/skills/job-application/workflows/job-cv.md`
+- `.claude/skills/job-application/templates/cv-adapted-template.typ`
+
+**Test validé :** Offre Wavestone → CV adapté compilé avec succès (1 page)
