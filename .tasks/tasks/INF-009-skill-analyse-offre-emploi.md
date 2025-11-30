@@ -8,7 +8,7 @@
 |-------|--------|
 | **ID** | INF-009 |
 | **Titre** | Skill d'analyse d'offre d'emploi |
-| **Statut** | ⏳ À faire |
+| **Statut** | 🔄 En cours |
 | **Priorité** | 🔴 Haute |
 | **Trigramme** | INF (Infrastructure) |
 | **Section CV** | N/A |
@@ -214,6 +214,7 @@ Closes INF-009"
 
 | Date | Action | Détails |
 |------|--------|---------|
+| 2025-11-29 | En cours | Début du travail |
 | 2025-11-25 | Création | Skill d'analyse d'offre d'emploi |
 
 ---
