@@ -62,7 +62,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 Les tâches archivées sont déplacées dans [.archived/](.archived/).
 
-**Tâches archivées:** 54 tâches
+**Tâches archivées:** 55 tâches
 
 - INF-006 (2025-11-30)
 - CNT-036 (2025-11-28)
@@ -93,6 +93,11 @@ Les tâches archivées sont déplacées dans [.archived/](.archived/).
 - CNT-027 (2025-11-25)
 - CNT-024 (2025-11-25)
 - CNT-023 (2025-11-25)
+- CNT-022 (2025-11-25)
+- CNT-021 (2025-11-25)
+- CNT-020 (2025-11-25)
+- CNT-019 (2025-11-25)
+- CNT-018 (2025-11-25)
 - CNT-017 (2025-11-25)
 - CNT-016 (2025-11-25)
 - CNT-015 (2025-11-25)
@@ -178,12 +183,12 @@ Closes TPL-001"
 
 ## Statistiques
 
-- **Total**: 65 tâches
+- **Total**: 66 tâches
 - **À faire**: 11
 - **En cours**: 0
 - **Terminées**: 0
 - **Bloquées**: 0
-- **Archivées**: 54
+- **Archivées**: 55
 
 **Prochains IDs disponibles par trigramme**:
 
