@@ -61,19 +61,19 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
-| [INF-012](tasks/INF-012-skill-cv-adapte.md) | Skill CV adapté à l'offre | ✅ Terminé | 🔴 Haute | 2025-11-30 |
-| [INF-010](tasks/INF-010-skill-analyse-adequation.md) | Skill analyse adéquation profil-poste | ✅ Terminé | 🔴 Haute | 2025-11-30 |
-| [INF-009](tasks/INF-009-skill-analyse-offre-emploi.md) | Skill analyse d'offre d'emploi | ✅ Terminé | 🔴 Haute | 2025-11-30 |
-| [CNT-037](tasks/CNT-037-optimisation-version-courte.md) | Optimisation version courte (1 page) | ✅ Terminé | 🟡 Moyenne | 2025-11-29 |
-| [LAY-004](tasks/LAY-004-equilibrer-contenu-premiere-page-cv-long.md) | Équilibrer contenu page 1 + factorisation (TPL-005) | ✅ Terminé | 🟡 Moyenne | 2025-11-28 |
-| [TPL-005](tasks/TPL-005-factoriser-page-1-commune.md) | Factoriser page 1 commune (fusionné LAY-004) | ✅ Terminé | 🟡 Moyenne | 2025-11-28 |
-| [LAY-005](tasks/LAY-005-zoom-photo-profil.md) | Zoomer sur le visage dans la photo de profil | ✅ Terminé | 🟡 Moyenne | 2025-11-27 |
-| [LAY-003](tasks/LAY-003-reorganiser-competences-3-poles.md) | Réorganiser compétences en 3 pôles thématiques | ✅ Terminé | 🟡 Moyenne | 2025-11-27 |
 
 Les tâches archivées sont déplacées dans [.archived/](.archived/).
 
-**Tâches archivées:** 40 tâches
+**Tâches archivées:** 48 tâches
 
+- INF-012 (2025-11-30)
+- INF-010 (2025-11-30)
+- INF-009 (2025-11-30)
+- CNT-037 (2025-11-29)
+- LAY-004 (2025-11-28)
+- TPL-005 (2025-11-28)
+- LAY-005 (2025-11-27)
+- LAY-003 (2025-11-27)
 - INF-005 (2025-11-27)
 - DOC-002 (2025-11-27)
 - TPL-001 (2025-11-27)
@@ -181,9 +181,9 @@ Closes TPL-001"
 - **Total**: 60 tâches
 - **À faire**: 12
 - **En cours**: 0
-- **Terminées**: 8
+- **Terminées**: 0
 - **Bloquées**: 0
-- **Archivées**: 40
+- **Archivées**: 48
 
 **Prochains IDs disponibles par trigramme**:
 
