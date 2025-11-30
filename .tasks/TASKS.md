@@ -52,6 +52,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | [INF-003](tasks/INF-003-perenniser-ameliorer-script-priorites.md) | Pérenniser et améliorer le script Python de calcul des priorités | ⏳ À faire | 🟢 Basse | 1.70 | 2025-11-16 |
 | [TPL-003](tasks/TPL-003-cv-from-scratch-alternatives.md) | CV from scratch - Structurations alternatives | ⏳ À faire | 🟡 Moyenne | 1.38 | 2025-11-25 |
 | [INF-013](tasks/INF-013-integration-askuserquestion-skills.md) | Intégration AskUserQuestion dans les skills | ⏳ À faire | 🟢 Basse | 1.00 | 2025-11-30 |
+| [INF-014](tasks/INF-014-reviser-poids-anciennete-wsjf.md) | Réviser le poids de l'ancienneté dans le calcul WSJF | ⏳ À faire | 🔴 Haute | - | 2025-11-30 |
 
 ---
 
@@ -183,8 +184,8 @@ Closes TPL-001"
 
 ## Statistiques
 
-- **Total**: 66 tâches
-- **À faire**: 11
+- **Total**: 67 tâches
+- **À faire**: 12
 - **En cours**: 0
 - **Terminées**: 0
 - **Bloquées**: 0
@@ -192,7 +193,7 @@ Closes TPL-001"
 
 **Prochains IDs disponibles par trigramme**:
 
-- CNT-038, TPL-006, QUA-003, PIP-004, INF-014, LAY-006, DOC-003
+- CNT-038, TPL-006, QUA-003, PIP-004, INF-015, LAY-006, DOC-003
 
 ---
 
