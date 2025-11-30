@@ -44,7 +44,6 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | [TPL-002](tasks/TPL-002-template-system.md) | Système de changement de template | ⏳ À faire | 🟢 Basse | 3.02 | 2025-10-28 |
 | [LAY-002](tasks/LAY-002-consolidation-sections-dupliquees.md) | Consolider les sections dupliquées (Études, Expérience) | ⏳ À faire | 🟡 Moyenne | 2.65 | 2025-11-25 |
 | [PIP-003](tasks/PIP-003-build-word-format.md) | Build du CV au format Word | ⏳ À faire | 🟡 Moyenne | 2.65 | 2025-11-25 |
-| [INF-012](tasks/INF-012-skill-cv-adapte.md) | Skill CV adapté à l'offre | 🔄 En cours | 🔴 Haute | 2.58 | 2025-11-25 |
 | [INF-008](tasks/INF-008-architecture-skills-candidature.md) | Architecture système skills candidature | ⏳ À faire | 🔴 Haute | 2.58 | 2025-11-25 |
 | [PIP-001](tasks/PIP-001-cicd-pipeline.md) | CI/CD pour publication automatique | ⏳ À faire | 🟢 Basse | 2.52 | 2025-10-28 |
 | [INF-007](tasks/INF-007-supprimer-cta-slash-commands-skills.md) | Supprimer CTA slash commands dans skills | ⏳ À faire | 🟢 Basse | 2.30 | 2025-11-25 |
@@ -62,6 +61,7 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
+| [INF-012](tasks/INF-012-skill-cv-adapte.md) | Skill CV adapté à l'offre | ✅ Terminé | 🔴 Haute | 2025-11-30 |
 | [INF-010](tasks/INF-010-skill-analyse-adequation.md) | Skill analyse adéquation profil-poste | ✅ Terminé | 🔴 Haute | 2025-11-30 |
 | [INF-009](tasks/INF-009-skill-analyse-offre-emploi.md) | Skill analyse d'offre d'emploi | ✅ Terminé | 🔴 Haute | 2025-11-30 |
 | [CNT-037](tasks/CNT-037-optimisation-version-courte.md) | Optimisation version courte (1 page) | ✅ Terminé | 🟡 Moyenne | 2025-11-29 |
@@ -179,9 +179,9 @@ Closes TPL-001"
 ## Statistiques
 
 - **Total**: 60 tâches
-- **À faire**: 13
-- **En cours**: 1
-- **Terminées**: 7
+- **À faire**: 12
+- **En cours**: 0
+- **Terminées**: 8
 - **Bloquées**: 0
 - **Archivées**: 40
 
