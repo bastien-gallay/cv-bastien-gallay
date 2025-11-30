@@ -50,7 +50,7 @@ release:
 build-adapted app_id:
     @echo "Building adapted CV for {{app_id}}..."
     @mkdir -p data/applications/{{app_id}}
-    typst compile data/applications/{{app_id}}/cv-adapted.typ data/applications/{{app_id}}/cv-adapted.pdf
+    typst compile --root . data/applications/{{app_id}}/cv-adapted.typ data/applications/{{app_id}}/cv-adapted.pdf
     @echo "✓ Built data/applications/{{app_id}}/cv-adapted.pdf"
 
 # Validate CV compiles without errors

@@ -76,7 +76,7 @@ INF-009 → INF-010
 - [x] Ajouter la réorganisation des sections
 - [x] Créer le workflow `/job-cv`
 - [x] Intégrer la compilation PDF automatique
-- [ ] Tester avec différents types de postes
+- [x] Tester avec différents types de postes
 
 ---
 

@@ -2,20 +2,20 @@
 // Copier ce fichier vers data/applications/{app_id}/cv-adapted.typ
 // et personnaliser selon l'analyse
 
-// Imports depuis la racine du projet
-#import "../../src/neat-cv-local.typ": (
+// Imports depuis data/applications/{app_id}/ (3 niveaux de profondeur)
+#import "../../../src/neat-cv-local.typ": (
   cv-continued, cv-page-one, cv-setup, email-link, entry, publications,
   contact-info, item-pills, social-links,
 )
 
 // Configuration de base
-#import "../../src/shared/config.typ": *
+#import "../../../src/shared/config.typ": *
 
 // Expériences modulaires
-#import "../../src/shared/experiences.typ": *
+#import "../../../src/shared/experiences.typ": *
 
 // Sections additionnelles
-#import "../../src/shared/sections.typ": *
+#import "../../../src/shared/sections.typ": *
 
 // =============================================================================
 // CONFIGURATION ADAPTÉE
@@ -145,7 +145,7 @@
 )
 
 #cv-page-one(
-  profile-picture: image("../../src/assets/photo-profile-pro.jpg"),
+  profile-picture: image("../../../src/assets/photo-profile-pro.jpg"),
   sidebar-adapted(),
   [
     #experiences-adapted
