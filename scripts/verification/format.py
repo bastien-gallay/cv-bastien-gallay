@@ -7,16 +7,15 @@ from scripts.lib import ValidatedContent
 
 REQUIRED_SECTIONS = [
     "Expérience",
-    "Etudes",
+    "Formation",
     "Certifications",
-    "Expertises",
-    "Langues",
 ]
 
 EMAIL_PATTERN = re.compile(r"email:\s*[\"']?[\w.+-]+@[\w.-]+\.\w+[\"']?", re.IGNORECASE)
 PHONE_PATTERN = re.compile(r"phone:", re.IGNORECASE)
 LINKEDIN_PATTERN = re.compile(r"linkedin:", re.IGNORECASE)
-ENTRY_PATTERN = re.compile(r"#entry\(")
+# Match both "#entry(" and "= entry(" (variable assignment)
+ENTRY_PATTERN = re.compile(r"(?:#entry\(|=\s*entry\()")
 TRAILING_WHITESPACE_PATTERN = re.compile(r"[ \t]+$", re.MULTILINE)
 ENCODING_ERROR_PATTERN = re.compile(r"\?{3,}")
 FRENCH_CHARS_PATTERN = re.compile(r"[éèêëàâäùûüîïôöç]", re.IGNORECASE)
@@ -151,19 +150,34 @@ def step_verify_french_chars(ctx: FormatContext) -> FormatContext:
     return ctx
 
 
+def collect_typ_content(src_dir: Path) -> str:
+    """Collect content from all .typ files in src directory."""
+    contents = []
+    for typ_file in sorted(src_dir.rglob("*.typ")):
+        contents.append(typ_file.read_text(encoding="utf-8"))
+    return "\n".join(contents)
+
+
 def verify_format(project_root: Path | None = None) -> FormatResult:
     if project_root is None:
         project_root = Path.cwd()
     project_root = Path(project_root)
 
-    cv_file = project_root / "src" / "cv.typ"
-    if not cv_file.exists():
+    src_dir = project_root / "src"
+    if not src_dir.exists():
         return FormatResult(
             success=False,
-            errors=[f"Fichier CV introuvable: {cv_file}"],
+            errors=[f"Répertoire src introuvable: {src_dir}"],
         )
 
-    content = ValidatedContent(cv_file.read_text(encoding="utf-8"))
+    typ_files = list(src_dir.rglob("*.typ"))
+    if not typ_files:
+        return FormatResult(
+            success=False,
+            errors=["Aucun fichier .typ trouvé dans src/"],
+        )
+
+    content = ValidatedContent(collect_typ_content(src_dir))
 
     ctx = (
         FormatContext(content=content, result=FormatResult(success=True))
@@ -252,7 +266,7 @@ if __name__ == "__main__":
 
     current = Path.cwd()
     while current != current.parent:
-        if (current / "src" / "cv.typ").exists():
+        if (current / "src").is_dir():
             break
         current = current.parent
     else:

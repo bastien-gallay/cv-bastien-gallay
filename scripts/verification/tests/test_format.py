@@ -149,18 +149,18 @@ class TestStepFillStatistics:
 
 class TestStepVerifySections:
     def test_all_sections_found(self):
-        content = "Expérience Etudes Certifications Expertises Langues"
+        content = "Expérience Formation Certifications"
         ctx = make_context(content)
         result = step_verify_sections(ctx)
-        assert len(result.result.sections_found) == 5
+        assert len(result.result.sections_found) == 3
         assert len(result.result.warnings) == 0
 
     def test_missing_sections_add_warnings(self):
         ctx = make_context("Expérience")
         result = step_verify_sections(ctx)
         assert "Expérience" in result.result.sections_found
-        assert len(result.result.warnings) == 4
-        assert any("Etudes" in w for w in result.result.warnings)
+        assert len(result.result.warnings) == 2
+        assert any("Formation" in w for w in result.result.warnings)
 
     def test_does_not_change_success(self):
         ctx = make_context("no sections")
@@ -257,25 +257,23 @@ class TestStepVerifyFrenchChars:
 
 class TestCheckSections:
     def test_all_sections_present(self):
-        content = "= Expérience\n= Etudes\n= Certifications\n= Expertises\n= Langues"
+        content = "= Expérience\n= Formation\n= Certifications"
         found, missing = check_sections(content)
-        assert len(found) == 5
+        assert len(found) == 3
         assert len(missing) == 0
 
     def test_some_sections_missing(self):
-        content = "= Expérience\n= Etudes"
+        content = "= Expérience\n= Formation"
         found, missing = check_sections(content)
         assert "Expérience" in found
-        assert "Etudes" in found
+        assert "Formation" in found
         assert "Certifications" in missing
-        assert "Expertises" in missing
-        assert "Langues" in missing
 
     def test_no_sections(self):
         content = "Some random content"
         found, missing = check_sections(content)
         assert len(found) == 0
-        assert len(missing) == 5
+        assert len(missing) == 3
 
 
 class TestCheckContactInfo:
