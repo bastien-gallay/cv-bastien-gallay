@@ -10,10 +10,8 @@ CUPID:
 
 from .extractors import (
     clean_lines,
-    extract_bullet_points,
     extract_company,
     extract_contract_type,
-    extract_first_match,
     extract_keywords,
     extract_location,
     extract_must_have,
@@ -21,44 +19,12 @@ from .extractors import (
     extract_responsibilities,
     extract_salary,
     extract_title,
-    is_nice_to_have,
 )
-from .patterns import FRENCH_CITIES, KEYWORD_FALSE_POSITIVES
-from .types import JobPosting
-
-# =============================================================================
-# Backward Compatibility Aliases
-# =============================================================================
-# These aliases maintain compatibility with existing tests and code
-# that imports the underscore-prefixed functions.
-
-_get_clean_lines = clean_lines
-_extract_first_match = extract_first_match
-_extract_bullet_points = extract_bullet_points
-_extract_title = extract_title
-_extract_company = extract_company
-_extract_location = extract_location
-_extract_contract_type = extract_contract_type
-_extract_salary = extract_salary
-_is_nice_to_have_marker = is_nice_to_have
+from .types import ContractType, JobPosting, Location, Salary
 
 __all__ = [
-    # Main API
     "JobPosting",
     "parse_job_posting",
-    # Constants (for tests)
-    "FRENCH_CITIES",
-    "KEYWORD_FALSE_POSITIVES",
-    # Backward compatibility exports
-    "_get_clean_lines",
-    "_extract_first_match",
-    "_extract_bullet_points",
-    "_extract_title",
-    "_extract_company",
-    "_extract_location",
-    "_extract_contract_type",
-    "_extract_salary",
-    "_is_nice_to_have_marker",
 ]
 
 
@@ -99,12 +65,22 @@ def parse_job_posting(text: str) -> JobPosting:
 
     lines = clean_lines(text)
 
+    # Extract raw values
+    location_str = extract_location(text)
+    contract_str = extract_contract_type(text)
+    salary_str = extract_salary(text)
+
+    # Convert to rich types
+    location = Location(city=location_str) if location_str else None
+    contract_type = ContractType.from_string(contract_str) if contract_str else ContractType.UNKNOWN
+    salary = Salary(raw=salary_str) if salary_str else None
+
     return JobPosting(
         title=extract_title(lines),
         company=extract_company(lines, text),
-        location=extract_location(text),
-        contract_type=extract_contract_type(text),
-        salary=extract_salary(text),
+        location=location,
+        contract_type=contract_type,
+        salary=salary,
         must_have=extract_must_have(text),
         nice_to_have=extract_nice_to_have(text),
         responsibilities=extract_responsibilities(text),

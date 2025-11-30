@@ -1,20 +1,19 @@
 """Tests for job posting parser - TDD approach."""
 
-from scripts.job_analyze.parser import (
-    JobPosting,
-    parse_job_posting,
-    _get_clean_lines,
-    _extract_first_match,
-    _extract_bullet_points,
-    _extract_title,
-    _extract_company,
-    _extract_location,
-    _extract_contract_type,
-    _extract_salary,
-    _is_nice_to_have_marker,
-    FRENCH_CITIES,
-    KEYWORD_FALSE_POSITIVES,
+from scripts.job_analyze.extractors import (
+    clean_lines,
+    extract_bullet_points,
+    extract_company,
+    extract_contract_type,
+    extract_first_match,
+    extract_location,
+    extract_salary,
+    extract_title,
+    is_nice_to_have,
 )
+from scripts.job_analyze.parser import JobPosting, parse_job_posting
+from scripts.job_analyze.patterns import Filters, LocationPatterns
+from scripts.job_analyze.types import ContractType, Location
 
 
 # =============================================================================
@@ -85,97 +84,97 @@ What we offer:
 
 
 class TestGetCleanLines:
-    """Tests for _get_clean_lines helper."""
+    """Tests for clean_lines helper."""
 
     def test_basic_split(self):
         """Should split text into lines."""
-        result = _get_clean_lines("line1\nline2\nline3")
+        result = clean_lines("line1\nline2\nline3")
         assert result == ["line1", "line2", "line3"]
 
     def test_removes_empty_lines(self):
         """Should remove empty lines."""
-        result = _get_clean_lines("line1\n\nline2\n\n\nline3")
+        result = clean_lines("line1\n\nline2\n\n\nline3")
         assert result == ["line1", "line2", "line3"]
 
     def test_trims_whitespace(self):
         """Should trim whitespace from lines."""
-        result = _get_clean_lines("  line1  \n  line2  ")
+        result = clean_lines("  line1  \n  line2  ")
         assert result == ["line1", "line2"]
 
     def test_handles_whitespace_only_lines(self):
         """Should skip whitespace-only lines."""
-        result = _get_clean_lines("line1\n   \nline2")
+        result = clean_lines("line1\n   \nline2")
         assert result == ["line1", "line2"]
 
 
 class TestExtractFirstMatch:
-    """Tests for _extract_first_match helper."""
+    """Tests for extract_first_match helper."""
 
     def test_returns_first_match(self):
         """Should return first matching group."""
         patterns = [r"Name:\s*(\w+)", r"Title:\s*(\w+)"]
-        result = _extract_first_match("Title: Developer", patterns)
+        result = extract_first_match("Title: Developer", patterns)
         assert result == "Developer"
 
     def test_returns_none_when_no_match(self):
         """Should return None when nothing matches."""
         patterns = [r"Name:\s*(\w+)"]
-        result = _extract_first_match("No name here", patterns)
+        result = extract_first_match("No name here", patterns)
         assert result is None
 
     def test_tries_patterns_in_order(self):
         """Should try patterns in order."""
         patterns = [r"First:\s*(\w+)", r"Second:\s*(\w+)"]
-        result = _extract_first_match("First: A Second: B", patterns)
+        result = extract_first_match("First: A Second: B", patterns)
         assert result == "A"
 
 
 class TestExtractBulletPoints:
-    """Tests for _extract_bullet_points helper."""
+    """Tests for extract_bullet_points helper."""
 
     def test_extracts_dash_bullets(self):
         """Should extract dash bullet points."""
         section = "- Point one here\n- Point two here"
-        result = _extract_bullet_points(section)
+        result = extract_bullet_points(section)
         assert result == ["Point one here", "Point two here"]
 
     def test_extracts_bullet_char(self):
         """Should extract • bullet points."""
         section = "• First item here\n• Second item here"
-        result = _extract_bullet_points(section)
+        result = extract_bullet_points(section)
         assert result == ["First item here", "Second item here"]
 
     def test_filters_short_items(self):
         """Should filter items shorter than min_length."""
         section = "- OK this is long enough\n- Short"
-        result = _extract_bullet_points(section, min_length=10)
+        result = extract_bullet_points(section, min_length=10)
         assert result == ["OK this is long enough"]
 
 
 class TestIsNiceToHaveMarker:
-    """Tests for _is_nice_to_have_marker helper."""
+    """Tests for is_nice_to_have helper."""
 
     def test_detects_nice_to_have(self):
         """Should detect 'nice to have'."""
-        assert _is_nice_to_have_marker("This is nice to have")
-        assert _is_nice_to_have_marker("Nice-to-have skill")
+        assert is_nice_to_have("This is nice to have")
+        assert is_nice_to_have("Nice-to-have skill")
 
     def test_detects_souhaite(self):
         """Should detect 'souhaité' (French)."""
-        assert _is_nice_to_have_marker("Compétence souhaitée")
+        assert is_nice_to_have("Compétence souhaitée")
 
     def test_detects_optional(self):
         """Should detect 'optional'."""
-        assert _is_nice_to_have_marker("This is optional")
+        assert is_nice_to_have("This is optional")
 
     def test_detects_atout(self):
         """Should detect 'atout:' (French)."""
-        assert _is_nice_to_have_marker("Atout: experience in EdTech")
+        assert is_nice_to_have("Atout: experience in EdTech")
 
     def test_returns_false_for_required(self):
         """Should return False for required items."""
-        assert not _is_nice_to_have_marker("Python (required)")
-        assert not _is_nice_to_have_marker("This is mandatory")
+        assert not is_nice_to_have("Python (required)")
+        assert not is_nice_to_have("This is mandatory")
 
 
 # =============================================================================
@@ -184,136 +183,136 @@ class TestIsNiceToHaveMarker:
 
 
 class TestExtractTitle:
-    """Tests for _extract_title function."""
+    """Tests for extract_title function."""
 
     def test_extracts_from_dash_separator(self):
         """Should extract title from 'Title - Company' format."""
         lines = ["Software Engineer - TechCorp"]
-        assert _extract_title(lines) == "Software Engineer"
+        assert extract_title(lines) == "Software Engineer"
 
     def test_extracts_from_at_separator(self):
         """Should extract title from 'Title @ Company' format."""
         lines = ["CTO @ Startup"]
-        assert _extract_title(lines) == "CTO"
+        assert extract_title(lines) == "CTO"
 
     def test_extracts_from_at_word(self):
         """Should extract title from 'Title at Company' format."""
         lines = ["Developer at BigCo"]
-        assert _extract_title(lines) == "Developer"
+        assert extract_title(lines) == "Developer"
 
     def test_returns_first_line_as_title(self):
         """Should return first line if no separator found."""
         lines = ["Senior Software Engineer"]
-        assert _extract_title(lines) == "Senior Software Engineer"
+        assert extract_title(lines) == "Senior Software Engineer"
 
     def test_skips_urls(self):
         """Should return Unknown for URLs."""
         lines = ["https://example.com/jobs"]
-        assert _extract_title(lines) == "Unknown"
+        assert extract_title(lines) == "Unknown"
 
     def test_handles_empty_lines(self):
         """Should return Unknown for empty list."""
-        assert _extract_title([]) == "Unknown"
+        assert extract_title([]) == "Unknown"
 
 
 class TestExtractCompany:
-    """Tests for _extract_company function."""
+    """Tests for extract_company function."""
 
     def test_extracts_from_dash_separator(self):
         """Should extract company from 'Title - Company' format."""
         lines = ["Engineer - TechCorp Inc"]
-        assert _extract_company(lines, "") == "TechCorp Inc"
+        assert extract_company(lines, "") == "TechCorp Inc"
 
     def test_extracts_from_at_separator(self):
         """Should extract company from 'Title @ Company' format."""
         lines = ["CTO @ Startup.io"]
-        assert _extract_company(lines, "") == "Startup.io"
+        assert extract_company(lines, "") == "Startup.io"
 
     def test_extracts_cto_pattern(self):
         """Should extract company from 'CTO COMPANY' pattern."""
         lines = ["CTO HANDIPULSE – Description"]
         text = "CTO HANDIPULSE – Description"
-        assert _extract_company(lines, text) == "HANDIPULSE"
+        assert extract_company(lines, text) == "HANDIPULSE"
 
     def test_extracts_french_pattern(self):
         """Should extract company from 'X est une' pattern."""
         lines = ["Job posting"]
         text = "Handipulse est une deeptech à impact social"
-        assert _extract_company(lines, text) == "Handipulse"
+        assert extract_company(lines, text) == "Handipulse"
 
     def test_returns_unknown_when_not_found(self):
         """Should return Unknown when company not found."""
         lines = ["Just a title"]
-        assert _extract_company(lines, "No company info") == "Unknown"
+        assert extract_company(lines, "No company info") == "Unknown"
 
 
 class TestExtractLocation:
-    """Tests for _extract_location function."""
+    """Tests for extract_location function."""
 
     def test_extracts_explicit_location(self):
         """Should extract from 'Location: X' format."""
         text = "Location: Paris, France"
-        assert _extract_location(text) == "Paris, France"
+        assert extract_location(text) == "Paris, France"
 
     def test_extracts_french_city(self):
         """Should extract French cities."""
         text = "Poste basé à Lyon"
-        assert _extract_location(text) == "Lyon"
+        assert extract_location(text) == "Lyon"
 
     def test_avoids_nice_to_have_false_positive(self):
         """Should not confuse 'Nice' city with 'nice to have'."""
         text = "This is nice to have but not required"
-        assert _extract_location(text) is None
+        assert extract_location(text) is None
 
     def test_returns_none_when_not_found(self):
         """Should return None when no location found."""
         text = "Remote position anywhere"
-        assert _extract_location(text) is None
+        assert extract_location(text) is None
 
 
 class TestExtractContractType:
-    """Tests for _extract_contract_type function."""
+    """Tests for extract_contract_type function."""
 
     def test_extracts_cdi(self):
         """Should extract CDI."""
-        assert _extract_contract_type("Type: CDI") == "CDI"
-        assert _extract_contract_type("Poste en CDI") == "CDI"
+        assert extract_contract_type("Type: CDI") == "CDI"
+        assert extract_contract_type("Poste en CDI") == "CDI"
 
     def test_normalizes_fulltime_to_cdi(self):
         """Should normalize Full-time to CDI."""
-        assert _extract_contract_type("(Full-time)") == "CDI"
+        assert extract_contract_type("(Full-time)") == "CDI"
 
     def test_extracts_cdd(self):
         """Should extract CDD."""
-        assert _extract_contract_type("Contrat: CDD") == "CDD"
+        assert extract_contract_type("Contrat: CDD") == "CDD"
 
     def test_extracts_freelance(self):
         """Should extract Freelance."""
-        assert _extract_contract_type("Mission Freelance") == "Freelance"
+        assert extract_contract_type("Mission Freelance") == "Freelance"
 
 
 class TestExtractSalary:
-    """Tests for _extract_salary function."""
+    """Tests for extract_salary function."""
 
     def test_extracts_explicit_salary(self):
         """Should extract from 'Salary: X' format."""
         text = "Salary: 50-60k EUR"
-        assert _extract_salary(text) == "50-60k EUR"
+        assert extract_salary(text) == "50-60k EUR"
 
     def test_extracts_range_with_euro(self):
         """Should extract salary ranges with € symbol."""
         text = "50-70k €"
-        assert _extract_salary(text) == "50-70k €"
+        assert extract_salary(text) == "50-70k €"
 
     def test_avoids_year_false_positive(self):
         """Should not match year ranges like 2025-2030."""
         text = "Stratégie R&D 2025-2030"
-        assert _extract_salary(text) is None
+        assert extract_salary(text) is None
 
     def test_returns_none_when_not_found(self):
         """Should return None when no salary found."""
         text = "Competitive compensation"
-        assert _extract_salary(text) is None
+        assert extract_salary(text) is None
 
 
 # =============================================================================
@@ -326,14 +325,14 @@ class TestConstants:
 
     def test_french_cities_list(self):
         """Should contain major French cities."""
-        assert "Paris" in FRENCH_CITIES
-        assert "Lyon" in FRENCH_CITIES
-        assert "Bordeaux" in FRENCH_CITIES
+        assert "Paris" in LocationPatterns.FRENCH_CITIES
+        assert "Lyon" in LocationPatterns.FRENCH_CITIES
+        assert "Bordeaux" in LocationPatterns.FRENCH_CITIES
 
     def test_keyword_false_positives(self):
         """Should contain common false positives."""
-        assert "Technologies" in KEYWORD_FALSE_POSITIVES
-        assert "Intelligence" in KEYWORD_FALSE_POSITIVES
+        assert "Technologies" in Filters.KEYWORD_FALSE_POSITIVES
+        assert "Intelligence" in Filters.KEYWORD_FALSE_POSITIVES
 
 
 # =============================================================================
@@ -349,13 +348,14 @@ class TestJobPostingDataclass:
         job = JobPosting(
             title="Software Engineer",
             company="TechCorp",
-            location="Paris",
-            contract_type="CDI",
+            location=Location(city="Paris"),
+            contract_type=ContractType.CDI,
         )
         assert job.title == "Software Engineer"
         assert job.company == "TechCorp"
-        assert job.location == "Paris"
-        assert job.contract_type == "CDI"
+        assert job.location is not None
+        assert job.location.city == "Paris"
+        assert job.contract_type == ContractType.CDI
 
     def test_job_posting_optional_fields(self):
         """Should handle optional fields with defaults."""
@@ -365,6 +365,7 @@ class TestJobPostingDataclass:
         )
         assert job.location is None
         assert job.salary is None
+        assert job.contract_type == ContractType.UNKNOWN
         assert job.must_have == []
         assert job.nice_to_have == []
         assert job.responsibilities == []
@@ -396,13 +397,15 @@ class TestParseJobPosting:
 
         assert job.title == "Senior Python Developer"
         assert job.company == "TechCorp"
-        assert job.location == "Paris, France"
-        assert job.contract_type == "CDI"
+        assert job.location is not None
+        assert job.location.city == "Paris, France"
+        assert job.contract_type == ContractType.CDI
 
     def test_extract_salary(self):
         """Should extract salary information."""
         job = parse_job_posting(SAMPLE_JOB_SIMPLE)
-        assert job.salary == "60-80k EUR"
+        assert job.salary is not None
+        assert str(job.salary) == "60-80k EUR"
 
     def test_extract_must_have_requirements(self):
         """Should identify must-have requirements."""
@@ -443,7 +446,8 @@ class TestParseJobPosting:
 
         assert job.title == "Chief Technology Officer" or "CTO" in job.title
         assert job.company == "StartupAI"
-        assert "Paris" in job.location
+        assert job.location is not None
+        assert "Paris" in str(job.location)
 
     def test_parse_complex_requirements(self):
         """Should correctly categorize complex requirements."""

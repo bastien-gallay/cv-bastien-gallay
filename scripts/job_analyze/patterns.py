@@ -161,36 +161,3 @@ class Filters:
     })
 
 
-# =============================================================================
-# Backward Compatibility Aliases
-# =============================================================================
-# These aliases maintain compatibility with existing code.
-
-REQUIREMENTS_HEADERS = SectionHeaders.REQUIREMENTS
-NICE_TO_HAVE_HEADERS = SectionHeaders.NICE_TO_HAVE
-RESPONSIBILITIES_HEADERS = SectionHeaders.RESPONSIBILITIES
-
-REQUIREMENTS_TERMINATORS = SectionTerminators.REQUIREMENTS
-RESPONSIBILITIES_TERMINATORS = SectionTerminators.RESPONSIBILITIES
-GENERIC_TERMINATORS = SectionTerminators.GENERIC
-
-PROGRAMMING_LANGUAGES = TechKeywords.PROGRAMMING_LANGUAGES
-FRAMEWORKS = TechKeywords.FRAMEWORKS
-DATABASES = TechKeywords.DATABASES
-CLOUD_PLATFORMS = TechKeywords.CLOUD_PLATFORMS
-AI_ML_TERMS = TechKeywords.AI_ML
-METHODOLOGIES = TechKeywords.METHODOLOGIES
-COMPLIANCE_TERMS = TechKeywords.COMPLIANCE
-
-FRENCH_CITIES = LocationPatterns.FRENCH_CITIES
-LOCATION_KEYWORDS = LocationPatterns.KEYWORDS
-
-CONTRACT_TYPES = ContractPatterns.TYPES
-
-NICE_TO_HAVE_MARKERS = RequirementMarkers.NICE_TO_HAVE
-REQUIRED_MARKERS = RequirementMarkers.REQUIRED
-
-TITLE_COMPANY_SEPARATORS = TitlePatterns.SEPARATORS
-EXECUTIVE_TITLES = TitlePatterns.EXECUTIVE_TITLES
-
-KEYWORD_FALSE_POSITIVES = Filters.KEYWORD_FALSE_POSITIVES

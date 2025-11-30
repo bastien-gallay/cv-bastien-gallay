@@ -1,7 +1,7 @@
 """Tests for job posting report generator."""
 
-from scripts.job_analyze.parser import JobPosting
 from scripts.job_analyze.report import generate_report
+from scripts.job_analyze.types import ContractType, JobPosting, Location, Salary
 
 
 class TestGenerateReport:
@@ -12,15 +12,15 @@ class TestGenerateReport:
         job = JobPosting(
             title="Software Engineer",
             company="TechCorp",
-            location="Paris",
-            contract_type="CDI",
+            location=Location(city="Paris"),
+            contract_type=ContractType.CDI,
         )
         report = generate_report(job)
 
         assert "# Analyse : Software Engineer @ TechCorp" in report
         assert "**Poste**: Software Engineer" in report
         assert "**Entreprise**: TechCorp" in report
-        assert "**Localisation**: Paris" in report
+        assert "**Localisation**: Paris, France" in report
         assert "**Type de contrat**: CDI" in report
 
     def test_generate_report_with_requirements(self):
@@ -70,7 +70,7 @@ class TestGenerateReport:
         job = JobPosting(
             title="Developer",
             company="Corp",
-            salary="50-60k EUR",
+            salary=Salary(raw="50-60k EUR"),
         )
         report = generate_report(job)
 

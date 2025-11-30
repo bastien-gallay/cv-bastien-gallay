@@ -5,7 +5,6 @@ CUPID: Domain-based - types model the problem domain explicitly.
 
 from dataclasses import dataclass, field
 from enum import Enum, auto
-from typing import Self
 
 
 class RequirementLevel(Enum):
@@ -26,7 +25,7 @@ class ContractType(Enum):
     UNKNOWN = "Unknown"
 
     @classmethod
-    def from_string(cls, value: str) -> Self:
+    def from_string(cls, value: str) -> "ContractType":
         """Parse contract type from string."""
         normalized = value.strip().upper()
 
@@ -107,13 +106,17 @@ class JobPosting:
     """Structured representation of a job posting.
 
     CUPID: Domain-based - the aggregate root of job posting domain.
+
+    Uses explicit sentinel values instead of None where appropriate:
+    - contract_type: ContractType.UNKNOWN instead of None
+    - location/salary: Optional (None means "not specified")
     """
 
     title: str
     company: str
-    location: str | None = None
-    contract_type: str | None = None
-    salary: str | None = None
+    location: Location | None = None
+    contract_type: ContractType = ContractType.UNKNOWN
+    salary: Salary | None = None
     must_have: list[str] = field(default_factory=list)
     nice_to_have: list[str] = field(default_factory=list)
     responsibilities: list[str] = field(default_factory=list)
