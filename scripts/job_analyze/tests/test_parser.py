@@ -1,6 +1,5 @@
 """Tests for job posting parser - TDD approach."""
 
-import pytest
 from scripts.job_analyze.parser import (
     JobPosting,
     parse_job_posting,

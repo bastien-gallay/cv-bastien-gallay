@@ -1,6 +1,5 @@
 """Tests for company research module."""
 
-import pytest
 from scripts.job_analyze.company_research import (
     CompanyResearchPrompt,
     create_company_research_prompt,

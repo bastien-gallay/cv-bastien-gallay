@@ -1,6 +1,5 @@
 """Tests for job posting report generator."""
 
-import pytest
 from scripts.job_analyze.parser import JobPosting
 from scripts.job_analyze.report import generate_report
 
