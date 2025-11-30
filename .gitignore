@@ -62,3 +62,10 @@ __pycache__/
 *$py.class
 *.so
 .Python
+
+# Testing
+.coverage
+.mutmut-cache
+mutants/
+htmlcov/
+.pytest_cache/
