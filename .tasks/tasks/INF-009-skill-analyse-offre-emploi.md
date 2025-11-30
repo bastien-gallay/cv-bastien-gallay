@@ -71,10 +71,11 @@ Créer un skill qui :
 - [x] Créer le template de rapport d'analyse
 - [x] Implémenter l'extraction des informations structurées
 - [x] Ajouter la détection des mots-clés ATS
-- [ ] Intégrer la recherche entreprise (WebSearch) - optionnel
+- [x] Intégrer la recherche entreprise (WebSearch) - module company_research
 - [x] Créer le workflow `/job-analyze`
-- [ ] Tester avec différents types d'offres
+- [x] Tester avec différents types d'offres (Handipulse CTO)
 - [x] Documenter l'utilisation (SKILL.md + workflow)
+- [x] Refactorer le parser (constantes, helpers, CUPID)
 
 ---
 
@@ -202,11 +203,13 @@ Closes INF-009"
 ## Tests / Vérifications
 
 - [ ] Le skill parse correctement une offre LinkedIn
-- [x] Le skill parse correctement une offre texte brut (21 tests passent)
-- [x] Les exigences sont correctement catégorisées
-- [x] Les mots-clés ATS sont extraits
+- [x] Le skill parse correctement une offre texte brut (68 tests passent)
+- [x] Le skill parse correctement une offre réelle (CTO Handipulse)
+- [x] Les exigences sont correctement catégorisées (must-have/nice-to-have)
+- [x] Les mots-clés ATS sont extraits (filtrage faux positifs)
 - [x] Le rapport est bien formaté et lisible
-- [ ] Les données sont sauvegardées correctement
+- [x] Module company_research pour WebSearch
+- [ ] Les données sont sauvegardées correctement (optionnel)
 
 ---
 
@@ -214,7 +217,8 @@ Closes INF-009"
 
 | Date | Action | Détails |
 |------|--------|---------|
-| 2025-11-29 | En cours | Début du travail |
+| 2025-11-30 | En cours | Refactoring CUPID, 68 tests, test réel Handipulse |
+| 2025-11-29 | En cours | Début du travail, parser + report |
 | 2025-11-25 | Création | Skill d'analyse d'offre d'emploi |
 
 ---

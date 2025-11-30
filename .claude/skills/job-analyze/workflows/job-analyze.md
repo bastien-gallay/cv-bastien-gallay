@@ -4,13 +4,14 @@ Analyse une offre d'emploi et génère un rapport structuré.
 
 ## Usage
 
-```
+```bash
 job-analyze [URL ou texte]
 ```
 
 ## Input
 
 L'utilisateur fournit :
+
 - **URL** : Lien vers l'offre (LinkedIn, WTTJ, Indeed, etc.)
 - **Texte** : Contenu copié-collé de l'offre
 - **Rien** : Demander à l'utilisateur de coller le texte
@@ -20,18 +21,21 @@ L'utilisateur fournit :
 ### 1. Récupérer le contenu
 
 **Si URL fournie :**
+
 ```python
 # Utiliser WebFetch pour récupérer le contenu
 content = WebFetch(url, prompt="Extract the full job posting text")
 ```
 
 **Si texte fourni :**
+
 ```python
 content = user_input
 ```
 
 **Si rien fourni :**
-```
+
+```text
 Veuillez coller le texte de l'offre d'emploi ci-dessous :
 ```
 
@@ -55,15 +59,39 @@ print(generate_report(job))
 
 ### 3. Enrichir avec recherche entreprise (optionnel)
 
-Si l'entreprise est identifiée, utiliser WebSearch pour :
-- Taille de l'entreprise
-- Secteur d'activité
-- Actualités récentes
-- Culture d'entreprise
+Si l'entreprise est identifiée, utiliser le module `company_research` pour générer les prompts :
 
 ```python
-# WebSearch query
-f"{company} entreprise taille secteur avis"
+from scripts.job_analyze import create_company_research_prompt
+
+# Créer les prompts de recherche
+research = create_company_research_prompt(
+    company="HANDIPULSE",
+    sector="EdTech"  # optionnel
+)
+
+# Requêtes WebSearch suggérées :
+# - "HANDIPULSE entreprise taille employés"
+# - "HANDIPULSE avis salariés Glassdoor"
+# - "HANDIPULSE actualités levée de fonds"
+# - "HANDIPULSE EdTech innovation"
+```
+
+Utiliser WebSearch avec ces requêtes, puis analyser les résultats avec `research.analysis_prompt`.
+
+Le module fournit aussi `format_company_section()` pour formater les résultats :
+
+```python
+from scripts.job_analyze import format_company_section
+
+company_md = format_company_section(
+    company="HANDIPULSE",
+    sector="EdTech / AccessTech",
+    size="10-20 employés",
+    funding="En recherche de levée de fonds",
+    highlights=["Mission sociale forte", "Technologie CNRS"],
+    concerns=["Startup early-stage", "Équipe technique à construire"],
+)
 ```
 
 ### 4. Générer le rapport final
@@ -114,7 +142,7 @@ Combiner les informations dans le format suivant :
 
 Proposer de sauvegarder l'analyse :
 
-```
+```text
 Voulez-vous sauvegarder cette analyse ?
 → Sera stockée dans data/applications/{entreprise}-{date}/
 ```
@@ -127,7 +155,8 @@ Voulez-vous sauvegarder cette analyse ?
 ## Exemples
 
 **Depuis URL :**
-```
+
+```text
 > job-analyze https://www.linkedin.com/jobs/view/123456
 
 🔍 Analyse de l'offre LinkedIn...
@@ -135,7 +164,8 @@ Voulez-vous sauvegarder cette analyse ?
 ```
 
 **Depuis texte :**
-```
+
+```text
 > job-analyze
 
 Collez le texte de l'offre :
