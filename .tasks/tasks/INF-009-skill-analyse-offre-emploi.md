@@ -67,14 +67,14 @@ Créer un skill qui :
 
 ## Sous-tâches
 
-- [ ] Définir le format d'entrée (URL, texte, fichier)
-- [ ] Créer le template de rapport d'analyse
-- [ ] Implémenter l'extraction des informations structurées
-- [ ] Ajouter la détection des mots-clés ATS
-- [ ] Intégrer la recherche entreprise (WebSearch)
-- [ ] Créer le workflow `/job-analyze`
+- [x] Définir le format d'entrée (URL, texte, fichier)
+- [x] Créer le template de rapport d'analyse
+- [x] Implémenter l'extraction des informations structurées
+- [x] Ajouter la détection des mots-clés ATS
+- [ ] Intégrer la recherche entreprise (WebSearch) - optionnel
+- [x] Créer le workflow `/job-analyze`
 - [ ] Tester avec différents types d'offres
-- [ ] Documenter l'utilisation
+- [x] Documenter l'utilisation (SKILL.md + workflow)
 
 ---
 
@@ -202,10 +202,10 @@ Closes INF-009"
 ## Tests / Vérifications
 
 - [ ] Le skill parse correctement une offre LinkedIn
-- [ ] Le skill parse correctement une offre texte brut
-- [ ] Les exigences sont correctement catégorisées
-- [ ] Les mots-clés ATS sont extraits
-- [ ] Le rapport est bien formaté et lisible
+- [x] Le skill parse correctement une offre texte brut (21 tests passent)
+- [x] Les exigences sont correctement catégorisées
+- [x] Les mots-clés ATS sont extraits
+- [x] Le rapport est bien formaté et lisible
 - [ ] Les données sont sauvegardées correctement
 
 ---
