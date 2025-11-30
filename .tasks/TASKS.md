@@ -41,12 +41,10 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Score | Créé le |
 |----|-------|--------|----------|-------|---------|
-| [INF-010](tasks/INF-010-skill-analyse-adequation.md) | Skill analyse adéquation profil-poste | ⏳ À faire | 🔴 Haute | 3.43 | 2025-11-25 |
-| [INF-009](tasks/INF-009-skill-analyse-offre-emploi.md) | Skill analyse d'offre d'emploi | ⏳ À faire | 🔴 Haute | 3.43 | 2025-11-25 |
 | [TPL-002](tasks/TPL-002-template-system.md) | Système de changement de template | ⏳ À faire | 🟢 Basse | 3.02 | 2025-10-28 |
 | [LAY-002](tasks/LAY-002-consolidation-sections-dupliquees.md) | Consolider les sections dupliquées (Études, Expérience) | ⏳ À faire | 🟡 Moyenne | 2.65 | 2025-11-25 |
 | [PIP-003](tasks/PIP-003-build-word-format.md) | Build du CV au format Word | ⏳ À faire | 🟡 Moyenne | 2.65 | 2025-11-25 |
-| [INF-012](tasks/INF-012-skill-cv-adapte.md) | Skill CV adapté à l'offre | ⏳ À faire | 🔴 Haute | 2.58 | 2025-11-25 |
+| [INF-012](tasks/INF-012-skill-cv-adapte.md) | Skill CV adapté à l'offre | 🔄 En cours | 🔴 Haute | 2.58 | 2025-11-25 |
 | [INF-008](tasks/INF-008-architecture-skills-candidature.md) | Architecture système skills candidature | ⏳ À faire | 🔴 Haute | 2.58 | 2025-11-25 |
 | [PIP-001](tasks/PIP-001-cicd-pipeline.md) | CI/CD pour publication automatique | ⏳ À faire | 🟢 Basse | 2.52 | 2025-10-28 |
 | [INF-007](tasks/INF-007-supprimer-cta-slash-commands-skills.md) | Supprimer CTA slash commands dans skills | ⏳ À faire | 🟢 Basse | 2.30 | 2025-11-25 |
@@ -63,6 +61,8 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 | ID | Titre | Statut | Priorité | Terminé le |
 |----|-------|--------|----------|------------|
+| [INF-010](tasks/INF-010-skill-analyse-adequation.md) | Skill analyse adéquation profil-poste | ✅ Terminé | 🔴 Haute | 2025-11-30 |
+| [INF-009](tasks/INF-009-skill-analyse-offre-emploi.md) | Skill analyse d'offre d'emploi | ✅ Terminé | 🔴 Haute | 2025-11-30 |
 | [CNT-037](tasks/CNT-037-optimisation-version-courte.md) | Optimisation version courte (1 page) | ✅ Terminé | 🟡 Moyenne | 2025-11-29 |
 | [LAY-004](tasks/LAY-004-equilibrer-contenu-premiere-page-cv-long.md) | Équilibrer contenu page 1 + factorisation (TPL-005) | ✅ Terminé | 🟡 Moyenne | 2025-11-28 |
 | [TPL-005](tasks/TPL-005-factoriser-page-1-commune.md) | Factoriser page 1 commune (fusionné LAY-004) | ✅ Terminé | 🟡 Moyenne | 2025-11-28 |
@@ -178,9 +178,9 @@ Closes TPL-001"
 ## Statistiques
 
 - **Total**: 59 tâches
-- **À faire**: 15
-- **En cours**: 0
-- **Terminées**: 5
+- **À faire**: 12
+- **En cours**: 1
+- **Terminées**: 7
 - **Bloquées**: 0
 - **Archivées**: 40
 
