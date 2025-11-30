@@ -52,7 +52,6 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 | [INF-003](tasks/INF-003-perenniser-ameliorer-script-priorites.md) | Pérenniser et améliorer le script Python de calcul des priorités | ⏳ À faire | 🟢 Basse | 1.70 | 2025-11-16 |
 | [TPL-003](tasks/TPL-003-cv-from-scratch-alternatives.md) | CV from scratch - Structurations alternatives | ⏳ À faire | 🟡 Moyenne | 1.38 | 2025-11-25 |
 | [INF-013](tasks/INF-013-integration-askuserquestion-skills.md) | Intégration AskUserQuestion dans les skills | ⏳ À faire | 🟢 Basse | 1.00 | 2025-11-30 |
-| [INF-006](tasks/INF-006-extraire-scripts-tests-hors-claude.md) | Extraire scripts et tests hors de `.claude/` | ⏳ À faire | 🔴 Haute | 3.40 | 2025-11-25 |
 
 ---
 
@@ -63,8 +62,9 @@ Les descriptions détaillées de chaque tâche se trouvent dans le dossier [TASK
 
 Les tâches archivées sont déplacées dans [.archived/](.archived/).
 
-**Tâches archivées:** 49 tâches
+**Tâches archivées:** 54 tâches
 
+- INF-006 (2025-11-30)
 - CNT-036 (2025-11-28)
 - INF-012 (2025-11-30)
 - INF-010 (2025-11-30)
@@ -178,12 +178,12 @@ Closes TPL-001"
 
 ## Statistiques
 
-- **Total**: 60 tâches
+- **Total**: 65 tâches
 - **À faire**: 11
 - **En cours**: 0
 - **Terminées**: 0
 - **Bloquées**: 0
-- **Archivées**: 49
+- **Archivées**: 54
 
 **Prochains IDs disponibles par trigramme**:
 
