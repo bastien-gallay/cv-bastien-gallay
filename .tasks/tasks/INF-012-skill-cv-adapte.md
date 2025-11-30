@@ -70,12 +70,12 @@ INF-009 → INF-010
 
 ## Sous-tâches
 
-- [ ] Définir les règles d'adaptation (ordre, détail, keywords)
-- [ ] Créer le mécanisme de modification du CV Typst
-- [ ] Implémenter l'injection des mots-clés ATS
-- [ ] Ajouter la réorganisation des sections
-- [ ] Créer le workflow `/job-cv`
-- [ ] Intégrer la compilation PDF automatique
+- [x] Définir les règles d'adaptation (ordre, détail, keywords)
+- [x] Créer le mécanisme de modification du CV Typst
+- [x] Implémenter l'injection des mots-clés ATS
+- [x] Ajouter la réorganisation des sections
+- [x] Créer le workflow `/job-cv`
+- [x] Intégrer la compilation PDF automatique
 - [ ] Tester avec différents types de postes
 
 ---
