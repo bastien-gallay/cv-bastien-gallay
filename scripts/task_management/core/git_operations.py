@@ -4,14 +4,10 @@ This module provides functions to handle Git operations like creating branches,
 committing changes, and checking repository status.
 """
 
+import re
 import subprocess
-import sys
 from pathlib import Path
 from typing import Optional, Tuple
-import re
-
-# Add project root to path for imports
-sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
 
 from scripts.task_management.core.config_loader import load_paths
 

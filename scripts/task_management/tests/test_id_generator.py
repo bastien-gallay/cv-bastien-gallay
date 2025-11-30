@@ -1,13 +1,10 @@
 """Unit tests for id_generator.py"""
 
-import pytest
-from pathlib import Path
-import tempfile
 import shutil
-import sys
+import tempfile
+from pathlib import Path
 
-# Add project root to path for imports
-sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
+import pytest
 
 from scripts.task_management.core.id_generator import (
     slugify,
@@ -29,7 +26,9 @@ def temp_tasks_dir():
     """Create temporary tasks directory with sample files."""
     temp_dir = Path(tempfile.mkdtemp())
     tasks_dir = temp_dir / "tasks"
+    archived_dir = temp_dir / "archived"
     tasks_dir.mkdir()
+    archived_dir.mkdir()  # Empty archived directory
 
     # Create sample task files
     (tasks_dir / "CNT-001-sample-task.md").touch()
@@ -39,7 +38,7 @@ def temp_tasks_dir():
     (tasks_dir / "TPL-002-another-template.md").touch()
     (tasks_dir / "TEMPLATE.md").touch()  # Should be ignored
 
-    yield tasks_dir
+    yield tasks_dir, archived_dir
 
     # Cleanup
     shutil.rmtree(temp_dir)
@@ -117,7 +116,8 @@ def test_slugify_edge_cases():
 
 def test_find_existing_ids(temp_tasks_dir):
     """Test finding existing IDs in tasks directory."""
-    existing = find_existing_ids(tasks_dir=temp_tasks_dir, archived_dir=None)
+    tasks_dir, archived_dir = temp_tasks_dir
+    existing = find_existing_ids(tasks_dir=tasks_dir, archived_dir=archived_dir)
 
     assert 'CNT' in existing
     assert 'TPL' in existing
@@ -141,15 +141,18 @@ def test_find_existing_ids_empty_dir():
     """Test with empty directory."""
     with tempfile.TemporaryDirectory() as temp_dir:
         tasks_dir = Path(temp_dir) / "tasks"
+        archived_dir = Path(temp_dir) / "archived"
         tasks_dir.mkdir()
+        archived_dir.mkdir()
 
-        existing = find_existing_ids(tasks_dir=tasks_dir, archived_dir=None)
+        existing = find_existing_ids(tasks_dir=tasks_dir, archived_dir=archived_dir)
         assert existing == {}
 
 
 def test_find_existing_ids_ignores_template(temp_tasks_dir):
     """Test that TEMPLATE.md is ignored."""
-    existing = find_existing_ids(tasks_dir=temp_tasks_dir, archived_dir=None)
+    tasks_dir, archived_dir = temp_tasks_dir
+    existing = find_existing_ids(tasks_dir=tasks_dir, archived_dir=archived_dir)
 
     # Should not have 'TEMPLATE' key
     for trig in existing:
@@ -224,14 +227,16 @@ def test_generate_id_format():
 
 def test_verify_id_unique_true(temp_tasks_dir):
     """Test verification when ID is unique."""
-    assert verify_id_unique('CNT-999', tasks_dir=temp_tasks_dir, archived_dir=None) is True
-    assert verify_id_unique('QUA-001', tasks_dir=temp_tasks_dir, archived_dir=None) is True
+    tasks_dir, archived_dir = temp_tasks_dir
+    assert verify_id_unique('CNT-999', tasks_dir=tasks_dir, archived_dir=archived_dir) is True
+    assert verify_id_unique('QUA-001', tasks_dir=tasks_dir, archived_dir=archived_dir) is True
 
 
 def test_verify_id_unique_false(temp_tasks_dir):
     """Test verification when ID already exists."""
-    assert verify_id_unique('CNT-001', tasks_dir=temp_tasks_dir, archived_dir=None) is False
-    assert verify_id_unique('CNT-002', tasks_dir=temp_tasks_dir, archived_dir=None) is False
+    tasks_dir, archived_dir = temp_tasks_dir
+    assert verify_id_unique('CNT-001', tasks_dir=tasks_dir, archived_dir=archived_dir) is False
+    assert verify_id_unique('CNT-002', tasks_dir=tasks_dir, archived_dir=archived_dir) is False
 
 
 def test_verify_id_unique_with_archived(temp_dirs_with_archived):
@@ -269,7 +274,10 @@ def test_create_unique_id_and_filename(monkeypatch, temp_tasks_dir):
     def mock_find_existing_ids(tasks_dir=None, archived_dir=None):
         return {'CNT': [1, 2, 5], 'TPL': [1, 2]}
 
-    monkeypatch.setattr('core.id_generator.find_existing_ids', mock_find_existing_ids)
+    monkeypatch.setattr(
+        'scripts.task_management.core.id_generator.find_existing_ids',
+        mock_find_existing_ids
+    )
 
     # CNT has 001, 002, 005, so next should be 003 (gap fill)
     task_id, filename = create_unique_id_and_filename('CNT', 'Test Task')
@@ -284,7 +292,10 @@ def test_create_unique_id_and_filename_new_trigramme(monkeypatch):
     def mock_find_existing_ids(tasks_dir=None, archived_dir=None):
         return {'CNT': [1], 'TPL': [1]}  # QUA not in dict
 
-    monkeypatch.setattr('core.id_generator.find_existing_ids', mock_find_existing_ids)
+    monkeypatch.setattr(
+        'scripts.task_management.core.id_generator.find_existing_ids',
+        mock_find_existing_ids
+    )
 
     task_id, filename = create_unique_id_and_filename('QUA', 'Quality Check')
 

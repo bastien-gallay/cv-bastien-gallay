@@ -7,12 +7,8 @@ according to the rules defined in TASK_RULES.md.
 from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Optional
-import sys
 
-# Add project root to path for imports
-sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
-
-from scripts.task_management.core.file_parser import parse_task_file, get_task_status
+from scripts.task_management.core.file_parser import get_task_status, parse_task_file
 
 
 # ============================================================================

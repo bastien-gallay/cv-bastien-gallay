@@ -6,6 +6,8 @@ WSJF (Weighted Shortest Job First) prioritizes by value/effort ratio.
 Formula: Score = Value / Time
 Where: Value = Priority + Urgency + Age
 
+CUPID: Composable - delegates to lib/ for scoring and parsing.
+
 Usage:
     uv run scripts/update_priority_scores.py
     uv run scripts/update_priority_scores.py --dry-run
@@ -25,6 +27,15 @@ from pathlib import Path
 from typing import TYPE_CHECKING
 
 import yaml
+
+from scripts.lib.dates import parse_date
+from scripts.lib.metadata import extract_field
+from scripts.lib.wsjf import (
+    WSJFConfig,
+    calculate_age,
+    calculate_urgency,
+    calculate_wsjf_score,
+)
 
 if TYPE_CHECKING:
     from collections.abc import Iterator
@@ -58,33 +69,22 @@ class Priority(Enum):
         return cls.MEDIUM
 
 
-@dataclass(frozen=True)
-class WSJFConfig:
-    """Configuration for WSJF scoring algorithm."""
+def load_wsjf_config(path: Path) -> WSJFConfig:
+    """Load WSJF config from YAML file, with defaults as fallback."""
+    if not path.exists():
+        return WSJFConfig()
 
-    age_divisor: float = 20.0
-    age_max_score: float = 2.5
-    urgency_overdue: float = 10.0
-    urgency_week: float = 5.0
-    urgency_month: float = 2.0
+    data = yaml.safe_load(path.read_text())
+    age = data.get("age_scoring", {})
+    urgency = data.get("urgency_scores", {})
 
-    @classmethod
-    def from_yaml(cls, path: Path) -> WSJFConfig:
-        """Load config from YAML file, with defaults as fallback."""
-        if not path.exists():
-            return cls()
-
-        data = yaml.safe_load(path.read_text())
-        age = data.get("age_scoring", {})
-        urgency = data.get("urgency_scores", {})
-
-        return cls(
-            age_divisor=age.get("divisor", cls.age_divisor),
-            age_max_score=age.get("max_score", cls.age_max_score),
-            urgency_overdue=urgency.get("overdue", cls.urgency_overdue),
-            urgency_week=urgency.get("week", cls.urgency_week),
-            urgency_month=urgency.get("month", cls.urgency_month),
-        )
+    return WSJFConfig(
+        age_divisor=age.get("divisor", 20.0),
+        age_max=age.get("max_score", 2.5),
+        urgency_overdue=urgency.get("overdue", 10.0),
+        urgency_week=urgency.get("week", 5.0),
+        urgency_month=urgency.get("month", 2.0),
+    )
 
 
 @dataclass(frozen=True)
@@ -122,47 +122,8 @@ class ScoredTask:
 
 
 # =============================================================================
-# Scoring Logic (Pure Functions)
+# Scoring Logic
 # =============================================================================
-
-
-def calculate_urgency(target: date | None, today: date, config: WSJFConfig) -> float:
-    """Calculate urgency score based on target date proximity."""
-    if target is None:
-        return 0.0
-
-    days_until = (target - today).days
-
-    if days_until < 0:
-        return config.urgency_overdue
-    if days_until < 7:
-        return config.urgency_week
-    if days_until < 30:
-        return config.urgency_month
-    return 0.0
-
-
-def calculate_age(created: date | None, today: date, config: WSJFConfig) -> float:
-    """Calculate age score based on task age in days."""
-    if created is None:
-        return 0.0
-
-    days_old = (today - created).days
-    return min(days_old / config.age_divisor, config.age_max_score)
-
-
-def calculate_wsjf_score(
-    priority: Priority,
-    urgency: float,
-    age: float,
-    time_hours: float,
-) -> float:
-    """Calculate WSJF score: (priority + urgency + age) / time."""
-    if time_hours <= 0:
-        time_hours = priority.default_hours
-
-    total_value = priority.score + urgency + age
-    return round(total_value / time_hours, 2)
 
 
 def score_task(
@@ -174,10 +135,11 @@ def score_task(
     urgency = calculate_urgency(metadata.target, today, config)
     age = calculate_age(metadata.created, today, config)
     score = calculate_wsjf_score(
-        metadata.priority,
-        urgency,
-        age,
-        metadata.time_estimate,
+        priority_score=metadata.priority.score,
+        urgency=urgency,
+        age=age,
+        time_hours=metadata.time_estimate,
+        config=config,
     )
 
     return ScoredTask(
@@ -197,23 +159,6 @@ def score_task(
 # =============================================================================
 # File Parsing (IO Layer)
 # =============================================================================
-
-
-def parse_date(date_str: str) -> date | None:
-    """Parse a date string in YYYY-MM-DD format."""
-    if not date_str or date_str == "-":
-        return None
-    try:
-        return date.fromisoformat(date_str)
-    except ValueError:
-        return None
-
-
-def extract_field(content: str, field: str) -> str:
-    """Extract a metadata field from task file markdown table."""
-    pattern = rf"\| \*\*{re.escape(field)}\*\* \| (.*?) \|"
-    match = re.search(pattern, content)
-    return match.group(1).strip() if match else ""
 
 
 def parse_time_estimate(time_str: str, priority: Priority) -> float:
@@ -442,7 +387,7 @@ def run(
     verbose: bool = False,
 ) -> int:
     """Main entry point with dependency injection."""
-    config = WSJFConfig.from_yaml(config_path)
+    config = load_wsjf_config(config_path)
     today = date.today()
 
     log.info("🔄 Calculating priority scores...\n")

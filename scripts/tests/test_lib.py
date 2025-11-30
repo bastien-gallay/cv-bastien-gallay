@@ -187,3 +187,212 @@ class TestValidatedContentType:
     def test_validated_content_is_str(self):
         content = ValidatedContent("test")
         assert isinstance(content, str)
+
+
+# Tests for dates module
+from datetime import date
+
+from scripts.lib.dates import parse_date
+
+
+class TestParseDate:
+    def test_valid_iso_date(self):
+        result = parse_date("2025-11-30")
+        assert result == date(2025, 11, 30)
+
+    def test_valid_date_with_whitespace(self):
+        result = parse_date("  2025-01-15  ")
+        assert result == date(2025, 1, 15)
+
+    def test_empty_string_returns_none(self):
+        assert parse_date("") is None
+
+    def test_dash_returns_none(self):
+        assert parse_date("-") is None
+
+    def test_whitespace_only_returns_none(self):
+        assert parse_date("   ") is None
+
+    def test_invalid_format_returns_none(self):
+        assert parse_date("30/11/2025") is None
+
+    def test_invalid_date_returns_none(self):
+        assert parse_date("2025-13-45") is None
+
+    def test_text_returns_none(self):
+        assert parse_date("not a date") is None
+
+
+# Tests for metadata module
+from scripts.lib.metadata import extract_field, extract_metadata_table
+
+
+class TestExtractMetadataTable:
+    def test_extract_single_field(self):
+        content = "| **Statut** | En cours |"
+        result = extract_metadata_table(content)
+        assert result == {"Statut": "En cours"}
+
+    def test_extract_multiple_fields(self):
+        content = """| **Statut** | En cours |
+| **Priorité** | Haute |
+| **Auteur** | Test |"""
+        result = extract_metadata_table(content)
+        assert result == {
+            "Statut": "En cours",
+            "Priorité": "Haute",
+            "Auteur": "Test",
+        }
+
+    def test_ignores_separator_rows(self):
+        content = """| **Champ** | Valeur |
+| --- | --- |
+| **Autre** | Data |"""
+        result = extract_metadata_table(content)
+        assert result == {"Champ": "Valeur", "Autre": "Data"}
+
+    def test_strips_whitespace(self):
+        content = "|   **Champ**   |   Valeur avec espaces   |"
+        result = extract_metadata_table(content)
+        assert result == {"Champ": "Valeur avec espaces"}
+
+    def test_empty_content_returns_empty_dict(self):
+        assert extract_metadata_table("") == {}
+
+    def test_no_matches_returns_empty_dict(self):
+        content = "Just some text without tables"
+        assert extract_metadata_table(content) == {}
+
+
+class TestExtractField:
+    def test_extract_existing_field(self):
+        content = "| **Statut** | À faire |"
+        result = extract_field(content, "Statut")
+        assert result == "À faire"
+
+    def test_extract_missing_field_returns_empty(self):
+        content = "| **Statut** | En cours |"
+        result = extract_field(content, "Priorité")
+        assert result == ""
+
+    def test_extract_field_with_special_chars(self):
+        content = "| **Temps estimé** | 4h |"
+        result = extract_field(content, "Temps estimé")
+        assert result == "4h"
+
+    def test_extract_field_strips_value(self):
+        content = "|  **Champ**  |   valeur   |"
+        result = extract_field(content, "Champ")
+        assert result == "valeur"
+
+
+# Tests for wsjf module
+from scripts.lib.wsjf import (
+    WSJFConfig,
+    calculate_age,
+    calculate_urgency,
+    calculate_wsjf_score,
+)
+
+
+class TestWSJFConfig:
+    def test_default_values(self):
+        config = WSJFConfig()
+        assert config.age_divisor == 20.0
+        assert config.age_max == 2.5
+        assert config.urgency_overdue == 10.0
+        assert config.urgency_week == 5.0
+        assert config.urgency_month == 2.0
+        assert config.default_hours == 4.0
+
+    def test_custom_values(self):
+        config = WSJFConfig(age_divisor=10.0, age_max=5.0)
+        assert config.age_divisor == 10.0
+        assert config.age_max == 5.0
+
+    def test_frozen(self):
+        config = WSJFConfig()
+        with pytest.raises(Exception):
+            config.age_divisor = 30.0
+
+
+class TestCalculateUrgency:
+    def test_no_target_returns_zero(self):
+        config = WSJFConfig()
+        assert calculate_urgency(None, date(2025, 11, 30), config) == 0.0
+
+    def test_overdue_returns_overdue_value(self):
+        config = WSJFConfig()
+        today = date(2025, 11, 30)
+        target = date(2025, 11, 25)  # 5 days ago
+        assert calculate_urgency(target, today, config) == 10.0
+
+    def test_within_week_returns_week_value(self):
+        config = WSJFConfig()
+        today = date(2025, 11, 30)
+        target = date(2025, 12, 3)  # 3 days from now
+        assert calculate_urgency(target, today, config) == 5.0
+
+    def test_within_month_returns_month_value(self):
+        config = WSJFConfig()
+        today = date(2025, 11, 30)
+        target = date(2025, 12, 15)  # 15 days from now
+        assert calculate_urgency(target, today, config) == 2.0
+
+    def test_far_future_returns_zero(self):
+        config = WSJFConfig()
+        today = date(2025, 11, 30)
+        target = date(2026, 3, 1)  # 3 months away
+        assert calculate_urgency(target, today, config) == 0.0
+
+
+class TestCalculateAge:
+    def test_no_created_date_returns_zero(self):
+        config = WSJFConfig()
+        assert calculate_age(None, date(2025, 11, 30), config) == 0.0
+
+    def test_new_task_returns_low_value(self):
+        config = WSJFConfig()
+        today = date(2025, 11, 30)
+        created = date(2025, 11, 28)  # 2 days old
+        result = calculate_age(created, today, config)
+        assert result == 2 / 20.0  # 0.1
+
+    def test_20_days_old_returns_one(self):
+        config = WSJFConfig()
+        today = date(2025, 11, 30)
+        created = date(2025, 11, 10)  # 20 days old
+        result = calculate_age(created, today, config)
+        assert result == 1.0
+
+    def test_capped_at_max(self):
+        config = WSJFConfig()
+        today = date(2025, 11, 30)
+        created = date(2025, 1, 1)  # ~330 days old
+        result = calculate_age(created, today, config)
+        assert result == 2.5  # capped at age_max
+
+
+class TestCalculateWsjfScore:
+    def test_basic_calculation(self):
+        config = WSJFConfig()
+        # (10 + 5 + 1) / 4 = 4.0
+        result = calculate_wsjf_score(10.0, 5.0, 1.0, 4.0, config)
+        assert result == 4.0
+
+    def test_zero_time_uses_default(self):
+        config = WSJFConfig()
+        # (10 + 0 + 0) / 4 (default) = 2.5
+        result = calculate_wsjf_score(10.0, 0.0, 0.0, 0.0, config)
+        assert result == 2.5
+
+    def test_negative_time_uses_default(self):
+        config = WSJFConfig()
+        result = calculate_wsjf_score(10.0, 0.0, 0.0, -2.0, config)
+        assert result == 2.5
+
+    def test_rounding(self):
+        config = WSJFConfig()
+        # (10 + 5 + 1) / 3 = 5.333...
+        result = calculate_wsjf_score(10.0, 5.0, 1.0, 3.0, config)
+        assert result == 5.33

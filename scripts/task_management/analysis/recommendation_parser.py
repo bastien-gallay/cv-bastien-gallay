@@ -5,13 +5,9 @@ extract pending recommendations, and update recommendation statuses when tasks a
 """
 
 import re
-import sys
 from dataclasses import dataclass
 from pathlib import Path
-from typing import List, Optional, Dict
-
-# Add project root to path for imports
-sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
+from typing import Dict, List, Optional
 
 from scripts.task_management.core.config_loader import load_paths
 

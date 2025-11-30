@@ -1,13 +1,10 @@
 """Unit tests for dor_validator.py"""
 
-import pytest
-from pathlib import Path
-import tempfile
 import shutil
-import sys
+import tempfile
+from pathlib import Path
 
-# Add project root to path for imports
-sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
+import pytest
 
 from scripts.task_management.validators.dor_validator import (
     ValidationIssue,

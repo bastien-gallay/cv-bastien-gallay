@@ -1,11 +1,8 @@
 """Tests for recommendation_parser.py"""
 
-import pytest
 from pathlib import Path
-import sys
 
-# Add project root to path for imports
-sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
+import pytest
 
 from scripts.task_management.analysis.recommendation_parser import (
     Recommendation,

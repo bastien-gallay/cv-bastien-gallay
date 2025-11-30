@@ -6,13 +6,9 @@ across the task repository.
 """
 
 import re
-import sys
 import unicodedata
 from pathlib import Path
-from typing import Optional, Tuple, List
-
-# Add project root to path for imports
-sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
+from typing import List, Optional, Tuple
 
 from scripts.task_management.core.config_loader import load_paths, load_trigrammes
 

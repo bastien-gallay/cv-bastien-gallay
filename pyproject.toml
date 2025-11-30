@@ -10,6 +10,8 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
     "pytest>=8.0.0",
+    "pytest-cov>=4.1.0",
+    "mutmut>=2.4.0,<3.0.0",
 ]
 reports = [
     "matplotlib>=3.8.0",
@@ -21,11 +23,26 @@ generate-cfd = "scripts.reports.generate_cfd:main"
 
 [tool.pytest.ini_options]
 testpaths = [
+    "scripts/tests",
     "scripts/verification/tests",
     "scripts/task_management/tests",
     "scripts/reports/tests",
 ]
 pythonpath = ["."]
+
+[tool.coverage.run]
+source = ["scripts"]
+omit = ["scripts/*/tests/*", "scripts/tests/*"]
+
+[tool.coverage.report]
+exclude_lines = ["if __name__ == .__main__.:"]
+# Target: 80%, current: 63% - modules CLI (0% coverage) need dedicated tests
+fail_under = 63
+
+[tool.mutmut]
+paths_to_mutate = "scripts/lib/"
+tests_dir = "scripts/"
+runner = "python -m pytest -x"
 
 [tool.ruff]
 target-version = "py311"

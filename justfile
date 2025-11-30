@@ -76,6 +76,18 @@ verify-format:
 test-verify:
     @uv run --extra dev pytest scripts/verification/tests/ -v
 
+# Run all tests with coverage
+test:
+    @uv run --extra dev pytest scripts/ -v --cov=scripts --cov-report=term-missing
+
+# Run mutation testing on lib/
+test-mutate:
+    @uv run --extra dev mutmut run
+
+# Show mutation testing results
+test-mutate-results:
+    @uv run --extra dev mutmut results
+
 # Update priority scores in TASKS.md
 update-scores:
     @uv run python scripts/update_priority_scores.py

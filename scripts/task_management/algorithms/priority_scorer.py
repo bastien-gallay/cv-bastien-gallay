@@ -3,20 +3,33 @@
 This module implements the value/time prioritization algorithm for task-next command.
 
 Formula: Score = Value / Time
-Where: Value = (Priority × 10) + (Urgency × 5) + (Age × 1)
+Where: Value = Priority + Urgency + Age
+
+CUPID: Composable - delegates to lib/wsjf.py for scoring calculations.
 """
 
+import sys
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
 from typing import List, Optional
-import sys
 
-# Add project root to path for imports
-sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
+from scripts.lib.dates import parse_date
+from scripts.lib.wsjf import WSJFConfig, calculate_age, calculate_urgency
+from scripts.task_management.core.config_loader import (
+    get_priority_score,
+    load_paths,
+    load_priorities,
+)
+from scripts.task_management.core.file_parser import (
+    get_task_priority,
+    get_task_status,
+    parse_estimated_hours,
+    parse_task_file,
+)
 
-from scripts.task_management.core.config_loader import load_priorities, load_paths, get_priority_score
-from scripts.task_management.core.file_parser import parse_task_file, get_task_status, get_task_priority, parse_estimated_hours
+# Use standard WSJF configuration (reference: update_priority_scores.py)
+WSJF_CONFIG = WSJFConfig()
 
 
 @dataclass
@@ -38,63 +51,12 @@ class TaskScore:
     file_path: Path
 
 
-def calculate_urgency(target_date_str: Optional[str], today: datetime) -> float:
-    """Calculate urgency score based on target date.
-
-    Args:
-        target_date_str: Target date in YYYY-MM-DD format, or None
-        today: Current date
-
-    Returns:
-        Urgency score (0-10)
-    """
-    if not target_date_str or target_date_str == '-':
-        return 0.0
-
-    try:
-        target_date = datetime.strptime(target_date_str, '%Y-%m-%d')
-        days_until = (target_date - today).days
-
-        if days_until < 0:
-            return 10.0  # Overdue
-        elif days_until < 7:
-            return 5.0  # Within week
-        elif days_until < 30:
-            return 2.0  # Within month
-        else:
-            return 0.0
-    except (ValueError, AttributeError):
-        return 0.0
-
-
-def calculate_age(created_date_str: str, today: datetime) -> float:
-    """Calculate age score based on creation date.
-
-    Args:
-        created_date_str: Creation date in YYYY-MM-DD format
-        today: Current date
-
-    Returns:
-        Age score (0-5, capped at 5)
-    """
-    if not created_date_str or created_date_str == '-':
-        return 0.0
-
-    try:
-        created_date = datetime.strptime(created_date_str, '%Y-%m-%d')
-        days_old = (today - created_date).days
-        # Cap at 5 points (50 days old = max age bonus)
-        return min(days_old / 10.0, 5.0)
-    except (ValueError, AttributeError):
-        return 0.0
-
-
-def score_task(task_file: Path, today: Optional[datetime] = None) -> Optional[TaskScore]:
+def score_task(task_file: Path, today: Optional[date] = None) -> Optional[TaskScore]:
     """Score a single task file.
 
     Args:
         task_file: Path to task markdown file
-        today: Current date (defaults to now)
+        today: Current date (defaults to today)
 
     Returns:
         TaskScore object, or None if task should be skipped (not "À faire")
@@ -103,7 +65,7 @@ def score_task(task_file: Path, today: Optional[datetime] = None) -> Optional[Ta
         FileNotFoundError: If task file doesn't exist
     """
     if today is None:
-        today = datetime.now()
+        today = date.today()
 
     # Parse task file
     data = parse_task_file(task_file)
@@ -118,8 +80,12 @@ def score_task(task_file: Path, today: Optional[datetime] = None) -> Optional[Ta
     task_id = metadata.get('ID', task_file.stem)
     title = metadata.get('Titre', task_id)
     priority = get_task_priority(metadata)
-    created_date = metadata.get('Créé le', '')
-    target_date = metadata.get('Cible', '')
+    created_date_str = metadata.get('Créé le', '')
+    target_date_str = metadata.get('Cible', '')
+
+    # Parse dates using shared lib
+    created_date = parse_date(created_date_str)
+    target_date = parse_date(target_date_str)
 
     # Get time estimate
     time_hours = parse_estimated_hours(metadata)
@@ -134,12 +100,12 @@ def score_task(task_file: Path, today: Optional[datetime] = None) -> Optional[Ta
         else:
             time_hours = task_prio.medium.default_time_hours
 
-    # Calculate value components
+    # Calculate value components using shared lib
     priority_value = float(get_priority_score(priority))
-    urgency = calculate_urgency(target_date, today)
-    age = calculate_age(created_date, today)
+    urgency_score = calculate_urgency(target_date, today, WSJF_CONFIG)
+    age_score = calculate_age(created_date, today, WSJF_CONFIG)
 
-    total_value = priority_value + urgency + age
+    total_value = priority_value + urgency_score + age_score
     score = total_value / time_hours
 
     return TaskScore(
@@ -150,26 +116,26 @@ def score_task(task_file: Path, today: Optional[datetime] = None) -> Optional[Ta
         value=total_value,
         score=score,
         priority_value=priority_value,
-        urgency=urgency,
-        age=age,
-        created_date=created_date,
-        target_date=target_date if target_date != '-' else None,
+        urgency=urgency_score,
+        age=age_score,
+        created_date=created_date_str,
+        target_date=target_date_str if target_date_str != '-' else None,
         file_path=task_file
     )
 
 
-def rank_tasks(tasks_dir: Optional[Path] = None, today: Optional[datetime] = None) -> List[TaskScore]:
+def rank_tasks(tasks_dir: Optional[Path] = None, today: Optional[date] = None) -> List[TaskScore]:
     """Score and rank all tasks in directory.
 
     Args:
         tasks_dir: Directory containing task files (defaults to config)
-        today: Current date (defaults to now)
+        today: Current date (defaults to today)
 
     Returns:
         List of TaskScore objects, sorted by score descending
     """
     if today is None:
-        today = datetime.now()
+        today = date.today()
 
     # Get tasks directory from config if not provided
     if tasks_dir is None:

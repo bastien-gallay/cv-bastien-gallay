@@ -225,11 +225,7 @@ def parse_estimated_hours(metadata: Dict[str, str]) -> Optional[float]:
 
 if __name__ == '__main__':
     """Test file parser on actual task file."""
-    import sys
-
-    # Import config_loader for CLI usage
-    sys.path.insert(0, str(Path(__file__).parent.parent))
-    from core.config_loader import load_paths
+    from scripts.task_management.core.config_loader import load_paths
 
     print("Testing file_parser.py")
     print("=" * 60)

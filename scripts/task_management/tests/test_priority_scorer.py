@@ -1,20 +1,23 @@
-"""Tests for update_priority_scores module."""
+"""Tests for update_priority_scores module and lib functions."""
 
 from datetime import date
 from textwrap import dedent
 
 import pytest
 
-from scripts.update_priority_scores import (
-    Priority,
-    TableRow,
-    TaskMetadata,
+from scripts.lib.dates import parse_date
+from scripts.lib.metadata import extract_field
+from scripts.lib.wsjf import (
     WSJFConfig,
     calculate_age,
     calculate_urgency,
     calculate_wsjf_score,
-    extract_field,
-    parse_date,
+)
+from scripts.update_priority_scores import (
+    Priority,
+    TableRow,
+    TaskMetadata,
+    load_wsjf_config,
     parse_task_file,
     parse_tasks_table,
     parse_time_estimate,
@@ -57,20 +60,20 @@ class TestWSJFConfig:
     def test_default_values(self):
         config = WSJFConfig()
         assert config.age_divisor == 20.0
-        assert config.age_max_score == 2.5
+        assert config.age_max == 2.5
         assert config.urgency_overdue == 10.0
 
-    def test_from_yaml_missing_file(self, tmp_path):
-        config = WSJFConfig.from_yaml(tmp_path / "nonexistent.yml")
+    def test_load_wsjf_config_missing_file(self, tmp_path):
+        config = load_wsjf_config(tmp_path / "nonexistent.yml")
         assert config == WSJFConfig()
 
-    def test_from_yaml_partial_config(self, tmp_path):
+    def test_load_wsjf_config_partial(self, tmp_path):
         config_file = tmp_path / "config.yml"
         config_file.write_text("age_scoring:\n  divisor: 30\n")
 
-        config = WSJFConfig.from_yaml(config_file)
+        config = load_wsjf_config(config_file)
         assert config.age_divisor == 30
-        assert config.age_max_score == 2.5  # default
+        assert config.age_max == 2.5  # default
 
 
 # =============================================================================
@@ -110,7 +113,7 @@ class TestCalculateUrgency:
 class TestCalculateAge:
     @pytest.fixture
     def config(self):
-        return WSJFConfig(age_divisor=20.0, age_max_score=2.5)
+        return WSJFConfig(age_divisor=20.0, age_max=2.5)
 
     @pytest.fixture
     def today(self):
@@ -133,20 +136,28 @@ class TestCalculateAge:
 
 
 class TestCalculateWsjfScore:
-    def test_basic_calculation(self):
+    @pytest.fixture
+    def config(self):
+        return WSJFConfig()
+
+    def test_basic_calculation(self, config):
         # (10 + 5 + 1) / 4 = 4.0
-        score = calculate_wsjf_score(Priority.HIGH, urgency=5.0, age=1.0, time_hours=4.0)
+        score = calculate_wsjf_score(
+            priority_score=10, urgency=5.0, age=1.0, time_hours=4.0, config=config
+        )
         assert score == 4.0
 
-    def test_zero_time_uses_default(self):
-        # (10 + 0 + 0) / 8.0 (default for HIGH) = 1.25
-        score = calculate_wsjf_score(Priority.HIGH, urgency=0.0, age=0.0, time_hours=0.0)
-        assert score == 1.25
+    def test_zero_time_uses_default(self, config):
+        # (10 + 0 + 0) / 4.0 (default_hours from config) = 2.5
+        score = calculate_wsjf_score(
+            priority_score=10, urgency=0.0, age=0.0, time_hours=0.0, config=config
+        )
+        assert score == 2.5
 
-    def test_rounding(self):
+    def test_rounding(self, config):
         # (5 + 2 + 1.5) / 3 = 2.833... -> 2.83
         score = calculate_wsjf_score(
-            Priority.MEDIUM, urgency=2.0, age=1.5, time_hours=3.0
+            priority_score=5, urgency=2.0, age=1.5, time_hours=3.0, config=config
         )
         assert score == 2.83
 
