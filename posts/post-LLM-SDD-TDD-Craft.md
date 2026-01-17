@@ -1,0 +1,14 @@
+# Les assistants de code IA et les pratiques de code
+
+Est-ce que vous aussi, vous avez eu, depuis quelques années, un parcours ressemblant à Craft -> Assistants de code LLM --> SDD --> Craft.
+Je vous partage le miens. C'est assez long, je vais juste mettre les étapes de découvertes ici. 
+
+Pour résumer le début : j'ai tenté dans mes études de faire un générateur de code, puis d'utiliser les algo génétiques pour répondre à des tests unitaires dans les années 2000 (projets persos abandonnés dans l'oeuf). Découverte de XP en 2004, échecs sur échecs en tentant de l'appliquer, puis je me tourne vers Scrum. Ensuite, redécouverte de TDD dans les années 2010, reprise de toutes mes bases. 2018, je découvre Tabnine, et j'adhère au concept d'auto-complétion poussée, mais sans en fait une manière de travailler. ChatGPT en 2022, comme tout le monde, je vois cette capacité pour le code et ça m'intrigue et m'excité autant que ça m'énerve. Je passe ensuite quelques temps à peaufiner du code à l'aide de Codium (Windsurf, maintenant). En 
+
+Ca fait maintenant 1 an que j'ai abouti à une version de prompt pour Github Copilot et Cursor (mes 2 assistants de l'époque) pour le pousser à faire du TDD. Je n'étais pas sûr que l'idée était bonne de vouloir forcer une machine à utiliser cette technique de conception émergeante comme un humain. A mon grand étonnement, les avantage que j'ai trouvé étaient pourtant nombreux:
+Quelques avantages de TDD, bien sûr : une conception simple et émergeante, un code auto-expressif et documenté par ses tests, couverture de test à 100%
+Reprise de l'existant plus rapide: j'avais la capacité à plonger n'importe quand dans un développement seulement humain, dans une continuité avec le code généré
+Respect correct des règles: même si le LLM s'acharnait souvent à écrire plusieurs tests à la fois, et que parfois il oubliait de relancer les tests avant de créer un nouveau test rouge, globalement, il n'était pas plus mauvais dans cet exercice que de nombreux devs (très bons, pour la plupart) avec qui j'ai pratiqué TDD.
+Réduction de la dérive générative : le plus étonnant, pour moi, a été que cette approche était un anti-vibe-coding puissant, et produisait uniquement ce que je demandais dans le chat dans 80% des cas. Sans ce prompt demandant à faire du TDD strict, je perdais du temps à réajuster et supprimer le "spam" généré dans plus de la moitié des cas.
+
+J'ai aussi eu de gros problèmes, qui étaient dûs aux performances des assistants. Je les avais toutefois moins souvent que sans le prompt TDD. En revanche, je suis passé pendant un bon moment à côté du Spec Driven Development car je trouvais mon approche plus efficace.
