@@ -18,10 +18,42 @@ Ce fichier centralise les décisions stratégiques prises pour le CV, avec leurs
 
 ### Profil cible
 
-| Aspect | Décision | Justification |
-|--------|----------|---------------|
-| Niveau | CTO / VP Engineering / Head of Engineering | Profil senior avec 15+ ans d'expérience |
-| Focus | Leadership technique + Hands-on | Équilibre entre management et expertise technique |
+| Aspect | Décision                          | Justification                                               |
+|--------|-----------------------------------|-------------------------------------------------------------|
+| Niveau | Consultant & Coach senior         | Profil senior avec 15+ ans d'expérience, CTO en second plan |
+| Focus  | Conseil, Coaching, Innovation, IA | 4 axes d'expertise complémentaires                          |
+
+### Axes d'expertise (2026-01-16)
+
+**Décision :** Repositionnement sur 4 axes principaux, CTO en second plan.
+
+| Axe | Description |
+|-----|-------------|
+| **Conseil Tech** | Audit DSI, amélioration architectures logicielles, organisations et pratiques |
+| **Coaching Managers Tech** | PO, CTO, Directeurs techniques, Scrum Masters, Tech Leads |
+| **Adoption IA** | Accompagnement à l'adoption de l'IA pour le développement |
+| **Organisation Innovation** | Structures, gouvernance, outils (Agile, Lean Startup, expérience CTO) |
+
+**Justification :** Le titre CTO reste visible dans le parcours mais n'est plus mis en avant. Le positionnement conseil/coaching correspond mieux à l'activité actuelle et future.
+
+### Titre LinkedIn
+
+**Décision (2026-01-16) :** Titre aligné avec les 4 axes d'expertise.
+
+**Version française :**
+
+> Conseil Tech & Coaching Leaders | Innovation, IA, Excellence Logicielle
+
+**Version anglaise :**
+
+> Tech Advisory & Leadership Coaching | Innovation, AI, Software Excellence
+
+**Analyse :** Voir [analyse des chapeaux de Bono](../../docs/prospectives/2026-01-16-titre-linkedin-analyse-bono.md)
+
+**Alternatives réservées :**
+
+- Consultant Tech | Coach Leaders Tech | Innovation & IA
+- Conseil Tech · Coaching Managers · Innovation · IA
 
 ---
 
@@ -136,16 +168,18 @@ Cette section contient les alternatives non retenues mais potentiellement utiles
 
 ## Historique des décisions
 
-| Date | Tâche | Décision | Section |
-|------|-------|----------|---------|
-| 2025-11-27 | LAY-003 | Organisation compétences en 3 pôles | Compétences |
-| 2025-11-27 | LAY-003 | GenAI pas prioritaire | Compétences |
-| 2025-11-27 | LAY-003 | SAFe sans SPC5 | Compétences |
-| 2025-11-27 | LAY-003 | Inclure technos précises (hands-on) | Compétences |
-| 2025-11-27 | LAY-003 | Leadership: COMEX, Recrutement, Stratégie, Formation | Compétences |
-| 2025-11-27 | LAY-003 | Langues sans jauges visuelles | Format |
-| 2025-11-27 | LAY-003 | Suppression "Centres d'intérêt" | Format |
+| Date       | Tâche   | Décision                                                         | Section        |
+|------------|---------|------------------------------------------------------------------|----------------|
+| 2026-01-16 | -       | Repositionnement sur 4 axes (Conseil, Coaching, Innovation, IA) | Positionnement |
+| 2026-01-16 | -       | Titre LinkedIn FR/EN                                             | Positionnement |
+| 2025-11-27 | LAY-003 | Organisation compétences en 3 pôles                              | Compétences    |
+| 2025-11-27 | LAY-003 | GenAI pas prioritaire                                            | Compétences    |
+| 2025-11-27 | LAY-003 | SAFe sans SPC5                                                   | Compétences    |
+| 2025-11-27 | LAY-003 | Inclure technos précises (hands-on)                              | Compétences    |
+| 2025-11-27 | LAY-003 | Leadership: COMEX, Recrutement, Stratégie, Formation             | Compétences    |
+| 2025-11-27 | LAY-003 | Langues sans jauges visuelles                                    | Format         |
+| 2025-11-27 | LAY-003 | Suppression "Centres d'intérêt"                                  | Format         |
 
 ---
 
-*Dernière mise à jour: 2025-11-27*
+*Dernière mise à jour : 2026-01-16*
