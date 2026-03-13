@@ -66,7 +66,7 @@
 
 #let engagement-agile = entry(
   title: "Organisateur Agile Tour Bordeaux",
-  date: "2011 - Aujourd'hui",
+  date: "2011 - 2016",
   institution: "Agile Tour",
   location: "Bordeaux",
 )[
