@@ -48,6 +48,29 @@
 
   = Expérience détaillée
 
+  #entry(
+    title: [Consultant Architecture Senior - Audit de plateforme],
+    date: [11/2025 - 02/2026],
+    institution: [Berger-Levrault],
+    location: [Remote / Bordeaux],
+  )[
+    Audit d'obsolescence, d'architecture et d'organisation humaine sur 2 produits majeurs (RH, Gestion Financière) pour des collectivités de taille moyenne et grande.
+    - Analyse obsolescence technologique (Java 8 → Java 25), revue d'architecture applicative
+    - Évaluation de l'organisation des équipes, recommandations d'évolution
+    - #strong[Stack :] Java 8, Java 25, Spring Boot, Python, Oracle
+  ]
+
+  #entry(
+    title: [Auditeur Technique - Plateforme ISWC],
+    date: [10/2025 - 11/2025],
+    institution: [CISAC],
+    location: [Remote / Bordeaux],
+  )[
+    Audit technique de la plateforme ISWC (International Standard Work Code) pour la Confédération Internationale des Sociétés d'Auteurs et Compositeurs.
+    - Analyse de l'architecture cloud Azure (Databricks, Cosmos DB)
+    - Évaluation de la qualité du code et des pratiques de développement
+    - #strong[Domaine :] Droits d'auteur, standards internationaux (ISWC)
+  ]
 
   #entry(
     title: [Consultant Technique Senior → Chief Technology Officer],

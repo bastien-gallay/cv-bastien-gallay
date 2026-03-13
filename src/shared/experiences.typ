@@ -5,6 +5,19 @@
 #import "../neat-cv-local.typ": entry
 
 // =============================================================================
+// TERAGONE FACTORY - Consultant Architecture & Audit (2025-aujourd'hui)
+// =============================================================================
+#let exp-teragone = entry(
+  title: "Consultant Architecture & Audit",
+  date: "10/2025 - Aujourd'hui",
+  institution: "Teragone Factory / Indépendant",
+  location: "Remote / Bordeaux",
+)[
+  - *CISAC - Audit ISWC (2 mois) :* Audit technique plateforme ISWC (droits d'auteur). Analyse architecture cloud Azure (Databricks, Cosmos DB).
+  - *Berger-Levrault - Audit plateforme (3 mois) :* Audit obsolescence, architecture et organisation sur 2 produits RH et Gestion Financière. #strong[Stack :] Java 8/25, Spring Boot, Oracle.
+]
+
+// =============================================================================
 // PALO IT - CTO (2021-2025)
 // =============================================================================
 #let exp-palo-it = entry(
@@ -13,11 +26,9 @@
   institution: "PALO IT",
   location: "Bordeaux/Paris, France",
 )[
-  - *Innovation IA :* Conception de Gen-e2, framework de développement accéléré par IA. 20-40 certifications GitHub Copilot. Partenariats Scaleway, GitHub, Microsoft.
-  - *Leadership :* Direction stratégie technologique et COMEX. Pilotage presales 6+ opportunités (€15k-€500k+). Management de 50 professionnels techniques.
-  - *Business :* Presales 6+ opportunités majeures (€15k-€500k+). Initiative Quantum Computing.
-  - *Missions :* Bodic (External CTO), Beta.gouv (Lead Dev, 7 mois), Fircosoft (Dev Senior, 2 ans).
-  - *Stack :* Azure, OpenAI, Anthropic, Python, C\#, TypeScript, Rust.
+  - *CTO :* Direction stratégie technologique, COMEX, management 50 professionnels. Presales 6+ opportunités (€15k-€500k+).
+  - *Innovation IA :* Conception Gen-e2 (framework IA). Partenariats Scaleway, GitHub, Microsoft.
+  - *Missions :* Bodic (External CTO), Beta.gouv (Lead Dev), Fircosoft (Dev Senior, 2 ans), Nalo (Coach CTO).
 ]
 
 // =============================================================================
@@ -29,11 +40,8 @@
   institution: "Upwiser",
   location: "Bordeaux, France",
 )[
-  - Pilotage de transformations Agiles à l'échelle (SAFe, Scrum) pour grands comptes (Dekra, i-BP).
-  - Structuration R&D et coaching CTOs pour scale-ups (Dronisos, Wanteeed, Nalo, SeLoger).
-  - Accompagnement de *~100 startups et PME* en transformation agile.
-  - Animation de formations Agile, Lean, Design Thinking (*~15 sessions/an*).
-  - Fondateur du cercle Lean Startup Bordeaux.
+  - Transformations Agiles grands comptes (Dekra, i-BP) et coaching CTOs scale-ups (Dronisos, Wanteeed, SeLoger).
+  - Accompagnement *~100 startups et PME*. Formations Agile, Lean, Design Thinking.
 ]
 
 // =============================================================================
@@ -45,10 +53,8 @@
   institution: "CDiscount",
   location: "Bordeaux, France",
 )[
-  - Responsable technique plateforme paiement (*1 milliard € CA*, certification PCI DSS).
-  - Gestion de *200 jours/projet par mois* en Scrum/Scrumban.
-  - Industrialisation de l'anonymisation des données clients (précurseur RGPD).
-  - *Stack :* .Net, C\#, SQL Server.
+  - Responsable technique plateforme paiement (*1 milliard € CA*, certification PCI DSS). Équipe 15 personnes.
+  - #strong[Stack :] C\#, .Net, SQL Server.
 ]
 
 // =============================================================================
@@ -60,9 +66,7 @@
   institution: "Cast Consulting",
   location: "Paris, France",
 )[
-  - Product Owner JOA Online (équipe 10p, Scrum distribué, coordination 10 sous-traitants).
-  - Chef de projet Pixmania/TheLink (équipe 7 dev, coordination internationale).
-  - Clients : La Poste, CEA, Nespresso. Domaines : e-commerce, jeux en ligne, nucléaire.
+  - Projets internationaux (JOA Online, Pixmania). Coordination équipes distribuées Europe.
 ]
 
 // =============================================================================
@@ -84,6 +88,7 @@
 #let experiences-page-1 = [
   = Expérience Professionnelle
 
+  #exp-teragone
   #exp-palo-it
   #exp-upwiser
   #exp-cdiscount

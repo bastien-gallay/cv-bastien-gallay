@@ -12,18 +12,14 @@
   date: "2002",
   institution: "INSTN (CEA Saclay)",
   location: "Saclay, France",
-)[
-  Recherche : _"Comparaison des algorithmes de classification pour la segmentation multitexturées"_.
-]
+)[]
 
 #let formation-maitrise = entry(
   title: "Maîtrise d'Informatique - Mention Bien",
   date: "2001",
   institution: "Université de Picardie Jules Verne",
   location: "Amiens, France",
-)[
-  Mémoire : _"Complexité des algorithmes quantiques"_.
-]
+)[]
 
 // Section complète avec les deux formations
 #let section-formation = [
@@ -74,7 +70,7 @@
   institution: "Agile Tour",
   location: "Bordeaux",
 )[
-  Organisation de la conférence annuelle (150+ participants). Fondateur Lean Startup Bordeaux (2012-2018). Co-fondateur Collectif Quinconces (2016-2018).
+  Conférence annuelle (150+ participants). Fondateur Lean Startup Bordeaux. Co-fondateur Collectif Quinconces.
 ]
 
 #let section-engagement = [
