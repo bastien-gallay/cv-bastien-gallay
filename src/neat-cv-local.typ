@@ -406,6 +406,7 @@
 // ---- Page 1: Header + Sidebar + Main Content ----
 #let cv-page-one(
   profile-picture: none,
+  header-logo: none,
   sidebar-content,
   main-content,
 ) = {
@@ -428,6 +429,9 @@
       ),
       inset: (bottom: page.margin.top),
     )[
+      #if header-logo != none {
+        place(top + right, dx: -2mm, dy: 2mm, header-logo)
+      }
       #align(center)[
         #let position = if type(author.position) == array {
           author.position.join(box(inset: (x: 0.5em), sym.dot.c))
