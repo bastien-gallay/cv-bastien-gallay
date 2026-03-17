@@ -95,6 +95,9 @@
   )[
     - *Berger-Levrault - Audit plateforme (3 mois) :* Audit d'obsolescence, d'architecture et d'organisation humaine sur 2 produits majeurs. Recommandations d'évolution technique et organisationnelle. #strong[Stack :] Java 8/25, Spring Boot, Oracle.
     - *CISAC - Audit ISWC (2 mois) :* Audit technique de la plateforme ISWC. Évaluation qualité du code et des pratiques de développement. #strong[Stack :] Azure Databricks, Cosmos DB.
+    - *TopTex - Spécification API (4j) :* Spécification technique détaillée d'un serveur API via AI Engineering (Specification Driven Development).
+    - *Bodic - Agent IA (2025) :* Agent d'analyse de PR : release notes automatisées, calculs de performance, optimisations détaillées.
+    - *Méthodologie :* Doc as Code assisté par IA pour livrables d'audit et propositions commerciales (prototypes SDD, Context Engineering).
   ]
 
   #entry(
@@ -269,6 +272,27 @@
     - *Gestion documentaire :* Documents personnels dont CV. #strong[Framework :] Custom
     - *Générateur de musique :* Création musicale exploitant des modèles existants #strong[Framework :] OpenSpec
     - *Framework SDD personnel :* Création d'un mini framework Specification Driven Development
+  ]
+
+  #entry(
+    title: [Spécification technique API - AI Engineering],
+    date: [2025],
+    institution: [TopTex (via PALO IT)],
+    location: [Remote],
+  )[
+    - Conception d'une spécification technique détaillée pour un serveur API via Specification Driven Development et AI Engineering. Étude migration API multi-instance Sage.
+  ]
+
+  #entry(
+    title: [Lead Developer / External CTO],
+    date: [02/2025 - 08/2025],
+    institution: [Bodic (via PALO IT)],
+    location: [Remote / Bordeaux],
+  )[
+    Back office de gestion de fonds d'investissements durables. Infrastructure full Azure.
+    - Développement API backend (optimisée à 72ms) et frontend React, Outlook add-in
+    - Création d'un agent IA d'analyse de pull requests : génération automatisée de release notes, explications des optimisations, calculs de performance
+    - #strong[Stack :] NestJS, React, TypeScript, Node.js, Azure, PostgreSQL
   ]
 
   #entry(

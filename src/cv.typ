@@ -111,9 +111,9 @@
 
     === Missions clients
 
-    - *Bodic - External CTO (2024-2025, 1.5j/sem) :* API optimisée à 72ms, Outlook add-in. #strong[Stack:] Azure, TypeScript, PostgreSQL.
+    - *Bodic - External CTO (2024-2025, 1.5j/sem) :* API optimisée à 72ms, Outlook add-in. Agent IA d'analyse de PR (release notes, calculs de performance). #strong[Stack:] Azure, TypeScript, PostgreSQL.
     - *Systel - Team Coach (2025, 30j) :* Coaching équipe 3 dev, audit technique acquisition. #strong[Stack:] Java, Angular, Spring Boot.
-    - *TopTex - Architecture API (2025, 4j) :* Étude migration API multi-instance Sage.
+    - *TopTex - Architecture API (2025, 4j) :* Spécification technique détaillée d'un serveur API via AI Engineering (Specification Driven Development). Étude migration API multi-instance Sage.
     - *Beta.gouv - Lead Dev (2023-2024, 7 mois) :* Création infrastructure MonEspaceNis2. #strong[Stack:] React, TypeScript, NestJS, PostgreSQL.
     - *Fircosoft - Dev Senior (2021-2023, 2 ans 4 mois) :* Filtrage transactions bancaires, CI/CD langages propriétaires, SAFe 80+ personnes. #strong[Domaine:] AML, KYC, SWIFT. #strong[Stack:] Python, C, Oracle.
     - *Nalo - Coach Technique (2021, 10 mois) :* Coaching CTO, Software Craftsmanship. #strong[Stack:] Python, Django, TDD, DDD.

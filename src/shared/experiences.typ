@@ -15,6 +15,7 @@
 )[
   - *CISAC - Audit ISWC (2 mois) :* Audit technique plateforme ISWC (droits d'auteur). Analyse architecture cloud Azure (Databricks, Cosmos DB).
   - *Berger-Levrault - Audit plateforme (3 mois) :* Audit obsolescence, architecture et organisation sur 2 produits RH et Gestion Financière. #strong[Stack :] Java 8/25, Spring Boot, Oracle.
+  - *Méthodologie :* Doc as Code assisté par IA pour livrables d'audit et propositions commerciales (prototypes SDD, Context Engineering).
 ]
 
 // =============================================================================
