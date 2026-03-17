@@ -103,7 +103,7 @@
     institution: [PALO IT],
     location: [Bordeaux/Paris],
   )[
-    - *AI Engineering & SDD :* Ambassadeur Gen-e2 en France et fort contributeur. Praticien Specification Driven Development (BMAD, OpenSpec, SpecKit). Créateur d'un framework SDD personnel. Partenariat GitHub Copilot. Négociations avancées partenariats IA et cloud : Mistral, Anthropic, Scaleway, OVH.
+    - *AI Engineering & SDD :* Ambassadeur Gen-e2 en France et fort contributeur. Praticien Specification Driven Development (BMAD, OpenSpec, SpecKit). Créateur d'un framework SDD personnel. Partenariats GitHub, Microsoft. Négociations avancées : Mistral, Anthropic, Scaleway, OVH, MongoDB.
     - *Formation AI Engineering :* 20-40 certifications GitHub Copilot délivrées. Learn & Lunch hebdomadaires IA. Tech\&Toast 70+ professionnels. Accompagnement des équipes sur les bonnes pratiques AI-assisted development.
     - *Coaching technique :* Coaching CTO Nalo (Craftsmanship, TDD, DDD) et équipe Systel (3 dev, audit acquisition).
     - *CTO & Management :* Direction stratégie technologique, COMEX, 50 personnes. Presales €15k-€500k+.
@@ -257,7 +257,7 @@
     Direction stratégie technologique, COMEX. Management 50 professionnels techniques.
     - Ambassadeur Gen-e2 en France et fort contributeur. Praticien Specification Driven Development : spécifications structurées → génération LLM → validation qualité. Frameworks : BMAD, OpenSpec, SpecKit + framework SDD personnel
     - Formation AI Engineering : 20-40 certifications GitHub Copilot délivrées, Learn & Lunch hebdomadaires, ateliers hands-on prompt engineering et AI-assisted development
-    - Partenariat GitHub Copilot. Négociations avancées partenariats IA et cloud : Mistral (Codestral), Anthropic (Claude), Scaleway, OVH
+    - Partenariats GitHub (Copilot), Microsoft. Négociations avancées : Mistral (Codestral), Anthropic (Claude), Scaleway, OVH, MongoDB
     - Pilotage 6+ opportunités presales (€15k-€500k+) : Natixis, CEVA Logistics, Aviva
   ]
 
