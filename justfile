@@ -1,6 +1,9 @@
 # Justfile for neat-cv project
 # Modern command runner for build automation
 
+# CV output name with year-month
+cv_name := "CV-Bastien-Gallay-" + `date +%Y-%m`
+
 # Default recipe (runs when you type `just`)
 default: build
 
@@ -8,43 +11,36 @@ default: build
 build:
     @echo "Building CV..."
     @mkdir -p dist
-    typst compile src/cv.typ dist/cv.pdf
-    @echo "✓ Built dist/cv.pdf"
+    typst compile src/cv.typ dist/{{cv_name}}.pdf
+    @echo "✓ Built dist/{{cv_name}}.pdf"
 
 # Build short CV (1 page)
 build-short:
     @echo "Building short CV..."
     @mkdir -p dist
-    typst compile src/cv-short.typ dist/cv-short.pdf
-    @echo "✓ Built dist/cv-short.pdf"
+    typst compile src/cv-short.typ dist/{{cv_name}}-short.pdf
+    @echo "✓ Built dist/{{cv_name}}-short.pdf"
 
 # Build all CV versions
 build-all:
     @echo "Building all CV versions..."
     @mkdir -p dist
-    typst compile src/cv.typ dist/cv.pdf
-    typst compile src/cv-short.typ dist/cv-short.pdf
-    @echo "✓ Built dist/cv.pdf and dist/cv-short.pdf"
+    typst compile src/cv.typ dist/{{cv_name}}.pdf
+    typst compile src/cv-short.typ dist/{{cv_name}}-short.pdf
+    @echo "✓ Built dist/{{cv_name}}.pdf and dist/{{cv_name}}-short.pdf"
 
 # Watch for changes and rebuild automatically (both versions)
 watch:
     @echo "Watching for changes (both CV versions)..."
     @mkdir -p dist
-    typst watch src/cv.typ dist/cv.pdf &
-    typst watch src/cv-short.typ dist/cv-short.pdf
+    typst watch src/cv.typ dist/{{cv_name}}.pdf &
+    typst watch src/cv-short.typ dist/{{cv_name}}-short.pdf
 
 # Clean build artifacts
 clean:
     @echo "Cleaning build artifacts..."
     @rm -rf dist/*.pdf
     @echo "✓ Cleaned"
-
-# Build with date in filename for release
-release:
-    @echo "Building release..."
-    @mkdir -p dist
-    typst compile src/cv.typ dist/cv-{{`date +%Y-%m-%d`}}.pdf
-    @echo "✓ Built dist/cv-{{`date +%Y-%m-%d`}}.pdf"
 
 # Build adapted CV for a specific application (slug naming convention)
 build-adapted app_id:
