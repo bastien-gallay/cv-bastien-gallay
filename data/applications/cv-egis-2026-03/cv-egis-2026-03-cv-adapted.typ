@@ -98,12 +98,21 @@
   ]
 
   #entry(
+    title: [Projets personnels - AI Engineering & SDD],
+    date: [2025 - Aujourd'hui],
+    institution: [Side projects],
+    location: [Remote],
+  )[
+    - Multiples projets Specification Driven Development (BMAD, OpenSpec, SpecKit, framework SDD personnel) : analyseur rhétorique (détection arguments fallacieux), prototype jeu vidéo, gestion documentaire, générateur de musique.
+  ]
+
+  #entry(
     title: [Consultant Technique Senior → CTO],
     date: [02/2021 - 08/2025],
     institution: [PALO IT],
     location: [Bordeaux/Paris],
   )[
-    - *AI Engineering & SDD :* Ambassadeur Gen-e2 en France et fort contributeur. Praticien Specification Driven Development (BMAD, OpenSpec, SpecKit). Créateur d'un framework SDD personnel. Partenariats GitHub, Microsoft. Négociations avancées : Mistral, Anthropic, Scaleway, OVH, MongoDB.
+    - *AI Engineering :* Ambassadeur Gen-e2 en France et fort contributeur. Partenariats GitHub, Microsoft. Négociations avancées : Mistral, Anthropic, Scaleway, OVH, MongoDB.
     - *Formation AI Engineering :* 20-40 certifications GitHub Copilot délivrées. Learn & Lunch hebdomadaires IA. Tech\&Toast 70+ professionnels. Accompagnement des équipes sur les bonnes pratiques AI-assisted development.
     - *Coaching technique :* Coaching CTO Nalo (Craftsmanship, TDD, DDD) et équipe Systel (3 dev, audit acquisition).
     - *CTO & Management :* Direction stratégie technologique, COMEX, 50 personnes. Presales €15k-€500k+.
@@ -249,13 +258,27 @@
   ]
 
   #entry(
+    title: [Projets personnels - AI Engineering & SDD],
+    date: [2025 - Aujourd'hui],
+    institution: [Side projects],
+    location: [Remote],
+  )[
+    Pratique intensive du Specification Driven Development sur des projets variés avec différents frameworks :
+    - *Analyseur de rhétorique :* Détection d'arguments fallacieux à partir d'articles de presse. #strong[Framework :] SpecKit (et Lovable)
+    - *Prototype jeu vidéo :* Développement piloté par spécifications. #strong[Framework :] BMAD
+    - *Gestion documentaire :* Documents personnels dont CV. #strong[Framework :] Custom
+    - *Générateur de musique :* Création musicale exploitant des modèles existants #strong[Framework :] OpenSpec
+    - *Framework SDD personnel :* Création d'un mini framework Specification Driven Development
+  ]
+
+  #entry(
     title: [Chief Technology Officer (CTO)],
     date: [10/2024 - 08/2025],
     institution: [PALO IT],
     location: [Bordeaux/Paris],
   )[
     Direction stratégie technologique, COMEX. Management 50 professionnels techniques.
-    - Ambassadeur Gen-e2 en France et fort contributeur. Praticien Specification Driven Development : spécifications structurées → génération LLM → validation qualité. Frameworks : BMAD, OpenSpec, SpecKit + framework SDD personnel
+    - Ambassadeur Gen-e2 en France et fort contributeur. Specification Driven Development : spécifications structurées → génération LLM → validation qualité
     - Formation AI Engineering : 20-40 certifications GitHub Copilot délivrées, Learn & Lunch hebdomadaires, ateliers hands-on prompt engineering et AI-assisted development
     - Partenariats GitHub (Copilot), Microsoft. Négociations avancées : Mistral (Codestral), Anthropic (Claude), Scaleway, OVH, MongoDB
     - Pilotage 6+ opportunités presales (€15k-€500k+) : Natixis, CEVA Logistics, Aviva
