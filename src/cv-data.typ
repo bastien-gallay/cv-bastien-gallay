@@ -136,7 +136,7 @@
       location: "Bordeaux/Paris, France",
       period: (start: "02/2021", end: "10/2025"),
       summary: (
-        "Innovation IA : Conception de Gen-e2, framework de développement accéléré par IA. 20-40 certifications GitHub Copilot. Partenariats Scaleway, GitHub, Mistral.",
+        "AI Engineering : Ambassadeur Gen-e2 en France (framework IA). 20-40 certifications GitHub Copilot. Partenariats GitHub, Microsoft. Négociations avancées Mistral, Anthropic, Scaleway, OVH, MongoDB.",
         "Leadership : Direction stratégie technologique et COMEX. Pilotage presales 6+ opportunités (€15k-€500k+). Management de 50 professionnels techniques.",
         "Business : Presales 6+ opportunités majeures (€15k-€500k+). Initiative Quantum Computing.",
         "Missions Clients : Bodic (External CTO, API optimisée à 72ms), Beta.gouv (Lead Dev, 7 mois).",
@@ -234,9 +234,9 @@
               ),
             ),
             (
-              title: "Innovation & Gen-e2",
+              title: "AI Engineering & Gen-e2",
               items: (
-                "Conception de Gen-e2, framework de développement accéléré par IA",
+                "Ambassadeur Gen-e2 en France et fort contributeur (framework de développement accéléré par IA)",
                 "Learn & Lunch hebdomadaires et ateliers Hands-on",
                 "Initiative Quantum Computing : stage de 10 semaines",
                 "Organisation Tech&Toast : 70+ professionnels",
@@ -252,9 +252,9 @@
             (
               title: "Partenariats Stratégiques",
               items: (
-                "Scaleway : partenariat cloud infrastructure",
-                "GitHub : programme de certification Copilot",
-                "Mistral : intégration Codestral dans Gen-e2",
+                "GitHub : partenariat certification Copilot (actif)",
+                "Microsoft : partenariat (actif)",
+                "Négociations avancées : Mistral (Codestral), Anthropic (Claude), Scaleway (cloud), OVH, MongoDB",
               ),
             ),
           ),

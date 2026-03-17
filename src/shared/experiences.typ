@@ -27,7 +27,7 @@
   location: "Bordeaux/Paris, France",
 )[
   - *CTO :* Direction stratégie technologique, COMEX, management 50 professionnels. Presales 6+ opportunités (€15k-€500k+).
-  - *Innovation IA :* Conception Gen-e2 (framework IA). Partenariats Scaleway, GitHub, Microsoft.
+  - *AI Engineering :* Ambassadeur Gen-e2 en France (framework IA). Partenariats GitHub, Microsoft. Négociations avancées Mistral, Anthropic, Scaleway, OVH, MongoDB.
   - *Missions :* Bodic (External CTO), Beta.gouv (Lead Dev), Fircosoft (Dev Senior, 2 ans), Nalo (Coach CTO).
 ]
 

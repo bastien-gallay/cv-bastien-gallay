@@ -88,8 +88,8 @@
     - Pilotage de 6+ opportunités presales majeures (€15k-€500k+)
     - 20-40 certifications GitHub Copilot délivrées
 
-    ==== Innovation & Gen-e2
-    - Conception de Gen-e2, framework de développement accéléré par IA
+    ==== AI Engineering & Gen-e2
+    - Ambassadeur Gen-e2 en France et fort contributeur (framework de développement accéléré par IA)
     - Learn & Lunch hebdomadaires et ateliers Hands-on
     - Initiative Quantum Computing : stage de 10 semaines
     - Organisation Tech\&Toast : 70+ professionnels
@@ -99,9 +99,9 @@
     - Clients presales : Natixis, CEVA Logistics, Aviva, Groupe BZ
 
     ==== Partenariats Stratégiques
-    - Scaleway : partenariat cloud infrastructure
-    - GitHub : programme de certification Copilot
-    - Mistral : intégration Codestral dans Gen-e2
+    - GitHub : partenariat certification Copilot (actif)
+    - Microsoft : partenariat (actif)
+    - Négociations avancées : Mistral (Codestral), Anthropic (Claude), Scaleway (cloud), OVH, MongoDB
 
     ==== Stack Technique
     - #strong[Cloud:] Azure (Databricks, SQL Hyperscale, Cosmos DB), AWS (Bedrock), Scaleway
